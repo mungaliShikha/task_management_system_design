@@ -1,0 +1,29 @@
+{
+  "name": "task_management",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mungaliShikha/task_management.git"
+  },
+  "author": "shikha mungali, narendra kumar , nitin sharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mungaliShikha/task_management/issues"
+  },
+  "homepage": "https://github.com/mungaliShikha/task_management#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-rate-limit": "^6.7.0",
+    "mongoose": "^6.8.3",
+    "nodemailer": "^6.8.0",
+    "nodemon": "^2.0.20",
+    "winston": "^3.8.2"
+  }
+}
