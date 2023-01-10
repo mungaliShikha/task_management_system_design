@@ -1,0 +1,35 @@
+{
+  "name": "marketplace_nft_new_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.0",
+    "axios": "^0.21.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "depd": "^2.0.0",
+    "express": "^4.17.2",
+    "finalhandler": "^1.1.2",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "merge-descriptors": "^1.0.1",
+    "moment": "^2.29.2",
+    "mongoose": "^5.13.3",
+    "mongoose-aggregate-paginate": "^2.0.2",
+    "mongoose-paginate": "^5.0.3",
+    "multer": "^1.4.2",
+    "multiparty": "^4.2.2",
+    "nodemailer": "^6.7.2",
+    "nodemon": "^2.0.12",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-ui-express": "^4.1.6",
+    "winston": "^3.8.2"
+  }
+}
