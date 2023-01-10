@@ -12,6 +12,6 @@ module.exports.login = catchAsync(async (req, res) => {
   if (!loggedInUser || !compareHash(password, loggedInUser.password)) {
     throw new appError(ErrorMessage.EMAIL_NOT_REGISTERED, ErrorCode.NOT_FOUND);
   } else {
-    helper.commonResponse(res, 200, loggedInUser, generateToken({ email }));
+    helper.sendResponseWithData(res, SuccessCode.SUCCESS,SuccessMessage.LOGIN_SUCCESS, loggedInUser, generateToken({ email }));
   }
 });

@@ -31,7 +31,7 @@ module.exports = {
       response_code: responseCode,
       response_message: responseMessage,
       result: data,
-      token: tokn,
+      token: token,
     });
   },
   sendResponseWithoutData: (responseObj, responseCode, responseMessage) => {
