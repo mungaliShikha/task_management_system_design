@@ -2,7 +2,7 @@ module.exports = {
   commonResponse: (res, statusCode, result, message) => {
     return res.json({
       result: result || "",
-      message: message || "",
+      response_message: message || "",
       response_code: statusCode,
     });
   },
