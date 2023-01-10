@@ -14,7 +14,6 @@ var userModel = new schema(
    },
    email:{
     type:String,
-    required:true,
     unique:true
    },
    password:{
@@ -23,7 +22,6 @@ var userModel = new schema(
    },
    mobile_number:{
     type:String,
-    required:true,
     unique:true
    },
    address:{

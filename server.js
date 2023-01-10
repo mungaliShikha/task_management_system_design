@@ -16,29 +16,6 @@ app.use(express.json({ limit: "1000mb" }));
 
 app.use("/api", index);
 
-var swaggerDefinition = {
-  info: {
-    title: "NewProject ",
-    version: "2.0.0",
-    description: "NewProject API DOCS",
-  },
-  host: `${global.gConfig.swaggerURL}`,
-  basePath: "/",
-};
-
-var options = {
-  swaggerDefinition: swaggerDefinition,
-  apis: ["./routes/*/*.js"],
-};
-
-var swaggerSpec = swaggerJSDoc(options);
-
-app.get("/swagger.json", function (req, res) {
-  res.setHeader("Content-Type", "application/json");
-  res.send(swaggerSpec);
-});
-
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.all("*", (req, res, next) => {
   throw new appError(
