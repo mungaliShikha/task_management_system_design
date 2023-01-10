@@ -4,8 +4,7 @@ const{combine,timestamp,printf,colorize} = format
 
 
 const formatter = printf((info)=>{
-    let object=info.message
-    return `${info.timestamp} [${info.level}] object`
+    return `${info.timestamp} [${info.level}] ${info.message} `
 })
 
 
