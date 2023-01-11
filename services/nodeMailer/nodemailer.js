@@ -1,21 +1,31 @@
-const nodemailer =require("nodemailer");
-module.exports= async({from ,to,subject,text,html})=>{
-    let transporter = nodemailer.createTransport({
-        host:"smtp.office365.com",
-        port:587,
-        secure:false,
-        auth:{
-            user:'shikha1081998@gmail.com',
-            pass:'shikha1234567890'
-        }
-    })
+const nodemailer = require("nodemailer");
+module.exports.sendMail = async (from, to, text, html) => {
+  try {
+    var transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: "shikha1081998@gmail.com",
+        pass: "vwlxuktqpfwzyzqp",
+      },
+      tls: {
+        rejectUnauthorized: false,
+      },
+    });
 
-
-    let info = await transporter.sendMail({
-        from:'shikha1081998@gmail.com',
-        to:to,
-        subject:subject,
-        text:text,
-        html:html
-    })
-}
+    var mailOptions = {
+      from: from,
+      to: to,
+      subject: text,
+      html: html,
+    };
+    transporter.sendMail(mailOptions, function (error, info) {
+      if (error) {
+        console.log(error);
+      } else {
+        console.log("Email sent: " + info.response);
+      }
+    });
+  } catch (error) {
+    console.log(error, "email not sent");
+  }
+};

@@ -1,11 +1,15 @@
 const router = require("express").Router();
-const {login} = require("../../controllers/admin.controller");
+const {login,forgetPassword,resetPassword,updateAdmin,getAdmin} = require("../../controllers/admin.controller");
 const auth = require('../../middleware/auth');
-const { route } = require("../userRoute/user.route");
 
 
 
 router.post('/login', login);
+router.post('/forgetPassword',forgetPassword)
+router.post('/resetPassword/:userId/:token',resetPassword)
+router.put('/updateAdmin/:userId',updateAdmin)
+router.get('/getAdminDetails/:userId',getAdmin)
+
 
 
 

@@ -6,7 +6,8 @@
         "user_name": "task_management_project",
         "database": "task_management",
         "password":"NYvDITjmrPvnIMzm",
-        "jwtSecretKey": "asd7abjsd7"
+        "jwtSecretKey": "asd7abjsd7",
+        "db_URL":"http://localhost:5000/api/"
        
     },
     "staging": {
