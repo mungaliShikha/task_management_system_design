@@ -18,11 +18,9 @@ var userModel = new schema(
    },
    password:{
     type:String,
-    required:true
    },
    mobile_number:{
     type:String,
-    unique:true
    },
    address:{
     type:String

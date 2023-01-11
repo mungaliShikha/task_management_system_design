@@ -1,12 +1,126 @@
 const router = require("express").Router();
-const {login} = require("../../controllers/admin.controller");
+const adminController = require("../../controllers/admin.controller");
 const auth = require('../../middleware/auth');
 const { route } = require("../userRoute/user.route");
 
 
+/**
+ * @swagger
+ * /api/admin/login:
+ *   post:
+ *     tags:
+ *       - ADMIN
+ *     description: Check for Social existence and give the access Token 
+ *     produces:
+ *       - application/json
+ *     parameters:
+ *       - name: email
+ *         description: email
+ *         in: formData
+ *         required: true
+ *       - name: password
+ *         description: password
+ *         in: formData
+ *         required: true
+ *     responses:
+ *       200:
+ *         description: Your login is successful.
+ *       404:
+ *         description: Requested data not found.
+ *       402:
+ *         description: Invalid login credentials.
+ *       500:
+ *         description: Internal Server Error
+ */
+router.post('/login', adminController.login);
 
-router.post('/login', login);
 
+/**
+ * @swagger
+ * /api/admin/addDeveloper:
+ *   post:
+ *     tags:
+ *       - ADMIN_DEVELOPER_DASHBOARD
+ *     description: Check for Social existence and give the access Token 
+ *     produces:
+ *       - application/json
+ *     parameters:
+ *       - name: email
+ *         description: email
+ *         in: formData
+ *         required: true
+ *       - name: first_name
+ *         description: first_name
+ *         in: formData
+ *         required: true
+ *       - name: last_name
+ *         description: last_name
+ *         in: formData
+ *         required: true
+ *       - name: mobile_number
+ *         description: mobile_number
+ *         in: formData
+ *         required: true
+ *     responses:
+ *       200:
+ *         description: Your login is successful.
+ *       404:
+ *         description: Requested data not found.
+ *       402:
+ *         description: Invalid login credentials.
+ *       500:
+ *         description: Internal Server Error
+ */
+router.post('/addDeveloper', adminController.addDeveloper)
+
+
+/**
+ * @swagger
+ * /api/admin/listDeveloper:
+ *   get:
+ *     tags:
+ *       - ADMIN_DEVELOPER_DASHBOARD
+ *     description: Check for Social existence and give the access Token 
+ *     produces:
+ *       - application/json
+ *     responses:
+ *       200:
+ *         description: Developer list successfully.
+ *       404:
+ *         description: Requested data not found.
+ *       402:
+ *         description: Invalid login credentials.
+ *       500:
+ *         description: Internal Server Error
+ */
+router.get('/listDeveloper', adminController.listDeveloper)
+
+
+/**
+ * @swagger
+ * /api/admin/viewDeveloper:
+ *   get:
+ *     tags:
+ *       - ADMIN_DEVELOPER_DASHBOARD
+ *     description: Check for Social existence and give the access Token 
+ *     produces:
+ *       - application/json
+ *     parameters:
+ *       - name: _id
+ *         description: _id
+ *         in: query
+ *         required: true
+ *     responses:
+ *       200:
+ *         description: Developer list successfully.
+ *       404:
+ *         description: Requested data not found.
+ *       402:
+ *         description: Invalid login credentials.
+ *       500:
+ *         description: Internal Server Error
+ */
+router.get('/viewDeveloper', adminController.viewDeveloper)
 
 
 
