@@ -17,7 +17,7 @@ const { sendMail } = require("../services/nodeMailer/nodemailer");
 module.exports = {
 
 
-  
+
   login: catchAsync(async (req, res) => {
     const { email, password } = req.body;
     const loggedInUser = await User.findOne({ email });
@@ -113,17 +113,41 @@ module.exports = {
 
 
   updateAdmin: catchAsync(async (req, res) => {
-    // const {profile_image}=req.files
     const { first_name, last_name, email, mobile_number, address } = req.body;
     const { userId } = req.params;
+    let data ={}
+
     const user = await User.findById(userId);
     if (!user) {
       throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
     }
-    upload.single("file");
-    req.body.profile_image = req.files.location;
+    if(first_name){
+      data['first_name'] =first_name
+    }
+    if(last_name){
+      data['last_name'] =last_name
+    }
+    if(email){
+      data['email'] =email
+    }
+    if(mobile_number){
+      data['mobile_number'] =mobile_number
+    }
+    if(address){
+      data['address'] =address
+    }
+    if(req.files){
+      data["profile_image"] = req.files[0].location
+    }
 
-    const updateAdmin = await User.findOneAndUpdate({});
+    let update = await User.findOneAndUpdate({ _id: userId }, data, { new: true })
+    helper.commonResponse(
+      res,
+      SuccessCode.SUCCESS,
+      update,
+      SuccessMessage.PROFILE_DETAILS
+    );
+        
   }),
 
 

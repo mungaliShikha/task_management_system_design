@@ -47,3 +47,31 @@ Jan-11-2023 12:13:11 [error] 404 - Requested URL http://localhost:5000/api/admin
 Jan-11-2023 12:14:15 [error] 400 - Please provide token. 
 Jan-11-2023 12:16:48 [error] 400 - Verifcation link has expired 
 Jan-11-2023 16:19:18 [error] 404 - Provided email is not registered. 
+Jan-11-2023 17:21:30 [error] 500 - Cannot read properties of undefined (reading 'location') 
+Jan-11-2023 17:23:07 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 17:23:47 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 17:25:13 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 17:27:03 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 17:29:33 [error] 500 - Unexpected field 
+Jan-11-2023 17:31:14 [error] 500 - Unexpected field 
+Jan-11-2023 17:34:02 [error] 500 - this.client.send is not a function 
+Jan-11-2023 17:39:35 [error] 500 - this.client.send is not a function 
+Jan-11-2023 17:40:07 [error] 500 - this.client.send is not a function 
+Jan-11-2023 17:40:09 [error] 500 - this.client.send is not a function 
+Jan-11-2023 17:41:13 [error] 500 - Assignment to constant variable. 
+Jan-11-2023 17:42:12 [error] 500 - userModel is not defined 
+Jan-11-2023 17:46:36 [error] 500 - this.client.send is not a function 
+Jan-11-2023 17:47:04 [error] 500 - this.client.send is not a function 
+Jan-11-2023 17:47:05 [error] 500 - this.client.send is not a function 
+Jan-11-2023 17:47:26 [error] 500 - this.client.send is not a function 
+Jan-11-2023 18:00:10 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 18:00:29 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 18:00:30 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 18:00:31 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 18:00:32 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 18:00:52 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 18:03:07 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 18:03:12 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 18:05:57 [error] 500 - Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: null } 
+Jan-12-2023 09:30:55 [error] 404 - Requested URL http://localhost:5000/ not found! 
+Jan-12-2023 09:36:36 [error] 404 - Requested URL http://localhost:5000/requested.html not found! 

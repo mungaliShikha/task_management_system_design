@@ -131,3 +131,68 @@ Jan-11-2023 16:13:31 [info] http://localhost:3000/api/admin/login - POST METHOD
 Jan-11-2023 16:19:07 [info] http://localhost:3000/api/admin/login - POST METHOD  
 Jan-11-2023 16:19:18 [error] 404 - Provided email is not registered. 
 Jan-11-2023 16:33:02 [info] http://localhost:3000/api/admin/getAdminDetails/63bd2142a8387822a8122eaa - GET METHOD  
+Jan-11-2023 17:21:30 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:21:30 [error] 500 - Cannot read properties of undefined (reading 'location') 
+Jan-11-2023 17:23:07 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:23:07 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 17:23:47 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:23:47 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 17:25:11 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:25:13 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 17:27:03 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:27:03 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 17:29:33 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:29:33 [error] 500 - Unexpected field 
+Jan-11-2023 17:31:14 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:31:14 [error] 500 - Unexpected field 
+Jan-11-2023 17:34:02 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:34:02 [error] 500 - this.client.send is not a function 
+Jan-11-2023 17:39:35 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:39:35 [error] 500 - this.client.send is not a function 
+Jan-11-2023 17:40:07 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:40:07 [error] 500 - this.client.send is not a function 
+Jan-11-2023 17:40:09 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:40:09 [error] 500 - this.client.send is not a function 
+Jan-11-2023 17:41:13 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:41:13 [error] 500 - Assignment to constant variable. 
+Jan-11-2023 17:42:12 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:42:12 [error] 500 - userModel is not defined 
+Jan-11-2023 17:42:55 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:46:36 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:46:36 [error] 500 - this.client.send is not a function 
+Jan-11-2023 17:47:04 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - POST METHOD  
+Jan-11-2023 17:47:04 [error] 500 - this.client.send is not a function 
+Jan-11-2023 17:47:05 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - POST METHOD  
+Jan-11-2023 17:47:05 [error] 500 - this.client.send is not a function 
+Jan-11-2023 17:47:26 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:47:26 [error] 500 - this.client.send is not a function 
+Jan-11-2023 17:56:13 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:57:45 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:58:42 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 18:00:10 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 18:00:10 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 18:00:29 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 18:00:29 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 18:00:30 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 18:00:30 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 18:00:31 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 18:00:31 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 18:00:32 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 18:00:32 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 18:00:52 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 18:00:52 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 18:02:09 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 18:03:07 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 18:03:07 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 18:03:12 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 18:03:12 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 18:04:50 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 18:05:57 [error] 500 - Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: null } 
+Jan-11-2023 18:09:40 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 18:10:08 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 18:11:46 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 18:13:59 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-12-2023 09:30:55 [error] 404 - Requested URL http://localhost:5000/ not found! 
+Jan-12-2023 09:34:25 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-12-2023 09:36:36 [error] 404 - Requested URL http://localhost:5000/requested.html not found! 
+Jan-12-2023 09:37:45 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  

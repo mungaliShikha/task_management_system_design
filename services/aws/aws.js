@@ -10,8 +10,8 @@ const s3 = new aws.S3({
 
 
 const fileFilter = (req, file, callback) => {
-    console.log(file) ///object 
-    if (file.mimetype.split("/")[0] === "application") { // acting as validation for a pratiular file type extension
+    // console.log(file) ///object 
+    if (file.mimetype.split("/")[0] === "image") { // acting as validation for a pratiular file type extension
         callback(null, true);
     }
     else {
@@ -27,7 +27,7 @@ exports.upload = multer({
         bucket: "blogapi",
         metadata: function (req, file, callback) {
             callback(null, { fieldName: file.fieldname })
-            console.log(file.fieldname)
+            // console.log(file.fieldname)
         },
         key: function (req, file, callback) {
             callback(null, `multipleFilesUpload/${file.originalname}`)
