@@ -41,6 +41,9 @@ module.exports = {
     }
   }),
 
+
+
+
   forgetPassword: catchAsync(async (req, res) => {
     const { email } = req.body;
     const user = await User.findOne({ email });
@@ -74,6 +77,10 @@ module.exports = {
     );
   }),
 
+
+
+
+
   resetPassword: catchAsync(async (req, res) => {
     const { userId, token } = req.params;
     const { password } = req.body;
@@ -103,6 +110,11 @@ module.exports = {
       SuccessMessage.RESET_SUCCESS
     );
   }),
+
+
+
+
+
 
   updateAdmin: catchAsync(async (req, res) => {
     const { first_name, last_name, email, mobile_number, address } = req.body;
@@ -143,6 +155,8 @@ module.exports = {
     );
   }),
 
+
+
   getAdmin: catchAsync(async (req, res) => {
     const { userId } = req.params;
     const userData = await User.findById(userId);
@@ -157,6 +171,8 @@ module.exports = {
     );
   }),
 
+
+  
   loginDeveloper: async (req, res) => {
     const { email, password } = req.body;
     const loggedInUser = await User.findOne({ email });
