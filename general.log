@@ -196,3 +196,14 @@ Jan-12-2023 09:30:55 [error] 404 - Requested URL http://localhost:5000/ not foun
 Jan-12-2023 09:34:25 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
 Jan-12-2023 09:36:36 [error] 404 - Requested URL http://localhost:5000/requested.html not found! 
 Jan-12-2023 09:37:45 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-12-2023 09:59:16 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-12-2023 10:06:30 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-12-2023 10:12:17 [info] http://localhost:3000/api/admin/login - POST METHOD  
+Jan-12-2023 10:12:17 [error] 404 - Provided email is not registered. 
+Jan-12-2023 10:12:43 [info] http://localhost:3000/api/admin/login - POST METHOD  
+Jan-12-2023 10:12:56 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-12-2023 10:13:20 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/766900f36c0d201c27465a7f3b43db9fc23a8a46486efdb34a74033147b99cd0 - GET METHOD  
+Jan-12-2023 10:13:20 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword/63bd2142a8387822a8122eaa/766900f36c0d201c27465a7f3b43db9fc23a8a46486efdb34a74033147b99cd0 not found! 
+Jan-12-2023 10:13:43 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/766900f36c0d201c27465a7f3b43db9fc23a8a46486efdb34a74033147b99cd0 - POST METHOD  
+Jan-12-2023 10:14:08 [info] http://localhost:3000/api/admin/getAdminDetails/63bd2142a8387822a8122eaa - GET METHOD  
+Jan-12-2023 10:14:44 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  

@@ -75,3 +75,5 @@ Jan-11-2023 18:03:12 [error] 500 - Cannot read properties of undefined (reading 
 Jan-11-2023 18:05:57 [error] 500 - Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: null } 
 Jan-12-2023 09:30:55 [error] 404 - Requested URL http://localhost:5000/ not found! 
 Jan-12-2023 09:36:36 [error] 404 - Requested URL http://localhost:5000/requested.html not found! 
+Jan-12-2023 10:12:17 [error] 404 - Provided email is not registered. 
+Jan-12-2023 10:13:20 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword/63bd2142a8387822a8122eaa/766900f36c0d201c27465a7f3b43db9fc23a8a46486efdb34a74033147b99cd0 not found! 

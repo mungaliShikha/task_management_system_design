@@ -14,6 +14,8 @@ const {
 const helper = require("../helper/commonResponseHandler");
 const { sendMail } = require("../services/nodeMailer/nodemailer");
 
+
+
 module.exports = {
 
 
@@ -57,10 +59,10 @@ module.exports = {
       }).save();
     }
 
-    const link = `${global.gConfig.db_URL}admin/resetPassword/${user._id}/${tokenFound.token}`;
+    const link = `${global.gFields.db_URL}admin/resetPassword/${user._id}/${tokenFound.token}`;
     const html = `<h1> Password reset requested </h1><h3> Download link </h3><p>${link}</p>`;
     await sendMail(
-      "shikha1081998@gmail.com",
+      global.gFields.nodemailer_mail,
       email,
       "password reset link",
       html

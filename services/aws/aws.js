@@ -3,14 +3,13 @@ const multer = require('multer')
 const multerS3 = require('multer-s3')
 
 const s3 = new aws.S3({
-    accessKeyId: 'AKIAYOVLRXWEW4VAVIP7',
-    secretAccessKey: "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",
-    region: 'us-west-2' 
+    accessKeyId:global.gFields.accessKeyId,
+    secretAccessKey: global.gFields.secretAccessKey,
+    region: global.gFields.region 
 })
 
 
 const fileFilter = (req, file, callback) => {
-    // console.log(file) ///object 
     if (file.mimetype.split("/")[0] === "image") { // acting as validation for a pratiular file type extension
         callback(null, true);
     }
@@ -24,7 +23,7 @@ exports.upload = multer({
     storage: multerS3({
         s3,
         ACLs: "public-read",
-        bucket: "blogapi",
+        bucket: global.gFields.bucket,
         metadata: function (req, file, callback) {
             callback(null, { fieldName: file.fieldname })
             // console.log(file.fieldname)
