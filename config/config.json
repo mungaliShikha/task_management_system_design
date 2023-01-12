@@ -7,7 +7,12 @@
         "database": "task_management",
         "password":"NYvDITjmrPvnIMzm",
         "jwtSecretKey": "asd7abjsd7",
-        "swaggerURL":"localhost:5000"
+        "swaggerURL":"localhost:5000",
+        "nodemailer":{
+            "user":"shikha1081998@gmail.com",
+            "pass":"vwlxuktqpfwzyzqp"
+        }
+      
        
     },
     "staging": {
@@ -15,7 +20,11 @@
         "node_port": 1859,
         "json_indentation": 4,
         "host": "localhost",
-        "database": "newProject-stag"
+        "database": "newProject-stag",
+        "nodemailer":{
+            "user":"shikha1081998@gmail.com",
+            "pass":"vwlxuktqpfwzyzqp"
+        }
         
     },
     "production": {

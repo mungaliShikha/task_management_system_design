@@ -23,15 +23,25 @@ module.exports.loginAdmin = catchAsync(async (req, res) => {
   }
 });
 
-
 module.exports = {
+
   login: async (req, res) => {
     const { email, password } = req.body;
     const loggedInUser = await User.findOne({ email });
     if (!loggedInUser || !compareHash(password, loggedInUser.password)) {
       throw new appError(ErrorMessage.EMAIL_NOT_REGISTERED, ErrorCode.NOT_FOUND);
     } else {
-      helper.sendResponseWithData(res, SuccessCode.SUCCESS, SuccessMessage.LOGIN_SUCCESS, loggedInUser, generateToken({ email }));
+      let token = generateToken({ id: loggedInUser._id, role: loggedInUser.role })
+      let finalRes = {
+        userId: loggedInUser._id,
+        email: email,
+        role: loggedInUser.role,
+        first_name: loggedInUser.first_name,
+        last_name: loggedInUser.last_name,
+        mobile_number: loggedInUser.mobile_number,
+        token: token
+      }
+      helper.sendResponseWithData(res, SuccessCode.SUCCESS, SuccessMessage.LOGIN_SUCCESS, finalRes);
     }
   },
 
@@ -39,8 +49,8 @@ module.exports = {
   addDeveloper: async (req, res) => {
     try {
       let { email, mobile_number } = req.body
-      // const adminAuthCheck = await User.findOne({ userId: req.userId, role: "Admin" });
-      // if (!adminAuthCheck) response(res, ErrorCode.NOT_FOUND, {}, ErrorMessage.USER_NOT_FOUND);
+      const adminAuthCheck = await User.findOne({ userId: req.userId, role: "Admin" });
+      if (!adminAuthCheck) response(res, ErrorCode.NOT_FOUND, {}, ErrorMessage.USER_NOT_FOUND);
 
       const userExistRes = await User.findOne({ email });
       if (userExistRes)
@@ -50,10 +60,10 @@ module.exports = {
       req.body.password = bcrypt.hashSync(passGen);
 
       req.body.employee_id = "DEV" + mobile_number.substr(-4);
-      req.body.role = "Developer"
+      req.body.role = "Developer",
+        req.body.userId = adminAuthCheck._id
 
-      // await sendMailNotify("shikha1081998@gmail.com", req.body.email, "Developer Invitation", `Your account is successfully created eamil:${req.body.email} and Password: ${req.body.password}`)
-      // console.log("checkMail==", checkMail)
+      // await sendMail(adminAuthCheck.email, req.body.email, "Developer Invitation", `Your account is successfully created eamil:${req.body.email} and Password: ${req.body.password}`)
 
       let finalRes = await User.create(req.body);
       response(res, SuccessCode.SUCCESS, finalRes, SuccessMessage.DEVELOPER_ADD)
@@ -64,7 +74,17 @@ module.exports = {
 
   listDeveloper: async (req, res) => {
     try {
-      let developerList = await User.find({ role: "Developer" });
+      var query = { status: { $ne: "DELETE" }, role: "Developer" };
+      if (req.body.search) {
+        query.name = new RegExp('^' + req.body.search, "i");
+      }
+      req.body.limit = parseInt(req.body.limit)
+      var options = {
+        page: req.body.page || 1,
+        limit: req.body.limit || 10,
+        sort: { createdAt: -1 }
+      };
+      let developerList = await User.paginate(query, options);
       if (developerList.length == 0) response(res, ErrorCode.NOT_FOUND, [], ErrorMessage.DATA_NOT_FOUND)
       response(res, SuccessCode.SUCCESS, developerList, SuccessMessage.DATA_FOUND)
     } catch (error) {

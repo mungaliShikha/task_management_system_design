@@ -62,3 +62,23 @@ Jan-11-2023 17:49:44 [info] http://localhost:5000/api/admin/listDeveloper - POST
 Jan-11-2023 17:49:44 [error] 404 - Requested URL http://localhost:5000/api/admin/listDeveloper not found! 
 Jan-11-2023 17:50:38 [info] http://localhost:5000/api/admin/listDeveloper - GET METHOD  
 Jan-11-2023 17:54:25 [info] http://localhost:5000/api/admin/viewDeveloper?_id=63bea82d12da7aa426e24656 - GET METHOD  
+Jan-12-2023 09:36:18 [info] http://localhost:5000/api/admin/listDeveloper - GET METHOD  
+Jan-12-2023 09:47:13 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-12-2023 09:55:12 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-12-2023 09:55:36 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-12-2023 10:00:09 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
+Jan-12-2023 10:01:26 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
+Jan-12-2023 10:02:53 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
+Jan-12-2023 10:03:43 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
+Jan-12-2023 10:04:23 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
+Jan-12-2023 10:06:58 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
+Jan-12-2023 10:13:09 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
+Jan-12-2023 10:15:40 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
+Jan-12-2023 10:17:54 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
+Jan-12-2023 10:19:55 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
+Jan-12-2023 10:22:01 [info] http://localhost:5000/api/admin/listDeveloper - GET METHOD  
+Jan-12-2023 10:26:27 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
+Jan-12-2023 10:27:57 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
+Jan-12-2023 11:06:38 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
+Jan-12-2023 11:08:17 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
+Jan-12-2023 11:09:13 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  

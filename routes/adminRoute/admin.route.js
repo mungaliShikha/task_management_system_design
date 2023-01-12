@@ -10,7 +10,7 @@ const { route } = require("../userRoute/user.route");
  *   post:
  *     tags:
  *       - ADMIN
- *     description: Check for Social existence and give the access Token 
+ *     description: Admin Login
  *     produces:
  *       - application/json
  *     parameters:
@@ -41,10 +41,14 @@ router.post('/login', adminController.login);
  *   post:
  *     tags:
  *       - ADMIN_DEVELOPER_DASHBOARD
- *     description: Check for Social existence and give the access Token 
+ *     description: Developer Added
  *     produces:
  *       - application/json
  *     parameters:
+ *       - name: token
+ *         description: token
+ *         in: header
+ *         required: true
  *       - name: email
  *         description: email
  *         in: formData
@@ -63,7 +67,7 @@ router.post('/login', adminController.login);
  *         required: true
  *     responses:
  *       200:
- *         description: Your login is successful.
+ *         description: Developer added successfully.
  *       404:
  *         description: Requested data not found.
  *       402:
@@ -112,7 +116,7 @@ router.get('/listDeveloper', adminController.listDeveloper)
  *         required: true
  *     responses:
  *       200:
- *         description: Developer list successfully.
+ *         description: Developer view successfully.
  *       404:
  *         description: Requested data not found.
  *       402:

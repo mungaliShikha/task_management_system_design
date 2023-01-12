@@ -1,4 +1,5 @@
 const nodemailer = require("nodemailer");
+const config = require("../../config/config.json")
 
 module.exports = async ({ from, to, subject, text, html }) => {
     let transporter = nodemailer.createTransport({
@@ -7,7 +8,7 @@ module.exports = async ({ from, to, subject, text, html }) => {
         secure: false,
         auth: {
             user: 'shikha1081998@gmail.com',
-            pass: 'shikha1234567890'
+            pass: 'vwlxuktqpfwzyzqp'
         }
     })
 
@@ -20,21 +21,28 @@ module.exports = async ({ from, to, subject, text, html }) => {
         html: html
     })
 },
-    module.exports.sendMailNotify = async ({ email, subject, body }) => {
+    module.exports.sendMailNotify = async ({ email, subject, text }) => {
         return new Promise((resolve, reject) => {
             var transporter = nodemailer.createTransport({
+                host: "smtp.office365.com",
+                port: 587,
+                secure: false,
                 service: 'gmail',
                 auth: {
-                    "user": "shikha1081998@gmail.com",
-                    "pass": "shikha1234567890"
+                    user: global.gConfig.nodemailer.user,
+                    pass: global.gConfig.nodemailer.pass
                 },
-            }); 
+                tls: {
+                  rejectUnauthorized: false,
+                },
+              });
             var mailOption = {
-                from: 'shikha1081998@gmail.com',
+                from: "shikha1081998@gmail.com",
                 to: email,
                 subject: subject,
-                text: body
+                text: text
             }
+            console.log("=mailOption",mailOption)
             transporter.sendMail(mailOption, (error, result) => {
                 if (error) {
                     reject(error)
