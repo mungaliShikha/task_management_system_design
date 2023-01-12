@@ -64,7 +64,7 @@ module.exports = {
       req.body.employee_id = "DEV" + mobile_number.substr(-4);
       req.body.role = "Developer",
         req.body.userId = adminAuthCheck._id
-
+     
       let subject = "Developer Invitation"
       let message =`Your account is successfully created as A Developer on Our plateform <br> Kindly Use this Credentials for Login <br> email:${req.body.email} <br> Password: ${passGen}`
 
