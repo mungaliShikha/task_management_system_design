@@ -77,3 +77,26 @@ Jan-12-2023 09:30:55 [error] 404 - Requested URL http://localhost:5000/ not foun
 Jan-12-2023 09:36:36 [error] 404 - Requested URL http://localhost:5000/requested.html not found! 
 Jan-12-2023 10:12:17 [error] 404 - Provided email is not registered. 
 Jan-12-2023 10:13:20 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword/63bd2142a8387822a8122eaa/766900f36c0d201c27465a7f3b43db9fc23a8a46486efdb34a74033147b99cd0 not found! 
+Jan-12-2023 14:53:28 [error] 404 - Provided email is not registered. 
+Jan-12-2023 14:53:56 [error] 404 - Provided email is not registered. 
+Jan-12-2023 14:54:04 [error] 404 - Provided email is not registered. 
+Jan-12-2023 14:54:12 [error] 404 - Provided email is not registered. 
+Jan-12-2023 15:04:04 [error] 400 - Unexpected token e in JSON at position 188 
+Jan-12-2023 15:07:32 [error] 404 - Requested URL http://localhost:5000/api/user/addDeveloper not found! 
+Jan-12-2023 15:07:51 [error] 500 - to is not defined 
+Jan-12-2023 15:09:38 [error] 500 - to is not defined 
+Jan-12-2023 15:13:46 [error] 500 - mailOption is not defined 
+Jan-12-2023 15:17:02 [error] 404 - Requested URL http://localhost:5000/api/user/loginDeveloper not found! 
+Jan-12-2023 15:19:54 [error] 404 - Requested URL http://localhost:5000/api/user/viewDeveloper not found! 
+Jan-12-2023 15:41:14 [error] 500 - Cannot read properties of null (reading 'role') 
+Jan-12-2023 15:43:25 [error] 404 - Requested URL http://localhost:5000/api/admin/createManager/63bfd1e810c6d75c1008da21 not found! 
+Jan-12-2023 15:49:35 [error] 409 - Already exists. 
+Jan-12-2023 15:51:55 [error] 409 - Already exists. 
+Jan-12-2023 15:52:28 [error] 500 - E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: "9718272919" } 
+Jan-12-2023 15:52:46 [error] 500 - E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: "9718272919" } 
+Jan-12-2023 15:53:38 [error] 500 - E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: "9718272919" } 
+Jan-12-2023 15:55:33 [error] 409 - Already exists. 
+Jan-12-2023 16:06:33 [error] 404 - This user does not exist. 
+Jan-12-2023 16:10:58 [error] 404 - This email already exists. 
+Jan-12-2023 16:12:01 [error] 500 - E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: "687987987987" } 
+Jan-12-2023 16:12:38 [error] 409 - Already exists. 
