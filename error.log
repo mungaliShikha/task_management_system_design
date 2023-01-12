@@ -9,3 +9,25 @@ Jan-10-2023 17:29:51 [error] statusCode - Requested URL http://localhost:5000/ap
 Jan-10-2023 17:46:12 [error] 500 - loggedInUse is not defined 
 Jan-10-2023 18:00:27 [error] 500 - tokn is not defined 
 Jan-10-2023 18:00:29 [error] 500 - tokn is not defined 
+Jan-11-2023 13:03:36 [error] 404 - Requested URL http://localhost:5000/createManager not found! 
+Jan-11-2023 13:06:30 [error] 404 - Requested URL http://localhost:5000/createManager not found! 
+Jan-11-2023 13:10:29 [error] 500 - users validation failed: password: Path `password` is required. 
+Jan-11-2023 13:50:20 [error] 500 - E11000 duplicate key error collection: task_management.users index: email_1 dup key: { email: "nitin.s@antino.io" } 
+Jan-11-2023 13:50:49 [error] 500 - E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: null } 
+Jan-11-2023 13:51:09 [error] 500 - E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: null } 
+Jan-11-2023 13:51:27 [error] 500 - E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: null } 
+Jan-11-2023 14:39:31 [error] 500 - E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: null } 
+Jan-11-2023 14:47:40 [error] 500 - E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: null } 
+Jan-11-2023 14:47:56 [error] 500 - E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: null } 
+Jan-11-2023 16:23:57 [error] 500 - AppError is not defined 
+Jan-11-2023 16:24:17 [error] 500 - users validation failed: role: `Dev` is not a valid enum value for path `role`. 
+Jan-11-2023 16:24:58 [error] 500 - E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: null } 
+Jan-11-2023 16:27:07 [error] 500 - Developer is not defined 
+Jan-11-2023 16:39:57 [error] 500 - AppError is not defined 
+Jan-11-2023 16:40:24 [error] 409 - Already exists. 
+Jan-11-2023 16:40:45 [error] 500 - Developer is not defined 
+Jan-11-2023 17:52:43 [error] 404 - Provided email is not registered. 
+Jan-11-2023 18:17:04 [error] 404 - Provided email is not registered. 
+Jan-11-2023 18:17:35 [error] 404 - Provided email is not registered. 
+Jan-11-2023 18:17:58 [error] 404 - Provided email is not registered. 
+Jan-11-2023 18:18:06 [error] 404 - Provided email is not registered. 
