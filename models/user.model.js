@@ -47,7 +47,6 @@ var userModel = new schema(
   },
   { timestamps: true }
 );
-
 userModel.plugin(mongoosePaginate);
 userModel.plugin(mongooseAggregatePaginate);
 module.exports = mongoose.model("users", userModel);

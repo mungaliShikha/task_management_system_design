@@ -20,88 +20,192 @@ Jan-10-2023 18:00:27 [error] 500 - tokn is not defined
 Jan-10-2023 18:00:29 [info] http://localhost:3000/api/admin/login - POST METHOD  
 Jan-10-2023 18:00:29 [error] 500 - tokn is not defined 
 Jan-10-2023 18:00:45 [info] http://localhost:3000/api/admin/login - POST METHOD  
-Jan-11-2023 15:36:29 [error] 404 - Requested URL http://localhost:5000/api-doc/ not found! 
-Jan-11-2023 15:36:29 [error] 404 - Requested URL http://localhost:5000/favicon.ico not found! 
-Jan-11-2023 15:37:44 [error] 404 - Requested URL http://localhost:5000/api-doc/ not found! 
-Jan-11-2023 15:37:45 [error] 404 - Requested URL http://localhost:5000/api-doc/ not found! 
-Jan-11-2023 15:43:01 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-11-2023 16:16:10 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-11-2023 16:16:10 [error] 500 - bcrypt is not defined 
-Jan-11-2023 16:19:34 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-11-2023 16:22:12 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-11-2023 16:22:50 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-11-2023 16:24:05 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-11-2023 16:24:39 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-11-2023 16:30:16 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-11-2023 16:30:57 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-11-2023 16:31:43 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-11-2023 16:35:27 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-11-2023 16:35:47 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-11-2023 16:40:20 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-11-2023 16:45:00 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-11-2023 16:45:49 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-11-2023 16:47:43 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-11-2023 17:06:32 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-11-2023 17:07:43 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-11-2023 17:09:47 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-11-2023 17:11:41 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-11-2023 17:12:49 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-11-2023 17:19:56 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-11-2023 17:28:08 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-11-2023 17:34:25 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-11-2023 17:35:19 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-11-2023 17:40:31 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-11-2023 17:40:56 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-11-2023 17:41:58 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-11-2023 17:42:19 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-11-2023 17:43:33 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-11-2023 17:43:46 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-11-2023 17:44:17 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-11-2023 17:44:37 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-11-2023 17:49:44 [info] http://localhost:5000/api/admin/listDeveloper - POST METHOD  
-Jan-11-2023 17:49:44 [error] 404 - Requested URL http://localhost:5000/api/admin/listDeveloper not found! 
-Jan-11-2023 17:50:38 [info] http://localhost:5000/api/admin/listDeveloper - GET METHOD  
-Jan-11-2023 17:54:25 [info] http://localhost:5000/api/admin/viewDeveloper?_id=63bea82d12da7aa426e24656 - GET METHOD  
-Jan-12-2023 09:36:18 [info] http://localhost:5000/api/admin/listDeveloper - GET METHOD  
-Jan-12-2023 09:47:13 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-12-2023 09:55:12 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-12-2023 09:55:36 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-12-2023 10:00:09 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 10:01:26 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 10:02:53 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 10:03:43 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 10:04:23 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 10:06:58 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 10:13:09 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 10:15:40 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 10:17:54 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 10:19:55 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 10:22:01 [info] http://localhost:5000/api/admin/listDeveloper - GET METHOD  
-Jan-12-2023 10:26:27 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 10:27:57 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 11:06:38 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 11:08:17 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 11:09:13 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 11:43:29 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 11:44:55 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 11:50:49 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 11:55:11 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 11:56:00 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 11:56:24 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 11:57:22 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 11:57:52 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 11:59:38 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 12:01:13 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 12:04:11 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 12:04:31 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 12:26:06 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 12:27:34 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 12:38:04 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 12:45:48 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 12:48:30 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 12:49:51 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 12:51:13 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 12:59:08 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 13:01:25 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 13:03:45 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 13:04:30 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
+Jan-11-2023 00:18:26 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 00:18:26 [error] 500 - Assignment to constant variable. 
+Jan-11-2023 00:18:58 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 00:19:23 [error] 500 - sendMail is not a function 
+Jan-11-2023 00:20:24 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 00:21:49 [error] 500 - sendMail is not a function 
+Jan-11-2023 00:23:39 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 00:29:45 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 00:30:28 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 00:34:56 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 00:37:06 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 00:38:36 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 00:39:15 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 00:45:46 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 00:52:14 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 09:58:06 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 09:58:22 [error] 500 - Assignment to constant variable. 
+Jan-11-2023 09:59:41 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 10:01:46 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 10:02:16 [error] 500 - Assignment to constant variable. 
+Jan-11-2023 10:03:45 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 10:04:58 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 10:06:38 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 10:07:48 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 10:09:27 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 10:10:29 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 10:13:08 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 10:41:46 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 10:43:52 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 10:56:56 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 10:58:26 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 11:02:20 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 11:02:20 [error] 404 - Provided email is not registered. 
+Jan-11-2023 11:24:43 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 11:24:43 [error] 404 - Provided email is not registered. 
+Jan-11-2023 11:24:48 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 11:24:48 [error] 500 - Assignment to constant variable. 
+Jan-11-2023 11:24:50 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 11:26:58 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/f670d1dcb7046d5ed44551ea88572c9ea345b515304b50934170a97852007981 - POST METHOD  
+Jan-11-2023 11:26:58 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword/63bd2142a8387822a8122eaa/f670d1dcb7046d5ed44551ea88572c9ea345b515304b50934170a97852007981 not found! 
+Jan-11-2023 11:27:26 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/f670d1dcb7046d5ed44551ea88572c9ea345b515304b50934170a97852007981 - POST METHOD  
+Jan-11-2023 11:27:26 [error] 500 - token.delete is not a function 
+Jan-11-2023 11:27:30 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/f670d1dcb7046d5ed44551ea88572c9ea345b515304b50934170a97852007981 - POST METHOD  
+Jan-11-2023 11:27:30 [error] 500 - token.delete is not a function 
+Jan-11-2023 11:27:54 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/f670d1dcb7046d5ed44551ea88572c9ea345b515304b50934170a97852007981 - POST METHOD  
+Jan-11-2023 11:29:20 [error] 404 - Requested URL http://localhost:5000/password-reset/63bd2142a8387822a8122eaa/f670d1dcb7046d5ed44551ea88572c9ea345b515304b50934170a97852007981 not found! 
+Jan-11-2023 11:29:20 [error] 404 - Requested URL http://localhost:5000/favicon.ico not found! 
+Jan-11-2023 11:29:22 [error] 404 - Requested URL http://localhost:5000/password-reset/63bd2142a8387822a8122eaa/f670d1dcb7046d5ed44551ea88572c9ea345b515304b50934170a97852007981 not found! 
+Jan-11-2023 11:29:24 [error] 404 - Requested URL http://localhost:5000/password-reset/63bd2142a8387822a8122eaa/f670d1dcb7046d5ed44551ea88572c9ea345b515304b50934170a97852007981 not found! 
+Jan-11-2023 11:29:29 [error] 404 - Requested URL http://localhost:5000/password-reset/63bd2142a8387822a8122eaa/f670d1dcb7046d5ed44551ea88572c9ea345b515304b50934170a97852007981 not found! 
+Jan-11-2023 11:32:10 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/f670d1dcb7046d5ed44551ea88572c9ea345b515304b50934170a97852007981 - POST METHOD  
+Jan-11-2023 11:32:10 [error] 500 - Cannot read properties of null (reading 'delete') 
+Jan-11-2023 11:32:43 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 11:32:43 [error] 500 - Assignment to constant variable. 
+Jan-11-2023 11:34:26 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 11:34:41 [info] http://localhost:3000/api//resetPassword/63bd2142a8387822a8122eaa/bd8f1d460ff18089c42b69c81a95987e7f88749a5bbc9a4567d7f24a30883141 - GET METHOD  
+Jan-11-2023 11:34:41 [error] 404 - Requested URL http://localhost:5000/api//resetPassword/63bd2142a8387822a8122eaa/bd8f1d460ff18089c42b69c81a95987e7f88749a5bbc9a4567d7f24a30883141 not found! 
+Jan-11-2023 11:35:30 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 11:35:44 [info] http://localhost:3000/api//admin/resetPassword/63bd2142a8387822a8122eaa/bd8f1d460ff18089c42b69c81a95987e7f88749a5bbc9a4567d7f24a30883141 - GET METHOD  
+Jan-11-2023 11:35:44 [error] 404 - Requested URL http://localhost:5000/api//admin/resetPassword/63bd2142a8387822a8122eaa/bd8f1d460ff18089c42b69c81a95987e7f88749a5bbc9a4567d7f24a30883141 not found! 
+Jan-11-2023 11:36:05 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 11:36:43 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/bd8f1d460ff18089c42b69c81a95987e7f88749a5bbc9a4567d7f24a30883141 - GET METHOD  
+Jan-11-2023 11:36:43 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword/63bd2142a8387822a8122eaa/bd8f1d460ff18089c42b69c81a95987e7f88749a5bbc9a4567d7f24a30883141 not found! 
+Jan-11-2023 11:37:38 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/bd8f1d460ff18089c42b69c81a95987e7f88749a5bbc9a4567d7f24a30883141 - POST METHOD  
+Jan-11-2023 11:38:22 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/bd8f1d460ff18089c42b69c81a95987e7f88749a5bbc9a4567d7f24a30883141 - GET METHOD  
+Jan-11-2023 11:38:22 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword/63bd2142a8387822a8122eaa/bd8f1d460ff18089c42b69c81a95987e7f88749a5bbc9a4567d7f24a30883141 not found! 
+Jan-11-2023 11:38:39 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/bd8f1d460ff18089c42b69c81a95987e7f88749a5bbc9a4567d7f24a30883141 - GET METHOD  
+Jan-11-2023 11:38:39 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword/63bd2142a8387822a8122eaa/bd8f1d460ff18089c42b69c81a95987e7f88749a5bbc9a4567d7f24a30883141 not found! 
+Jan-11-2023 11:57:58 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/bd8f1d460ff18089c42b69c81a95987e7f88749a5bbc9a4567d7f24a30883141 - POST METHOD  
+Jan-11-2023 11:57:59 [error] 500 - Cannot read properties of null (reading 'delete') 
+Jan-11-2023 11:58:05 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 11:58:05 [error] 500 - Assignment to constant variable. 
+Jan-11-2023 11:58:08 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 12:00:00 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/41c8faf0e8234b2980eff5242b48876639f97d6a59e5ecf40d8d96ec86abfda3 - POST METHOD  
+Jan-11-2023 12:03:20 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 12:03:20 [error] 500 - Assignment to constant variable. 
+Jan-11-2023 12:04:35 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 12:04:36 [error] 500 - Assignment to constant variable. 
+Jan-11-2023 12:05:18 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 12:05:21 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 12:05:23 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 12:07:17 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 12:07:31 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/efd96e8beda74aaedac0deadb1c45c7344530eaba79136bbed8f22e11964a750 - GET METHOD  
+Jan-11-2023 12:07:31 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword/63bd2142a8387822a8122eaa/efd96e8beda74aaedac0deadb1c45c7344530eaba79136bbed8f22e11964a750 not found! 
+Jan-11-2023 12:08:00 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/efd96e8beda74aaedac0deadb1c45c7344530eaba79136bbed8f22e11964a750 - POST METHOD  
+Jan-11-2023 12:09:54 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/efd96e8beda74aaedac0deadb1c45c7344530eaba79136bbed8f22e11964a750 - POST METHOD  
+Jan-11-2023 12:09:54 [error] 400 - Please provide token. 
+Jan-11-2023 12:10:07 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 12:10:32 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/58635b8a637e31b32a0177c8acc572a9641d6dbf53c280b864dd248d6d235c86 - POST METHOD  
+Jan-11-2023 12:10:33 [error] 500 - users validation failed: password: Cast to string failed for value "Promise {
+  <pending>,
+  [Symbol(async_id_symbol)]: 718,
+  [Symbol(trigger_async_id_symbol)]: 702
+}" (type Promise) at path "password" 
+Jan-11-2023 12:12:59 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 12:13:11 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/58635b8a637e31b32a0177c8acc572a9641d6dbf53c280b864dd248d6d235c86 - GET METHOD  
+Jan-11-2023 12:13:11 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword/63bd2142a8387822a8122eaa/58635b8a637e31b32a0177c8acc572a9641d6dbf53c280b864dd248d6d235c86 not found! 
+Jan-11-2023 12:13:35 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/58635b8a637e31b32a0177c8acc572a9641d6dbf53c280b864dd248d6d235c86 - POST METHOD  
+Jan-11-2023 12:14:14 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/58635b8a637e31b32a0177c8acc572a9641d6dbf53c280b864dd248d6d235c86 - POST METHOD  
+Jan-11-2023 12:14:15 [error] 400 - Please provide token. 
+Jan-11-2023 12:16:48 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/58635b8a637e31b32a0177c8acc572a9641d6dbf53c280b864dd248d6d235c86 - POST METHOD  
+Jan-11-2023 12:16:48 [error] 400 - Verifcation link has expired 
+Jan-11-2023 16:07:20 [info] http://localhost:3000/api/admin/login - POST METHOD  
+Jan-11-2023 16:09:05 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-11-2023 16:09:57 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/3a4b0fd831ed0f203624ee96e122e9b949f72a7545eb065bffd0f3a8b5d54679 - POST METHOD  
+Jan-11-2023 16:10:18 [info] http://localhost:3000/api/admin/login - POST METHOD  
+Jan-11-2023 16:11:52 [info] http://localhost:3000/api/admin/login - POST METHOD  
+Jan-11-2023 16:13:31 [info] http://localhost:3000/api/admin/login - POST METHOD  
+Jan-11-2023 16:19:07 [info] http://localhost:3000/api/admin/login - POST METHOD  
+Jan-11-2023 16:19:18 [error] 404 - Provided email is not registered. 
+Jan-11-2023 16:33:02 [info] http://localhost:3000/api/admin/getAdminDetails/63bd2142a8387822a8122eaa - GET METHOD  
+Jan-11-2023 17:21:30 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:21:30 [error] 500 - Cannot read properties of undefined (reading 'location') 
+Jan-11-2023 17:23:07 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:23:07 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 17:23:47 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:23:47 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 17:25:11 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:25:13 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 17:27:03 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:27:03 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 17:29:33 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:29:33 [error] 500 - Unexpected field 
+Jan-11-2023 17:31:14 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:31:14 [error] 500 - Unexpected field 
+Jan-11-2023 17:34:02 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:34:02 [error] 500 - this.client.send is not a function 
+Jan-11-2023 17:39:35 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:39:35 [error] 500 - this.client.send is not a function 
+Jan-11-2023 17:40:07 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:40:07 [error] 500 - this.client.send is not a function 
+Jan-11-2023 17:40:09 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:40:09 [error] 500 - this.client.send is not a function 
+Jan-11-2023 17:41:13 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:41:13 [error] 500 - Assignment to constant variable. 
+Jan-11-2023 17:42:12 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:42:12 [error] 500 - userModel is not defined 
+Jan-11-2023 17:42:55 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:46:36 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:46:36 [error] 500 - this.client.send is not a function 
+Jan-11-2023 17:47:04 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - POST METHOD  
+Jan-11-2023 17:47:04 [error] 500 - this.client.send is not a function 
+Jan-11-2023 17:47:05 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - POST METHOD  
+Jan-11-2023 17:47:05 [error] 500 - this.client.send is not a function 
+Jan-11-2023 17:47:26 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:47:26 [error] 500 - this.client.send is not a function 
+Jan-11-2023 17:56:13 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:57:45 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 17:58:42 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 18:00:10 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 18:00:10 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 18:00:29 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 18:00:29 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 18:00:30 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 18:00:30 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 18:00:31 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 18:00:31 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 18:00:32 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 18:00:32 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 18:00:52 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 18:00:52 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 18:02:09 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 18:03:07 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 18:03:07 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 18:03:12 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 18:03:12 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-11-2023 18:04:50 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 18:05:57 [error] 500 - Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: null } 
+Jan-11-2023 18:09:40 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 18:10:08 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 18:11:46 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-11-2023 18:13:59 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-12-2023 09:30:55 [error] 404 - Requested URL http://localhost:5000/ not found! 
+Jan-12-2023 09:34:25 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-12-2023 09:36:36 [error] 404 - Requested URL http://localhost:5000/requested.html not found! 
+Jan-12-2023 09:37:45 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-12-2023 09:59:16 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-12-2023 10:06:30 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-12-2023 10:12:17 [info] http://localhost:3000/api/admin/login - POST METHOD  
+Jan-12-2023 10:12:17 [error] 404 - Provided email is not registered. 
+Jan-12-2023 10:12:43 [info] http://localhost:3000/api/admin/login - POST METHOD  
+Jan-12-2023 10:12:56 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-12-2023 10:13:20 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/766900f36c0d201c27465a7f3b43db9fc23a8a46486efdb34a74033147b99cd0 - GET METHOD  
+Jan-12-2023 10:13:20 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword/63bd2142a8387822a8122eaa/766900f36c0d201c27465a7f3b43db9fc23a8a46486efdb34a74033147b99cd0 not found! 
+Jan-12-2023 10:13:43 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/766900f36c0d201c27465a7f3b43db9fc23a8a46486efdb34a74033147b99cd0 - POST METHOD  
+Jan-12-2023 10:14:08 [info] http://localhost:3000/api/admin/getAdminDetails/63bd2142a8387822a8122eaa - GET METHOD  
+Jan-12-2023 10:14:44 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-12-2023 11:32:25 [info] http://localhost:3000/api/user/listDeveloper - GET METHOD  
+Jan-12-2023 11:58:49 [info] http://localhost:3000/api/user/viewDeveloper?_id=63bea075262aac54ae4cf0f1 - GET METHOD  

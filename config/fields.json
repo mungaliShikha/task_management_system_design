@@ -1,0 +1,16 @@
+{
+  "env": {
+    "user_name": "task_management_project",
+    "database": "task_management",
+    "password": "NYvDITjmrPvnIMzm",
+    "jwtSecretKey": "asd7abjsd7",
+    "db_URL": "http://localhost:5000/api/",
+    "nodemailer_mail": "shikha1081998@gmail.com",
+    "nodemailer_password": "vwlxuktqpfwzyzqp",
+    "nodemailer_service": "gmail",
+    "accessKeyId": "AKIAYOVLRXWEW4VAVIP7",
+    "secretAccessKey": "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",
+    "region": "us-west-2",
+    "bucket": "blogapi"
+  }
+}

@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const adminController = require("../../controllers/admin.controller");
 const auth = require('../../middleware/auth');
-const { route } = require("../userRoute/user.route");
+const { upload } = require("../../services/aws/aws");
 
 
 /**
@@ -33,7 +33,6 @@ const { route } = require("../userRoute/user.route");
  *         description: Internal Server Error
  */
 router.post('/login', adminController.login);
-
 
 /**
  * @swagger
@@ -125,6 +124,11 @@ router.get('/listDeveloper', adminController.listDeveloper)
  *         description: Internal Server Error
  */
 router.get('/viewDeveloper', adminController.viewDeveloper)
+
+router.post('/forgetPassword',adminController.forgetPassword)
+router.post('/resetPassword/:userId/:token',adminController.resetPassword)
+router.put('/updateAdmin/:userId',upload.single("profile_image"),adminController.updateAdmin)
+router.get('/getAdminDetails/:userId',adminController.getAdmin)
 
 
 

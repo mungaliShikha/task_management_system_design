@@ -1,5 +1,6 @@
 
 module.exports.ErrorMessage = Object.freeze({
+    LINK_EXPIRED:'Verifcation link has expired',
     INVALID_TOKEN: 'Unauthorized user.',
     COUNTRY_EXIST: 'Country name already exist',
     INTERNAL_ERROR: 'Internal Server Error.',
@@ -49,7 +50,8 @@ module.exports.ErrorMessage = Object.freeze({
     UPDATE_SUCCESS:"Data Update Successfully",
     SUBADMIN_ALREADY_EXIST:"This address already added as sub-admin",
     USER_ALREADY_EXIST:"This address already added as user",
-    ADMIN_ALREADY_EXIST:"This address already added as Admin"
+    ADMIN_ALREADY_EXIST:"This address already added as Admin",
+    DATA_NOT_FOUND:"Developer data not found"
 
 });
 
@@ -60,6 +62,8 @@ module.exports.ErrorMessage = Object.freeze({
 
 module.exports.SuccessMessage = Object.freeze({
     SIGNUP_SUCCESSFULLY: "Thanks, You have successfully signed up.",
+    DATA_FOUND: "Requested data found.",
+    DEVELOPER_ADD:"Developer added successfully",
     LOGIN_SUCCESS: 'Your login is successful.',
     CUSTOMER_VERIFY: 'Customer verified successfully',
     FORGET_SUCCESS: 'A password link has been sent to your registered ID.',
@@ -68,7 +72,7 @@ module.exports.SuccessMessage = Object.freeze({
     USER_LIST_FETCH: 'Successfully fetched user list.',
     AUTHORIZATION: 'This User is Authorized.',
     ACCOUNT_CREATION: 'Your account has been created successfully.',
-    EMAIL_SEND: "Otp has been sent to your registered Email successfully.",
+    EMAIL_SEND: "Link has been sent to your registered Email successfully.",
     OTP_SEND: 'Otp has been sent to your registered mobile number.',
     VERIFY_OTP: 'OTP verified successfully.',
     PIN_SET: "Your Pin has been set successfully.",
