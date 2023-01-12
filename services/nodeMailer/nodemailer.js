@@ -2,10 +2,10 @@ const nodemailer = require("nodemailer");
 module.exports.sendMail = async (from, to, text, html) => {
   try {
     var transporter = nodemailer.createTransport({
-      service: "gmail",
+      service: global.gFields.nodemailer_service,
       auth: {
-        user: "shikha1081998@gmail.com",
-        pass: "vwlxuktqpfwzyzqp",
+        user: global.gFields.nodemailer_mail,
+        pass: global.gFields.nodemailer_password,
       },
       tls: {
         rejectUnauthorized: false,
