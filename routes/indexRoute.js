@@ -1,9 +1,12 @@
 const router = require("express").Router();
-const user = require("./userRoute/user.route");
-const admin = require("./adminRoute/admin.route");
-const task = require("./taskRoute/task.route");
-const project = require("./projectRoute/project.route");
-const comment = require("./commentRoute/comment.route");
+const admin = require("../routes/adminRoute/admin.route");
+const user = require("../routes/userRoute/user.route");
+const task = require("../routes/taskRoute/task.route");
+const project = require("../routes/projectRoute/project.route");
+const comment = require("../routes/commentRoute/comment.route");
+
+
+
 
 router.use("/user", user);
 router.use("/admin", admin);

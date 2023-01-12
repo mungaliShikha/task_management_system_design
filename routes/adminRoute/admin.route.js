@@ -3,7 +3,6 @@ const adminController = require("../../controllers/admin.controller");
 const auth = require('../../middleware/auth');
 const { upload } = require("../../services/aws/aws");
 
-
 /**
  * @swagger
  * /api/admin/login:
@@ -131,7 +130,13 @@ router.put('/updateAdmin/:userId',upload.single("profile_image"),adminController
 router.get('/getAdminDetails/:userId',adminController.getAdmin)
 
 
+/// admin can create manager
+router.post("/loginManager", adminController.loginManager);
+router.post("/createManager/:userId",upload.array("profile_image"), adminController.createManager);
+
+router.post("/addDeveloper/:userId",upload.array("profile_image"), adminController.addDeveloper);
+router.post("/loginDeveloper", adminController.loginDeveloper);
+router.get("/listDeveloper", adminController.listDeveloper);
+router.get("/viewDeveloper", adminController.viewDeveloper);
 
 module.exports = router;
-
-
