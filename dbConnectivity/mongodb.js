@@ -1,9 +1,9 @@
 const mongoose = require('mongoose')
 global.Promise = mongoose.Promise;
 const config = require('../config/config')
-const db_name = `${global.gConfig.database}`;
-const user_name = `${global.gConfig.user_name}`;
-const password = `${global.gConfig.password}`
+const db_name = `${global.gFields.database}`;
+const user_name = `${global.gFields.user_name}`;
+const password = `${global.gFields.password}`
 const DB_URL = `mongodb+srv://${user_name}:${password}@cluster0.gt6t6cy.mongodb.net/${db_name}`
 
 mongoose.set('useFindAndModify', false);

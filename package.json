@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "async": "^3.2.0",
+    "aws-sdk": "^2.1293.0",
     "axios": "^0.21.1",
     "bcrypt": "^5.1.0",
     "bcryptjs": "^2.4.3",
@@ -25,12 +26,11 @@
     "mongoose": "^5.13.3",
     "mongoose-aggregate-paginate": "^2.0.2",
     "mongoose-paginate": "^5.0.3",
-    "multer": "^1.4.2",
+    "multer": "^1.4.4",
+    "multer-s3": "^2.10.0",
     "multiparty": "^4.2.2",
-    "nodemailer": "^6.7.2",
+    "nodemailer": "^6.8.0",
     "nodemon": "^2.0.12",
-    "swagger-jsdoc": "^6.1.0",
-    "swagger-ui-express": "^4.1.6",
     "winston": "^3.8.2"
   }
 }

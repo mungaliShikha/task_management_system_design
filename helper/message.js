@@ -1,4 +1,5 @@
 module.exports.ErrorMessage = Object.freeze({
+  LINK_EXPIRED: "Verifcation link has expired",
   INVALID_TOKEN: "Unauthorized user.",
   COUNTRY_EXIST: "Country name already exist",
   INTERNAL_ERROR: "Internal Server Error.",
@@ -54,7 +55,6 @@ module.exports.ErrorMessage = Object.freeze({
 module.exports.SuccessMessage = Object.freeze({
   SIGNUP_SUCCESSFULLY: "Thanks, You have successfully signed up.",
   LOGIN_SUCCESS: "Your login is successful.",
-  CREATE_MANAGER: "MANAGER created successfully",
   CUSTOMER_VERIFY: "Customer verified successfully",
   FORGET_SUCCESS: "A password link has been sent to your registered ID.",
   RESET_SUCCESS: "Your password was successfully changed.",
@@ -62,7 +62,7 @@ module.exports.SuccessMessage = Object.freeze({
   USER_LIST_FETCH: "Successfully fetched user list.",
   AUTHORIZATION: "This User is Authorized.",
   ACCOUNT_CREATION: "Your account has been created successfully.",
-  EMAIL_SEND: "Otp has been sent to your registered Email successfully.",
+  EMAIL_SEND: "Link has been sent to your registered Email successfully.",
   OTP_SEND: "Otp has been sent to your registered mobile number.",
   VERIFY_OTP: "OTP verified successfully.",
   PIN_SET: "Your Pin has been set successfully.",
