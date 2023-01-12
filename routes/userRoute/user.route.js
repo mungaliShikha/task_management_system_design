@@ -1,13 +1,24 @@
 const router = require("express").Router();
-const userController = require("../../controllers/user.controller")
+const {loginDeveloper,addDeveloper,listDeveloper,viewDeveloper} = require("../../controllers/user.controller");
+const { loginManager, createManager } = require("../../controllers/user.controller");
+
 const auth = require('../../middleware/auth');
-var multer = require('multer');
-var upload = multer({ dest: 'uploads/' });
+const { upload } = require("../../services/aws/aws");
 
 
-// router.get('/getProfile', auth.verifyToken, userController.getProfile);
+router.post('/addDeveloper', addDeveloper)
+router.post('/loginDeveloper', loginDeveloper);
+router.get('/listDeveloper', listDeveloper)
+router.get('/viewDeveloper', viewDeveloper)
 
 
+
+
+
+router.post("/loginManager", loginManager);
+router.post("/createManager", createManager);
+
+module.exports = router;
 
 
 

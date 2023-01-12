@@ -207,3 +207,5 @@ Jan-12-2023 10:13:20 [error] 404 - Requested URL http://localhost:5000/api/admin
 Jan-12-2023 10:13:43 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/766900f36c0d201c27465a7f3b43db9fc23a8a46486efdb34a74033147b99cd0 - POST METHOD  
 Jan-12-2023 10:14:08 [info] http://localhost:3000/api/admin/getAdminDetails/63bd2142a8387822a8122eaa - GET METHOD  
 Jan-12-2023 10:14:44 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
+Jan-12-2023 11:32:25 [info] http://localhost:3000/api/user/listDeveloper - GET METHOD  
+Jan-12-2023 11:58:49 [info] http://localhost:3000/api/user/viewDeveloper?_id=63bea075262aac54ae4cf0f1 - GET METHOD  
