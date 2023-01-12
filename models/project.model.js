@@ -48,4 +48,6 @@ var project_model = new schema(
 
 userModel.plugin(mongoosePaginate);
 userModel.plugin(mongooseAggregatePaginate);
+
 module.exports = mongoose.model("project", project_model);
+

@@ -15,6 +15,10 @@ router.get('/getAdminDetails/:userId',getAdmin)
 
 
 
+
+
+
+
 module.exports = router;
 
 
