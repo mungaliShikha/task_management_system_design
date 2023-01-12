@@ -280,3 +280,4 @@ Jan-12-2023 16:17:04 [info] http://localhost:3000/api/admin/loginManager - POST 
 Jan-12-2023 16:17:49 [info] http://localhost:3000/api/admin/loginManager - POST METHOD  
 Jan-12-2023 16:18:29 [info] http://localhost:3000/api/admin/loginManager - POST METHOD  
 Jan-12-2023 16:19:59 [info] http://localhost:3000/api/admin/loginManager - POST METHOD  
+Jan-12-2023 16:38:00 [info] http://localhost:5000/api/admin/listDeveloper - GET METHOD  

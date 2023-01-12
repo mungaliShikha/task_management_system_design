@@ -1,20 +1,36 @@
 {
-  "development": {
-    "config_id": "development",
-    "node_port": 5000,
-    "json_indentation": 4
-  },
-  "staging": {
-    "config_id": "staging",
-    "node_port": 1859,
-    "json_indentation": 4,
-    "host": "localhost",
-    "database": "newProject-stag"
-  },
-  "production": {
-    "config_id": "production",
-    "node_port": 1838,
-    "database": "newProject-pro",
-    "host": "localhost"
-  }
+    "development": {
+        "config_id": "development",
+        "node_port": 5000,
+        "json_indentation": 4,
+        "user_name": "task_management_project",
+        "database": "task_management",
+        "password":"NYvDITjmrPvnIMzm",
+        "jwtSecretKey": "asd7abjsd7",
+        "swaggerURL":"localhost:5000",
+        "nodemailer":{
+            "user":"shikha1081998@gmail.com",
+            "pass":"vwlxuktqpfwzyzqp"
+        }
+      
+       
+    },
+    "staging": {
+        "config_id": "staging",
+        "node_port": 1859,
+        "json_indentation": 4,
+        "host": "localhost",
+        "database": "newProject-stag",
+        "nodemailer":{
+            "user":"shikha1081998@gmail.com",
+            "pass":"vwlxuktqpfwzyzqp"
+        }
+        
+    },
+    "production": {
+        "config_id": "production",
+        "node_port": 1838,
+        "database": "newProject-pro",
+        "host": "localhost"
+    }
 }

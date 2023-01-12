@@ -124,6 +124,7 @@ module.exports.SuccessMessage = Object.freeze({
     FAQ_ADDED:"FAQ added successfully",
     FAQ_UPDATE:"FAQ updated successfully.",
     FAQ_DELETE: "FAQ deleted successfully.",
-    CONNECT_WALLET:"Wallet Connect Successfully"
+    CONNECT_WALLET:"Wallet Connect Successfully",
+    DEVELOPER_ADD:"Developer added successfully",
 
 });

@@ -6,40 +6,44 @@ const commonFunction = require('../helper/commonFunction');
 const schema = mongoose.Schema;
 var userModel = new schema(
   {
-   first_name:{
-    type:String
-   },
-   last_name:{
-    type:String
-   },
-   email:{
-    type:String,
-    unique:true
-   },
-   password:{
-    type:String,
-    required:true
-   },
-   mobile_number:{
-    type:String,
-    unique:true
-   },
-   address:{
-    type:String
-   },
-   profile_image:{
-    type:String
-   },
-   employee_id:{
-    type:String
-   },
-   role:{
-    type:String,
-    enum:["Manager","Developer","Admin"]
-   },
-   tech_stack:{
-    type:String
-   }
+
+    userId: {
+      type: schema.Types.ObjectId,
+      ref: "users"
+
+    },
+    first_name: {
+      type: String
+    },
+    last_name: {
+      type: String
+    },
+    email: {
+      type: String,
+      unique: true
+    },
+    password: {
+      type: String,
+    },
+    mobile_number: {
+      type: String,
+    },
+    address: {
+      type: String
+    },
+    profile_image: {
+      type: String
+    },
+    employee_id: {
+      type: String
+    },
+    role: {
+      type: String,
+      enum: ["Manager", "Developer", "Admin"]
+    },
+    tech_stack: {
+      type: String
+    }
   },
   { timestamps: true }
 );
@@ -56,15 +60,15 @@ mongoose.model("users", userModel).find({ role: "Admin" }, async (err, result) =
   }
   else {
     let obj = {
-      first_name:"Shikha",
-       last_name:"Mungali",
-       email:"shikha1081998@gmail.com",
-       password:bcrypt.hashSync("test@123345"),
-       mobile_number:"9998887772",
-       role:"Admin"
+      first_name: "Shikha",
+      last_name: "Mungali",
+      email: "shikha1081998@gmail.com",
+      password: bcrypt.hashSync("test@123345"),
+      mobile_number: "9998887772",
+      role: "Admin"
     };
 
-    
+
     mongoose.model("users", userModel).create(obj, async (err1, result1) => {
       if (err1) {
         console.log("DEFAULT ADMIN  creation ERROR", err1);
