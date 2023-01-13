@@ -1,7 +1,62 @@
 const router = require("express").Router();
+const userController = require("../../controllers/user.controller")
+
+/**
+ * @swagger
+ * /api/user/developerLogin:
+ *   post:
+ *     tags:
+ *       - DEVELOPER
+ *     description: Developer Login
+ *     produces:
+ *       - application/json
+ *     parameters:
+ *       - name: email
+ *         description: email
+ *         in: formData
+ *         required: true
+ *       - name: password
+ *         description: password
+ *         in: formData
+ *         required: true
+ *     responses:
+ *       200:
+ *         description: Your login is successful.
+ *       404:
+ *         description: Requested data not found.
+ *       402:
+ *         description: Invalid login credentials.
+ *       500:
+ *         description: Internal Server Error
+ */
+router.post("/developerLogin",userController.developerLogin)
 
 
-
+/**
+ * @swagger
+ * /api/user/getDeveloperProfile:
+ *   post:
+ *     tags:
+ *       - DEVELOPER
+ *     description: Developer Login
+ *     produces:
+ *       - application/json
+ *     parameters:
+ *       - name: token
+ *         description: token
+ *         in: header
+ *         required: true
+ *     responses:
+ *       200:
+ *         description: Your profile details get successfully.
+ *       404:
+ *         description: Requested data not found.
+ *       402:
+ *         description: Invalid login credentials.
+ *       500:
+ *         description: Internal Server Error
+ */
+router.get("/getDeveloperProfile",userController.getDeveloperProfile)
 
 module.exports = router;
 

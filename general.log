@@ -281,3 +281,88 @@ Jan-12-2023 16:17:49 [info] http://localhost:3000/api/admin/loginManager - POST 
 Jan-12-2023 16:18:29 [info] http://localhost:3000/api/admin/loginManager - POST METHOD  
 Jan-12-2023 16:19:59 [info] http://localhost:3000/api/admin/loginManager - POST METHOD  
 Jan-12-2023 16:38:00 [info] http://localhost:5000/api/admin/listDeveloper - GET METHOD  
+Jan-13-2023 10:43:24 [info] http://localhost:5000/api/v1/admin/login - POST METHOD  
+Jan-13-2023 10:43:24 [error] 404 - Requested URL http://localhost:5000/api/v1/admin/login not found! 
+Jan-13-2023 10:43:56 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-13-2023 10:43:57 [error] 404 - Provided email is not registered. 
+Jan-13-2023 10:45:04 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-13-2023 10:45:14 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-13-2023 10:54:40 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-13-2023 15:42:26 [error] 404 - Requested URL http://localhost:5000//api/admin/addDeveloper not found! 
+Jan-13-2023 15:43:18 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
+Jan-13-2023 15:43:18 [error] 404 - This user does not exist. 
+Jan-13-2023 15:47:48 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-13-2023 15:50:00 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
+Jan-13-2023 15:50:00 [error] 404 - This user does not exist. 
+Jan-13-2023 15:50:56 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
+Jan-13-2023 15:50:56 [error] 404 - This user does not exist. 
+Jan-13-2023 15:52:47 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
+Jan-13-2023 15:55:11 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
+Jan-13-2023 15:55:40 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
+Jan-13-2023 15:57:03 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
+Jan-13-2023 15:57:56 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
+Jan-13-2023 15:59:27 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
+Jan-13-2023 16:01:08 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
+Jan-13-2023 16:08:40 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-13-2023 16:08:54 [info] http://localhost:5000/api/admin/addDeveloper?userId=63c12974360a9538b5758e1e - POST METHOD  
+Jan-13-2023 16:08:54 [error] 404 - This user does not exist. 
+Jan-13-2023 16:10:10 [info] http://localhost:5000/api/admin/addDeveloper?userId=63c12974360a9538b5758e1e - POST METHOD  
+Jan-13-2023 16:10:10 [error] 404 - This user does not exist. 
+Jan-13-2023 16:10:28 [info] http://localhost:5000/api/admin/addDeveloper?userId=63c12974360a9538b5758e1e - POST METHOD  
+Jan-13-2023 16:10:28 [error] 500 - Cannot read properties of null (reading 'email') 
+Jan-13-2023 16:10:54 [info] http://localhost:5000/api/admin/addDeveloper?userId=63c12974360a9538b5758e1e - POST METHOD  
+Jan-13-2023 16:10:54 [error] 500 - Cannot read properties of null (reading '_id') 
+Jan-13-2023 16:11:10 [info] http://localhost:5000/api/admin/addDeveloper?userId=63c12974360a9538b5758e1e - POST METHOD  
+Jan-13-2023 16:12:33 [info] http://localhost:5000/api/admin/addDeveloper?userId=63c12974360a9538b5758e1e - POST METHOD  
+Jan-13-2023 16:12:33 [error] 404 - This email already exists. 
+Jan-13-2023 16:12:49 [info] http://localhost:5000/api/admin/addDeveloper?userId=63c12974360a9538b5758e1e - POST METHOD  
+Jan-13-2023 16:12:50 [error] 500 - E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: "9956386576" } 
+Jan-13-2023 16:12:59 [info] http://localhost:5000/api/admin/addDeveloper?userId=63c12974360a9538b5758e1e - POST METHOD  
+Jan-13-2023 16:34:41 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
+Jan-13-2023 16:34:42 [error] 500 - Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property 'parser' -> object with constructor 'HTTPParser'
+    --- property 'socket' closes the circle 
+Jan-13-2023 16:36:19 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
+Jan-13-2023 16:36:36 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
+Jan-13-2023 16:38:25 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
+Jan-13-2023 16:40:37 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
+Jan-13-2023 16:41:05 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
+Jan-13-2023 16:41:57 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
+Jan-13-2023 16:42:31 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
+Jan-13-2023 16:43:38 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
+Jan-13-2023 16:44:21 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
+Jan-13-2023 16:45:36 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
+Jan-13-2023 16:48:50 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
+Jan-13-2023 16:52:09 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-13-2023 16:52:09 [error] 404 - Requested URL http://localhost:5000/api/user/login not found! 
+Jan-13-2023 16:52:25 [error] 404 - Requested URL http://localhost:5000/admin/user/login not found! 
+Jan-13-2023 16:52:40 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-13-2023 16:52:40 [error] 500 - Cannot read properties of null (reading 'password') 
+Jan-13-2023 16:53:45 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-13-2023 16:53:45 [error] 500 - Cannot read properties of null (reading 'password') 
+Jan-13-2023 16:54:13 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-13-2023 16:54:13 [error] 500 - Cannot read properties of null (reading 'password') 
+Jan-13-2023 16:54:35 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-13-2023 16:54:35 [error] 404 - Provided email is not registered. 
+Jan-13-2023 16:54:37 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-13-2023 16:54:37 [error] 404 - Provided email is not registered. 
+Jan-13-2023 16:54:39 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-13-2023 16:54:39 [error] 404 - Provided email is not registered. 
+Jan-13-2023 16:55:10 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-13-2023 16:55:10 [error] 404 - Provided email is not registered. 
+Jan-13-2023 16:56:18 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-13-2023 16:56:18 [error] 404 - Provided email is not registered. 
+Jan-13-2023 16:56:57 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
+Jan-13-2023 16:58:23 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
+Jan-13-2023 16:59:10 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
+Jan-13-2023 17:00:35 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
+Jan-13-2023 17:01:21 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
+Jan-13-2023 17:03:48 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
+Jan-13-2023 17:04:33 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
+Jan-13-2023 17:06:03 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
+Jan-13-2023 17:06:39 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
+Jan-13-2023 17:07:53 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
+Jan-13-2023 17:08:39 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
+Jan-13-2023 17:08:55 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
+Jan-13-2023 17:15:25 [info] http://localhost:5000/api/user/getDeveloperProfile - GET METHOD  

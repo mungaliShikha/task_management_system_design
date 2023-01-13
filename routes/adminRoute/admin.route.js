@@ -124,6 +124,25 @@ router.get('/listDeveloper', adminController.listDeveloper)
  */
 router.get('/viewDeveloper', adminController.viewDeveloper)
 
+/**
+ * @swagger
+ * /api/admin/forgetPassword:
+ *   get:
+ *     tags:
+ *       - ADMIN
+ *     description: Check for Social existence and give the access Token 
+ *     produces:
+ *       - application/json
+ *     responses:
+ *       200:
+ *         description: Developer list successfully.
+ *       404:
+ *         description: Requested data not found.
+ *       402:
+ *         description: Invalid login credentials.
+ *       500:
+ *         description: Internal Server Error
+ */
 router.post('/forgetPassword',adminController.forgetPassword)
 router.post('/resetPassword/:userId/:token',adminController.resetPassword)
 router.put('/updateAdmin/:userId',upload.single("profile_image"),adminController.updateAdmin)

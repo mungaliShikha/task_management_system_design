@@ -100,3 +100,29 @@ Jan-12-2023 16:06:33 [error] 404 - This user does not exist.
 Jan-12-2023 16:10:58 [error] 404 - This email already exists. 
 Jan-12-2023 16:12:01 [error] 500 - E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: "687987987987" } 
 Jan-12-2023 16:12:38 [error] 409 - Already exists. 
+Jan-13-2023 10:43:24 [error] 404 - Requested URL http://localhost:5000/api/v1/admin/login not found! 
+Jan-13-2023 10:43:57 [error] 404 - Provided email is not registered. 
+Jan-13-2023 15:42:26 [error] 404 - Requested URL http://localhost:5000//api/admin/addDeveloper not found! 
+Jan-13-2023 15:43:18 [error] 404 - This user does not exist. 
+Jan-13-2023 15:50:00 [error] 404 - This user does not exist. 
+Jan-13-2023 15:50:56 [error] 404 - This user does not exist. 
+Jan-13-2023 16:08:54 [error] 404 - This user does not exist. 
+Jan-13-2023 16:10:10 [error] 404 - This user does not exist. 
+Jan-13-2023 16:10:28 [error] 500 - Cannot read properties of null (reading 'email') 
+Jan-13-2023 16:10:54 [error] 500 - Cannot read properties of null (reading '_id') 
+Jan-13-2023 16:12:33 [error] 404 - This email already exists. 
+Jan-13-2023 16:12:50 [error] 500 - E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: "9956386576" } 
+Jan-13-2023 16:34:42 [error] 500 - Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property 'parser' -> object with constructor 'HTTPParser'
+    --- property 'socket' closes the circle 
+Jan-13-2023 16:52:09 [error] 404 - Requested URL http://localhost:5000/api/user/login not found! 
+Jan-13-2023 16:52:25 [error] 404 - Requested URL http://localhost:5000/admin/user/login not found! 
+Jan-13-2023 16:52:40 [error] 500 - Cannot read properties of null (reading 'password') 
+Jan-13-2023 16:53:45 [error] 500 - Cannot read properties of null (reading 'password') 
+Jan-13-2023 16:54:13 [error] 500 - Cannot read properties of null (reading 'password') 
+Jan-13-2023 16:54:35 [error] 404 - Provided email is not registered. 
+Jan-13-2023 16:54:37 [error] 404 - Provided email is not registered. 
+Jan-13-2023 16:54:39 [error] 404 - Provided email is not registered. 
+Jan-13-2023 16:55:10 [error] 404 - Provided email is not registered. 
+Jan-13-2023 16:56:18 [error] 404 - Provided email is not registered. 

@@ -46,10 +46,7 @@ module.exports = {
       const { email } = req.body;
       const user = await User.findOne({ email });
       if (!user) {
-        throw new appError(
-          ErrorMessage.EMAIL_NOT_REGISTERED,
-          ErrorCode.NOT_FOUND
-        );
+        throw new appError(ErrorMessage.EMAIL_NOT_REGISTERED,ErrorCode.NOT_FOUND);
       }
       var tokenFound = await Token.findOne({ userId: user._id });
       if (!tokenFound) {
@@ -169,12 +166,7 @@ module.exports = {
           mobile_number: loggedInUser.mobile_number,
           token: token,
         };
-        helper.sendResponseWithData(
-          res,
-          SuccessCode.SUCCESS,
-          SuccessMessage.LOGIN_SUCCESS,
-          finalRes
-        );
+        helper.sendResponseWithData(res,SuccessCode.SUCCESS,SuccessMessage.LOGIN_SUCCESS,finalRes);
       }
     },
 
