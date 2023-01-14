@@ -1,8 +1,7 @@
 const mongoose = require("mongoose");
 const mongoosePaginate = require("mongoose-paginate");
 var mongooseAggregatePaginate = require("mongoose-aggregate-paginate");
-const bcrypt = require("bcryptjs");
-const commonFunction = require('../helper/commonFunction');
+const {generateHash} = require("../helper/commonFunction")
 const schema = mongoose.Schema;
 var userModel = new schema(
   {
@@ -27,6 +26,7 @@ var userModel = new schema(
     },
     mobile_number: {
       type: String,
+      unique: true
     },
     address: {
       type: String
@@ -49,6 +49,8 @@ var userModel = new schema(
 );
 userModel.plugin(mongoosePaginate);
 userModel.plugin(mongooseAggregatePaginate);
+
+
 module.exports = mongoose.model("users", userModel);
 
 mongoose.model("users", userModel).find({ role: "Admin" }, async (err, result) => {
@@ -63,7 +65,7 @@ mongoose.model("users", userModel).find({ role: "Admin" }, async (err, result) =
       first_name: "Shikha",
       last_name: "Mungali",
       email: "shikha1081998@gmail.com",
-      password: bcrypt.hashSync("test@123345"),
+      password: generateHash("test@123345"),
       mobile_number: "9998887772",
       role: "Admin"
     };

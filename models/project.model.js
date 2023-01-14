@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 const mongoosePaginate = require("mongoose-paginate");
 var mongooseAggregatePaginate = require("mongoose-aggregate-paginate");
-const bcrypt = require("bcryptjs");
 const commonFunction = require("../helper/commonFunction");
 const schema = mongoose.Schema;
 
@@ -25,29 +24,25 @@ var project_model = new schema(
     },
     project_task: [
       {
-        type: schema.Types.ObjectId,
-        ref: "user",
-      },
+        type: String,
+      }
     ],
 
-    developers: [
+    developer: [
       {
-        type: schema.Types.ObjectId,
-        ref: "user",
-      },
+        type: String,
+      }
     ],
     manager: [
       {
-        type: schema.Types.ObjectId,
-        ref: "user",
-      },
+        type: String,
+      }
     ],
   },
   { timestamps: true }
 );
 
-userModel.plugin(mongoosePaginate);
-userModel.plugin(mongooseAggregatePaginate);
+project_model.plugin(mongoosePaginate);
+project_model.plugin(mongooseAggregatePaginate);
 
 module.exports = mongoose.model("project", project_model);
-
