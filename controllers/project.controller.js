@@ -99,7 +99,33 @@ module.exports = {
   }),
   
   addManagerToProject:catchAsync(async(req,res)=>{
+    let { managerId , projectId } = req.params;
+    const managerAuthCheck = await User.findById(managerId);
+    if (managerAuthCheck && managerAuthCheck.role != "Manager") {
+      throw new appError(ErrorMessage.INVALID_TOKEN, ErrorCode.NOT_ALLOWED);
+    } else if (!managerAuthCheck) {
+      throw new appError(ErrorMessage.MANAGER_NOT_EXIST, ErrorCode.NOT_FOUND);
+    }
+
+    const projectAuthCheck = await Project.findById(projectId);
+    if (projectAuthCheck && projectAuthCheck.active_status == "DELETE") {
+      throw new appError(ErrorMessage.PROJECT_DELETED, ErrorCode.NOT_FOUND);
+    } else if (!projectAuthCheck) {
+      throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
+    }
+
+    const {manager} = req.body
     
+    
+    const newProject = await Project.findOneAndUpdate({_id:projectId}, {$addToSet:{manager:manager}},{new:true})
+
+
+    helper.commonResponse(
+      res,
+      SuccessCode.SUCCESS,
+      newProject,
+      SuccessMessage.PROJECT_ADDED
+    );
   }),
   
   
@@ -143,6 +169,7 @@ viewProject:catchAsync(async(req,res)=>{
   // const {projectId} = req.params
   const projectView = await Project.aggregate([
     {$lookup:{from:"users",localField:"developer",foreignField:"email",as:"devlopersList"}},
+    {$lookup:{from:"users",localField:"manager",foreignField:"email",as:"managerList"}},
     { $project : { _id : 0, 'developer' : 0, 'manager' : 0,'project_task':0 ,"createdAt": 0,
     "updatedAt":0,"__v": 0} }
     ])
