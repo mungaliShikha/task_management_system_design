@@ -6,7 +6,7 @@ const {createProject,listProject,addDeveloperToProject,addManagerToProject,viewP
 router.post("/createProject/:managerId", createProject);
 router.get("/listProject",listProject)
 router.post("/addDevelopersToProject/:managerId/:projectId",addDeveloperToProject);
-router.post("/addManagerToProject",addManagerToProject);
+router.post("/addManagerToProject/:managerId/:projectId",addManagerToProject);
 router.get("/viewProject",viewProject)
 
 module.exports = router;
