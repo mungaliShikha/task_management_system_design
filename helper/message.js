@@ -1,5 +1,8 @@
 
 module.exports.ErrorMessage = Object.freeze({
+    PROJECT_NOT_EXIST:"Project not found",
+    PROJECT_DELETED:"Project deleted",
+    MANAGER_NOT_EXIST:"Manager does not exist",
     NOT_AUTHORISED:"Only admin can create the manager",
     PROJECT_ALREADY_CREATED:"Project is already created",
     LINK_EXPIRED:'Verifcation link has expired',

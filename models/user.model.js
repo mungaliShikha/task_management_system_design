@@ -26,6 +26,7 @@ var userModel = new schema(
     },
     mobile_number: {
       type: String,
+      unique: true
     },
     address: {
       type: String

@@ -302,3 +302,128 @@ Jan-14-2023 18:46:39 [info] http://localhost:5000/api/admin/createManager/63c2aa
 Jan-14-2023 18:47:27 [info] http://localhost:5000/api/admin/loginManager - POST METHOD  
 Jan-14-2023 18:47:46 [info] http://localhost:5000/api/project/createProject/63c11cfdfddb76190cd8d3ea - POST METHOD  
 Jan-14-2023 18:47:47 [error] 404 - Project is already created 
+Jan-14-2023 19:12:29 [info] http://localhost:5000/api/project/listProject - GET METHOD  
+Jan-14-2023 19:12:29 [error] 404 - Requested URL http://localhost:5000/api/project/listProject not found! 
+Jan-14-2023 19:12:57 [info] http://localhost:5000/api/project/listProject - GET METHOD  
+Jan-14-2023 19:12:58 [error] 500 - projectList is not defined 
+Jan-14-2023 19:13:37 [info] http://localhost:5000/api/project/listProject - GET METHOD  
+Jan-14-2023 19:14:39 [info] http://localhost:5000/api/project/listProject?status=started - GET METHOD  
+Jan-14-2023 19:15:21 [info] http://localhost:5000/api/project/listProject?status=ongoing - GET METHOD  
+Jan-14-2023 19:15:31 [info] http://localhost:5000/api/project/listProject?status=started - GET METHOD  
+Jan-14-2023 19:19:15 [info] http://localhost:5000/api/project/listProject?status=started - GET METHOD  
+Jan-14-2023 19:19:31 [info] http://localhost:5000/api/project/listProject - GET METHOD  
+Jan-14-2023 19:20:07 [info] http://localhost:5000/api/project/listProject - GET METHOD  
+Jan-14-2023 19:21:03 [info] http://localhost:5000/api/project/listProject - GET METHOD  
+Jan-14-2023 19:21:45 [info] http://localhost:5000/api/project/createProject/63c11cfdfddb76190cd8d3ea - POST METHOD  
+Jan-14-2023 19:21:57 [error] 400 - Unexpected token / in JSON at position 7 
+Jan-14-2023 19:22:05 [info] http://localhost:5000/api/project/listProject - GET METHOD  
+Jan-14-2023 19:22:32 [info] http://localhost:5000/api/project/createProject/63c11cfdfddb76190cd8d3ea - POST METHOD  
+Jan-14-2023 19:22:50 [info] http://localhost:5000/api/project/createProject/63c11cfdfddb76190cd8d3eb - POST METHOD  
+Jan-14-2023 19:22:50 [error] 404 - This user does not exist. 
+Jan-14-2023 19:23:19 [info] http://localhost:5000/api/project/createProject/63be9f40260eb348a20f54d0 - POST METHOD  
+Jan-14-2023 19:23:19 [error] 405 - Unauthorized user. 
+Jan-14-2023 19:23:26 [info] http://localhost:5000/api/project/createProject/63c11cfdfddb76190cd8d3ea - POST METHOD  
+Jan-14-2023 19:23:27 [error] 404 - Project is already created 
+Jan-14-2023 19:23:31 [info] http://localhost:5000/api/project/listProject - GET METHOD  
+Jan-14-2023 19:23:49 [info] http://localhost:5000/api/project/listProject - GET METHOD  
+Jan-14-2023 19:24:02 [info] http://localhost:5000/api/project/listProject - GET METHOD  
+Jan-14-2023 19:44:58 [info] http://localhost:5000/api/project/addDeveloperToProject/63c11cfdfddb76190cd8d3ea/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 19:44:58 [error] 404 - Requested URL http://localhost:5000/api/project/addDeveloperToProject/63c11cfdfddb76190cd8d3ea/63c2b3a0c8c4963a5ccc7f8a not found! 
+Jan-14-2023 19:45:21 [info] http://localhost:5000/api/project/addDevelopersToProject/63c11cfdfddb76190cd8d3ea/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 19:45:21 [error] 404 - Requested URL http://localhost:5000/api/project/addDevelopersToProject/63c11cfdfddb76190cd8d3ea/63c2b3a0c8c4963a5ccc7f8a not found! 
+Jan-14-2023 19:46:28 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 19:46:28 [error] 500 - Cannot set properties of undefined (setting 'developers') 
+Jan-14-2023 19:46:49 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 19:47:25 [error] 500 - Cannot set properties of undefined (setting 'developers') 
+Jan-14-2023 19:47:51 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 19:48:04 [error] 500 - re is not defined 
+Jan-14-2023 19:48:23 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 19:49:12 [error] 500 - Maximum call stack size exceeded 
+Jan-14-2023 19:51:03 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 19:51:06 [error] 500 - Maximum call stack size exceeded 
+Jan-14-2023 19:52:14 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 19:52:26 [error] 500 - developers.split is not a function 
+Jan-14-2023 19:52:47 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 19:53:35 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 19:53:37 [error] 500 - Maximum call stack size exceeded 
+Jan-14-2023 19:59:53 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 19:59:56 [error] 500 - Maximum call stack size exceeded 
+Jan-14-2023 20:00:37 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 20:01:12 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 20:03:37 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 20:03:40 [error] 500 - Maximum call stack size exceeded 
+Jan-14-2023 20:09:32 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 20:09:34 [error] 500 - Maximum call stack size exceeded 
+Jan-14-2023 20:09:40 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 20:09:44 [error] 500 - Maximum call stack size exceeded 
+Jan-14-2023 20:15:50 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 20:17:11 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 20:18:21 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 20:18:24 [error] 500 - Project.aggregate(...).find is not a function 
+Jan-14-2023 20:20:02 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 20:21:14 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 20:21:52 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 20:32:13 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 20:32:16 [error] 500 - Arguments must be aggregate pipeline operators 
+Jan-14-2023 20:34:21 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 20:34:23 [error] 500 - The field 'project_name' must be an accumulator object 
+Jan-14-2023 20:36:03 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 20:38:28 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 20:38:32 [error] 500 - The $push accumulator is a unary operator 
+Jan-14-2023 20:39:18 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 20:45:20 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 20:45:23 [error] 500 - Cast to [ObjectId] failed for value "[{"developers":["63bfe407250f5f2c60a5b4bd","63c119cbfddb76190cd8d3e1"]}]" (type string) at path "developers.0" 
+Jan-14-2023 20:46:50 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 20:46:53 [error] 500 - Cast to [ObjectId] failed for value "[{"developers":["63bfe407250f5f2c60a5b4bd","63c119cbfddb76190cd8d3e1"]}]" (type string) at path "developers.0" 
+Jan-14-2023 20:47:28 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 20:47:33 [error] 500 - Cast to [ObjectId] failed for value "[{"developer":["63bfe407250f5f2c60a5b4bd","63c119cbfddb76190cd8d3e1"]}]" (type string) at path "developers.0" 
+Jan-14-2023 20:47:43 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 20:50:37 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 20:50:39 [error] 500 - Cast to [ObjectId] failed for value "[{"developer":["63bfe407250f5f2c60a5b4bd","63c119cbfddb76190cd8d3e1"]}]" (type string) at path "developers.0" 
+Jan-14-2023 20:50:50 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 20:51:26 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 20:51:28 [error] 500 - Cast to [string] failed for value "[{"developer":["63bfe407250f5f2c60a5b4bd","63c119cbfddb76190cd8d3e1"]}]" (type string) at path "developers.0" 
+Jan-14-2023 20:57:30 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 20:57:38 [error] 500 - developer.map is not a function 
+Jan-14-2023 20:58:26 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 20:59:02 [error] 500 - developer.map is not a function 
+Jan-14-2023 21:01:59 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 21:02:18 [error] 500 - req.body.map is not a function 
+Jan-14-2023 21:21:03 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 21:21:07 [error] 500 - Cast to [string] failed for value "[{"developer":["63bfe407250f5f2c60a5b4bd","63c119cbfddb76190cd8d3e1"]}]" (type string) at path "developers.0" 
+Jan-14-2023 21:22:00 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 21:29:01 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
+Jan-14-2023 21:29:01 [error] 500 - Mongoose 5.x disallows passing a spread of operators to `Model.aggregate()`. Instead of `Model.aggregate({ $match }, { $skip })`, do `Model.aggregate([{ $match }, { $skip }])` 
+Jan-14-2023 21:29:56 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
+Jan-14-2023 21:29:56 [error] 500 - unknown argument to $lookup: localfield 
+Jan-14-2023 21:32:10 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
+Jan-14-2023 21:32:10 [error] 500 - unknown argument to $lookup: localfield 
+Jan-14-2023 21:32:29 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
+Jan-14-2023 21:32:29 [error] 500 - Mongoose 5.x disallows passing a spread of operators to `Model.aggregate()`. Instead of `Model.aggregate({ $match }, { $skip })`, do `Model.aggregate([{ $match }, { $skip }])` 
+Jan-14-2023 21:32:31 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
+Jan-14-2023 21:32:31 [error] 500 - Mongoose 5.x disallows passing a spread of operators to `Model.aggregate()`. Instead of `Model.aggregate({ $match }, { $skip })`, do `Model.aggregate([{ $match }, { $skip }])` 
+Jan-14-2023 21:41:24 [info] http://localhost:5000/api/project/createProject/63c11cfdfddb76190cd8d3ea - POST METHOD  
+Jan-14-2023 21:41:32 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2b3a0c8c4963a5ccc7f8a - POST METHOD  
+Jan-14-2023 21:41:37 [error] 404 - Project not found 
+Jan-14-2023 21:41:59 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2d42ceda228661403627e - POST METHOD  
+Jan-14-2023 21:42:18 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
+Jan-14-2023 21:42:18 [error] 500 - Mongoose 5.x disallows passing a spread of operators to `Model.aggregate()`. Instead of `Model.aggregate({ $match }, { $skip })`, do `Model.aggregate([{ $match }, { $skip }])` 
+Jan-14-2023 21:52:55 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2d42ceda228661403627e - POST METHOD  
+Jan-14-2023 21:53:41 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2d42ceda228661403627e - POST METHOD  
+Jan-14-2023 21:54:11 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
+Jan-14-2023 21:54:11 [error] 500 - Mongoose 5.x disallows passing a spread of operators to `Model.aggregate()`. Instead of `Model.aggregate({ $match }, { $skip })`, do `Model.aggregate([{ $match }, { $skip }])` 
+Jan-14-2023 21:55:17 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
+Jan-14-2023 21:55:17 [error] 500 - unknown argument to $lookup: localfield 
+Jan-14-2023 22:03:05 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
+Jan-14-2023 22:08:00 [info] http://localhost:5000/api/project/createProject/63c11cfdfddb76190cd8d3ea - POST METHOD  
+Jan-14-2023 22:08:11 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2d42ceda228661403627e - POST METHOD  
+Jan-14-2023 22:08:16 [error] 404 - Project not found 
+Jan-14-2023 22:08:35 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2da688032f65ddcab6fbe - POST METHOD  
+Jan-14-2023 22:08:46 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
+Jan-14-2023 22:10:19 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2ab37db817742a4f921af/63c2da688032f65ddcab6fbe - POST METHOD  
+Jan-14-2023 22:10:34 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
+Jan-14-2023 22:11:26 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
+Jan-14-2023 22:13:53 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
+Jan-14-2023 22:14:47 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
+Jan-14-2023 22:15:16 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
+Jan-14-2023 22:15:42 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
