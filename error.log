@@ -100,3 +100,18 @@ Jan-12-2023 16:06:33 [error] 404 - This user does not exist.
 Jan-12-2023 16:10:58 [error] 404 - This email already exists. 
 Jan-12-2023 16:12:01 [error] 500 - E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: "687987987987" } 
 Jan-12-2023 16:12:38 [error] 409 - Already exists. 
+Jan-13-2023 14:07:59 [error] 404 - Requested URL http://localhost:5000/api/admin/viewDeveloper not found! 
+Jan-13-2023 14:09:58 [error] 404 - Requested URL http://localhost:5000/api/admin/addDeveloper/63bfe166ef6a2a821c58b801 not found! 
+Jan-13-2023 14:23:27 [error] 500 - Cannot read properties of null (reading 'role') 
+Jan-13-2023 14:23:56 [error] 500 - Cannot read properties of null (reading 'role') 
+Jan-13-2023 14:25:49 [error] 500 - Cannot read properties of null (reading 'role') 
+Jan-13-2023 14:26:00 [error] 500 - Cast to ObjectId failed for value "63c0e8c7b359b7b8f13c1c02\n" (type string) at path "_id" for model "users" 
+Jan-13-2023 14:30:53 [error] 404 - This user does not exist. 
+Jan-13-2023 14:31:17 [error] 409 - Already exists. 
+Jan-13-2023 15:22:32 [error] 400 - Unexpected token ; in JSON at position 29 
+Jan-13-2023 15:23:45 [error] 400 - Unexpected token ; in JSON at position 29 
+Jan-13-2023 15:23:54 [error] 400 - Unexpected token ; in JSON at position 29 
+Jan-13-2023 15:39:10 [error] 500 - Parameter "filter" to findOne() must be an object, got JIRA BOARD 
+Jan-13-2023 16:07:15 [error] 404 - Project is already created 
+Jan-13-2023 16:59:15 [error] 404 - This user does not exist. 
+Jan-13-2023 19:19:38 [error] 404 - Requested URL http://localhost:5000/ not found! 

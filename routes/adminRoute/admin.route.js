@@ -5,10 +5,6 @@ const {
   resetPassword,
   updateAdmin,
   getAdmin,
-  loginDeveloper,
-  addDeveloper,
-  listDeveloper,
-  viewDeveloper,
   loginManager,
   createManager,
 } = require("../../controllers/admin.controller");
@@ -25,9 +21,6 @@ router.get("/getAdminDetails/:userId", getAdmin);
 router.post("/loginManager", loginManager);
 router.post("/createManager/:userId",upload.array("profile_image"), createManager);
 
-router.post("/addDeveloper/:userId",upload.array("profile_image"), addDeveloper);
-router.post("/loginDeveloper", loginDeveloper);
-router.get("/listDeveloper", listDeveloper);
-router.get("/viewDeveloper", viewDeveloper);
+
 
 module.exports = router;

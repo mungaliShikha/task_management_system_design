@@ -1,5 +1,6 @@
 
 module.exports.ErrorMessage = Object.freeze({
+    PROJECT_ALREADY_CREATED:"Project is already created",
     LINK_EXPIRED:'Verifcation link has expired',
     INVALID_TOKEN: 'Unauthorized user.',
     COUNTRY_EXIST: 'Country name already exist',
@@ -61,6 +62,7 @@ module.exports.ErrorMessage = Object.freeze({
 
 
 module.exports.SuccessMessage = Object.freeze({
+    PROJECT_ADDED:"Project added sucessfully",
     SIGNUP_SUCCESSFULLY: "Thanks, You have successfully signed up.",
     DATA_FOUND: "Requested data found.",
     DEVELOPER_ADD:"Developer added successfully",
