@@ -25,10 +25,7 @@ module.exports = {
     const { email, password } = req.body;
     const loggedInUser = await User.findOne({ email });
     if (!loggedInUser || !compareHash(password, loggedInUser.password)) {
-      throw new appError(
-        ErrorMessage.EMAIL_NOT_REGISTERED,
-        ErrorCode.NOT_FOUND
-      );
+      throw new appError(ErrorMessage.EMAIL_NOT_REGISTERED, ErrorCode.NOT_FOUND);
     } else {
       helper.sendResponseWithData(
         res,
@@ -197,28 +194,28 @@ module.exports = {
     }
     const { first_name, last_name, email, mobile_number } = payload;
 
-    const user = await User.findOne({ email, mobile_number });
-    if (user) {
-      throw new appError(ErrorMessage.ALREADY_EXIST, ErrorCode.ALREADY_EXIST);
-    }
+      const user = await User.findOne({ email, mobile_number });
+      if (user) {
+        throw new appError(ErrorMessage.ALREADY_EXIST, ErrorCode.ALREADY_EXIST);
+      }
 
-    if (req.files) {
-      payload["profile_image"] = req.files[0].location;
-    }
+      if (req.files) {
+        payload["profile_image"] = req.files[0].location;
+      }
 
-    payload["employee_id"] = "MAN" + mobile_number.substr(-4);
-    let passGen = randomPassword();
-    console.log(passGen);
-    payload["password"] = generateHash(passGen);
-    payload["role"] = "Manager";
+      payload["employee_id"] = "MAN" + mobile_number.substr(-4);
+      let passGen = randomPassword();
+      console.log(passGen)
+      payload["password"] = generateHash(passGen);
+      payload["role"] = "Manager";
 
-    const createManager = await User.create(payload);
+      const createManager = await User.create(payload);
 
-    helper.sendResponseWithData(
-      res,
-      SuccessCode.SUCCESS,
-      SuccessMessage.CREATE_MANAGER,
-      createManager
-    );
-  }),
+      helper.sendResponseWithData(
+        res,
+        SuccessCode.SUCCESS,
+        SuccessMessage.CREATE_MANAGER,
+        createManager
+      );
+    }),
 };

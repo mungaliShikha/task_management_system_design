@@ -280,43 +280,4 @@ Jan-12-2023 16:17:04 [info] http://localhost:3000/api/admin/loginManager - POST 
 Jan-12-2023 16:17:49 [info] http://localhost:3000/api/admin/loginManager - POST METHOD  
 Jan-12-2023 16:18:29 [info] http://localhost:3000/api/admin/loginManager - POST METHOD  
 Jan-12-2023 16:19:59 [info] http://localhost:3000/api/admin/loginManager - POST METHOD  
-Jan-13-2023 12:22:30 [info] http://localhost:3000/api/admin/listDeveloper - GET METHOD  
-Jan-13-2023 14:05:59 [info] http://localhost:3000/api/user/listDeveloper - GET METHOD  
-Jan-13-2023 14:07:59 [info] http://localhost:3000/api/admin/viewDeveloper?_id=63bea075262aac54ae4cf0f1 - GET METHOD  
-Jan-13-2023 14:07:59 [error] 404 - Requested URL http://localhost:5000/api/admin/viewDeveloper not found! 
-Jan-13-2023 14:09:58 [info] http://localhost:3000/api/admin/addDeveloper/63bfe166ef6a2a821c58b801 - POST METHOD  
-Jan-13-2023 14:09:58 [error] 404 - Requested URL http://localhost:5000/api/admin/addDeveloper/63bfe166ef6a2a821c58b801 not found! 
-Jan-13-2023 14:10:08 [info] http://localhost:3000/api/user/addDeveloper/63bfe166ef6a2a821c58b801 - POST METHOD  
-Jan-13-2023 14:11:30 [info] http://localhost:3000/api/user/addDeveloper/63bfe166ef6a2a821c58b801 - POST METHOD  
-Jan-13-2023 14:12:26 [info] http://localhost:3000/api/user/loginDeveloper - POST METHOD  
-Jan-13-2023 14:13:51 [info] http://localhost:3000/api/user/addDeveloper/63bfe166ef6a2a821c58b801 - POST METHOD  
-Jan-13-2023 14:14:36 [info] http://localhost:3000/api/user/loginDeveloper - POST METHOD  
-Jan-13-2023 14:16:18 [info] http://localhost:3000/api/user/viewDeveloper?_id=63c119cbfddb76190cd8d3e1 - GET METHOD  
-Jan-13-2023 14:23:27 [info] http://localhost:3000/api/admin/createManager/63bfd1e810c6d75c1008da21 - POST METHOD  
-Jan-13-2023 14:23:27 [error] 500 - Cannot read properties of null (reading 'role') 
-Jan-13-2023 14:23:56 [info] http://localhost:3000/api/admin/createManager/63bfd1e810c6d75c1008da21 - POST METHOD  
-Jan-13-2023 14:23:56 [error] 500 - Cannot read properties of null (reading 'role') 
-Jan-13-2023 14:24:22 [info] http://localhost:3000/api/admin/createManager/63bfd1e810c6d75c1008da21 - POST METHOD  
-Jan-13-2023 14:25:49 [error] 500 - Cannot read properties of null (reading 'role') 
-Jan-13-2023 14:25:49 [info] http://localhost:3000/api/admin/createManager/63c0e8c7b359b7b8f13c1c02%0A - POST METHOD  
-Jan-13-2023 14:26:00 [error] 500 - Cast to ObjectId failed for value "63c0e8c7b359b7b8f13c1c02\n" (type string) at path "_id" for model "users" 
-Jan-13-2023 14:27:04 [info] http://localhost:3000/api/admin/createManager/63c0e8c7b359b7b8f13c1c02 - POST METHOD  
-Jan-13-2023 14:30:43 [info] http://localhost:3000/api/admin/createManager/63c0e8c7b359b7b8f13c1c01 - POST METHOD  
-Jan-13-2023 14:30:53 [error] 404 - This user does not exist. 
-Jan-13-2023 14:31:17 [info] http://localhost:3000/api/admin/createManager/63c0e8c7b359b7b8f13c1c02 - POST METHOD  
-Jan-13-2023 14:31:17 [error] 409 - Already exists. 
-Jan-13-2023 14:40:17 [info] http://localhost:3000/api/admin/loginManager - POST METHOD  
-Jan-13-2023 15:22:32 [error] 400 - Unexpected token ; in JSON at position 29 
-Jan-13-2023 15:23:45 [error] 400 - Unexpected token ; in JSON at position 29 
-Jan-13-2023 15:23:54 [error] 400 - Unexpected token ; in JSON at position 29 
-Jan-13-2023 15:24:05 [info] http://localhost:3000/api/project/createProject/63c11cfdfddb76190cd8d3ea - POST METHOD  
-Jan-13-2023 15:26:33 [info] http://localhost:3000/api/project/createProject/63c11cfdfddb76190cd8d3ea - POST METHOD  
-Jan-13-2023 15:38:40 [info] http://localhost:3000/api/project/createProject/63c11cfdfddb76190cd8d3ea - POST METHOD  
-Jan-13-2023 15:39:10 [error] 500 - Parameter "filter" to findOne() must be an object, got JIRA BOARD 
-Jan-13-2023 16:04:25 [info] http://localhost:3000/api/project/createProject/63c11cfdfddb76190cd8d3ea - POST METHOD  
-Jan-13-2023 16:07:15 [info] http://localhost:3000/api/project/createProject/63c11cfdfddb76190cd8d3ea - POST METHOD  
-Jan-13-2023 16:07:15 [error] 404 - Project is already created 
-Jan-13-2023 16:59:13 [info] http://localhost:3000/api/admin/updateAdmin/63bfd1e810c6d75c1008da21 - PUT METHOD  
-Jan-13-2023 16:59:15 [error] 404 - This user does not exist. 
-Jan-13-2023 17:01:59 [info] http://localhost:3000/api/admin/updateAdmin/63c13e425d9b3e4964f57148 - PUT METHOD  
-Jan-13-2023 19:19:38 [error] 404 - Requested URL http://localhost:5000/ not found! 
+Jan-12-2023 16:38:00 [info] http://localhost:5000/api/admin/listDeveloper - GET METHOD  
