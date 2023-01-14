@@ -1,5 +1,6 @@
 
 module.exports.ErrorMessage = Object.freeze({
+    NOT_AUTHORISED:"Only admin can create the manager",
     PROJECT_ALREADY_CREATED:"Project is already created",
     LINK_EXPIRED:'Verifcation link has expired',
     INVALID_TOKEN: 'Unauthorized user.',

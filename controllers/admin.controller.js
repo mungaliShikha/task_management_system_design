@@ -187,7 +187,7 @@ module.exports = {
     const { userId } = req.params;
     const user1 = await User.findById(userId);
     if(!user1){
-      throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
+      throw new appError(ErrorMessage.NOT_AUTHORISED, ErrorCode.NOT_FOUND);
     }
     if (user1["role"] != "Admin") {
       throw new appError(ErrorMessage.INVALID_TOKEN, ErrorCode.NOT_ALLOWED);

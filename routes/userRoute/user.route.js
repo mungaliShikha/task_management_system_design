@@ -99,7 +99,7 @@ router.get('/viewDeveloper', userController.viewDeveloper)
 
 
 
-router.post("/loginDeveloper", loginDeveloper);
+router.post("/loginDeveloper", userController.loginDeveloper);
 
 module.exports = router;
 
