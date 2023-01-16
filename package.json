@@ -10,30 +10,27 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
     "async": "^3.2.0",
     "aws-sdk": "^2.1293.0",
     "axios": "^0.21.1",
+=======
+    "aws-sdk": "^2.1292.0",
+>>>>>>> 6f768ff4d45227f1df9b95d7a2c4fc66cd4b8d93
     "bcrypt": "^5.1.0",
-    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
-    "depd": "^2.0.0",
     "express": "^4.17.2",
-    "express-basic-auth": "^1.2.1",
-    "finalhandler": "^1.1.2",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.21",
-    "merge-descriptors": "^1.0.1",
-    "moment": "^2.29.2",
     "mongoose": "^5.13.3",
     "mongoose-aggregate-paginate": "^2.0.2",
     "mongoose-paginate": "^5.0.3",
     "multer": "^1.4.4",
     "multer-s3": "^2.10.0",
-    "multiparty": "^4.2.2",
     "nodemailer": "^6.8.0",
-    "nodemon": "^2.0.12",
-    "swagger-jsdoc": "^6.2.7",
-    "swagger-ui-express": "^4.6.0",
     "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }

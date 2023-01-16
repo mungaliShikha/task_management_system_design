@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 const mongoosePaginate = require("mongoose-paginate");
 var mongooseAggregatePaginate = require("mongoose-aggregate-paginate");
-const bcrypt = require("bcryptjs");
 const commonFunction = require("../helper/commonFunction");
 const schema = mongoose.Schema;
 
@@ -20,31 +19,30 @@ var task_model = new schema(
     },
     type: {
       type: String,
-      enum: ["bug", "enchancement", "new-feature"],
+      enum: ["bug", "enhancement", "new-feature"],
     },
 
     priority: {
-      type: string,
+      type: String,
       enum: ["urgent", "high", "medium", "low"],
     },
 
     start_date: {
-      type: string,
+      type: String,
     },
     due_date: {
-      type: string,
+      type: String,
     },
-    developer_assigned: [
+    developer_assigned: 
       {
         type: schema.Types.ObjectId,
         ref: "user",
-      },
-    ],
+      }
   },
   { timestamps: true }
 );
 
-userModel.plugin(mongoosePaginate);
-userModel.plugin(mongooseAggregatePaginate);
+task_model.plugin(mongoosePaginate);
+task_model.plugin(mongooseAggregatePaginate);
 module.exports = mongoose.model("task", task_model);
 

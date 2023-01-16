@@ -6,6 +6,7 @@ const userModel = require("../models/user.model");
 const jwt = require("jsonwebtoken");
 
 module.exports = {
+<<<<<<< HEAD
   verifyToken: (req, res, next) => {
     console.log(req.headers.token);
     if (req.headers.token) {
@@ -65,3 +66,8 @@ module.exports = {
     }
   },
 };
+=======
+   
+  
+}
+>>>>>>> 6f768ff4d45227f1df9b95d7a2c4fc66cd4b8d93
