@@ -146,7 +146,7 @@ router.get('/viewDeveloper', adminController.viewDeveloper)
 router.post('/forgetPassword',adminController.forgetPassword)
 router.post('/resetPassword/:userId/:token',adminController.resetPassword)
 router.put('/updateAdmin/:userId',upload.single("profile_image"),adminController.updateAdmin)
-router.get('/getAdminDetails/:userId',adminController.getAdmin)
+router.get('/getAdminDetails',auth.verifyToken, adminController.getAdmin)
 
 
 /// admin can create manager

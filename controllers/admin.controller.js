@@ -6,29 +6,21 @@ const crypto = require("crypto");
 const appError = require("../utils/errorHandlers/errorHandler");
 const { ErrorMessage, SuccessMessage } = require("../helper/message");
 const { ErrorCode, SuccessCode } = require("../helper/statusCode");
-const {
-  compareHash,
-  generateToken,
-  generatePassword,
-  randomPassword,
-  generateHash,
-} = require("../helper/commonFunction");
+const {compareHash,generateToken,generatePassword,randomPassword,generateHash} = require("../helper/commonFunction");
 const helper = require("../helper/commonResponseHandler");
-const {
-  sendMail,
-  sendMailNotify,
-} = require("../services/nodeMailer/nodemailer");
+const {sendMail,sendMailNotify} = require("../services/nodeMailer/nodemailer");
 
 const bcrypt = require("bcryptjs");
 
 module.exports = {
+
   login: catchAsync(async (req, res) => {
     const { email, password } = req.body;
     const loggedInUser = await User.findOne({ email });
     if (!loggedInUser || !compareHash(password, loggedInUser.password)) {
       throw new appError(ErrorMessage.EMAIL_NOT_REGISTERED, ErrorCode.NOT_FOUND);
     } else {
-      let token = generateToken({ id: loggedInUser._id, role: loggedInUser.role })
+      let token = generateToken({ id: loggedInUser._id, role: loggedInUser.role });
       let finalRes = {
         userId: loggedInUser._id,
         email: email,
@@ -135,14 +127,22 @@ module.exports = {
 
     }),
 
-    getAdmin: catchAsync(async (req, res) => {
-      const { userId } = req.params;
-      const userData = await User.findById(userId);
-      if (!userData) {
-        throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
+    getAdmin: async (req, res) => {
+      try {
+        let { userId } = req.query;
+        console.log(req)
+        const userData = await User.findOne(userId);
+        if (!userData) {
+          throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
+        }
+        helper.commonResponse(res, SuccessCode.SUCCESS, userData, SuccessMessage.DETAIL_GET);
+      } catch (error) {
+        console.log("error==>",error)
       }
-      helper.commonResponse(res, SuccessCode.SUCCESS, userData, SuccessMessage.DETAIL_GET);
-    }),
+    
+    },
+
+ 
 
     loginDeveloper: async (req, res) => {
       const { email, password } = req.body;

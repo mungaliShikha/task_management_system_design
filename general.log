@@ -366,3 +366,30 @@ Jan-13-2023 17:07:53 [info] http://localhost:5000/api/user/developerLogin - POST
 Jan-13-2023 17:08:39 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
 Jan-13-2023 17:08:55 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
 Jan-13-2023 17:15:25 [info] http://localhost:5000/api/user/getDeveloperProfile - GET METHOD  
+Jan-16-2023 11:16:50 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-16-2023 11:18:44 [info] http://localhost:5000/api/admin/getAdmin?userId=63c2aa0499a9884740a9f94f - GET METHOD  
+Jan-16-2023 11:18:44 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdmin not found! 
+Jan-16-2023 11:18:55 [info] http://localhost:5000/api/admin/getAdmin/63c2aa0499a9884740a9f94f - GET METHOD  
+Jan-16-2023 11:18:55 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdmin/63c2aa0499a9884740a9f94f not found! 
+Jan-16-2023 11:23:00 [info] http://localhost:5000/api/admin/getAdmin - GET METHOD  
+Jan-16-2023 11:23:00 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdmin not found! 
+Jan-16-2023 11:23:13 [info] http://localhost:5000/api/admin/getAdmin - GET METHOD  
+Jan-16-2023 11:23:13 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdmin not found! 
+Jan-16-2023 11:27:04 [info] http://localhost:5000/api/admin/getAdmin - GET METHOD  
+Jan-16-2023 11:27:04 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdmin not found! 
+Jan-16-2023 11:28:47 [info] http://localhost:5000/api/admin/getAdmin - GET METHOD  
+Jan-16-2023 11:28:47 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdmin not found! 
+Jan-16-2023 11:29:43 [info] http://localhost:5000/api/admin/getAdmin - GET METHOD  
+Jan-16-2023 11:29:43 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdmin not found! 
+Jan-16-2023 11:30:23 [info] http://localhost:5000/api/admin/getAdmin - GET METHOD  
+Jan-16-2023 11:30:23 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdmin not found! 
+Jan-16-2023 11:31:41 [info] http://localhost:5000/api/admin/getAdminDetails - GET METHOD  
+Jan-16-2023 11:32:26 [info] http://localhost:5000/api/admin/getAdminDetails - GET METHOD  
+Jan-16-2023 11:34:25 [info] http://localhost:5000/api/admin/getAdminDetails?userId=63c2aa0499a9884740a9f94f - GET METHOD  
+Jan-16-2023 11:34:25 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdminDetails not found! 
+Jan-16-2023 11:40:15 [info] http://localhost:5000/api/admin/getAdminDetails/63c2aa0499a9884740a9f94f - GET METHOD  
+Jan-16-2023 11:40:15 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdminDetails/63c2aa0499a9884740a9f94f not found! 
+Jan-16-2023 11:42:07 [info] http://localhost:5000/api/admin/getAdminDetails/63c2aa0499a9884740a9f94f - GET METHOD  
+Jan-16-2023 11:42:07 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdminDetails/63c2aa0499a9884740a9f94f not found! 
+Jan-16-2023 11:47:32 [info] http://localhost:5000/api/admin/getAdminDetails/63c2aa0499a9884740a9f94f - GET METHOD  
+Jan-16-2023 11:47:32 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdminDetails/63c2aa0499a9884740a9f94f not found! 
