@@ -207,28 +207,166 @@ Jan-12-2023 10:13:20 [error] 404 - Requested URL http://localhost:5000/api/admin
 Jan-12-2023 10:13:43 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/766900f36c0d201c27465a7f3b43db9fc23a8a46486efdb34a74033147b99cd0 - POST METHOD  
 Jan-12-2023 10:14:08 [info] http://localhost:3000/api/admin/getAdminDetails/63bd2142a8387822a8122eaa - GET METHOD  
 Jan-12-2023 10:14:44 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-12-2023 12:34:37 [info] http://localhost:3000/api/admin/getManager - GET METHOD  
-Jan-12-2023 12:34:37 [error] 500 - getManager is not defined 
-Jan-12-2023 12:36:20 [info] http://localhost:3000/api/admin/getManager - GET METHOD  
-Jan-12-2023 12:36:20 [error] 500 - getManager is not defined 
-Jan-12-2023 12:45:25 [info] http://localhost:3000/api/admin/getManager - GET METHOD  
-Jan-12-2023 12:45:25 [error] 500 - getManager is not defined 
-Jan-12-2023 12:46:13 [info] http://localhost:3000/api/admin/getManager - GET METHOD  
-Jan-12-2023 12:46:13 [error] 500 - getManager is not defined 
-Jan-12-2023 12:54:03 [info] http://localhost:3000/api/admin/login - POST METHOD  
-Jan-12-2023 12:55:22 [info] http://localhost:3000/api/admin/createManager - POST METHOD  
-Jan-12-2023 12:55:22 [error] 405 - Unauthorized user. 
-Jan-12-2023 13:09:07 [info] http://localhost:3000/api/admin/createManager - POST METHOD  
-Jan-12-2023 13:09:07 [error] 405 - Unauthorized user. 
-Jan-12-2023 13:10:33 [info] http://localhost:3000/api/admin/createManager - POST METHOD  
-Jan-12-2023 13:10:33 [error] 405 - Unauthorized user. 
-Jan-12-2023 14:19:18 [info] http://localhost:3000/api/admin/createManager - POST METHOD  
-Jan-12-2023 14:19:18 [error] 500 - verifyToken is not defined 
-Jan-12-2023 14:19:40 [info] http://localhost:3000/api/admin/createManager - POST METHOD  
-Jan-12-2023 14:19:40 [error] 405 - Unauthorized user. 
-Jan-12-2023 14:29:12 [info] http://localhost:3000/api/admin/createManager - POST METHOD  
-Jan-12-2023 14:29:34 [info] http://localhost:3000/api/admin/createManager - POST METHOD  
-Jan-12-2023 14:30:19 [info] http://localhost:3000/api/admin/createManager - POST METHOD  
-Jan-12-2023 14:30:58 [info] http://localhost:3000/api/admin/createManager - POST METHOD  
-Jan-12-2023 14:32:06 [info] http://localhost:3000/api/admin/createManager - POST METHOD  
-Jan-12-2023 16:41:55 [info] http://localhost:3000/api/admin/createManager - POST METHOD  
+Jan-12-2023 11:32:25 [info] http://localhost:3000/api/user/listDeveloper - GET METHOD  
+Jan-12-2023 11:58:49 [info] http://localhost:3000/api/user/viewDeveloper?_id=63bea075262aac54ae4cf0f1 - GET METHOD  
+Jan-12-2023 14:53:28 [info] http://localhost:3000/api/admin/login - POST METHOD  
+Jan-12-2023 14:53:28 [error] 404 - Provided email is not registered. 
+Jan-12-2023 14:53:56 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/766900f36c0d201c27465a7f3b43db9fc23a8a46486efdb34a74033147b99cd0 - POST METHOD  
+Jan-12-2023 14:53:56 [error] 404 - Provided email is not registered. 
+Jan-12-2023 14:54:04 [info] http://localhost:3000/api/admin/login - POST METHOD  
+Jan-12-2023 14:54:04 [error] 404 - Provided email is not registered. 
+Jan-12-2023 14:54:12 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-12-2023 14:54:12 [error] 404 - Provided email is not registered. 
+Jan-12-2023 14:55:50 [info] http://localhost:3000/api/admin/login - POST METHOD  
+Jan-12-2023 15:00:00 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
+Jan-12-2023 15:00:43 [info] http://localhost:3000/api/admin/resetPassword/63bfd1e810c6d75c1008da21/9700dc160cd0f10234a9296a4be036bbc7ed27c73848a8adf81df53ee8e46e67 - POST METHOD  
+Jan-12-2023 15:01:25 [info] http://localhost:3000/api/admin/getAdminDetails/63bfd1e810c6d75c1008da21 - GET METHOD  
+Jan-12-2023 15:01:40 [info] http://localhost:3000/api/admin/updateAdmin/63bfd1e810c6d75c1008da21 - PUT METHOD  
+Jan-12-2023 15:04:04 [error] 400 - Unexpected token e in JSON at position 188 
+Jan-12-2023 15:07:32 [info] http://localhost:3000/api/user/addDeveloper - POST METHOD  
+Jan-12-2023 15:07:32 [error] 404 - Requested URL http://localhost:5000/api/user/addDeveloper not found! 
+Jan-12-2023 15:07:51 [info] http://localhost:3000/api/admin/addDeveloper - POST METHOD  
+Jan-12-2023 15:07:51 [error] 500 - to is not defined 
+Jan-12-2023 15:08:58 [info] http://localhost:3000/api/admin/addDeveloper - POST METHOD  
+Jan-12-2023 15:09:38 [error] 500 - to is not defined 
+Jan-12-2023 15:13:41 [info] http://localhost:3000/api/admin/addDeveloper - POST METHOD  
+Jan-12-2023 15:13:46 [error] 500 - mailOption is not defined 
+Jan-12-2023 15:14:33 [info] http://localhost:3000/api/admin/addDeveloper - POST METHOD  
+Jan-12-2023 15:17:02 [info] http://localhost:3000/api/user/loginDeveloper - POST METHOD  
+Jan-12-2023 15:17:02 [error] 404 - Requested URL http://localhost:5000/api/user/loginDeveloper not found! 
+Jan-12-2023 15:17:14 [info] http://localhost:3000/api/admin/loginDeveloper - POST METHOD  
+Jan-12-2023 15:17:47 [info] http://localhost:3000/api/admin/listDeveloper - GET METHOD  
+Jan-12-2023 15:19:54 [info] http://localhost:3000/api/user/viewDeveloper?_id=63bea075262aac54ae4cf0f1 - GET METHOD  
+Jan-12-2023 15:19:54 [error] 404 - Requested URL http://localhost:5000/api/user/viewDeveloper not found! 
+Jan-12-2023 15:20:06 [info] http://localhost:3000/api/admin/viewDeveloper?_id=63bea075262aac54ae4cf0f1 - GET METHOD  
+Jan-12-2023 15:22:01 [info] http://localhost:3000/api/admin/addDeveloper - POST METHOD  
+Jan-12-2023 15:41:14 [info] http://localhost:3000/api/admin/createManager - POST METHOD  
+Jan-12-2023 15:41:14 [error] 500 - Cannot read properties of null (reading 'role') 
+Jan-12-2023 15:41:47 [info] http://localhost:3000/api/admin/createManager - POST METHOD  
+Jan-12-2023 15:43:25 [info] http://localhost:3000/api/admin/createManager/63bfd1e810c6d75c1008da21 - POST METHOD  
+Jan-12-2023 15:43:25 [error] 404 - Requested URL http://localhost:5000/api/admin/createManager/63bfd1e810c6d75c1008da21 not found! 
+Jan-12-2023 15:44:46 [info] http://localhost:3000/api/admin/createManager/63bfd1e810c6d75c1008da21 - POST METHOD  
+Jan-12-2023 15:49:35 [error] 409 - Already exists. 
+Jan-12-2023 15:49:35 [info] http://localhost:3000/api/admin/createManager/63bfd1e810c6d75c1008da21 - POST METHOD  
+Jan-12-2023 15:51:50 [info] http://localhost:3000/api/admin/createManager/63bfd1e810c6d75c1008da21 - POST METHOD  
+Jan-12-2023 15:51:55 [error] 409 - Already exists. 
+Jan-12-2023 15:52:07 [info] http://localhost:3000/api/admin/createManager/63bfd1e810c6d75c1008da21 - POST METHOD  
+Jan-12-2023 15:52:28 [error] 500 - E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: "9718272919" } 
+Jan-12-2023 15:52:45 [info] http://localhost:3000/api/admin/createManager/63bfd1e810c6d75c1008da21 - POST METHOD  
+Jan-12-2023 15:52:46 [error] 500 - E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: "9718272919" } 
+Jan-12-2023 15:53:38 [info] http://localhost:3000/api/admin/createManager/63bfd1e810c6d75c1008da21 - POST METHOD  
+Jan-12-2023 15:53:38 [error] 500 - E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: "9718272919" } 
+Jan-12-2023 15:53:48 [info] http://localhost:3000/api/admin/createManager/63bfd1e810c6d75c1008da21 - POST METHOD  
+Jan-12-2023 15:55:33 [info] http://localhost:3000/api/admin/createManager/63bfd1e810c6d75c1008da21 - POST METHOD  
+Jan-12-2023 15:55:33 [error] 409 - Already exists. 
+Jan-12-2023 16:01:02 [info] http://localhost:3000/api/admin/createManager/63bfd1e810c6d75c1008da21 - POST METHOD  
+Jan-12-2023 16:01:30 [info] http://localhost:3000/api/admin/addDeveloper/63bfe166ef6a2a821c58b801 - POST METHOD  
+Jan-12-2023 16:02:24 [info] http://localhost:3000/api/admin/addDeveloper/63bfe166ef6a2a821c58b801 - POST METHOD  
+Jan-12-2023 16:03:20 [info] http://localhost:3000/api/admin/addDeveloper/63bfe166ef6a2a821c58b801 - POST METHOD  
+Jan-12-2023 16:04:38 [info] http://localhost:3000/api/admin/addDeveloper/63bfe166ef6a2a821c58b801 - POST METHOD  
+Jan-12-2023 16:04:57 [info] http://localhost:3000/api/admin/addDeveloper/63bfe166ef6a2a821c58b801 - POST METHOD  
+Jan-12-2023 16:06:33 [error] 404 - This user does not exist. 
+Jan-12-2023 16:10:32 [info] http://localhost:3000/api/admin/addDeveloper/63bfe166ef6a2a821c58b801 - POST METHOD  
+Jan-12-2023 16:10:58 [error] 404 - This email already exists. 
+Jan-12-2023 16:11:54 [info] http://localhost:3000/api/admin/addDeveloper/63bfe166ef6a2a821c58b801 - POST METHOD  
+Jan-12-2023 16:12:01 [error] 500 - E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: "687987987987" } 
+Jan-12-2023 16:12:08 [info] http://localhost:3000/api/admin/addDeveloper/63bfe166ef6a2a821c58b801 - POST METHOD  
+Jan-12-2023 16:12:38 [info] http://localhost:3000/api/admin/createManager/63bfd1e810c6d75c1008da21 - POST METHOD  
+Jan-12-2023 16:12:38 [error] 409 - Already exists. 
+Jan-12-2023 16:13:29 [info] http://localhost:3000/api/admin/createManager/63bfd1e810c6d75c1008da21 - POST METHOD  
+Jan-12-2023 16:14:59 [info] http://localhost:3000/api/admin/createManager/63bfd1e810c6d75c1008da21 - POST METHOD  
+Jan-12-2023 16:16:39 [info] http://localhost:3000/api/admin/loginManager - POST METHOD  
+Jan-12-2023 16:17:04 [info] http://localhost:3000/api/admin/loginManager - POST METHOD  
+Jan-12-2023 16:17:49 [info] http://localhost:3000/api/admin/loginManager - POST METHOD  
+Jan-12-2023 16:18:29 [info] http://localhost:3000/api/admin/loginManager - POST METHOD  
+Jan-12-2023 16:19:59 [info] http://localhost:3000/api/admin/loginManager - POST METHOD  
+Jan-12-2023 16:38:00 [info] http://localhost:5000/api/admin/listDeveloper - GET METHOD  
+Jan-13-2023 15:14:44 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
+Jan-13-2023 15:14:44 [error] 404 - Requested URL http://localhost:5000/api/admin/createManager not found! 
+Jan-13-2023 15:19:03 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-13-2023 15:19:03 [error] 404 - Provided email is not registered. 
+Jan-13-2023 15:23:04 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-13-2023 15:23:04 [error] 404 - Provided email is not registered. 
+Jan-13-2023 15:33:01 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
+Jan-13-2023 15:33:01 [error] 500 - Cannot read properties of undefined (reading 'substr') 
+Jan-13-2023 15:34:51 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
+Jan-13-2023 15:34:51 [error] 500 - Cannot read properties of undefined (reading 'substring') 
+Jan-13-2023 15:35:55 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
+Jan-13-2023 15:35:55 [error] 500 - managerEmail is not defined 
+Jan-13-2023 16:07:45 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
+Jan-13-2023 16:07:45 [error] 404 - This user does not exist. 
+Jan-13-2023 16:08:27 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
+Jan-13-2023 16:08:27 [error] 404 - This user does not exist. 
+Jan-13-2023 16:26:33 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
+Jan-13-2023 16:26:33 [error] 404 - This user does not exist. 
+Jan-13-2023 16:50:18 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-13-2023 16:51:02 [info] http://localhost:5000/api/admin/createManager?userId=63c13e425d9b3e4964f57148 - POST METHOD  
+Jan-13-2023 16:51:02 [error] 404 - Requested URL http://localhost:5000/api/admin/createManager not found! 
+Jan-13-2023 16:53:34 [info] http://localhost:5000/api/admin/createManager?userId=63c13e425d9b3e4964f57148 - POST METHOD  
+Jan-13-2023 16:53:34 [error] 404 - Requested URL http://localhost:5000/api/admin/createManager not found! 
+Jan-13-2023 16:55:11 [info] http://localhost:5000/api/admin/createManager?userId=63c13e425d9b3e4964f57148 - POST METHOD  
+Jan-13-2023 16:55:11 [error] 404 - Requested URL http://localhost:5000/api/admin/createManager not found! 
+Jan-13-2023 16:55:32 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
+Jan-13-2023 16:55:32 [error] 404 - Requested URL http://localhost:5000/api/admin/createManager not found! 
+Jan-13-2023 16:56:34 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
+Jan-13-2023 16:56:34 [error] 404 - Requested URL http://localhost:5000/api/admin/createManager not found! 
+Jan-13-2023 17:02:03 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
+Jan-13-2023 17:02:03 [error] 404 - Requested URL http://localhost:5000/api/admin/createManager not found! 
+Jan-13-2023 17:02:16 [info] http://localhost:5000/api/admin/createManager?userId=63c13e425d9b3e4964f57148 - POST METHOD  
+Jan-13-2023 17:02:16 [error] 404 - Requested URL http://localhost:5000/api/admin/createManager not found! 
+Jan-13-2023 17:14:38 [info] http://localhost:5000/api/admin/createManager?userId=63c13e425d9b3e4964f57148 - POST METHOD  
+Jan-13-2023 17:14:38 [error] 404 - Requested URL http://localhost:5000/api/admin/createManager not found! 
+Jan-13-2023 17:59:04 [info] http://localhost:5000/api/admin/createManager/:63c13e425d9b3e4964f57148 - POST METHOD  
+Jan-13-2023 17:59:04 [error] 500 - Cast to ObjectId failed for value ":63c13e425d9b3e4964f57148" (type string) at path "_id" for model "users" 
+Jan-13-2023 17:59:53 [info] http://localhost:5000/api/admin/createManager/63c13e425d9b3e4964f57148 - POST METHOD  
+Jan-13-2023 18:03:39 [info] http://localhost:5000/api/admin/listManager - GET METHOD  
+Jan-13-2023 18:05:37 [info] http://localhost:5000/api/admin/viewManager - GET METHOD  
+Jan-13-2023 18:05:37 [error] 404 - Developer data not found 
+Jan-13-2023 18:10:36 [info] http://localhost:5000/api/admin/viewManager?_id=63c14ec55d9b3e4964f5714d - GET METHOD  
+Jan-13-2023 18:10:36 [error] 500 - viewParticularDev is not defined 
+Jan-13-2023 18:12:03 [info] http://localhost:5000/api/admin/viewManager?_id=63c14ec55d9b3e4964f5714d - GET METHOD  
+Jan-13-2023 18:12:03 [error] 500 - viewParticularDev is not defined 
+Jan-13-2023 18:12:32 [info] http://localhost:5000/api/admin/viewManager?_id=63c14ec55d9b3e4964f5714d - GET METHOD  
+Jan-13-2023 18:12:32 [error] 500 - viewParticularDev is not defined 
+Jan-13-2023 18:16:11 [info] http://localhost:5000/api/admin/viewManager?_id=63c14ec55d9b3e4964f5714d&role=Manager - GET METHOD  
+Jan-13-2023 18:16:11 [error] 500 - viewParticularDev is not defined 
+Jan-13-2023 18:17:06 [info] http://localhost:5000/api/admin/viewManager?_id=63c14ec55d9b3e4964f5714d&role=Manager - GET METHOD  
+Jan-13-2023 18:17:06 [error] 500 - viewParticularDev is not defined 
+Jan-13-2023 18:19:31 [info] http://localhost:5000/api/admin/viewManager?_id=63c14ec55d9b3e4964f5714d&role=Manager - GET METHOD  
+Jan-15-2023 22:45:48 [info] http://localhost:5000/api/admin/updatemanager/63c13e425d9b3e4964f57148 - GET METHOD  
+Jan-15-2023 22:45:48 [error] 404 - Requested URL http://localhost:5000/api/admin/updatemanager/63c13e425d9b3e4964f57148 not found! 
+Jan-15-2023 22:46:06 [info] http://localhost:5000/api/admin/updatemanager/63c13e425d9b3e4964f57148 - PUT METHOD  
+Jan-15-2023 22:46:07 [error] 404 - This user does not exist. 
+Jan-15-2023 22:46:40 [info] http://localhost:5000/api/admin/updatemanager/63c14ec55d9b3e4964f5714d - PUT METHOD  
+Jan-15-2023 22:46:40 [error] 500 - Cannot read properties of undefined (reading '0') 
+Jan-15-2023 22:47:44 [info] http://localhost:5000/api/admin/updatemanager/63c14ec55d9b3e4964f5714d - PUT METHOD  
+Jan-15-2023 22:47:44 [error] 500 - Cannot read properties of undefined (reading 'profile_image') 
+Jan-15-2023 22:48:24 [info] http://localhost:5000/api/admin/updatemanager/63c14ec55d9b3e4964f5714d - PUT METHOD  
+Jan-16-2023 11:47:05 [info] http://localhost:5000/api/admin/createManager/63c13e425d9b3e4964f57148 - POST METHOD  
+Jan-16-2023 11:47:05 [error] 404 - This user does not exist. 
+Jan-16-2023 11:47:26 [info] http://localhost:5000/api/admin/createManager/63c13e425d9b3e4964f57148 - POST METHOD  
+Jan-16-2023 11:47:26 [error] 404 - This user does not exist. 
+Jan-16-2023 11:49:21 [info] http://localhost:5000/api/admin/createManager/63c2aa0499a9884740a9f94f - POST METHOD  
+Jan-16-2023 11:49:21 [error] 500 - Cannot access 'email' before initialization 
+Jan-16-2023 11:49:44 [info] http://localhost:5000/api/admin/createManager/63c2aa0499a9884740a9f94f - POST METHOD  
+Jan-16-2023 11:49:44 [error] 500 - Cannot access 'email' before initialization 
+Jan-16-2023 11:56:58 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-16-2023 11:56:58 [error] 404 - Provided email is not registered. 
+Jan-16-2023 12:00:06 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-16-2023 12:00:06 [error] 404 - Provided email is not registered. 
+Jan-16-2023 12:01:03 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-16-2023 12:02:13 [info] http://localhost:5000/api/admin/createManager/63c2aa0499a9884740a9f94f - POST METHOD  
+Jan-16-2023 12:02:13 [error] 404 - This user does not exist. 
+Jan-16-2023 12:02:37 [info] http://localhost:5000/api/admin/createManager/63c4ef12e0765e27488c9864%0A - POST METHOD  
+Jan-16-2023 12:02:37 [error] 500 - Cast to ObjectId failed for value "63c4ef12e0765e27488c9864\n" (type string) at path "_id" for model "users" 
+Jan-16-2023 12:03:19 [info] http://localhost:5000/api/admin/createManager/63c4ef12e0765e27488c9864 - POST METHOD  
+Jan-16-2023 12:03:19 [error] 500 - Cannot access 'email' before initialization 
+Jan-16-2023 12:03:44 [info] http://localhost:5000/api/admin/createManager/63c4ef12e0765e27488c9864 - POST METHOD  
+Jan-16-2023 12:03:44 [error] 500 - Cannot access 'email' before initialization 
+Jan-16-2023 12:32:07 [info] http://localhost:5000/api/admin/createManager/63c4ef12e0765e27488c9864 - POST METHOD  
+Jan-16-2023 12:32:28 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-16-2023 12:32:51 [info] http://localhost:5000/api/admin/createManager/63c4ef12e0765e27488c9864 - POST METHOD  
+Jan-16-2023 12:34:13 [info] http://localhost:5000/api/admin/createManager/63c4ef12e0765e27488c9864 - POST METHOD  
+Jan-16-2023 12:35:09 [info] http://localhost:5000/api/admin/createManager/63c4ef12e0765e27488c9864 - POST METHOD  
+Jan-16-2023 12:37:35 [info] http://localhost:5000/api/admin/createManager/63c4ef12e0765e27488c9864 - POST METHOD  
+Jan-16-2023 13:14:31 [info] http://localhost:5000/api/admin/createManager/63c4ef12e0765e27488c9864 - POST METHOD  

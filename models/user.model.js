@@ -6,6 +6,10 @@ const commonFunction = require("../helper/commonFunction");
 const schema = mongoose.Schema;
 var userModel = new schema(
   {
+    userId: {
+      type: schema.Types.ObjectId,
+      ref: "users",
+    },
     first_name: {
       type: String,
     },
@@ -18,11 +22,9 @@ var userModel = new schema(
     },
     password: {
       type: String,
-      required: true,
     },
     mobile_number: {
       type: String,
-      unique: true,
     },
     address: {
       type: String,
@@ -58,9 +60,9 @@ mongoose
       let obj = {
         first_name: "nitin",
         last_name: "sharma",
-        email: "nitin008sharma@gmail.com",
+        email: "nitin.antino@gmail.com",
         password: bcrypt.hashSync("test@12345"),
-        mobile_number: "9012111854",
+        mobile_number: "9988776655",
         role: "Admin",
       };
 

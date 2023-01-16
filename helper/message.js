@@ -50,10 +50,14 @@ module.exports.ErrorMessage = Object.freeze({
   SUBADMIN_ALREADY_EXIST: "This address already added as sub-admin",
   USER_ALREADY_EXIST: "This address already added as user",
   ADMIN_ALREADY_EXIST: "This address already added as Admin",
+  DATA_NOT_FOUND: "Developer data not found",
+  DATA_NOT_FOUND_1: "Manager data not found",
 });
 
 module.exports.SuccessMessage = Object.freeze({
   SIGNUP_SUCCESSFULLY: "Thanks, You have successfully signed up.",
+  DATA_FOUND: "Requested data found.",
+  DEVELOPER_ADD: "Developer added successfully",
   LOGIN_SUCCESS: "Your login is successful.",
   CUSTOMER_VERIFY: "Customer verified successfully",
   FORGET_SUCCESS: "A password link has been sent to your registered ID.",
@@ -115,4 +119,5 @@ module.exports.SuccessMessage = Object.freeze({
   FAQ_UPDATE: "FAQ updated successfully.",
   FAQ_DELETE: "FAQ deleted successfully.",
   CONNECT_WALLET: "Wallet Connect Successfully",
+  DEVELOPER_ADD: "Developer added successfully",
 });
