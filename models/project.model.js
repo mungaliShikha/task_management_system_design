@@ -9,6 +9,9 @@ var project_model = new schema(
     project_name: {
       type: String,
     },
+    project_id:{
+      type:Number
+    },
     description: {
       type: String,
     },
@@ -33,11 +36,11 @@ var project_model = new schema(
         type: String,
       }
     ],
-    manager: [
+    manager: 
       {
         type: String,
       }
-    ],
+    ,
   },
   { timestamps: true }
 );

@@ -138,3 +138,29 @@ Jan-16-2023 11:34:25 [error] 404 - Requested URL http://localhost:5000/api/admin
 Jan-16-2023 11:40:15 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdminDetails/63c2aa0499a9884740a9f94f not found! 
 Jan-16-2023 11:42:07 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdminDetails/63c2aa0499a9884740a9f94f not found! 
 Jan-16-2023 11:47:32 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdminDetails/63c2aa0499a9884740a9f94f not found! 
+Jan-16-2023 12:33:44 [error] 404 - Provided email is not registered. 
+Jan-16-2023 12:34:33 [error] 404 - Provided email is not registered. 
+Jan-16-2023 12:35:32 [error] 404 - Provided email is not registered. 
+Jan-16-2023 12:55:25 [error] 404 - This user does not exist. 
+Jan-16-2023 12:56:11 [error] 404 - This user does not exist. 
+Jan-16-2023 12:57:54 [error] 404 - This user does not exist. 
+Jan-16-2023 12:58:56 [error] 404 - This user does not exist. 
+Jan-16-2023 12:59:35 [error] 404 - This user does not exist. 
+Jan-16-2023 13:11:50 [error] 500 - Unexpected field 
+Jan-16-2023 13:11:57 [error] 500 - Unexpected field 
+Jan-16-2023 13:13:38 [error] 500 - Cannot destructure property 'profile_image' of 'req.files' as it is undefined. 
+Jan-16-2023 13:30:27 [error] 404 - Requested URL http://localhost:5000/api/admin/createManager not found! 
+Jan-16-2023 14:58:21 [error] 409 - Already exists. 
+Jan-16-2023 14:58:52 [error] 500 - No recipients defined 
+Jan-16-2023 15:01:41 [error] 500 - No recipients defined 
+Jan-16-2023 15:02:51 [error] 500 - No recipients defined 
+Jan-16-2023 16:33:05 [error] 400 - Unexpected token } in JSON at position 169 
+Jan-16-2023 17:05:30 [error] 500 - task.save is not a function 
+Jan-16-2023 17:06:12 [error] 500 - task validation failed: status: `started` is not a valid enum value for path `status`. 
+Jan-16-2023 17:07:16 [error] 500 - task validation failed: status: `started` is not a valid enum value for path `status`. 
+Jan-16-2023 17:19:03 [error] 404 - Requested URL http://localhost:5000/api/task/addTaskToProject not found! 
+Jan-16-2023 17:19:22 [error] 500 - Cannot read properties of null (reading '_id') 
+Jan-16-2023 17:19:46 [error] 404 - Requested URL http://localhost:5000/api/task/listTaskOnparticularProject/63c52f49ea7e459099465018 not found! 
+Jan-16-2023 17:20:20 [error] 404 - Requested URL http://localhost:5000/api/task/listTaskOnparticularProject/63c52f49ea7e459099465018 not found! 
+Jan-16-2023 17:21:43 [error] 404 - Requested URL http://localhost:5000/api/task/listTaskOnparticularProject not found! 
+Jan-16-2023 17:22:00 [error] 404 - Requested URL http://localhost:5000/api/task/listTaskOnparticularProject not found! 

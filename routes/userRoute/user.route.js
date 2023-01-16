@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { upload } = require("../../services/aws/aws");
+const auth = require('../../middleware/auth');
 const userController = require("../../controllers/user.controller")
 
 
@@ -62,11 +63,13 @@ router.post("/developerLogin",userController.developerLogin)
  *       500:
  *         description: Internal Server Error
  */
-router.get("/getDeveloperProfile",userController.getDeveloperProfile)
+router.get("/getProfile",auth.verifyToken, userController.getProfile);
 
+router.put("/updateProfile",auth.verifyToken, upload.single("profile_image"),userController.updateProfile)
 
+router.post("/loginManager", userController.loginManager);
 
-// router.post("/loginDeveloper", userController.loginDeveloper);
+router.post("/addDeveloper",auth.verifyToken,userController.addDeveloper)
 
 module.exports = router;
 

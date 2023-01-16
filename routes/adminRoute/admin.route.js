@@ -145,13 +145,12 @@ router.post('/login', adminController.login);
  */
 router.post('/forgetPassword',adminController.forgetPassword)
 router.post('/resetPassword/:userId/:token',adminController.resetPassword)
-router.put('/updateAdmin/:userId',upload.single("profile_image"),adminController.updateAdmin)
-router.get('/getAdminDetails/:userId',adminController.getAdminDetails)
+router.put('/updateAdmin',auth.verifyToken, upload.single("profile_image"),adminController.updateAdmin)
+router.get('/getAdminDetails',auth.verifyToken, adminController.getAdminDetails)
 
 
 /// admin can create manager
-router.post("/loginManager", adminController.loginManager);
-router.post("/createManager/:userId",upload.array("profile_image"), adminController.createManager);
+router.post("/createManager",auth.verifyToken, adminController.createManager);
 
 
 module.exports = router;
