@@ -63,9 +63,9 @@ router.post("/developerLogin",userController.developerLogin)
  *       500:
  *         description: Internal Server Error
  */
-router.get("/getProfile",auth.verifyToken, userController.getProfile);
+router.get("/getProfile",auth.verifyToken, userController.getProfile); // get profile for manager and developer
 
-router.put("/updateProfile",auth.verifyToken, upload.single("profile_image"),userController.updateProfile)
+router.put("/updateProfile",auth.verifyToken, upload.array("profile_image"),userController.updateProfile) //update api for manager and developer
 
 router.post("/loginManager", userController.loginManager);
 

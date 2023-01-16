@@ -145,7 +145,7 @@ router.post('/login', adminController.login);
  */
 router.post('/forgetPassword',adminController.forgetPassword)
 router.post('/resetPassword/:userId/:token',adminController.resetPassword)
-router.put('/updateAdmin',auth.verifyToken, upload.single("profile_image"),adminController.updateAdmin)
+router.put('/updateAdmin',auth.verifyToken, upload.array("profile_image"),adminController.updateAdmin)
 router.get('/getAdminDetails',auth.verifyToken, adminController.getAdminDetails)
 
 

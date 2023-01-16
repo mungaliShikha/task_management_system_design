@@ -164,3 +164,14 @@ Jan-16-2023 17:19:46 [error] 404 - Requested URL http://localhost:5000/api/task/
 Jan-16-2023 17:20:20 [error] 404 - Requested URL http://localhost:5000/api/task/listTaskOnparticularProject/63c52f49ea7e459099465018 not found! 
 Jan-16-2023 17:21:43 [error] 404 - Requested URL http://localhost:5000/api/task/listTaskOnparticularProject not found! 
 Jan-16-2023 17:22:00 [error] 404 - Requested URL http://localhost:5000/api/task/listTaskOnparticularProject not found! 
+Jan-16-2023 18:53:03 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdminDetails/63c4f74d78e9c57679c45950 not found! 
+Jan-16-2023 18:55:54 [error] 500 - No recipients defined 
+Jan-16-2023 18:58:10 [error] 409 - Already exists. 
+Jan-16-2023 19:01:16 [error] 404 - Requested URL http://localhost:5000/api/admin/loginManager not found! 
+Jan-16-2023 19:07:42 [error] 500 - Cannot read properties of undefined (reading 'catch') 
+Jan-16-2023 19:08:57 [error] 500 - Cannot read properties of undefined (reading 'catch') 
+Jan-16-2023 19:10:03 [error] 500 - Cannot read properties of undefined (reading 'catch') 
+Jan-16-2023 19:10:38 [error] 500 - Cannot read properties of undefined (reading 'catch') 
+Jan-16-2023 19:24:38 [error] 404 - Data not found 
+Jan-16-2023 19:45:07 [error] 404 - Requested URL http://localhost:5000/api/user/loginDeveloper not found! 
+Jan-16-2023 19:45:49 [error] 404 - Data not found 

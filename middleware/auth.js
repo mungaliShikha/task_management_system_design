@@ -4,11 +4,12 @@ const { ErrorMessage } = require('../helper/message')
 const { ErrorCode } = require('../helper/statusCode')
 const userModel = require('../models/user.model')
 const jwt = require('jsonwebtoken')
+const appError = require("../utils/errorHandlers/errorHandler");
 
 
 exports.verifyToken = (req, res, next) => {
     if (req.headers.token) {
-        jwt.verify(req.headers.token, 'task-management', (err, result) => {
+        jwt.verify(req.headers.token, global.gFields.jwtSecretKey, (err, result) => {
             if (err) {
                 response(res, ErrorCode.UNAUTHORIZED, [], ErrorMessage.INCORRECT_JWT);
             }
@@ -17,7 +18,7 @@ exports.verifyToken = (req, res, next) => {
                     if (error)
                         response(res, ErrorCode.INTERNAL_ERROR, [], ErrorMessage.INTERNAL_ERROR)
                     else if (!result2) {
-                        response(res, ErrorCode.NOT_FOUND, [], ErrorMessage.USER_NOT_FOUND)
+                        throw new appError(ErrorMessage.USER_NOT_FOUND,ErrorCode.NOT_FOUND)
                     }
                     else {
                         if (result2.status == "BLOCK") {

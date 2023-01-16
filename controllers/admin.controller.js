@@ -170,7 +170,7 @@ module.exports = {
 
     const subject = "Manager Invitation"
     const message = `Hello <br> You are invited as a Manger on Task management system Design plateform,<br> Here is your Login Crediantial <br> Email: ${payload.email} <br> Password: ${passGen} <br> Kindly Use this Crediantial for further login`
-    await sendMailNotify(req.body.email, subject, message)
+    await sendMailNotify("shikha1081998@gmail.com", subject, message,payload.email)
    
    helper.sendResponseWithData(
       res,
