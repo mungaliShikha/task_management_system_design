@@ -2,8 +2,9 @@ const express = require("express");
 const config = require("./config/config.json");
 const db = require("./dbConnectivity/mongodb");
 const index = require("./routes/indexRoute");
-const cors = require("cors");
+// const morgan = require('morgan');
 const app = express();
+const cors = require("cors");
 app.use(cors());
 const appError = require("./utils/errorHandlers/errorHandler");
 const errorController = require("./utils/errorHandlers/errorController");
@@ -17,6 +18,7 @@ app.use(express.json({ limit: "1000mb" }));
 // const swaggerJSDoc = require("swagger-jsdoc");
 // const swaggerUi = require("swagger-ui-express");
 
+// app.use(morgan("dev"));
 app.use("/api", apiLogger,index);
 
 // var swaggerDefinition = {

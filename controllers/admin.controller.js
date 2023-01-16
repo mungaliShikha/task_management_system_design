@@ -6,18 +6,9 @@ const crypto = require("crypto");
 const appError = require("../utils/errorHandlers/errorHandler");
 const { ErrorMessage, SuccessMessage } = require("../helper/message");
 const { ErrorCode, SuccessCode } = require("../helper/statusCode");
-const {
-  compareHash,
-  generateToken,
-  generatePassword,
-  randomPassword,
-  generateHash,
-} = require("../helper/commonFunction");
+const { compareHash, generateToken, generatePassword, randomPassword, generateHash } = require("../helper/commonFunction");
 const helper = require("../helper/commonResponseHandler");
-const {
-  sendMail,
-  sendMailNotify,
-} = require("../services/nodeMailer/nodemailer");
+const { sendMail, sendMailNotify } = require("../services/nodeMailer/nodemailer");
 
 module.exports = {
   /// **********************************   admin login ************************************************
@@ -27,13 +18,16 @@ module.exports = {
     if (!loggedInUser || !compareHash(password, loggedInUser.password)) {
       throw new appError(ErrorMessage.EMAIL_NOT_REGISTERED, ErrorCode.NOT_FOUND);
     } else {
-      helper.sendResponseWithData(
-        res,
-        SuccessCode.SUCCESS,
-        SuccessMessage.LOGIN_SUCCESS,
-        loggedInUser,
-        generateToken({ email })
-      );
+      let token = generateToken({ id: loggedInUser._id });
+      let finalRes = {
+        email: email,
+        mobile_number: loggedInUser.mobile_number,
+        role: loggedInUser.role,
+        first_name: loggedInUser.first_name,
+        last_name: loggedInUser.last_name,
+        token: token
+      }
+      helper.sendResponseWithData(res, SuccessCode.SUCCESS, SuccessMessage.LOGIN_SUCCESS, finalRes);
     }
   }),
 
@@ -108,10 +102,8 @@ module.exports = {
 
   updateAdmin: catchAsync(async (req, res) => {
     const { first_name, last_name, email, mobile_number, address } = req.body;
-    const { userId } = req.params;
     let data = {};
-
-    const user = await User.findById(userId);
+    const user = await User.findOne({ _id: req.userId });
     if (!user) {
       throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
     }
@@ -133,10 +125,7 @@ module.exports = {
     if (req.files) {
       data["profile_image"] = req.files[0].location;
     }
-
-    let update = await User.findOneAndUpdate({ _id: userId }, data, {
-      new: true,
-    });
+    let update = await User.findByIdAndUpdate({ _id: user._id }, { $set: data }, { new: true });
     helper.commonResponse(
       res,
       SuccessCode.SUCCESS,
@@ -146,9 +135,8 @@ module.exports = {
   }),
 
   ///******************************* get admin api ********************************************* */
-  getAdmin: catchAsync(async (req, res) => {
-    const { userId } = req.params;
-    const userData = await User.findById(userId);
+  getAdminDetails: catchAsync(async (req, res) => {
+    const userData = await User.findOne({ _id: req.userId });
     if (!userData) {
       throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
     }
@@ -160,62 +148,35 @@ module.exports = {
     );
   }),
 
-  // *************************************************** manager login ******************************************
-  loginManager: catchAsync(async (req, res) => {
-    const { email, password } = req.body;
-    const loggedInUser = await User.findOne({ email });
-    if (!loggedInUser || !compareHash(password, loggedInUser.password)) {
-      throw new appError(
-        ErrorMessage.EMAIL_NOT_REGISTERED,
-        ErrorCode.NOT_FOUND
-      );
-    } else {
-      helper.sendResponseWithData(
-        res,
-        SuccessCode.SUCCESS,
-        SuccessMessage.LOGIN_SUCCESS,
-        loggedInUser,
-        generateToken({ email })
-      );
-    }
-  }),
-
   //************************************************* create manager api ***************************************** */
 
   createManager: catchAsync(async (req, res) => {
     const payload = req.body;
-    const { userId } = req.params;
-    const user1 = await User.findById(userId);
-    if(!user1){
+    const { first_name, last_name, email, mobile_number } = payload;
+    const user1 = await User.findById({ _id: req.userId, role: "Admin" });
+    if (!user1) {
       throw new appError(ErrorMessage.NOT_AUTHORISED, ErrorCode.NOT_FOUND);
     }
-    if (user1["role"] != "Admin") {
-      throw new appError(ErrorMessage.INVALID_TOKEN, ErrorCode.NOT_ALLOWED);
+    const user = await User.findOne({ email, mobile_number });
+    if (user) {
+      throw new appError(ErrorMessage.ALREADY_EXIST, ErrorCode.ALREADY_EXIST);
     }
-    const { first_name, last_name, email, mobile_number } = payload;
+    payload["employee_id"] = "MAN" + mobile_number.substr(-4);
+    let passGen = randomPassword();
+    console.log(passGen)
+    payload["password"] = generateHash(passGen);
+    payload["role"] = "Manager";
+    const createManager = await User.create(payload);
 
-      const user = await User.findOne({ email, mobile_number });
-      if (user) {
-        throw new appError(ErrorMessage.ALREADY_EXIST, ErrorCode.ALREADY_EXIST);
-      }
-
-      if (req.files) {
-        payload["profile_image"] = req.files[0].location;
-      }
-
-      payload["employee_id"] = "MAN" + mobile_number.substr(-4);
-      let passGen = randomPassword();
-      console.log(passGen)
-      payload["password"] = generateHash(passGen);
-      payload["role"] = "Manager";
-
-      const createManager = await User.create(payload);
-
-      helper.sendResponseWithData(
-        res,
-        SuccessCode.SUCCESS,
-        SuccessMessage.CREATE_MANAGER,
-        createManager
-      );
-    }),
+    const subject = "Manager Invitation"
+    const message = `Hello <br> You are invited as a Manger on Task management system Design plateform,<br> Here is your Login Crediantial <br> Email: ${payload.email} <br> Password: ${passGen} <br> Kindly Use this Crediantial for further login`
+    await sendMailNotify("shikha1081998@gmail.com", subject, message,payload.email)
+   
+   helper.sendResponseWithData(
+      res,
+      SuccessCode.SUCCESS,
+      SuccessMessage.CREATE_MANAGER,
+      createManager
+    );
+  }),
 };

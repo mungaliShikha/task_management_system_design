@@ -1,6 +1,7 @@
 const User = require("../models/user.model");
-// const Token = require("../models/token.model");
+const Token = require("../models/token.model");
 const catchAsync = require("../utils/catchAsync");
+const { upload } = require("../services/aws/aws");
 const appError = require("../utils/errorHandlers/errorHandler");
 const { ErrorMessage, SuccessMessage } = require("../helper/message");
 const { ErrorCode, SuccessCode } = require("../helper/statusCode");
@@ -18,121 +19,171 @@ const {
 } = require("../services/nodeMailer/nodemailer");
 
 module.exports = {
-  //******************************************* developer login **************************************** */
-
-  loginDeveloper: async (req, res) => {
-    const { email, password } = req.body;
-    const loggedInUser = await User.findOne({ email });
-    if (!loggedInUser || !compareHash(password, loggedInUser.password)) {
-      throw new appError(
-        ErrorMessage.EMAIL_NOT_REGISTERED,
-        ErrorCode.NOT_FOUND
-      );
-    } else {
-      let token = generateToken({
-        id: loggedInUser._id,
-        role: loggedInUser.role,
-      });
-      let finalRes = {
-        userId: loggedInUser._id,
-        email: email,
-        role: loggedInUser.role,
-        first_name: loggedInUser.first_name,
-        last_name: loggedInUser.last_name,
-        mobile_number: loggedInUser.mobile_number,
-        token: token,
-      };
-      helper.sendResponseWithData(
+  // *************************************************** manager login ******************************************
+  loginManager: async (req, res) => {
+    try {
+      const { email, password } = req.body;
+      const loggedInUser = await User.findOne({ email });
+      if (!loggedInUser || !compareHash(password, loggedInUser.password)) {
+        throw new appError(
+          ErrorMessage.EMAIL_NOT_REGISTERED,
+          ErrorCode.NOT_FOUND
+        );
+      } else {
+        let token = generateToken({ id: loggedInUser._id });
+        let managerRes = {
+          email: email,
+          first_name: loggedInUser.first_name,
+          last_name: loggedInUser.last_name,
+          role: loggedInUser.role,
+          mobile_number: loggedInUser.mobile_number,
+          employee_id: loggedInUser.employee_id,
+          token: token,
+        };
+        helper.sendResponseWithData(
+          res,
+          SuccessCode.SUCCESS,
+          SuccessMessage.LOGIN_SUCCESS,
+          managerRes
+        );
+      }
+    } catch (error) {
+      helper.commonResponse(
         res,
-        SuccessCode.SUCCESS,
-        SuccessMessage.LOGIN_SUCCESS,
-        finalRes
+        ErrorCode.SOMETHING_WRONG,
+        ErrorMessage.SOMETHING_WRONG
       );
     }
   },
 
-  //************************************** create developer ************************************ */
+  // *********************************************** get profile for Manager,Developer *******************************
+
+  getProfile: catchAsync(async (req, res) => {
+    const tokenAuth = await User.findOne({
+      _id: req.userId,
+      role: { $in: ["Developer", "Manager"] },
+    });
+    if (!tokenAuth) {
+      throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
+    }
+    helper.commonResponse(
+      res,
+      SuccessCode.SUCCESS,
+      tokenAuth,
+      SuccessMessage.DATA_FOUND
+    );
+  }),
+  // *********************************************** update Profile for Manager,Developer *******************************
+
+  updateProfile: async (req, res) => {
+    try {
+      let payload = req.body;
+      const tokenAuth = await User.findOne({
+        _id: req.userId,
+        role: { $in: ["Developer", "Manager"] },
+      });
+      if (!tokenAuth)
+        helper.commonResponse(
+          res,
+          ErrorCode.NOT_FOUND,
+          ErrorMessage.USER_NOT_FOUND
+        );
+      if (req.files) {
+        payload["profile_pic"] = req.files[0].location;
+      }
+      let updateRes = await User.findByIdAndUpdate(
+        { _id: tokenAuth._id },
+        { $set: payload },
+        { new: true }
+      );
+      helper.commonResponse(
+        res,
+        SuccessCode.SUCCESS,
+        updateRes,
+        SuccessMessage.UPDATE_SUCCESS
+      );
+    } catch (error) {
+      helper.commonResponse(
+        res,
+        ErrorCode.SOMETHING_WRONG,
+        ErrorMessage.SOMETHING_WRONG
+      );
+    }
+  },
+
+  // **************************************************** Developer Create ************************
 
   addDeveloper: catchAsync(async (req, res) => {
-    let { email, mobile_number } = req.body;
-    let { userId } = req.params;
-    const adminAuthCheck = await User.findById(userId);
-    if (adminAuthCheck && adminAuthCheck.role != "Manager") {
-      throw new appError(ErrorMessage.INVALID_TOKEN, ErrorCode.NOT_ALLOWED);
-    } else if (!adminAuthCheck) {
-      throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
+    const payload = req.body;
+    const { first_name, last_name, email, mobile_number } = payload;
+    const user1 = await User.findById({ _id: req.userId, role: "Manager" });
+    if (!user1) {
+      throw new appError(ErrorMessage.NOT_AUTHORISED, ErrorCode.NOT_FOUND);
     }
-    let managerEmail = adminAuthCheck.email;
-    const userExistRes = await User.findOne({ email });
-    if (userExistRes) {
-      throw new appError(ErrorMessage.EMAIL_EXIST, ErrorCode.NOT_FOUND);
+    const user = await User.findOne({ email, mobile_number });
+    if (user) {
+      throw new appError(ErrorMessage.ALREADY_EXIST, ErrorCode.ALREADY_EXIST);
     }
+    payload["employee_id"] = "DEV" + mobile_number.substr(-4);
     let passGen = randomPassword();
-    console.log(passGen)
-    req.body.password = generateHash(passGen);
-    if (req.files) {
-      req.body["profile_image"] = req.files[0].location;
-    }
-    req.body.employee_id = "DEV" + mobile_number.substr(-4);
-    req.body.role = "Developer";
-    req.body.userId = adminAuthCheck._id;
+    console.log(passGen);
+    payload["password"] = generateHash(passGen);
+    payload["role"] = "Developer";
+    const createDeveloper = await User.create(payload);
 
-    let subject = "Developer Invitation";
-    let message = `Your account is successfully created as A Developer on Our platform <br> Kindly Use this Credentials for Login <br> Email: ${req.body.email} <br> Password: ${passGen}`;
+    const subject = "Developer Invitation";
+    const message = `Hello <br> You are invited as a Developer on Task management system Design plateform,<br> Here is your Login Crediantial <br> Email: ${payload.email} <br> Password: ${passGen} <br> Kindly Use this Crediantial for further login`;
+    await sendMailNotify(req.body.email, subject, message);
 
-    await sendMailNotify(managerEmail, subject, message, email);
-
-    let finalRes = await User.create(req.body);
-    helper.commonResponse(
+    helper.sendResponseWithData(
       res,
       SuccessCode.SUCCESS,
-      finalRes,
-      SuccessMessage.DEVELOPER_ADD
+      SuccessMessage.CREATE_DEVELOPER,
+      createDeveloper
     );
   }),
 
-  //******************************************** get list of developers ************************************ */
+  // **************************************************** Developer Login ************************
 
-  listDeveloper: catchAsync(async (req, res) => {
-    var query = { status: { $ne: "DELETE" }, role: "Developer" };
-    if (req.body.search) {
-      query.name = new RegExp("^" + req.body.search, "i");
+  developerLogin: async (req, res) => {
+    try {
+      const { email, password } = req.body;
+      let developerDetails = await User.findOne({ email });
+      if (!developerDetails)
+        helper.commonResponse(
+          res,
+          ErrorCode.NOT_FOUND,
+          ErrorMessage.USER_NOT_FOUND
+        );
+      else if (!compareHash(password, developerDetails.password))
+        helper.commonResponse(
+          res,
+          ErrorCode.NOT_FOUND,
+          ErrorMessage.INVALID_CREDENTIAL
+        );
+      const token = generateToken({
+        id: developerDetails._id,
+        role: developerDetails.role,
+      });
+      let loginRes = {
+        email: email,
+        role: developerDetails.role,
+        token: token,
+        first_name: developerDetails.first_name,
+        last_name: developerDetails.last_name,
+      };
+      helper.commonResponse(
+        res,
+        SuccessCode.SUCCESS,
+        loginRes,
+        SuccessMessage.DATA_FOUND
+      );
+    } catch (error) {
+      helper.commonResponse(
+        res,
+        ErrorCode.SOMETHING_WRONG,
+        ErrorMessage.SOMETHING_WRONG
+      );
     }
-    req.body.limit = parseInt(req.body.limit);
-    var options = {
-      page: req.body.page || 1,
-      limit: req.body.limit || 10,
-      sort: { createdAt: -1 },
-    };
-    let developerList = await User.paginate(query, options);
-
-    if (developerList.length == 0) {
-      throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
-    }
-
-    helper.commonResponse(
-      res,
-      SuccessCode.SUCCESS,
-      developerList,
-      SuccessMessage.DATA_FOUND
-    );
-  }),
-
-  /************************************** view developer ***************************************************** */
-
-  viewDeveloper: catchAsync(async (req, res) => {
-    let viewParticularDev = await User.findOne({
-      _id: req.query._id,
-      role: "Developer",
-    });
-    if (!viewParticularDev) {
-      throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
-    }
-    helper.commonResponse(
-      res,
-      SuccessCode.SUCCESS,
-      viewParticularDev,
-      SuccessMessage.DATA_FOUND
-    );
-  }),
+  },
 };

@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { upload } = require("../../services/aws/aws");
+const auth = require('../../middleware/auth');
 const userController = require("../../controllers/user.controller")
 
 
@@ -21,16 +22,8 @@ const userController = require("../../controllers/user.controller")
  *         description: email
  *         in: formData
  *         required: true
- *       - name: first_name
- *         description: first_name
- *         in: formData
- *         required: true
- *       - name: last_name
- *         description: last_name
- *         in: formData
- *         required: true
- *       - name: mobile_number
- *         description: mobile_number
+ *       - name: password
+ *         description: password
  *         in: formData
  *         required: true
  *     responses:
@@ -43,48 +36,26 @@ const userController = require("../../controllers/user.controller")
  *       500:
  *         description: Internal Server Error
  */
-router.post('/addDeveloper/:userId',upload.array("profile_image"), userController.addDeveloper)
+router.post("/developerLogin",userController.developerLogin)
 
 
 /**
  * @swagger
- * /api/admin/listDeveloper:
- *   get:
+ * /api/user/getDeveloperProfile:
+ *   post:
  *     tags:
- *       - ADMIN_DEVELOPER_DASHBOARD
- *     description: Check for Social existence and give the access Token 
- *     produces:
- *       - application/json
- *     responses:
- *       200:
- *         description: Developer list successfully.
- *       404:
- *         description: Requested data not found.
- *       402:
- *         description: Invalid login credentials.
- *       500:
- *         description: Internal Server Error
- */
-router.get('/listDeveloper', userController.listDeveloper)
-
-
-/**
- * @swagger
- * /api/admin/viewDeveloper:
- *   get:
- *     tags:
- *       - ADMIN_DEVELOPER_DASHBOARD
- *     description: Check for Social existence and give the access Token 
+ *       - DEVELOPER
+ *     description: Developer Login
  *     produces:
  *       - application/json
  *     parameters:
- *       - name: _id
- *         description: _id
- *         in: query
+ *       - name: token
+ *         description: token
+ *         in: header
  *         required: true
  *     responses:
  *       200:
- *         description: Developer view successfully.
+ *         description: Your profile details get successfully.
  *       404:
  *         description: Requested data not found.
  *       402:
@@ -92,14 +63,13 @@ router.get('/listDeveloper', userController.listDeveloper)
  *       500:
  *         description: Internal Server Error
  */
-router.get('/viewDeveloper', userController.viewDeveloper)
+router.get("/getProfile",auth.verifyToken, userController.getProfile); // get profile for manager and developer
 
+router.put("/updateProfile",auth.verifyToken, upload.array("profile_image"),userController.updateProfile) //update api for manager and developer
 
+router.post("/loginManager", userController.loginManager);
 
-
-
-
-router.post("/loginDeveloper", userController.loginDeveloper);
+router.post("/addDeveloper",auth.verifyToken,userController.addDeveloper)
 
 module.exports = router;
 
