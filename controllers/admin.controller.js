@@ -21,15 +21,6 @@ const {
   generateHash,
 } = require("../helper/commonFunction");
 const helper = require("../helper/commonResponseHandler");
-<<<<<<< HEAD
-const commonFunction = require("../helper/commonFunction");
-const { db } = require("../models/user.model");
-=======
-const {
-  sendMail,
-  sendMailNotify,
-} = require("../services/nodeMailer/nodemailer");
->>>>>>> 6f768ff4d45227f1df9b95d7a2c4fc66cd4b8d93
 
 module.exports = {
   /// **********************************   admin login ************************************************
@@ -42,21 +33,6 @@ module.exports = {
         ErrorCode.NOT_FOUND
       );
     } else {
-<<<<<<< HEAD
-      let token = generateToken({
-        id: loggedInUser._id,
-        role: loggedInUser.role,
-      });
-      let finalRes = {
-        userId: loggedInUser._id,
-        email: email,
-        role: loggedInUser.role,
-        first_name: loggedInUser.first_name,
-        last_name: loggedInUser.last_name,
-        mobile_number: loggedInUser.mobile_number,
-        token: token,
-      };
-=======
       helper.sendResponseWithData(
         res,
         SuccessCode.SUCCESS,
@@ -176,6 +152,7 @@ module.exports = {
   }),
 
   ///******************************* get admin api ********************************************* */
+
   getAdmin: catchAsync(async (req, res) => {
     const { userId } = req.params;
     const userData = await User.findById(userId);
@@ -191,6 +168,7 @@ module.exports = {
   }),
 
   // *************************************************** manager login ******************************************
+
   loginManager: catchAsync(async (req, res) => {
     const { email, password } = req.body;
     const loggedInUser = await User.findOne({ email });
@@ -206,47 +184,6 @@ module.exports = {
         SuccessMessage.LOGIN_SUCCESS,
         loggedInUser,
         generateToken({ email })
-      );
-    }
-  }),
-
-  //************************************************* create manager api ***************************************** */
-
-  createManager: catchAsync(async (req, res) => {
-    const payload = req.body;
-    const { userId } = req.params;
-    const user1 = await User.findById(userId);
-    if(!user1){
-      throw new appError(ErrorMessage.NOT_AUTHORISED, ErrorCode.NOT_FOUND);
-    }
-    if (user1["role"] != "Admin") {
-      throw new appError(ErrorMessage.INVALID_TOKEN, ErrorCode.NOT_ALLOWED);
-    }
-    const { first_name, last_name, email, mobile_number } = payload;
-
-      const user = await User.findOne({ email, mobile_number });
-      if (user) {
-        throw new appError(ErrorMessage.ALREADY_EXIST, ErrorCode.ALREADY_EXIST);
-      }
-
-      if (req.files) {
-        payload["profile_image"] = req.files[0].location;
-      }
-
-      payload["employee_id"] = "MAN" + mobile_number.substr(-4);
-      let passGen = randomPassword();
-      console.log(passGen)
-      payload["password"] = generateHash(passGen);
-      payload["role"] = "Manager";
-
-      const createManager = await User.create(payload);
-
->>>>>>> 6f768ff4d45227f1df9b95d7a2c4fc66cd4b8d93
-      helper.sendResponseWithData(
-        res,
-        SuccessCode.SUCCESS,
-        SuccessMessage.LOGIN_SUCCESS,
-        finalRes
       );
     }
   }),
@@ -494,6 +431,8 @@ module.exports = {
       );
     }
   }),
+
+  //************************************************* create manager api ***************************************** *
 
   createManager: catchAsync(async (req, res) => {
     const payload = req.body;

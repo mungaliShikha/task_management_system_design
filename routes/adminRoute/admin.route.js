@@ -43,11 +43,15 @@ const { verifyToken } = require("../../middleware/auth");
  *       500:
  *         description: Internal Server Error
  */
-router.post('/login', adminController.login);
-router.post('/forgetPassword',adminController.forgetPassword)
-router.post('/resetPassword/:userId/:token',adminController.resetPassword)
-router.put('/updateAdmin/:userId',upload.array("profile_image"),adminController.updateAdmin)
-router.get('/getAdminDetails/:userId',adminController.getAdmin)
+router.post("/login", adminController.login);
+router.post("/forgetPassword", adminController.forgetPassword);
+router.post("/resetPassword/:userId/:token", adminController.resetPassword);
+router.put(
+  "/updateAdmin/:userId",
+  upload.array("profile_image"),
+  adminController.updateAdmin
+);
+router.get("/getAdminDetails/:userId", adminController.getAdmin);
 
 router.post("/forgetPassword", adminController.forgetPassword);
 router.post("/resetPassword/:userId/:token", adminController.resetPassword);
@@ -62,7 +66,6 @@ router.get("/getAdminDetails/:userId", adminController.getAdmin);
 router.post("/loginManager", adminController.loginManager);
 router.post(
   "/createManager/:userId",
-  verifyToken,
   upload.array("profile_image"),
   adminController.createManager
 );

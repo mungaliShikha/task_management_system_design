@@ -62,12 +62,8 @@ module.exports = {
     }
   }),
 
-
-
-
-  
-  addDeveloperToProject :catchAsync(async(req,res)=>{
-    let { managerId , projectId } = req.params;
+  addDeveloperToProject: catchAsync(async (req, res) => {
+    let { managerId, projectId } = req.params;
     const managerAuthCheck = await User.findById(managerId);
     if (managerAuthCheck && managerAuthCheck.role != "Manager") {
       throw new appError(ErrorMessage.INVALID_TOKEN, ErrorCode.NOT_ALLOWED);
@@ -82,11 +78,13 @@ module.exports = {
       throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
     }
 
-    const {developer} = req.body
-    
-    
-    const newProject = await Project.findOneAndUpdate({_id:projectId}, {$addToSet:{developer:developer}},{new:true})
+    const { developer } = req.body;
 
+    const newProject = await Project.findOneAndUpdate(
+      { _id: projectId },
+      { $addToSet: { developer: developer } },
+      { new: true }
+    );
 
     helper.commonResponse(
       res,
@@ -94,12 +92,10 @@ module.exports = {
       newProject,
       SuccessMessage.PROJECT_ADDED
     );
-
-    
   }),
-  
-  addManagerToProject:catchAsync(async(req,res)=>{
-    let { managerId , projectId } = req.params;
+
+  addManagerToProject: catchAsync(async (req, res) => {
+    let { managerId, projectId } = req.params;
     const managerAuthCheck = await User.findById(managerId);
     if (managerAuthCheck && managerAuthCheck.role != "Manager") {
       throw new appError(ErrorMessage.INVALID_TOKEN, ErrorCode.NOT_ALLOWED);
@@ -114,11 +110,13 @@ module.exports = {
       throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
     }
 
-    const {manager} = req.body
-    
-    
-    const newProject = await Project.findOneAndUpdate({_id:projectId}, {$addToSet:{manager:manager}},{new:true})
+    const { manager } = req.body;
 
+    const newProject = await Project.findOneAndUpdate(
+      { _id: projectId },
+      { $addToSet: { manager: manager } },
+      { new: true }
+    );
 
     helper.commonResponse(
       res,
@@ -127,24 +125,16 @@ module.exports = {
       SuccessMessage.PROJECT_ADDED
     );
   }),
-  
-  
-  addTaskToProject:catchAsync(async(req,res)=>{
-    
-  }),
-  
 
-
-
+  addTaskToProject: catchAsync(async (req, res) => {}),
 
   listProject: catchAsync(async (req, res) => {
-    var query = { active_status: { $ne: "DELETE" }, 
-   };
+    var query = { active_status: { $ne: "DELETE" } };
     if (req.body.search) {
       query.project_name = new RegExp("^" + req.body.search, "i");
     }
     req.body.limit = parseInt(req.body.limit);
-    req.body.page= parseInt(req.body.page)
+    req.body.page = parseInt(req.body.page);
     var options = {
       page: req.body.page || 1,
       limit: req.body.limit || 10,
@@ -164,22 +154,44 @@ module.exports = {
     );
   }),
 
-
-viewProject:catchAsync(async(req,res)=>{
-  // const {projectId} = req.params
-  const projectView = await Project.aggregate([
-    {$lookup:{from:"users",localField:"developer",foreignField:"email",as:"devlopersList"}},
-    {$lookup:{from:"users",localField:"manager",foreignField:"email",as:"managerList"}},
-    { $project : { _id : 0, 'developer' : 0, 'manager' : 0,'project_task':0 ,"createdAt": 0,
-    "updatedAt":0,"__v": 0} }
-    ])
+  viewProject: catchAsync(async (req, res) => {
+    // const {projectId} = req.params
+    const projectView = await Project.aggregate([
+      {
+        $lookup: {
+          from: "users",
+          localField: "developer",
+          foreignField: "email",
+          as: "devlopersList",
+        },
+      },
+      {
+        $lookup: {
+          from: "users",
+          localField: "manager",
+          foreignField: "email",
+          as: "managerList",
+        },
+      },
+      {
+        $project: {
+          _id: 0,
+          developer: 0,
+          manager: 0,
+          project_task: 0,
+          createdAt: 0,
+          updatedAt: 0,
+          __v: 0,
+        },
+      },
+    ]);
     helper.commonResponse(
       res,
       SuccessCode.SUCCESS,
       projectView,
       SuccessMessage.DATA_FOUND
     );
-})
+  }),
 
-
+  listProjectTask: catchAsync(async (req, res) => {}),
 };

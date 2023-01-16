@@ -8,12 +8,7 @@ app.use(cors());
 const appError = require("./utils/errorHandlers/errorHandler");
 const errorController = require("./utils/errorHandlers/errorController");
 const apiLogger = require("./utils/logger/apiRouteLogger");
-<<<<<<< HEAD
-const basicAuth = require("express-basic-auth");
-=======
 // const basicAuth = require('express-basic-auth');
-
->>>>>>> 6f768ff4d45227f1df9b95d7a2c4fc66cd4b8d93
 
 app.use(express.urlencoded({ extended: true, limit: "1000mb" }));
 app.use(express.json({ limit: "1000mb" }));
