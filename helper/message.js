@@ -56,7 +56,7 @@ module.exports.ErrorMessage = Object.freeze({
     SUBADMIN_ALREADY_EXIST:"This address already added as sub-admin",
     USER_ALREADY_EXIST:"This address already added as user",
     ADMIN_ALREADY_EXIST:"This address already added as Admin",
-    DATA_NOT_FOUND:"Developer data not found"
+    DATA_NOT_FOUND:"Data not found"
 
 });
 
@@ -132,5 +132,7 @@ module.exports.SuccessMessage = Object.freeze({
     FAQ_DELETE: "FAQ deleted successfully.",
     CONNECT_WALLET:"Wallet Connect Successfully",
     DEVELOPER_ADD:"Developer added successfully",
-
+    CREATE_MANAGER:"Manager created successfully.",
+    CREATE_DEVELOPER:"Developer created successfully.",
+    TASK_ADD:"Task added Successfully."
 });
