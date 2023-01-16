@@ -1,16 +1,22 @@
 const router = require("express").Router();
+const { upload } = require("../../services/aws/aws");
 const userController = require("../../controllers/user.controller")
+
 
 /**
  * @swagger
- * /api/user/developerLogin:
+ * /api/admin/addDeveloper/:userId:
  *   post:
  *     tags:
- *       - DEVELOPER
- *     description: Developer Login
+ *       - ADMIN_DEVELOPER_DASHBOARD
+ *     description: Developer Added
  *     produces:
  *       - application/json
  *     parameters:
+ *       - name: token
+ *         description: token
+ *         in: header
+ *         required: true
  *       - name: email
  *         description: email
  *         in: formData
@@ -21,7 +27,7 @@ const userController = require("../../controllers/user.controller")
  *         required: true
  *     responses:
  *       200:
- *         description: Your login is successful.
+ *         description: Developer added successfully.
  *       404:
  *         description: Requested data not found.
  *       402:
@@ -57,6 +63,10 @@ router.post("/developerLogin",userController.developerLogin)
  *         description: Internal Server Error
  */
 router.get("/getDeveloperProfile",userController.getDeveloperProfile)
+
+
+
+// router.post("/loginDeveloper", userController.loginDeveloper);
 
 module.exports = router;
 

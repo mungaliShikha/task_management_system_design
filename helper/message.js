@@ -1,5 +1,10 @@
 
 module.exports.ErrorMessage = Object.freeze({
+    PROJECT_NOT_EXIST:"Project not found",
+    PROJECT_DELETED:"Project deleted",
+    MANAGER_NOT_EXIST:"Manager does not exist",
+    NOT_AUTHORISED:"Only admin can create the manager",
+    PROJECT_ALREADY_CREATED:"Project is already created",
     LINK_EXPIRED:'Verifcation link has expired',
     INVALID_TOKEN: 'Unauthorized user.',
     COUNTRY_EXIST: 'Country name already exist',
@@ -61,6 +66,7 @@ module.exports.ErrorMessage = Object.freeze({
 
 
 module.exports.SuccessMessage = Object.freeze({
+    PROJECT_ADDED:"Project added sucessfully",
     SIGNUP_SUCCESSFULLY: "Thanks, You have successfully signed up.",
     DATA_FOUND: "Requested data found.",
     DEVELOPER_ADD:"Developer added successfully",

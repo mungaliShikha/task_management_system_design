@@ -73,7 +73,7 @@ router.post('/login', adminController.login);
  *       500:
  *         description: Internal Server Error
  */
-router.post('/addDeveloper', adminController.addDeveloper)
+// router.post('/addDeveloper', adminController.addDeveloper)
 
 
 /**
@@ -95,7 +95,7 @@ router.post('/addDeveloper', adminController.addDeveloper)
  *       500:
  *         description: Internal Server Error
  */
-router.get('/listDeveloper', adminController.listDeveloper)
+// router.get('/listDeveloper', adminController.listDeveloper)
 
 
 /**
@@ -122,7 +122,7 @@ router.get('/listDeveloper', adminController.listDeveloper)
  *       500:
  *         description: Internal Server Error
  */
-router.get('/viewDeveloper', adminController.viewDeveloper)
+// router.get('/viewDeveloper', adminController.viewDeveloper)
 
 /**
  * @swagger
@@ -146,16 +146,12 @@ router.get('/viewDeveloper', adminController.viewDeveloper)
 router.post('/forgetPassword',adminController.forgetPassword)
 router.post('/resetPassword/:userId/:token',adminController.resetPassword)
 router.put('/updateAdmin/:userId',upload.single("profile_image"),adminController.updateAdmin)
-router.get('/getAdminDetails',auth.verifyToken, adminController.getAdmin)
+router.get('/getAdminDetails/:userId',adminController.getAdminDetails)
 
 
 /// admin can create manager
 router.post("/loginManager", adminController.loginManager);
 router.post("/createManager/:userId",upload.array("profile_image"), adminController.createManager);
 
-router.post("/addDeveloper/:userId",upload.array("profile_image"), adminController.addDeveloper);
-router.post("/loginDeveloper", adminController.loginDeveloper);
-router.get("/listDeveloper", adminController.listDeveloper);
-router.get("/viewDeveloper", adminController.viewDeveloper);
 
 module.exports = router;
