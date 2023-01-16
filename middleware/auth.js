@@ -30,6 +30,7 @@ exports.verifyToken = (req, res, next) => {
                         else {
                             req.userId = result.id
                             req.userDetails = result
+                            req.email = result2.email
                             next();
                         }
 

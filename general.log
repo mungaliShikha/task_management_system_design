@@ -525,3 +525,17 @@ Jan-16-2023 19:51:03 [info] http://localhost:5000/api/user/developerLogin - POST
 Jan-16-2023 19:51:21 [info] http://localhost:5000/api/project/listProject - GET METHOD  
 Jan-16-2023 19:51:57 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
 Jan-16-2023 19:55:59 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-16-2023 20:45:17 [info] http://localhost:5000/api/user/addDeveloper/63bfe4abebc1fb186c732ba1 - POST METHOD  
+Jan-16-2023 20:45:17 [error] 404 - Requested URL http://localhost:5000/api/user/addDeveloper/63bfe4abebc1fb186c732ba1 not found! 
+Jan-16-2023 20:45:27 [info] http://localhost:5000/api/user/addDeveloper - POST METHOD  
+Jan-16-2023 20:48:08 [info] http://localhost:5000/api/user/addDeveloper - POST METHOD  
+Jan-16-2023 20:48:15 [info] http://localhost:5000/api/user/loginManager - POST METHOD  
+Jan-16-2023 20:48:30 [info] http://localhost:5000/api/user/addDeveloper - POST METHOD  
+Jan-16-2023 20:48:30 [error] 409 - Already exists. 
+Jan-16-2023 20:49:03 [info] http://localhost:5000/api/user/addDeveloper - POST METHOD  
+Jan-16-2023 20:49:54 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
+Jan-16-2023 20:50:07 [info] http://localhost:5000/api/user/listDeveloper - GET METHOD  
+Jan-16-2023 20:50:07 [error] 404 - Requested URL http://localhost:5000/api/user/listDeveloper not found! 
+Jan-16-2023 20:51:04 [info] http://localhost:5000/api/user/getProfile - GET METHOD  
+Jan-16-2023 20:52:28 [info] http://localhost:5000/api/user/viewDeveloper?_id=63c119cbfddb76190cd8d3e1 - GET METHOD  
+Jan-16-2023 20:52:28 [error] 404 - Requested URL http://localhost:5000/api/user/viewDeveloper not found! 
