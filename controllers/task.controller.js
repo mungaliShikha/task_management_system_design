@@ -46,7 +46,30 @@ module.exports = {
         const taskListRes = await task.paginate(query, options);
         if (taskListRes.length == 0) helper.commonResponse(res, ErrorCode.NOT_FOUND, ErrorMessage.DATA_NOT_FOUND);
         helper.commonResponse(res, SuccessCode.SUCCESS, taskListRes, SuccessMessage.DATA_FOUND)
-    })
+    }),
+
+    addDeveloperToTask: catchAsync(async (req, res) => {
+        let { developers, taskId } = req.body;
+        const managerAuthCheck = await User.findOne({ _id: req.userId });
+        if (managerAuthCheck && managerAuthCheck.role != "Manager") {
+          throw new appError(ErrorMessage.INVALID_TOKEN, ErrorCode.NOT_ALLOWED);
+        } else if (!managerAuthCheck) {
+            throw new appError(ErrorMessage.MANAGER_NOT_EXIST, ErrorCode.NOT_FOUND);
+        }
+        let developerCheckRes = await User.findOne({_id:developers});
+        if (!developerCheckRes) helper.commonResponse(res, ErrorCode.NOT_FOUND, ErrorMessage.USER_NOT_FOUND)
+
+        const taskCheckRes = await task.findById(taskId);
+        if (taskCheckRes && taskCheckRes.active_status == "DELETE") {
+            throw new appError(ErrorMessage.PROJECT_DELETED, ErrorCode.NOT_FOUND);
+        } else if (!taskCheckRes) {
+            throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
+        }
+        const newProject = await task.findOneAndUpdate({ _id: taskId }, { $addToSet: { developer_assigned: developers } }, { new: true })
+        helper.commonResponse(res,SuccessCode.SUCCESS,newProject,SuccessMessage.DEVELOPER_ASSIGNED );
+
+
+    }),
 
 
 };

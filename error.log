@@ -168,3 +168,7 @@ Jan-17-2023 09:52:41 [error] 500 - Error getting query : Expected 'query' to be 
 Jan-17-2023 09:53:09 [error] 500 - Error getting query : Expected 'query' to be BSON, nil (or equivalent), but got primitive.ObjectID instead. Doc = [{count tasks} {query ObjectID("63c52eeff5f1198c612719ca")} {lsid [{id {4 [132 89 252 113 83 77 68 222 150 205 94 112 197 67 252 147]}}]} {$clusterTime [{clusterTime {1673929031 1}} {signature [{hash {0 [136 181 65 90 184 125 176 135 230 112 89 174 104 216 248 197 164 53 107 27]}} {keyId 7153350039593549829}]}]} {$db task_management}] 
 Jan-17-2023 10:08:30 [error] 500 - Schema hasn't been registered for model "user".
 Use mongoose.model(name, schema) 
+Jan-17-2023 11:01:05 [error] 405 - Unauthorized user. 
+Jan-17-2023 11:31:51 [error] 405 - Unauthorized user. 
+Jan-17-2023 11:32:17 [error] 500 - Parameter "filter" to findOne() must be an object, got 63be9f40260eb348a20f54d0 
+Jan-17-2023 11:32:41 [error] 500 - Cannot set headers after they are sent to the client 

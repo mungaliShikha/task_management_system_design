@@ -17,6 +17,11 @@ var task_model = new schema(
       type: schema.Types.ObjectId,
       ref: "users",
     },
+    developer_assigned:
+    {
+      type: schema.Types.ObjectId,
+      ref: "user",
+    },
 
     name: {
       type: String,
@@ -44,11 +49,6 @@ var task_model = new schema(
     },
     due_date: {
       type: Date,
-    },
-    developer_assigned:
-    {
-      type: schema.Types.ObjectId,
-      ref: "user",
     }
   },
   { timestamps: true }
