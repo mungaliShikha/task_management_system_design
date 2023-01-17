@@ -41,7 +41,7 @@ module.exports = {
 
     },
 
-// *********************************************** get profile for Manager,Developer *******************************
+    // *********************************************** get profile for Manager,Developer *******************************
 
     getProfile: async (req, res) => {
         try {
@@ -53,7 +53,7 @@ module.exports = {
         }
     },
 
-// *********************************************** update Profile for Manager,Developer *******************************
+    // *********************************************** update Profile for Manager,Developer *******************************
 
     updateProfile: async (req, res) => {
         try {
@@ -77,11 +77,11 @@ module.exports = {
         const { first_name, last_name, email, mobile_number } = payload;
         const user1 = await User.findById({ _id: req.userId, role: "Manager" });
         if (!user1) {
-          throw new appError(ErrorMessage.NOT_AUTHORISED, ErrorCode.NOT_FOUND);
+            throw new appError(ErrorMessage.NOT_AUTHORISED, ErrorCode.NOT_FOUND);
         }
         const user = await User.findOne({ email, mobile_number });
         if (user) {
-          throw new appError(ErrorMessage.ALREADY_EXIST, ErrorCode.ALREADY_EXIST);
+            throw new appError(ErrorMessage.ALREADY_EXIST, ErrorCode.ALREADY_EXIST);
         }
         payload["employee_id"] = "DEV" + mobile_number.substr(-4);
         let passGen = randomPassword();
@@ -89,18 +89,18 @@ module.exports = {
         payload["password"] = generateHash(passGen);
         payload["role"] = "Developer";
         const createDeveloper = await User.create(payload);
-    
+
         const subject = "Developer Invitation"
         const message = `Hello <br> You are invited as a Developer on Task management system Design plateform,<br> Here is your Login Crediantial <br> Email: ${payload.email} <br> Password: ${passGen} <br> Kindly Use this Crediantial for further login`
         await sendMailNotify(req.body.email, subject, message)
-       
-       helper.sendResponseWithData(
-          res,
-          SuccessCode.SUCCESS,
-          SuccessMessage.CREATE_DEVELOPER,
-          createDeveloper
+
+        helper.sendResponseWithData(
+            res,
+            SuccessCode.SUCCESS,
+            SuccessMessage.CREATE_DEVELOPER,
+            createDeveloper
         );
-      }),
+    }),
 
     // **************************************************** Developer Login ************************
 
@@ -125,6 +125,6 @@ module.exports = {
 
     },
 
-   
+
 
 }

@@ -164,3 +164,7 @@ Jan-16-2023 17:19:46 [error] 404 - Requested URL http://localhost:5000/api/task/
 Jan-16-2023 17:20:20 [error] 404 - Requested URL http://localhost:5000/api/task/listTaskOnparticularProject/63c52f49ea7e459099465018 not found! 
 Jan-16-2023 17:21:43 [error] 404 - Requested URL http://localhost:5000/api/task/listTaskOnparticularProject not found! 
 Jan-16-2023 17:22:00 [error] 404 - Requested URL http://localhost:5000/api/task/listTaskOnparticularProject not found! 
+Jan-17-2023 09:52:41 [error] 500 - Error getting query : Expected 'query' to be BSON, nil (or equivalent), but got primitive.ObjectID instead. Doc = [{count tasks} {query ObjectID("63c52eeff5f1198c612719ca")} {lsid [{id {4 [237 231 60 91 40 92 70 221 158 90 176 219 115 170 208 82]}}]} {$clusterTime [{clusterTime {1673929031 1}} {signature [{hash {0 [136 181 65 90 184 125 176 135 230 112 89 174 104 216 248 197 164 53 107 27]}} {keyId 7153350039593549829}]}]} {$db task_management}] 
+Jan-17-2023 09:53:09 [error] 500 - Error getting query : Expected 'query' to be BSON, nil (or equivalent), but got primitive.ObjectID instead. Doc = [{count tasks} {query ObjectID("63c52eeff5f1198c612719ca")} {lsid [{id {4 [132 89 252 113 83 77 68 222 150 205 94 112 197 67 252 147]}}]} {$clusterTime [{clusterTime {1673929031 1}} {signature [{hash {0 [136 181 65 90 184 125 176 135 230 112 89 174 104 216 248 197 164 53 107 27]}} {keyId 7153350039593549829}]}]} {$db task_management}] 
+Jan-17-2023 10:08:30 [error] 500 - Schema hasn't been registered for model "user".
+Use mongoose.model(name, schema) 
