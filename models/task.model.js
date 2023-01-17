@@ -36,6 +36,7 @@ var task_model = new schema(
 
     start_date: {
       type: Date,
+      default:Date.now()
     },
     due_date: {
       type: Date,

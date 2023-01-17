@@ -1,7 +1,6 @@
 const User = require("../models/user.model");
 const Token = require("../models/token.model");
 const catchAsync = require("../utils/catchAsync");
-const { upload } = require("../services/aws/aws");
 const crypto = require("crypto");
 const appError = require("../utils/errorHandlers/errorHandler");
 const { ErrorMessage, SuccessMessage } = require("../helper/message");
@@ -169,7 +168,7 @@ module.exports = {
     const createManager = await User.create(payload);
 
     const subject = "Manager Invitation"
-    const message = `Hello <br> You are invited as a Manger on Task management system Design plateform,<br> Here is your Login Crediantial <br> Email: ${payload.email} <br> Password: ${passGen} <br> Kindly Use this Crediantial for further login`
+    const message = `Hello <br> You are invited as a Manager on Task management system Design platform,<br> Here is your Login Crediantial <br> Email: ${payload.email} <br> Password: ${passGen} <br> Kindly Use this Crediantial for further login`
     await sendMailNotify("shikha1081998@gmail.com", subject, message,payload.email)
    
    helper.sendResponseWithData(

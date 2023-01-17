@@ -19,30 +19,50 @@ const {
 } = require("../services/nodeMailer/nodemailer");
 
 module.exports = {
-
   //************************************************create project ************************************** */
   createProject: catchAsync(async (req, res) => {
-    const { project_name, description, status, project_task, developers, active_status } = req.body;
-    const managerAuthCheck = await User.findOne({ _id: req.userId, role: "Manager" });
+    const {
+      project_name,
+      description,
+      status,
+      project_task,
+      developers,
+      active_status,
+    } = req.body;
+    const managerAuthCheck = await User.findOne({
+      _id: req.userId,
+      role: "Manager",
+    });
     if (!managerAuthCheck) {
       throw new appError(ErrorMessage.MANAGER_NOT_EXIST, ErrorCode.NOT_FOUND);
     }
     const projectName = await Project.findOne({ project_name });
     if (projectName) {
-      throw new appError(ErrorMessage.PROJECT_ALREADY_CREATED, ErrorCode.NOT_FOUND);
+      throw new appError(
+        ErrorMessage.PROJECT_ALREADY_CREATED,
+        ErrorCode.NOT_FOUND
+      );
     }
-    if (project_name || description || status || project_task || developers || manager || active_status) {
-      req.body.manager = managerAuthCheck._id
+    if (
+      project_name ||
+      description ||
+      status ||
+      project_task ||
+      developers ||
+      manager ||
+      active_status
+    ) {
+      managerId = managerAuthCheck._id.toString();
+      req.body.manager = managerId.split(" ");
       let finalData = await Project.create(req.body);
-      helper.commonResponse(res, SuccessCode.SUCCESS, finalData, SuccessMessage.PROJECT_ADDED);
+      helper.commonResponse(
+        res,
+        SuccessCode.SUCCESS,
+        finalData,
+        SuccessMessage.PROJECT_ADDED
+      );
     }
   }),
-
-
-
-
-
-
 
   addDeveloperToProject: catchAsync(async (req, res) => {
     let { managerId, projectId } = req.params;
@@ -59,16 +79,18 @@ module.exports = {
     } else if (!projectAuthCheck) {
       throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
     }
-    const { developer } = req.body
-    const newProject = await Project.findOneAndUpdate({ _id: projectId }, { $addToSet: { developer: developer } }, { new: true })
+    const { developer } = req.body;
+    const newProject = await Project.findOneAndUpdate(
+      { _id: projectId },
+      { $addToSet: { developer: developer } },
+      { new: true }
+    );
     helper.commonResponse(
       res,
       SuccessCode.SUCCESS,
       newProject,
       SuccessMessage.PROJECT_ADDED
     );
-
-
   }),
 
   addManagerToProject: catchAsync(async (req, res) => {

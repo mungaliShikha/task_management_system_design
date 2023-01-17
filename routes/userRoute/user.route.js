@@ -1,8 +1,9 @@
 const router = require("express").Router();
 const { upload } = require("../../services/aws/aws");
-const auth = require('../../middleware/auth');
-const userController = require("../../controllers/user.controller")
+const auth = require("../../middleware/auth");
+const userController = require("../../controllers/user.controller");
 
+router.post("/addDeveloper", auth.verifyToken, userController.addDeveloper);
 
 /**
  * @swagger
@@ -36,8 +37,7 @@ const userController = require("../../controllers/user.controller")
  *       500:
  *         description: Internal Server Error
  */
-router.post("/developerLogin",userController.developerLogin)
-
+router.post("/developerLogin", userController.developerLogin);
 
 /**
  * @swagger
@@ -63,15 +63,15 @@ router.post("/developerLogin",userController.developerLogin)
  *       500:
  *         description: Internal Server Error
  */
-router.get("/getProfile",auth.verifyToken, userController.getProfile); // get profile for manager and developer
+router.get("/getProfile", auth.verifyToken, userController.getProfile); // get profile for manager and developer
 
-router.put("/updateProfile",auth.verifyToken, upload.array("profile_image"),userController.updateProfile) //update api for manager and developer
+router.put(
+  "/updateProfile",
+  auth.verifyToken,
+  upload.array("profile_image"),
+  userController.updateProfile
+); //update api for manager and developer
 
 router.post("/loginManager", userController.loginManager);
 
-router.post("/addDeveloper",auth.verifyToken,userController.addDeveloper)
-
 module.exports = router;
-
-
-

@@ -20,11 +20,6 @@ var project_model = new schema(
       enum: ["started", "ongoing", "completed"],
       default: "started",
     },
-    active_status: {
-      type: String,
-      enum: ["ACTIVE", "BLOCK", "DELETE"],
-      default: "ACTIVE",
-    },
     project_task: [
       {
         type: String,
@@ -36,10 +31,10 @@ var project_model = new schema(
         type: String,
       }
     ],
-    manager: 
+    manager: [
       {
         type: String,
-      }
+      }]
     ,
   },
   { timestamps: true }
