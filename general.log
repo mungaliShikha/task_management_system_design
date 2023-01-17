@@ -481,3 +481,65 @@ Jan-16-2023 17:21:43 [error] 404 - Requested URL http://localhost:5000/api/task/
 Jan-16-2023 17:22:00 [info] http://localhost:5000/api/task/listTaskOnparticularProject?_id=63c52f49ea7e459099465018 - GET METHOD  
 Jan-16-2023 17:22:00 [error] 404 - Requested URL http://localhost:5000/api/task/listTaskOnparticularProject not found! 
 Jan-16-2023 17:22:32 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-17-2023 12:24:26 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-17-2023 12:24:27 [error] 500 - Cannot read properties of null (reading '_id') 
+Jan-17-2023 12:26:13 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-17-2023 12:27:13 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-17-2023 12:27:18 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-17-2023 12:39:41 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-17-2023 12:40:15 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-17-2023 12:41:53 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-17-2023 12:41:54 [error] 500 - Schema hasn't been registered for model "user".
+Use mongoose.model(name, schema) 
+Jan-17-2023 12:41:58 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-17-2023 12:41:58 [error] 500 - Schema hasn't been registered for model "user".
+Use mongoose.model(name, schema) 
+Jan-17-2023 12:42:31 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-17-2023 12:45:39 [info] http://localhost:5000/api/project/createProject - POST METHOD  
+Jan-17-2023 12:45:59 [info] http://localhost:5000/api/project/listProject - GET METHOD  
+Jan-17-2023 12:46:21 [info] http://localhost:5000/api/project/listProject - GET METHOD  
+Jan-17-2023 12:46:48 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
+Jan-17-2023 12:48:19 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
+Jan-17-2023 12:48:20 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
+Jan-17-2023 12:48:23 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
+Jan-17-2023 12:51:53 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
+Jan-17-2023 12:56:23 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
+Jan-17-2023 14:31:50 [info] http://localhost:5000/api/user/loginManager - POST METHOD  
+Jan-17-2023 14:33:12 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-17-2023 14:33:12 [error] 404 - Data not found 
+Jan-17-2023 14:34:13 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-17-2023 14:34:51 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2da688032f65ddcab6fbe - POST METHOD  
+Jan-17-2023 14:34:51 [error] 404 - Requested URL http://localhost:5000/api/project/addDevelopersToProject/63c2da688032f65ddcab6fbe not found! 
+Jan-17-2023 14:35:24 [info] http://localhost:5000/api/project/addTaskToProject/63c2da688032f65ddcab6fbe - POST METHOD  
+Jan-17-2023 14:35:24 [error] 404 - Project not found 
+Jan-17-2023 14:35:51 [info] http://localhost:5000/api/project/addTaskToProject/63c64b1b0e84e1074c76cab5 - POST METHOD  
+Jan-17-2023 14:35:57 [info] http://localhost:5000/api/project/addTaskToProject/63c64b1b0e84e1074c76cab5 - POST METHOD  
+Jan-17-2023 14:37:45 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
+Jan-17-2023 14:39:44 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-17-2023 14:39:45 [error] 500 - Cannot read properties of null (reading '_id') 
+Jan-17-2023 14:41:35 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-17-2023 14:41:35 [error] 500 - Cannot read properties of null (reading '_id') 
+Jan-17-2023 14:42:53 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-17-2023 14:44:02 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
+Jan-17-2023 15:02:26 [info] http://localhost:5000/api/task/lviewTask - GET METHOD  
+Jan-17-2023 15:02:26 [error] 404 - Requested URL http://localhost:5000/api/task/lviewTask not found! 
+Jan-17-2023 15:02:35 [info] http://localhost:5000/api/task/viewTask - GET METHOD  
+Jan-17-2023 15:02:35 [error] 404 - Requested URL http://localhost:5000/api/task/viewTask not found! 
+Jan-17-2023 15:02:40 [info] http://localhost:5000/api/task/viewTask - GET METHOD  
+Jan-17-2023 15:02:40 [error] 404 - Requested URL http://localhost:5000/api/task/viewTask not found! 
+Jan-17-2023 15:02:56 [info] http://localhost:5000/api/task/viewAllTask - GET METHOD  
+Jan-17-2023 15:02:56 [error] 500 - Task is not defined 
+Jan-17-2023 15:03:28 [info] http://localhost:5000/api/task/viewAllTask - GET METHOD  
+Jan-17-2023 15:04:44 [info] http://localhost:5000/api/project/listProject - GET METHOD  
+Jan-17-2023 15:05:22 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
+Jan-17-2023 15:07:56 [info] http://localhost:5000/api/task/viewAllTask - GET METHOD  
+Jan-17-2023 15:07:58 [info] http://localhost:5000/api/task/viewAllTask - GET METHOD  
+Jan-17-2023 15:08:22 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-17-2023 15:11:38 [info] http://localhost:5000/api/task/viewAllTask - GET METHOD  
+Jan-17-2023 15:11:42 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-17-2023 15:11:51 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-17-2023 15:12:03 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-17-2023 15:12:21 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-17-2023 15:12:21 [error] 500 - Cannot set headers after they are sent to the client 
+Jan-17-2023 15:16:35 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-17-2023 15:16:35 [error] 405 - The requested user cannot access the data 

@@ -1,5 +1,6 @@
 
 module.exports.ErrorMessage = Object.freeze({
+    CANNOT_ACCESS_DATA:"The requested user cannot access the data",
     PROJECT_NOT_EXIST:"Project not found",
     PROJECT_DELETED:"Project deleted",
     MANAGER_NOT_EXIST:"Manager does not exist",

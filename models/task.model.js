@@ -20,7 +20,12 @@ var task_model = new schema(
     developer_assigned:
     {
       type: schema.Types.ObjectId,
-      ref: "user",
+      ref: "users",
+    },
+    active_status: {
+      type: String,
+      enum: ["ACTIVE", "BLOCKED", "DELETE"],
+      default: "ACTIVE",
     },
 
     name: {

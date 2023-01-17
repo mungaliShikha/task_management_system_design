@@ -64,71 +64,10 @@ module.exports = {
     }
   }),
 
-  addDeveloperToProject: catchAsync(async (req, res) => {
-    let { managerId, projectId } = req.params;
-    const managerAuthCheck = await User.findById(managerId);
-    if (managerAuthCheck && managerAuthCheck.role != "Manager") {
-      throw new appError(ErrorMessage.INVALID_TOKEN, ErrorCode.NOT_ALLOWED);
-    } else if (!managerAuthCheck) {
-      throw new appError(ErrorMessage.MANAGER_NOT_EXIST, ErrorCode.NOT_FOUND);
-    }
-
-    const projectAuthCheck = await Project.findById(projectId);
-    if (projectAuthCheck && projectAuthCheck.active_status == "DELETE") {
-      throw new appError(ErrorMessage.PROJECT_DELETED, ErrorCode.NOT_FOUND);
-    } else if (!projectAuthCheck) {
-      throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
-    }
-    const { developer } = req.body;
-    const newProject = await Project.findOneAndUpdate(
-      { _id: projectId },
-      { $addToSet: { developer: developer } },
-      { new: true }
-    );
-    helper.commonResponse(
-      res,
-      SuccessCode.SUCCESS,
-      newProject,
-      SuccessMessage.PROJECT_ADDED
-    );
-  }),
-
-  addManagerToProject: catchAsync(async (req, res) => {
-    let { managerId, projectId } = req.params;
-    const managerAuthCheck = await User.findById(managerId);
-    if (managerAuthCheck && managerAuthCheck.role != "Manager") {
-      throw new appError(ErrorMessage.INVALID_TOKEN, ErrorCode.NOT_ALLOWED);
-    } else if (!managerAuthCheck) {
-      throw new appError(ErrorMessage.MANAGER_NOT_EXIST, ErrorCode.NOT_FOUND);
-    }
-
-    const projectAuthCheck = await Project.findById(projectId);
-    if (projectAuthCheck && projectAuthCheck.active_status == "DELETE") {
-      throw new appError(ErrorMessage.PROJECT_DELETED, ErrorCode.NOT_FOUND);
-    } else if (!projectAuthCheck) {
-      throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
-    }
-
-    const { developer } = req.body;
-
-    const newProject = await Project.findOneAndUpdate(
-      { _id: projectId },
-      { $addToSet: { developer: developer } },
-      { new: true }
-    );
-
-    helper.commonResponse(
-      res,
-      SuccessCode.SUCCESS,
-      newProject,
-      SuccessMessage.PROJECT_ADDED
-    );
-  }),
-
   //*********************************** add manager to project************************* */
   addManagerToProject: catchAsync(async (req, res) => {
-    let { managerId, projectId } = req.params;
-    const managerAuthCheck = await User.findById(managerId);
+    let { projectId } = req.params;
+    const managerAuthCheck = await User.findById(req.userId);
     if (managerAuthCheck && managerAuthCheck.role != "Manager") {
       throw new appError(ErrorMessage.INVALID_TOKEN, ErrorCode.NOT_ALLOWED);
     } else if (!managerAuthCheck) {
@@ -159,10 +98,44 @@ module.exports = {
   }),
 
   //***************************** add task to project ************************************************* */
-  addTaskToProject: catchAsync(async (req, res) => {}),
+  addTaskToProject: catchAsync(async (req, res) => {
+    const{projectId}=req.params
+    const { project_task} = req.body;
+    const managerAuthCheck = await User.findById(req.userId);
+    if (managerAuthCheck && managerAuthCheck.role != "Manager") {
+      throw new appError(ErrorMessage.INVALID_TOKEN, ErrorCode.NOT_ALLOWED);
+    } else if (!managerAuthCheck) {
+      throw new appError(ErrorMessage.MANAGER_NOT_EXIST, ErrorCode.NOT_FOUND);
+    }
 
-  //********************************************* ist of all the projects *********************************8 */
+    const projectAuthCheck = await Project.findById(projectId);
+    if (projectAuthCheck && projectAuthCheck.active_status == "DELETE") {
+      throw new appError(ErrorMessage.PROJECT_DELETED, ErrorCode.NOT_FOUND);
+    } else if (!projectAuthCheck) {
+      throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
+    }
+
+
+    const newProject = await Project.findOneAndUpdate(
+      { _id: projectId },
+      { $addToSet: { project_task: project_task } },
+      { new: true }
+    );
+
+    helper.commonResponse(
+      res,
+      SuccessCode.SUCCESS,
+      newProject,
+      SuccessMessage.PROJECT_ADDED
+    );
+  }),
+
+  //********************************************* list of all the projects *********************************8 */
   listProject: catchAsync(async (req, res) => {
+    const managerAuthCheck = await User.findById(req.userId);
+    if(managerAuthCheck && managerAuthCheck.role !== "Manager"){
+      throw new appError(ErrorMessage.CANNOT_ACCESS_DATA, ErrorCode.FORBIDDEN);
+    }
     var query = { active_status: { $ne: "DELETE" } };
     if (req.body.search) {
       query.project_name = new RegExp("^" + req.body.search, "i");
@@ -191,35 +164,40 @@ module.exports = {
   //************************************ view the populated project ****************************** */
   viewProject: catchAsync(async (req, res) => {
     // const {projectId} = req.params
-    const projectView = await Project.aggregate([
-      {
-        $lookup: {
-          from: "users",
-          localField: "developer",
-          foreignField: "email",
-          as: "devlopersList",
-        },
-      },
-      {
-        $lookup: {
-          from: "users",
-          localField: "manager",
-          foreignField: "email",
-          as: "managerList",
-        },
-      },
-      {
-        $project: {
-          _id: 0,
-          developer: 0,
-          manager: 0,
-          project_task: 0,
-          createdAt: 0,
-          updatedAt: 0,
-          __v: 0,
-        },
-      },
-    ]);
+    // const projectView = await Project.aggregate([
+    //   {
+    //     $lookup: {
+    //       from: "users",
+    //       localField: "project_task",
+    //       foreignField: "_id",
+    //       as: "taskList",
+    //     },
+    //   },
+    //   {
+    //     $lookup: {
+    //       from: "users",
+    //       localField: "manager",
+    //       foreignField: "_id",
+    //       as: "managerList",
+    //     },
+    //   },
+    //   {
+    //     $project: {
+    //       _id: 0,
+    //       developer: 0,
+    //       manager: 0,
+    //       project_task: 0,
+    //       createdAt: 0,
+    //       updatedAt: 0,
+    //       __v: 0,
+    //     },
+    //   },
+    // ]);
+    const managerAuthCheck = await User.findById(req.userId);
+    if(managerAuthCheck && managerAuthCheck.role !== "Manager"){
+      throw new appError(ErrorMessage.CANNOT_ACCESS_DATA, ErrorCode.FORBIDDEN);
+    }
+    const projectView = await Project.find().populate("manager project_task")
     helper.commonResponse(
       res,
       SuccessCode.SUCCESS,
