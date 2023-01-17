@@ -1,5 +1,6 @@
 
 module.exports.ErrorMessage = Object.freeze({
+    CANNOT_ACCESS_DATA:"The requested user cannot access the data",
     PROJECT_NOT_EXIST:"Project not found",
     PROJECT_DELETED:"Project deleted",
     MANAGER_NOT_EXIST:"Manager does not exist",
@@ -134,5 +135,6 @@ module.exports.SuccessMessage = Object.freeze({
     DEVELOPER_ADD:"Developer added successfully",
     CREATE_MANAGER:"Manager created successfully.",
     CREATE_DEVELOPER:"Developer created successfully.",
-    TASK_ADD:"Task added Successfully."
+    TASK_ADD:"Task added Successfully.",
+    DEVELOPER_ASSIGNED:"Developer Assigned on task Successfully."
 });

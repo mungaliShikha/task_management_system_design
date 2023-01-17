@@ -7,10 +7,25 @@ const schema = mongoose.Schema;
 var task_model = new schema(
   {
 
-    projectId: 
+    projectId:
     {
       type: schema.Types.ObjectId,
       ref: "project",
+    },
+    manager:
+    {
+      type: schema.Types.ObjectId,
+      ref: "users",
+    },
+    developer_assigned:
+    {
+      type: schema.Types.ObjectId,
+      ref: "users",
+    },
+    active_status: {
+      type: String,
+      enum: ["ACTIVE", "BLOCKED", "DELETE"],
+      default: "ACTIVE",
     },
 
     name: {
@@ -40,12 +55,7 @@ var task_model = new schema(
     },
     due_date: {
       type: Date,
-    },
-    developer_assigned: 
-      {
-        type: schema.Types.ObjectId,
-        ref: "user",
-      }
+    }
   },
   { timestamps: true }
 );

@@ -7,15 +7,17 @@ router.post(
   auth.verifyToken,
   projectController.createProject
 );
-router.get("/listProject", projectController.listProject);
 router.post(
-  "/addDevelopersToProject/:managerId/:projectId",
-  projectController.addDeveloperToProject
-);
-router.post(
-  "/addManagerToProject/:managerId/:projectId",
+  "/addManagerToProject/:projectId",
+  auth.verifyToken,
   projectController.addManagerToProject
 );
-router.get("/viewProject", projectController.viewProject);
+router.post(
+  "/addTaskToProject/:projectId",
+  auth.verifyToken,
+  projectController.addTaskToProject
+);
+router.get("/viewProject",auth.verifyToken, projectController.viewProject);
+router.get("/listProject",auth.verifyToken, projectController.listProject);
 
 module.exports = router;

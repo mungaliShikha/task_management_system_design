@@ -9,9 +9,6 @@ var project_model = new schema(
     project_name: {
       type: String,
     },
-    project_id:{
-      type:Number
-    },
     description: {
       type: String,
     },
@@ -22,19 +19,16 @@ var project_model = new schema(
     },
     project_task: [
       {
-        type: String,
-      }
-    ],
-
-    developer: [
-      {
-        type: String,
-      }
+        type: schema.ObjectId,
+        ref: "task"
+    }
     ],
     manager: [
       {
-        type: String,
-      }]
+        type: schema.ObjectId,
+        ref: "users"
+    }
+    ]
     ,
   },
   { timestamps: true }

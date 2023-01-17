@@ -19,8 +19,16 @@ const {
 } = require("../services/nodeMailer/nodemailer");
 
 module.exports = {
-  addTaskToProject: catchAsync(async (req, res) => {
-    const { projectId, name, type, priority, start_date, due_date } = req.body;
+  createTaskToProject: catchAsync(async (req, res) => {
+    const {
+      projectId,
+      name,
+      type,
+      priority,
+      start_date,
+      due_date,
+      developer_assigned,
+    } = req.body;
     const managerAuth = await User.findOne({
       _id: req.userId,
       role: "Manager",
@@ -38,6 +46,7 @@ module.exports = {
     req.body.projectId = projectRes._id;
 
     let taskRes = await task.create(req.body);
+
     helper.commonResponse(
       res,
       SuccessCode.SUCCESS,
@@ -48,7 +57,13 @@ module.exports = {
 
   listTaskOnparticularProject: catchAsync(async (req, res) => {
     const { _id } = req.body;
+    if (req.body.search) {
+      query.name = new RegExp("^" + req.body.search, "i");
+    }
     const allAuthRes = await User.findOne({ _id: req.userId });
+    if ((allAuthRes && allAuthRes.role !== "Manager") || "Developer") {
+      throw new appError(ErrorMessage.CANNOT_ACCESS_DATA, ErrorCode.FORBIDDEN);
+    }
     if (!allAuthRes) {
       throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
     }
@@ -56,8 +71,14 @@ module.exports = {
     if (!projectFindRes) {
       throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
     }
-
-    const taskListRes = await task.find({ projectId: projectFindRes._id });
+    var options = {
+      page: req.body.page || 1,
+      limit: req.body.limit || 10,
+      sort: { createdAt: -1 },
+      populate: "projectId manager developer_assigned",
+    };
+    let query = { projectId: projectFindRes._id };
+    const taskListRes = await task.paginate(query, options);
     if (taskListRes.length == 0) {
       throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
     }
@@ -65,6 +86,47 @@ module.exports = {
       res,
       SuccessCode.SUCCESS,
       taskListRes,
+      SuccessMessage.DATA_FOUND
+    );
+  }),
+
+  addDeveloperToTask: catchAsync(async (req, res) => {
+    let { developers, taskId } = req.body;
+    const managerAuthCheck = await User.findOne({ _id: req.userId });
+    if (managerAuthCheck && managerAuthCheck.role != "Manager") {
+      throw new appError(ErrorMessage.INVALID_TOKEN, ErrorCode.NOT_ALLOWED);
+    } else if (!managerAuthCheck) {
+      throw new appError(ErrorMessage.MANAGER_NOT_EXIST, ErrorCode.NOT_FOUND);
+    }
+    let developerCheckRes = await User.findOne({ _id: developers });
+    if (!developerCheckRes) {
+      throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
+    }
+    const taskCheckRes = await task.findById(taskId);
+    if (taskCheckRes && taskCheckRes.active_status == "DELETE") {
+      throw new appError(ErrorMessage.PROJECT_DELETED, ErrorCode.NOT_FOUND);
+    } else if (!taskCheckRes) {
+      throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
+    }
+    const newProject = await task.findOneAndUpdate(
+      { _id: taskId },
+      { $addToSet: { developer_assigned: developers } },
+      { new: true }
+    );
+    helper.commonResponse(
+      res,
+      SuccessCode.SUCCESS,
+      newProject,
+      SuccessMessage.DEVELOPER_ASSIGNED
+    );
+  }),
+
+  viewAllTask: catchAsync(async (req, res) => {
+    const allTask = await task.find().populate("developer_assigned");
+    helper.commonResponse(
+      res,
+      SuccessCode.SUCCESS,
+      allTask,
       SuccessMessage.DATA_FOUND
     );
   }),
