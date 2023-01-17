@@ -19,29 +19,50 @@ const {
 } = require("../services/nodeMailer/nodemailer");
 
 module.exports = {
-
+  //************************************************create project ************************************** */
   createProject: catchAsync(async (req, res) => {
-    const { project_name, description, status, project_task, developers, active_status } = req.body;
-    const managerAuthCheck = await User.findOne({ _id: req.userId, role: "Manager" });
+    const {
+      project_name,
+      description,
+      status,
+      project_task,
+      developers,
+      active_status,
+    } = req.body;
+    const managerAuthCheck = await User.findOne({
+      _id: req.userId,
+      role: "Manager",
+    });
     if (!managerAuthCheck) {
       throw new appError(ErrorMessage.MANAGER_NOT_EXIST, ErrorCode.NOT_FOUND);
     }
     const projectName = await Project.findOne({ project_name });
     if (projectName) {
-      throw new appError(ErrorMessage.PROJECT_ALREADY_CREATED, ErrorCode.NOT_FOUND);
+      throw new appError(
+        ErrorMessage.PROJECT_ALREADY_CREATED,
+        ErrorCode.NOT_FOUND
+      );
     }
-    if (project_name || description || status || project_task || developers || manager || active_status) {
-      req.body.manager = managerAuthCheck._id
+    if (
+      project_name ||
+      description ||
+      status ||
+      project_task ||
+      developers ||
+      manager ||
+      active_status
+    ) {
+      managerId = managerAuthCheck._id.toString();
+      req.body.manager = managerId.split(" ");
       let finalData = await Project.create(req.body);
-      helper.commonResponse(res, SuccessCode.SUCCESS, finalData, SuccessMessage.PROJECT_ADDED);
+      helper.commonResponse(
+        res,
+        SuccessCode.SUCCESS,
+        finalData,
+        SuccessMessage.PROJECT_ADDED
+      );
     }
   }),
-
-
-
-
-
-
 
   addDeveloperToProject: catchAsync(async (req, res) => {
     let { managerId, projectId } = req.params;
@@ -58,16 +79,18 @@ module.exports = {
     } else if (!projectAuthCheck) {
       throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
     }
-    const { developer } = req.body
-    const newProject = await Project.findOneAndUpdate({ _id: projectId }, { $addToSet: { developer: developer } }, { new: true })
+    const { developer } = req.body;
+    const newProject = await Project.findOneAndUpdate(
+      { _id: projectId },
+      { $addToSet: { developer: developer } },
+      { new: true }
+    );
     helper.commonResponse(
       res,
       SuccessCode.SUCCESS,
       newProject,
       SuccessMessage.PROJECT_ADDED
     );
-
-
   }),
 
   addManagerToProject: catchAsync(async (req, res) => {
@@ -86,11 +109,13 @@ module.exports = {
       throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
     }
 
-    const { manager } = req.body
+    const { developer } = req.body;
 
-
-    const newProject = await Project.findOneAndUpdate({ _id: projectId }, { $addToSet: { manager: manager } }, { new: true })
-
+    const newProject = await Project.findOneAndUpdate(
+      { _id: projectId },
+      { $addToSet: { developer: developer } },
+      { new: true }
+    );
 
     helper.commonResponse(
       res,
@@ -100,22 +125,50 @@ module.exports = {
     );
   }),
 
+  //*********************************** add manager to project************************* */
+  addManagerToProject: catchAsync(async (req, res) => {
+    let { managerId, projectId } = req.params;
+    const managerAuthCheck = await User.findById(managerId);
+    if (managerAuthCheck && managerAuthCheck.role != "Manager") {
+      throw new appError(ErrorMessage.INVALID_TOKEN, ErrorCode.NOT_ALLOWED);
+    } else if (!managerAuthCheck) {
+      throw new appError(ErrorMessage.MANAGER_NOT_EXIST, ErrorCode.NOT_FOUND);
+    }
 
- 
+    const projectAuthCheck = await Project.findById(projectId);
+    if (projectAuthCheck && projectAuthCheck.active_status == "DELETE") {
+      throw new appError(ErrorMessage.PROJECT_DELETED, ErrorCode.NOT_FOUND);
+    } else if (!projectAuthCheck) {
+      throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
+    }
 
+    const { manager } = req.body;
 
+    const newProject = await Project.findOneAndUpdate(
+      { _id: projectId },
+      { $addToSet: { manager: manager } },
+      { new: true }
+    );
 
+    helper.commonResponse(
+      res,
+      SuccessCode.SUCCESS,
+      newProject,
+      SuccessMessage.PROJECT_ADDED
+    );
+  }),
 
+  //***************************** add task to project ************************************************* */
+  addTaskToProject: catchAsync(async (req, res) => {}),
 
+  //********************************************* ist of all the projects *********************************8 */
   listProject: catchAsync(async (req, res) => {
-    var query = {
-      active_status: { $ne: "DELETE" },
-    };
+    var query = { active_status: { $ne: "DELETE" } };
     if (req.body.search) {
       query.project_name = new RegExp("^" + req.body.search, "i");
     }
     req.body.limit = parseInt(req.body.limit);
-    req.body.page = parseInt(req.body.page)
+    req.body.page = parseInt(req.body.page);
     var options = {
       page: req.body.page || 1,
       limit: req.body.limit || 10,
@@ -135,26 +188,43 @@ module.exports = {
     );
   }),
 
-
+  //************************************ view the populated project ****************************** */
   viewProject: catchAsync(async (req, res) => {
     // const {projectId} = req.params
     const projectView = await Project.aggregate([
-      { $lookup: { from: "users", localField: "developer", foreignField: "email", as: "devlopersList" } },
-      { $lookup: { from: "users", localField: "manager", foreignField: "email", as: "managerList" } },
+      {
+        $lookup: {
+          from: "users",
+          localField: "developer",
+          foreignField: "email",
+          as: "devlopersList",
+        },
+      },
+      {
+        $lookup: {
+          from: "users",
+          localField: "manager",
+          foreignField: "email",
+          as: "managerList",
+        },
+      },
       {
         $project: {
-          _id: 0, 'developer': 0, 'manager': 0, 'project_task': 0, "createdAt": 0,
-          "updatedAt": 0, "__v": 0
-        }
-      }
-    ])
+          _id: 0,
+          developer: 0,
+          manager: 0,
+          project_task: 0,
+          createdAt: 0,
+          updatedAt: 0,
+          __v: 0,
+        },
+      },
+    ]);
     helper.commonResponse(
       res,
       SuccessCode.SUCCESS,
       projectView,
       SuccessMessage.DATA_FOUND
     );
-  })
-
-
+  }),
 };

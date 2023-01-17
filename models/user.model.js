@@ -6,11 +6,6 @@ const schema = mongoose.Schema;
 var userModel = new schema(
   {
 
-    userId: {
-      type: schema.Types.ObjectId,
-      ref: "users"
-
-    },
     first_name: {
       type: String
     },
@@ -40,6 +35,11 @@ var userModel = new schema(
     role: {
       type: String,
       enum: ["Manager", "Developer", "Admin"]
+    },
+    status: {
+      type: String,
+      enum: ["ACTIVE", "BLOCKED", "DELETE"],
+      default: "ACTIVE",
     },
     tech_stack: {
       type: String

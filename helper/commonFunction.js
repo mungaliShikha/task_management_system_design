@@ -20,7 +20,7 @@ module.exports.generateHash = (data) => {
 
 module.exports.generateToken = (userObject) => {
   let expireTime = 6 * 30 * 72 * 60 * 60 * 1000; //6 months
-  return jwt.sign(userObject, "task-management", {
+  return jwt.sign(userObject, global.gFields.jwtSecretKey, {
     expiresIn: expireTime,
   });
 };
