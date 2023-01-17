@@ -1,7 +1,6 @@
 const User = require("../models/user.model");
 const Token = require("../models/token.model");
 const catchAsync = require("../utils/catchAsync");
-const { upload } = require("../services/aws/aws");
 const appError = require("../utils/errorHandlers/errorHandler");
 const { ErrorMessage, SuccessMessage } = require("../helper/message");
 const { ErrorCode, SuccessCode } = require("../helper/statusCode");
@@ -111,7 +110,7 @@ module.exports = {
     }
   },
 
-  // **************************************************** Developer Create ************************
+  // **************************************** Developer Create ************************
 
   addDeveloper: catchAsync(async (req, res) => {
     const payload = req.body;
@@ -132,7 +131,7 @@ module.exports = {
     const createDeveloper = await User.create(payload);
 
     const subject = "Developer Invitation";
-    const message = `Hello <br> You are invited as a Developer on Task management system Design plateform,<br> Here is your Login Crediantial <br> Email: ${payload.email} <br> Password: ${passGen} <br> Kindly Use this Crediantial for further login`;
+    const message = `Hello <br> You are invited as a Developer on Task management system Design platform,<br> Here is your Login Crediantial <br> Email: ${payload.email} <br> Password: ${passGen} <br> Kindly Use this Crediantial for further login`;
     await sendMailNotify(req.email, subject, message,req.body.email);
 
     helper.sendResponseWithData(
