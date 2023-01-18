@@ -271,3 +271,38 @@ Jan-18-2023 12:11:49 [info] success : Mongoose default connection
 Jan-18-2023 12:11:50 [info] Default Admin. 
 Jan-18-2023 12:12:14 [info] disconnected : Mongoose default connection is disconnected 
 Jan-18-2023 12:12:15 [info] success : Mongoose default connection 
+Jan-18-2023 12:58:24 [info] success : Mongoose default connection 
+Jan-18-2023 12:58:24 [info] Default Admin. 
+Jan-18-2023 12:58:43 [info] http://localhost:5000/api/user/loginManager - POST METHOD  
+Jan-18-2023 12:59:19 [info] http://localhost:5000/api/project/viewProject/63c64b1b0e84e1074c76cab5 - GET METHOD  
+Jan-18-2023 12:59:19 [error] 500 - jwt malformed 
+Jan-18-2023 12:59:29 [info] http://localhost:5000/api/project/viewProject/63c64b1b0e84e1074c76cab5 - GET METHOD  
+Jan-18-2023 12:59:29 [error] 500 - jwt malformed 
+Jan-18-2023 13:00:30 [info] http://localhost:5000/api/project/viewProject/63c64b1b0e84e1074c76cab5 - GET METHOD  
+Jan-18-2023 13:00:30 [error] 500 - jwt malformed 
+Jan-18-2023 13:01:18 [info] success : Mongoose default connection 
+Jan-18-2023 13:01:19 [info] Default Admin. 
+Jan-18-2023 13:01:19 [info] http://localhost:5000/api/project/viewProject/63c64b1b0e84e1074c76cab5 - GET METHOD  
+Jan-18-2023 13:01:19 [error] 500 - jwt malformed 
+Jan-18-2023 13:01:37 [info] http://localhost:5000/api/project/viewProject/63c64b1b0e84e1074c76cab5 - GET METHOD  
+Jan-18-2023 13:02:02 [info] http://localhost:5000/api/project/viewProject/63c64b1b0e84e1074c76cab5 - GET METHOD  
+Jan-18-2023 13:02:02 [error] 500 - invalid signature 
+Jan-18-2023 13:02:53 [info] http://localhost:5000/api/project/viewProject/63c64b1b0e84e1074c76cab5 - GET METHOD  
+Jan-18-2023 13:10:12 [info] http://localhost:5000/api/task/addDeveloperToTask - POST METHOD  
+Jan-18-2023 13:10:12 [error] 404 - Requested URL http://localhost:5000/api/task/addDeveloperToTask not found! 
+Jan-18-2023 13:10:43 [info] http://localhost:5000/api/task/addDeveloperToTask - PUT METHOD  
+Jan-18-2023 13:10:43 [error] 500 - Plan executor error during findAndModify :: caused by :: Cannot apply $addToSet to non-array field. Field named 'developer_assigned' has non-array type objectId 
+Jan-18-2023 13:11:31 [info] http://localhost:5000/api/task/addDeveloperToTask - PUT METHOD  
+Jan-18-2023 13:11:59 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-18-2023 13:14:18 [info] http://localhost:5000/api/project/viewProject/63c64b1b0e84e1074c76cab5 - GET METHOD  
+Jan-18-2023 13:31:14 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-18-2023 13:31:49 [info] http://localhost:5000/api/user/loginManager - POST METHOD  
+Jan-18-2023 13:32:03 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-18-2023 13:43:41 [info] success : Mongoose default connection 
+Jan-18-2023 13:43:41 [info] Default Admin. 
+Jan-18-2023 13:46:23 [info] success : Mongoose default connection 
+Jan-18-2023 13:46:23 [info] Default Admin. 
+Jan-18-2023 13:46:51 [info] success : Mongoose default connection 
+Jan-18-2023 13:46:51 [info] Default Admin. 
+Jan-18-2023 13:51:46 [info] success : Mongoose default connection 
+Jan-18-2023 13:51:46 [info] Default Admin. 

@@ -144,4 +144,9 @@ module.exports = {
       SuccessMessage.DATA_FOUND
     );
   }),
+
+removeDeveloperFromTask:catchAsync(async(req,res)=>{
+    
+})
+
 };

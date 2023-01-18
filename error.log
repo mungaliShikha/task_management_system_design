@@ -18,3 +18,10 @@ Jan-18-2023 12:02:49 [error] 403 - The requested user cannot access the data
 Jan-18-2023 12:03:38 [error] 403 - The requested user cannot access the data 
 Jan-18-2023 12:04:32 [error] 500 - query is not defined 
 Jan-18-2023 12:09:10 [error] 401 - Please provide token. 
+Jan-18-2023 12:59:19 [error] 500 - jwt malformed 
+Jan-18-2023 12:59:29 [error] 500 - jwt malformed 
+Jan-18-2023 13:00:30 [error] 500 - jwt malformed 
+Jan-18-2023 13:01:19 [error] 500 - jwt malformed 
+Jan-18-2023 13:02:02 [error] 500 - invalid signature 
+Jan-18-2023 13:10:12 [error] 404 - Requested URL http://localhost:5000/api/task/addDeveloperToTask not found! 
+Jan-18-2023 13:10:43 [error] 500 - Plan executor error during findAndModify :: caused by :: Cannot apply $addToSet to non-array field. Field named 'developer_assigned' has non-array type objectId 
