@@ -1,7 +1,5 @@
 const mongoose = require("mongoose");
-const mongoosePaginate = require("mongoose-paginate");
-var mongooseAggregatePaginate = require("mongoose-aggregate-paginate");
-const commonFunction = require("../helper/commonFunction");
+const {declaredEnum} = require("../helper/enum/enums")
 const schema = mongoose.Schema;
 
 var project_model = new schema(
@@ -12,10 +10,9 @@ var project_model = new schema(
     description: {
       type: String,
     },
-    status: {
+    projectStatus: {
       type: String,
-      enum: ["started", "ongoing", "completed"],
-      default: "started",
+      enum: declaredEnum.projectStatus
     },
     project_task: [
       {
@@ -34,7 +31,6 @@ var project_model = new schema(
   { timestamps: true }
 );
 
-project_model.plugin(mongoosePaginate);
-project_model.plugin(mongooseAggregatePaginate);
+
 
 module.exports = mongoose.model("project", project_model);
