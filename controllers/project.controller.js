@@ -18,6 +18,7 @@ const {
   sendMailNotify,
 } = require("../services/nodeMailer/nodemailer");
 
+const enums = require("../helper/enum/enums")
 module.exports = {
   //************************************************create project ************************************** */
   createProject: catchAsync(async (req, res) => {
@@ -31,7 +32,7 @@ module.exports = {
     } = req.body;
     const managerAuthCheck = await User.findOne({
       _id: req.userId,
-      role: "Manager",
+      role:enums.declaredEnum.role.MANAGER,
     });
     if (!managerAuthCheck) {
       throw new appError(ErrorMessage.MANAGER_NOT_EXIST, ErrorCode.NOT_FOUND);
@@ -68,14 +69,14 @@ module.exports = {
   addManagerToProject: catchAsync(async (req, res) => {
     let { projectId } = req.params;
     const managerAuthCheck = await User.findById(req.userId);
-    if (managerAuthCheck && managerAuthCheck.role != "Manager") {
+    if (managerAuthCheck && managerAuthCheck.role != enums.declaredEnum.role.MANAGER) {
       throw new appError(ErrorMessage.INVALID_TOKEN, ErrorCode.NOT_ALLOWED);
     } else if (!managerAuthCheck) {
       throw new appError(ErrorMessage.MANAGER_NOT_EXIST, ErrorCode.NOT_FOUND);
     }
 
     const projectAuthCheck = await Project.findById(projectId);
-    if (projectAuthCheck && projectAuthCheck.active_status == "DELETE") {
+    if (projectAuthCheck && projectAuthCheck.active_status == enums.declaredEnum.status.DELETE) {
       throw new appError(ErrorMessage.PROJECT_DELETED, ErrorCode.NOT_FOUND);
     } else if (!projectAuthCheck) {
       throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
@@ -102,14 +103,14 @@ module.exports = {
     const { projectId } = req.params;
     const { project_task } = req.body;
     const managerAuthCheck = await User.findById(req.userId);
-    if (managerAuthCheck && managerAuthCheck.role != "Manager") {
+    if (managerAuthCheck && managerAuthCheck.role != enums.declaredEnum.role.MANAGER) {
       throw new appError(ErrorMessage.INVALID_TOKEN, ErrorCode.NOT_ALLOWED);
     } else if (!managerAuthCheck) {
       throw new appError(ErrorMessage.MANAGER_NOT_EXIST, ErrorCode.NOT_FOUND);
     }
 
     const projectAuthCheck = await Project.findById(projectId);
-    if (projectAuthCheck && projectAuthCheck.active_status == "DELETE") {
+    if (projectAuthCheck && projectAuthCheck.status == enums.declaredEnum.status.DELETE) {
       throw new appError(ErrorMessage.PROJECT_DELETED, ErrorCode.NOT_FOUND);
     } else if (!projectAuthCheck) {
       throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
@@ -132,11 +133,11 @@ module.exports = {
   //********************************************* list of all the projects *********************************8 */
   listProject: catchAsync(async (req, res) => {
     const managerAuthCheck = await User.findById(req.userId);
-    if (managerAuthCheck && managerAuthCheck.role !== "Manager") {
+    if (managerAuthCheck && managerAuthCheck.role !== enums.declaredEnum.role.MANAGER) {
       throw new appError(ErrorMessage.CANNOT_ACCESS_DATA, ErrorCode.FORBIDDEN);
     }
 
-    var queryMade = { projectStatus: { $ne: "DELETE" } };
+    var queryMade = { projectStatus: { $ne: enums.declaredEnum.status.DELETE } };
     if (req.body.search) {
       queryMade.project_name = new RegExp("^" + req.body.search, "i");
     }
@@ -200,7 +201,7 @@ module.exports = {
     // ]);
     const {projectId} = req.params
     const managerAuthCheck = await User.findById(req.userId);
-    if (managerAuthCheck && managerAuthCheck.role !== "Manager") {
+    if (managerAuthCheck && managerAuthCheck.role !== enums.declaredEnum.role.MANAGER) {
       throw new appError(ErrorMessage.CANNOT_ACCESS_DATA, ErrorCode.FORBIDDEN);
     }
 

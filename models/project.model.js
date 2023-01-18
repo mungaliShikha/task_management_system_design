@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const {declaredEnum} = require("../helper/enum/enums")
+const enums = require("../helper/enum/enums")
 const schema = mongoose.Schema;
 
 var project_model = new schema(
@@ -12,7 +12,7 @@ var project_model = new schema(
     },
     projectStatus: {
       type: String,
-      enum: declaredEnum.projectStatus
+      enum: [enums.declaredEnum.projectStatus.STARTED,enums.declaredEnum.projectStatus.COMPLETED,enums.declaredEnum.projectStatus.ONGOING]
     },
     project_task: [
       {
