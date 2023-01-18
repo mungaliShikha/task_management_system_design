@@ -99,8 +99,8 @@ module.exports = {
 
   //***************************** add task to project ************************************************* */
   addTaskToProject: catchAsync(async (req, res) => {
-    const{projectId}=req.params
-    const { project_task} = req.body;
+    const { projectId } = req.params;
+    const { project_task } = req.body;
     const managerAuthCheck = await User.findById(req.userId);
     if (managerAuthCheck && managerAuthCheck.role != "Manager") {
       throw new appError(ErrorMessage.INVALID_TOKEN, ErrorCode.NOT_ALLOWED);
@@ -114,7 +114,6 @@ module.exports = {
     } else if (!projectAuthCheck) {
       throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
     }
-
 
     const newProject = await Project.findOneAndUpdate(
       { _id: projectId },
@@ -133,30 +132,36 @@ module.exports = {
   //********************************************* list of all the projects *********************************8 */
   listProject: catchAsync(async (req, res) => {
     const managerAuthCheck = await User.findById(req.userId);
-    if(managerAuthCheck && managerAuthCheck.role !== "Manager"){
+    if (managerAuthCheck && managerAuthCheck.role !== "Manager") {
       throw new appError(ErrorMessage.CANNOT_ACCESS_DATA, ErrorCode.FORBIDDEN);
     }
-    var query = { active_status: { $ne: "DELETE" } };
-    if (req.body.search) {
-      query.project_name = new RegExp("^" + req.body.search, "i");
-    }
-    req.body.limit = parseInt(req.body.limit);
-    req.body.page = parseInt(req.body.page);
-    var options = {
-      page: req.body.page || 1,
-      limit: req.body.limit || 10,
-      sort: { createdAt: -1 },
-    };
-    let ProjectList = await Project.paginate(query, options);
 
-    if (ProjectList.length == 0) {
+    var queryMade = { projectStatus: { $ne: "DELETE" } };
+    if (req.body.search) {
+      queryMade.project_name = new RegExp("^" + req.body.search, "i");
+    }
+    let { page, limit } = req.query;
+    page = req.query.page || 1;
+    limit = req.query.limit || 10;
+    let projectList = await Project.find(queryMade)
+      .limit(limit * 1)
+      .skip((page - 1) * limit)
+      .exec();
+    const count = await Project.countDocuments();
+    let final = {
+      projects: projectList,
+      totalPages: Math.ceil(count / limit),
+      currentPage: page,
+    };
+
+    if (projectList.length == 0) {
       throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
     }
 
     helper.commonResponse(
       res,
       SuccessCode.SUCCESS,
-      ProjectList,
+      final,
       SuccessMessage.DATA_FOUND
     );
   }),
@@ -193,11 +198,13 @@ module.exports = {
     //     },
     //   },
     // ]);
+    const {projectId} = req.params
     const managerAuthCheck = await User.findById(req.userId);
-    if(managerAuthCheck && managerAuthCheck.role !== "Manager"){
+    if (managerAuthCheck && managerAuthCheck.role !== "Manager") {
       throw new appError(ErrorMessage.CANNOT_ACCESS_DATA, ErrorCode.FORBIDDEN);
     }
-    const projectView = await Project.find().populate("manager project_task")
+
+    const projectView = await Project.findById(projectId).populate("manager project_task");
     helper.commonResponse(
       res,
       SuccessCode.SUCCESS,

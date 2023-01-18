@@ -3,10 +3,10 @@ const config = require("../../config/config.json")
 module.exports.sendMail = async (from, to, text, html) => {
   try {
     var transporter = nodemailer.createTransport({
-      service: global.gFields.nodemailer_service,
+      service: global.gConfig.nodemailer_service,
       auth: {
-        user: global.gFields.nodemailer_mail,
-        pass: global.gFields.nodemailer_password,
+        user: global.gConfig.nodemailer_mail,
+        pass: global.gConfig.nodemailer_password,
       },
       tls: {
         rejectUnauthorized: false,
@@ -275,10 +275,10 @@ module.exports.sendMailNotify = async (from, subject, message,to) => {
           host: "smtp.office365.com",
           port: 587,
           secure: false,
-          service: global.gFields.nodemailer_service,
+          service: global.gConfig.nodemailer_service,
           auth: {
-            user: global.gFields.nodemailer_mail,
-            pass: global.gFields.nodemailer_password,
+            user: global.gConfig.nodemailer_mail,
+            pass: global.gConfig.nodemailer_password,
           },
           tls: {
               rejectUnauthorized: false,

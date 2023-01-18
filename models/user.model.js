@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
-const mongoosePaginate = require("mongoose-paginate");
-var mongooseAggregatePaginate = require("mongoose-aggregate-paginate");
+const logger = require("../utils/logger/logger")
 const {generateHash} = require("../helper/commonFunction")
+const {declaredEnum} = require("../helper/enum/enums")
 const schema = mongoose.Schema;
 var userModel = new schema(
   {
@@ -34,11 +34,11 @@ var userModel = new schema(
     },
     role: {
       type: String,
-      enum: ["Manager", "Developer", "Admin"]
+      enum: declaredEnum.role
     },
     status: {
       type: String,
-      enum: ["ACTIVE", "BLOCKED", "DELETE"],
+      enum: declaredEnum.status,
       default: "ACTIVE",
     },
     tech_stack: {
@@ -47,18 +47,15 @@ var userModel = new schema(
   },
   { timestamps: true }
 );
-userModel.plugin(mongoosePaginate);
-userModel.plugin(mongooseAggregatePaginate);
-
 
 module.exports = mongoose.model("users", userModel);
 
 mongoose.model("users", userModel).find({ role: "Admin" }, async (err, result) => {
   if (err) {
-    console.log("DEFAULT ADMIN ERROR", err);
+    logger.info(`"DEFAULT ADMIN ERROR", ${err}`);
   }
   else if (result.length != 0) {
-    console.log("Default Admin.");
+    logger.info("Default Admin.");
   }
   else {
     let obj = {
@@ -73,9 +70,9 @@ mongoose.model("users", userModel).find({ role: "Admin" }, async (err, result) =
 
     mongoose.model("users", userModel).create(obj, async (err1, result1) => {
       if (err1) {
-        console.log("DEFAULT ADMIN  creation ERROR", err1);
+        logger.info(`"DEFAULT ADMIN  creation ERROR", ${err1}`);
       } else {
-        console.log("DEFAULT ADMIN Created", result1);
+        logger.info(`"DEFAULT ADMIN Created", ${result1}`);
       }
     });
   }

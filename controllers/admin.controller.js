@@ -52,7 +52,7 @@ module.exports = {
     const link = `${global.gFields.db_URL}admin/resetPassword/${user._id}/${tokenFound.token}`;
     const html = `<h1> Password reset requested </h1><h3> Download link </h3><p>${link}</p>`;
     await sendMail(
-      global.gFields.nodemailer_mail,
+      global.gConfig.nodemailer_mail,
       email,
       "password reset link",
       html
@@ -152,7 +152,7 @@ module.exports = {
   createManager: catchAsync(async (req, res) => {
     const payload = req.body;
     const { first_name, last_name, email, mobile_number } = payload;
-    const user1 = await User.findById({ _id: req.userId, role: "Admin" });
+    const user1 = await User.findOne({ _id: req.userId, role: "Admin" });
     if (!user1) {
       throw new appError(ErrorMessage.NOT_AUTHORISED, ErrorCode.NOT_FOUND);
     }
@@ -169,7 +169,7 @@ module.exports = {
 
     const subject = "Manager Invitation"
     const message = `Hello <br> You are invited as a Manager on Task management system Design platform,<br> Here is your Login Crediantial <br> Email: ${payload.email} <br> Password: ${passGen} <br> Kindly Use this Crediantial for further login`
-    await sendMailNotify("shikha1081998@gmail.com", subject, message,payload.email)
+    await sendMailNotify(user1.email, subject, message,payload.email)
    
    helper.sendResponseWithData(
       res,

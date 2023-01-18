@@ -1,182 +1,20 @@
-Jan-10-2023 16:58:47 [error] object
-Jan-10-2023 17:00:56 [error] object
-Jan-10-2023 17:01:12 [error] object
-Jan-10-2023 17:06:37 [error] object
-Jan-10-2023 17:10:45 [error] object
-Jan-10-2023 17:15:42 [error] object
-Jan-10-2023 17:26:18 [error] statusCode - Requested URL http://localhost:5000/api/admin/logi not found! 
-Jan-10-2023 17:29:51 [error] statusCode - Requested URL http://localhost:5000/api/admin/logi not found! 
-Jan-10-2023 17:46:12 [error] 500 - loggedInUse is not defined 
-Jan-10-2023 18:00:27 [error] 500 - tokn is not defined 
-Jan-10-2023 18:00:29 [error] 500 - tokn is not defined 
-Jan-11-2023 00:18:26 [error] 500 - Assignment to constant variable. 
-Jan-11-2023 00:19:23 [error] 500 - sendMail is not a function 
-Jan-11-2023 00:21:49 [error] 500 - sendMail is not a function 
-Jan-11-2023 09:58:22 [error] 500 - Assignment to constant variable. 
-Jan-11-2023 10:02:16 [error] 500 - Assignment to constant variable. 
-Jan-11-2023 11:02:20 [error] 404 - Provided email is not registered. 
-Jan-11-2023 11:24:43 [error] 404 - Provided email is not registered. 
-Jan-11-2023 11:24:48 [error] 500 - Assignment to constant variable. 
-Jan-11-2023 11:26:58 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword/63bd2142a8387822a8122eaa/f670d1dcb7046d5ed44551ea88572c9ea345b515304b50934170a97852007981 not found! 
-Jan-11-2023 11:27:26 [error] 500 - token.delete is not a function 
-Jan-11-2023 11:27:30 [error] 500 - token.delete is not a function 
-Jan-11-2023 11:29:20 [error] 404 - Requested URL http://localhost:5000/password-reset/63bd2142a8387822a8122eaa/f670d1dcb7046d5ed44551ea88572c9ea345b515304b50934170a97852007981 not found! 
-Jan-11-2023 11:29:20 [error] 404 - Requested URL http://localhost:5000/favicon.ico not found! 
-Jan-11-2023 11:29:22 [error] 404 - Requested URL http://localhost:5000/password-reset/63bd2142a8387822a8122eaa/f670d1dcb7046d5ed44551ea88572c9ea345b515304b50934170a97852007981 not found! 
-Jan-11-2023 11:29:24 [error] 404 - Requested URL http://localhost:5000/password-reset/63bd2142a8387822a8122eaa/f670d1dcb7046d5ed44551ea88572c9ea345b515304b50934170a97852007981 not found! 
-Jan-11-2023 11:29:29 [error] 404 - Requested URL http://localhost:5000/password-reset/63bd2142a8387822a8122eaa/f670d1dcb7046d5ed44551ea88572c9ea345b515304b50934170a97852007981 not found! 
-Jan-11-2023 11:32:10 [error] 500 - Cannot read properties of null (reading 'delete') 
-Jan-11-2023 11:32:43 [error] 500 - Assignment to constant variable. 
-Jan-11-2023 11:34:41 [error] 404 - Requested URL http://localhost:5000/api//resetPassword/63bd2142a8387822a8122eaa/bd8f1d460ff18089c42b69c81a95987e7f88749a5bbc9a4567d7f24a30883141 not found! 
-Jan-11-2023 11:35:44 [error] 404 - Requested URL http://localhost:5000/api//admin/resetPassword/63bd2142a8387822a8122eaa/bd8f1d460ff18089c42b69c81a95987e7f88749a5bbc9a4567d7f24a30883141 not found! 
-Jan-11-2023 11:36:43 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword/63bd2142a8387822a8122eaa/bd8f1d460ff18089c42b69c81a95987e7f88749a5bbc9a4567d7f24a30883141 not found! 
-Jan-11-2023 11:38:22 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword/63bd2142a8387822a8122eaa/bd8f1d460ff18089c42b69c81a95987e7f88749a5bbc9a4567d7f24a30883141 not found! 
-Jan-11-2023 11:38:39 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword/63bd2142a8387822a8122eaa/bd8f1d460ff18089c42b69c81a95987e7f88749a5bbc9a4567d7f24a30883141 not found! 
-Jan-11-2023 11:57:59 [error] 500 - Cannot read properties of null (reading 'delete') 
-Jan-11-2023 11:58:05 [error] 500 - Assignment to constant variable. 
-Jan-11-2023 12:03:20 [error] 500 - Assignment to constant variable. 
-Jan-11-2023 12:04:36 [error] 500 - Assignment to constant variable. 
-Jan-11-2023 12:07:31 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword/63bd2142a8387822a8122eaa/efd96e8beda74aaedac0deadb1c45c7344530eaba79136bbed8f22e11964a750 not found! 
-Jan-11-2023 12:09:54 [error] 400 - Please provide token. 
-Jan-11-2023 12:10:33 [error] 500 - users validation failed: password: Cast to string failed for value "Promise {
-  <pending>,
-  [Symbol(async_id_symbol)]: 718,
-  [Symbol(trigger_async_id_symbol)]: 702
-}" (type Promise) at path "password" 
-Jan-11-2023 12:13:11 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword/63bd2142a8387822a8122eaa/58635b8a637e31b32a0177c8acc572a9641d6dbf53c280b864dd248d6d235c86 not found! 
-Jan-11-2023 12:14:15 [error] 400 - Please provide token. 
-Jan-11-2023 12:16:48 [error] 400 - Verifcation link has expired 
-Jan-11-2023 16:19:18 [error] 404 - Provided email is not registered. 
-Jan-11-2023 17:21:30 [error] 500 - Cannot read properties of undefined (reading 'location') 
-Jan-11-2023 17:23:07 [error] 500 - Cannot read properties of undefined (reading '0') 
-Jan-11-2023 17:23:47 [error] 500 - Cannot read properties of undefined (reading '0') 
-Jan-11-2023 17:25:13 [error] 500 - Cannot read properties of undefined (reading '0') 
-Jan-11-2023 17:27:03 [error] 500 - Cannot read properties of undefined (reading '0') 
-Jan-11-2023 17:29:33 [error] 500 - Unexpected field 
-Jan-11-2023 17:31:14 [error] 500 - Unexpected field 
-Jan-11-2023 17:34:02 [error] 500 - this.client.send is not a function 
-Jan-11-2023 17:39:35 [error] 500 - this.client.send is not a function 
-Jan-11-2023 17:40:07 [error] 500 - this.client.send is not a function 
-Jan-11-2023 17:40:09 [error] 500 - this.client.send is not a function 
-Jan-11-2023 17:41:13 [error] 500 - Assignment to constant variable. 
-Jan-11-2023 17:42:12 [error] 500 - userModel is not defined 
-Jan-11-2023 17:46:36 [error] 500 - this.client.send is not a function 
-Jan-11-2023 17:47:04 [error] 500 - this.client.send is not a function 
-Jan-11-2023 17:47:05 [error] 500 - this.client.send is not a function 
-Jan-11-2023 17:47:26 [error] 500 - this.client.send is not a function 
-Jan-11-2023 18:00:10 [error] 500 - Cannot read properties of undefined (reading '0') 
-Jan-11-2023 18:00:29 [error] 500 - Cannot read properties of undefined (reading '0') 
-Jan-11-2023 18:00:30 [error] 500 - Cannot read properties of undefined (reading '0') 
-Jan-11-2023 18:00:31 [error] 500 - Cannot read properties of undefined (reading '0') 
-Jan-11-2023 18:00:32 [error] 500 - Cannot read properties of undefined (reading '0') 
-Jan-11-2023 18:00:52 [error] 500 - Cannot read properties of undefined (reading '0') 
-Jan-11-2023 18:03:07 [error] 500 - Cannot read properties of undefined (reading '0') 
-Jan-11-2023 18:03:12 [error] 500 - Cannot read properties of undefined (reading '0') 
-Jan-11-2023 18:05:57 [error] 500 - Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: null } 
-Jan-12-2023 09:30:55 [error] 404 - Requested URL http://localhost:5000/ not found! 
-Jan-12-2023 09:36:36 [error] 404 - Requested URL http://localhost:5000/requested.html not found! 
-Jan-12-2023 10:12:17 [error] 404 - Provided email is not registered. 
-Jan-12-2023 10:13:20 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword/63bd2142a8387822a8122eaa/766900f36c0d201c27465a7f3b43db9fc23a8a46486efdb34a74033147b99cd0 not found! 
-Jan-12-2023 14:53:28 [error] 404 - Provided email is not registered. 
-Jan-12-2023 14:53:56 [error] 404 - Provided email is not registered. 
-Jan-12-2023 14:54:04 [error] 404 - Provided email is not registered. 
-Jan-12-2023 14:54:12 [error] 404 - Provided email is not registered. 
-Jan-12-2023 15:04:04 [error] 400 - Unexpected token e in JSON at position 188 
-Jan-12-2023 15:07:32 [error] 404 - Requested URL http://localhost:5000/api/user/addDeveloper not found! 
-Jan-12-2023 15:07:51 [error] 500 - to is not defined 
-Jan-12-2023 15:09:38 [error] 500 - to is not defined 
-Jan-12-2023 15:13:46 [error] 500 - mailOption is not defined 
-Jan-12-2023 15:17:02 [error] 404 - Requested URL http://localhost:5000/api/user/loginDeveloper not found! 
-Jan-12-2023 15:19:54 [error] 404 - Requested URL http://localhost:5000/api/user/viewDeveloper not found! 
-Jan-12-2023 15:41:14 [error] 500 - Cannot read properties of null (reading 'role') 
-Jan-12-2023 15:43:25 [error] 404 - Requested URL http://localhost:5000/api/admin/createManager/63bfd1e810c6d75c1008da21 not found! 
-Jan-12-2023 15:49:35 [error] 409 - Already exists. 
-Jan-12-2023 15:51:55 [error] 409 - Already exists. 
-Jan-12-2023 15:52:28 [error] 500 - E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: "9718272919" } 
-Jan-12-2023 15:52:46 [error] 500 - E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: "9718272919" } 
-Jan-12-2023 15:53:38 [error] 500 - E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: "9718272919" } 
-Jan-12-2023 15:55:33 [error] 409 - Already exists. 
-Jan-12-2023 16:06:33 [error] 404 - This user does not exist. 
-Jan-12-2023 16:10:58 [error] 404 - This email already exists. 
-Jan-12-2023 16:12:01 [error] 500 - E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: "687987987987" } 
-Jan-12-2023 16:12:38 [error] 409 - Already exists. 
-Jan-13-2023 10:43:24 [error] 404 - Requested URL http://localhost:5000/api/v1/admin/login not found! 
-Jan-13-2023 10:43:57 [error] 404 - Provided email is not registered. 
-Jan-13-2023 15:42:26 [error] 404 - Requested URL http://localhost:5000//api/admin/addDeveloper not found! 
-Jan-13-2023 15:43:18 [error] 404 - This user does not exist. 
-Jan-13-2023 15:50:00 [error] 404 - This user does not exist. 
-Jan-13-2023 15:50:56 [error] 404 - This user does not exist. 
-Jan-13-2023 16:08:54 [error] 404 - This user does not exist. 
-Jan-13-2023 16:10:10 [error] 404 - This user does not exist. 
-Jan-13-2023 16:10:28 [error] 500 - Cannot read properties of null (reading 'email') 
-Jan-13-2023 16:10:54 [error] 500 - Cannot read properties of null (reading '_id') 
-Jan-13-2023 16:12:33 [error] 404 - This email already exists. 
-Jan-13-2023 16:12:50 [error] 500 - E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: "9956386576" } 
-Jan-13-2023 16:34:42 [error] 500 - Converting circular structure to JSON
-    --> starting at object with constructor 'Socket'
-    |     property 'parser' -> object with constructor 'HTTPParser'
-    --- property 'socket' closes the circle 
-Jan-13-2023 16:52:09 [error] 404 - Requested URL http://localhost:5000/api/user/login not found! 
-Jan-13-2023 16:52:25 [error] 404 - Requested URL http://localhost:5000/admin/user/login not found! 
-Jan-13-2023 16:52:40 [error] 500 - Cannot read properties of null (reading 'password') 
-Jan-13-2023 16:53:45 [error] 500 - Cannot read properties of null (reading 'password') 
-Jan-13-2023 16:54:13 [error] 500 - Cannot read properties of null (reading 'password') 
-Jan-13-2023 16:54:35 [error] 404 - Provided email is not registered. 
-Jan-13-2023 16:54:37 [error] 404 - Provided email is not registered. 
-Jan-13-2023 16:54:39 [error] 404 - Provided email is not registered. 
-Jan-13-2023 16:55:10 [error] 404 - Provided email is not registered. 
-Jan-13-2023 16:56:18 [error] 404 - Provided email is not registered. 
-Jan-16-2023 11:18:44 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdmin not found! 
-Jan-16-2023 11:18:55 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdmin/63c2aa0499a9884740a9f94f not found! 
-Jan-16-2023 11:23:00 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdmin not found! 
-Jan-16-2023 11:23:13 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdmin not found! 
-Jan-16-2023 11:27:04 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdmin not found! 
-Jan-16-2023 11:28:47 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdmin not found! 
-Jan-16-2023 11:29:43 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdmin not found! 
-Jan-16-2023 11:30:23 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdmin not found! 
-Jan-16-2023 11:34:25 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdminDetails not found! 
-Jan-16-2023 11:40:15 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdminDetails/63c2aa0499a9884740a9f94f not found! 
-Jan-16-2023 11:42:07 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdminDetails/63c2aa0499a9884740a9f94f not found! 
-Jan-16-2023 11:47:32 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdminDetails/63c2aa0499a9884740a9f94f not found! 
-Jan-16-2023 12:33:44 [error] 404 - Provided email is not registered. 
-Jan-16-2023 12:34:33 [error] 404 - Provided email is not registered. 
-Jan-16-2023 12:35:32 [error] 404 - Provided email is not registered. 
-Jan-16-2023 12:55:25 [error] 404 - This user does not exist. 
-Jan-16-2023 12:56:11 [error] 404 - This user does not exist. 
-Jan-16-2023 12:57:54 [error] 404 - This user does not exist. 
-Jan-16-2023 12:58:56 [error] 404 - This user does not exist. 
-Jan-16-2023 12:59:35 [error] 404 - This user does not exist. 
-Jan-16-2023 13:11:50 [error] 500 - Unexpected field 
-Jan-16-2023 13:11:57 [error] 500 - Unexpected field 
-Jan-16-2023 13:13:38 [error] 500 - Cannot destructure property 'profile_image' of 'req.files' as it is undefined. 
-Jan-16-2023 13:30:27 [error] 404 - Requested URL http://localhost:5000/api/admin/createManager not found! 
-Jan-16-2023 14:58:21 [error] 409 - Already exists. 
-Jan-16-2023 14:58:52 [error] 500 - No recipients defined 
-Jan-16-2023 15:01:41 [error] 500 - No recipients defined 
-Jan-16-2023 15:02:51 [error] 500 - No recipients defined 
-Jan-16-2023 16:33:05 [error] 400 - Unexpected token } in JSON at position 169 
-Jan-16-2023 17:05:30 [error] 500 - task.save is not a function 
-Jan-16-2023 17:06:12 [error] 500 - task validation failed: status: `started` is not a valid enum value for path `status`. 
-Jan-16-2023 17:07:16 [error] 500 - task validation failed: status: `started` is not a valid enum value for path `status`. 
-Jan-16-2023 17:19:03 [error] 404 - Requested URL http://localhost:5000/api/task/addTaskToProject not found! 
-Jan-16-2023 17:19:22 [error] 500 - Cannot read properties of null (reading '_id') 
-Jan-16-2023 17:19:46 [error] 404 - Requested URL http://localhost:5000/api/task/listTaskOnparticularProject/63c52f49ea7e459099465018 not found! 
-Jan-16-2023 17:20:20 [error] 404 - Requested URL http://localhost:5000/api/task/listTaskOnparticularProject/63c52f49ea7e459099465018 not found! 
-Jan-16-2023 17:21:43 [error] 404 - Requested URL http://localhost:5000/api/task/listTaskOnparticularProject not found! 
-Jan-16-2023 17:22:00 [error] 404 - Requested URL http://localhost:5000/api/task/listTaskOnparticularProject not found! 
-Jan-17-2023 12:24:27 [error] 500 - Cannot read properties of null (reading '_id') 
-Jan-17-2023 12:41:54 [error] 500 - Schema hasn't been registered for model "user".
-Use mongoose.model(name, schema) 
-Jan-17-2023 12:41:58 [error] 500 - Schema hasn't been registered for model "user".
-Use mongoose.model(name, schema) 
-Jan-17-2023 14:33:12 [error] 404 - Data not found 
-Jan-17-2023 14:34:51 [error] 404 - Requested URL http://localhost:5000/api/project/addDevelopersToProject/63c2da688032f65ddcab6fbe not found! 
-Jan-17-2023 14:35:24 [error] 404 - Project not found 
-Jan-17-2023 14:39:45 [error] 500 - Cannot read properties of null (reading '_id') 
-Jan-17-2023 14:41:35 [error] 500 - Cannot read properties of null (reading '_id') 
-Jan-17-2023 15:02:26 [error] 404 - Requested URL http://localhost:5000/api/task/lviewTask not found! 
-Jan-17-2023 15:02:35 [error] 404 - Requested URL http://localhost:5000/api/task/viewTask not found! 
-Jan-17-2023 15:02:40 [error] 404 - Requested URL http://localhost:5000/api/task/viewTask not found! 
-Jan-17-2023 15:02:56 [error] 500 - Task is not defined 
-Jan-17-2023 15:12:21 [error] 500 - Cannot set headers after they are sent to the client 
-Jan-17-2023 15:16:35 [error] 405 - The requested user cannot access the data 
+Jan-18-2023 09:13:26 [error] 404 - Requested URL http://localhost:5000/ not found! 
+Jan-18-2023 09:14:01 [error] 404 - Requested URL http://localhost:5000/requested.html not found! 
+Jan-18-2023 10:20:44 [error] 401 - Please provide token. 
+Jan-18-2023 10:32:41 [error] 404 - Requested URL http://localhost:5000/api/user/viewDeveloper not found! 
+Jan-18-2023 10:33:21 [error] 401 - Please provide token. 
+Jan-18-2023 11:05:08 [error] 401 - Please provide token. 
+Jan-18-2023 11:06:53 [error] 500 - Project.paginate is not a function 
+Jan-18-2023 11:24:04 [error] 500 - Assignment to constant variable. 
+Jan-18-2023 11:30:14 [error] 500 - Assignment to constant variable. 
+Jan-18-2023 11:30:41 [error] 500 - query is not defined 
+Jan-18-2023 11:31:05 [error] 500 - projectList is not defined 
+Jan-18-2023 11:31:25 [error] 500 - ProjectList is not defined 
+Jan-18-2023 11:31:28 [error] 500 - ProjectList is not defined 
+Jan-18-2023 11:32:37 [error] 401 - Please provide token. 
+Jan-18-2023 11:50:06 [error] 500 - Cast to ObjectId failed for value "{ projectId: '63c64b1b0e84e1074c76cab5' }" (type Object) at path "_id" for model "project" 
+Jan-18-2023 11:51:56 [error] 401 - Please provide token. 
+Jan-18-2023 12:02:49 [error] 403 - The requested user cannot access the data 
+Jan-18-2023 12:03:38 [error] 403 - The requested user cannot access the data 
+Jan-18-2023 12:04:32 [error] 500 - query is not defined 
+Jan-18-2023 12:09:10 [error] 401 - Please provide token. 

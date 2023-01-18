@@ -1,31 +1,26 @@
 const mongoose = require("mongoose");
-const mongoosePaginate = require("mongoose-paginate");
-var mongooseAggregatePaginate = require("mongoose-aggregate-paginate");
-const commonFunction = require("../helper/commonFunction");
+const { declaredEnum } = require("../helper/enum/enums");
 const schema = mongoose.Schema;
 
 var task_model = new schema(
   {
-
-    projectId:
-    {
+    projectId: {
       type: schema.Types.ObjectId,
       ref: "project",
     },
-    manager:
-    {
+    manager: {
       type: schema.Types.ObjectId,
       ref: "users",
     },
-    developer_assigned:
-    {
-      type: schema.Types.ObjectId,
-      ref: "users",
-    },
-    active_status: {
+    developer_assigned: [
+      {
+        type: schema.Types.ObjectId,
+        ref: "users",
+      },
+    ],
+    status: {
       type: String,
-      enum: ["ACTIVE", "BLOCKED", "DELETE"],
-      default: "ACTIVE",
+      enum: declaredEnum.status,
     },
 
     name: {
@@ -33,34 +28,31 @@ var task_model = new schema(
       required: true,
     },
 
-    status: {
+    taskStatus: {
       type: String,
-      enum: ["inProgress", "inQA", "completed"],
+      enum: declaredEnum.taskStatus,
       default: "inProgress",
       required: true,
     },
     type: {
       type: String,
-      enum: ["bug", "enhancement", "new-feature"],
+      enum: declaredEnum.type,
     },
 
     priority: {
       type: String,
-      enum: ["urgent", "high", "medium", "low"],
+      enum: declaredEnum.priority,
     },
 
     start_date: {
       type: Date,
-      default:Date.now()
+      default: Date.now(),
     },
     due_date: {
       type: Date,
-    }
+    },
   },
   { timestamps: true }
 );
 
-task_model.plugin(mongoosePaginate);
-task_model.plugin(mongooseAggregatePaginate);
 module.exports = mongoose.model("task", task_model);
-

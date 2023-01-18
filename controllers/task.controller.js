@@ -61,7 +61,7 @@ module.exports = {
       query.name = new RegExp("^" + req.body.search, "i");
     }
     const allAuthRes = await User.findOne({ _id: req.userId });
-    if ((allAuthRes && allAuthRes.role !== "Manager") || "Developer") {
+    if (allAuthRes && allAuthRes.role !== ("Manager" || "Developer")) {
       throw new appError(ErrorMessage.CANNOT_ACCESS_DATA, ErrorCode.FORBIDDEN);
     }
     if (!allAuthRes) {
@@ -71,21 +71,35 @@ module.exports = {
     if (!projectFindRes) {
       throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
     }
-    var options = {
-      page: req.body.page || 1,
-      limit: req.body.limit || 10,
-      sort: { createdAt: -1 },
-      populate: "projectId manager developer_assigned",
+    let queryMade = {
+      projectId: projectFindRes._id,
+      status: { $ne: "DELETE" },
     };
-    let query = { projectId: projectFindRes._id };
-    const taskListRes = await task.paginate(query, options);
+    if (req.body.search) {
+      queryMade.name = new RegExp("^" + req.body.search, "i");
+    }
+    let { page, limit } = req.query;
+    page = req.query.page || 1;
+    limit = req.query.limit || 10;
+    const taskListRes = await task
+      .find(queryMade)
+      .populate("projectId manager developer_assigned")
+      .limit(limit * 1)
+      .skip((page - 1) * limit)
+      .exec();
+    const count = await task.countDocuments();
     if (taskListRes.length == 0) {
       throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
     }
+    let final = {
+      task: taskListRes,
+      totalPages: Math.ceil(count / limit),
+      currentPage: page,
+    };
     helper.commonResponse(
       res,
       SuccessCode.SUCCESS,
-      taskListRes,
+      final,
       SuccessMessage.DATA_FOUND
     );
   }),

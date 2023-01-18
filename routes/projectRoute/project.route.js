@@ -17,7 +17,7 @@ router.post(
   auth.verifyToken,
   projectController.addTaskToProject
 );
-router.get("/viewProject",auth.verifyToken, projectController.viewProject);
+router.get("/viewProject/:projectId",auth.verifyToken, projectController.viewProject);
 router.get("/listProject",auth.verifyToken, projectController.listProject);
 
 module.exports = router;
