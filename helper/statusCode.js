@@ -17,5 +17,5 @@ module.exports.ErrorCode = Object.freeze({
 
 module.exports.SuccessCode = Object.freeze({
     'SUCCESS': 200,
-    'ADVERTISEMENT': 201,
+    'CREATED': 201,
 });

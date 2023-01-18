@@ -1,8 +1,8 @@
 const User = require("../models/user.model");
 const Project = require("../models/project.model");
 const task = require("../models/task.model");
-const catchAsync = require("../utils/catchAsync");
-const appError = require("../utils/errorHandlers/errorHandler");
+const catchAsync = require("../helper/catchAsync");
+const appError = require("../helper/errorHandlers/errorHandler");
 const { ErrorMessage, SuccessMessage } = require("../helper/message");
 const { ErrorCode, SuccessCode } = require("../helper/statusCode");
 const {
@@ -16,7 +16,7 @@ const helper = require("../helper/commonResponseHandler");
 const {
   sendMail,
   sendMailNotify,
-} = require("../services/nodeMailer/nodemailer");
+} = require("../utils/nodeMailer/nodemailer");
 
 const enums = require("../helper/enum/enums")
 module.exports = {

@@ -1,8 +1,8 @@
 const User = require("../models/user.model");
 const task = require("../models/task.model");
 const project = require("../models/project.model");
-const catchAsync = require("../utils/catchAsync");
-const appError = require("../utils/errorHandlers/errorHandler");
+const catchAsync = require("../helper/catchAsync");
+const appError = require("../helper/errorHandlers/errorHandler");
 const { ErrorMessage, SuccessMessage } = require("../helper/message");
 const { ErrorCode, SuccessCode } = require("../helper/statusCode");
 const {
@@ -16,7 +16,7 @@ const helper = require("../helper/commonResponseHandler");
 const {
     sendMail,
     sendMailNotify,
-} = require("../services/nodeMailer/nodemailer");
+} = require("../utils/nodeMailer/nodemailer");
 const enums = require("../helper/enum/enums")
 
 module.exports = {
@@ -62,11 +62,11 @@ module.exports = {
             query.name = new RegExp("^" + req.body.search, "i");
         }
         const allAuthRes = await User.findOne({ _id: req.userId });
-        if (allAuthRes && allAuthRes.role !== (enums.declaredEnum.role.DEVELOPER || enums.declaredEnum.role.MANAGER)) {
-            throw new appError(ErrorMessage.CANNOT_ACCESS_DATA, ErrorCode.FORBIDDEN);
-        }
         if (!allAuthRes) {
             throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
+        }
+        if (allAuthRes && allAuthRes.role !==enums.declaredEnum.role.MANAGER) {
+            throw new appError(ErrorMessage.CANNOT_ACCESS_DATA, ErrorCode.FORBIDDEN);
         }
         const projectFindRes = await project.findOne({ _id: _id });
         if (!projectFindRes) {

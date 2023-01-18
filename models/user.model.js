@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const logger = require("../utils/logger/logger")
+const logger = require("../helper/logger/logger")
 const { generateHash } = require("../helper/commonFunction")
 const enums = require("../helper/enum/enums")
 const schema = mongoose.Schema;
