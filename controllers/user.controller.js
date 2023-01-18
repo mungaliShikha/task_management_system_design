@@ -1,7 +1,7 @@
 const User = require("../models/user.model");
 const Token = require("../models/token.model");
-const catchAsync = require("../utils/catchAsync");
-const appError = require("../utils/errorHandlers/errorHandler");
+const catchAsync = require("../helper/catchAsync");
+const appError = require("../helper/errorHandlers/errorHandler");
 const { ErrorMessage, SuccessMessage } = require("../helper/message");
 const { ErrorCode, SuccessCode } = require("../helper/statusCode");
 const {
@@ -15,13 +15,13 @@ const helper = require("../helper/commonResponseHandler");
 const {
   sendMail,
   sendMailNotify,
-} = require("../services/nodeMailer/nodemailer");
+} = require("../utils/nodeMailer/nodemailer");
 
 const enums = require("../helper/enum/enums")
 
 module.exports = {
   // *************************************************** manager login ******************************************
-  loginManager: async (req, res) => {
+  loginManager: async (req, res,next) => {
     try {
       const { email, password } = req.body;
       const loggedInUser = await User.findOne({ email });
@@ -49,11 +49,7 @@ module.exports = {
         );
       }
     } catch (error) {
-      helper.commonResponse(
-        res,
-        ErrorCode.SOMETHING_WRONG,
-        ErrorMessage.SOMETHING_WRONG
-      );
+      next(error)
     }
   },
 
@@ -117,12 +113,12 @@ module.exports = {
   addDeveloper: catchAsync(async (req, res) => {
     const payload = req.body;
     const { first_name, last_name, email, mobile_number } = payload;
-    const user1 = await User.findById({ _id: req.userId, role: enums.declaredEnum.role.MANAGER });
-    if (!user1) {
+    const userAuth = await User.findById({ _id: req.userId, role: enums.declaredEnum.role.MANAGER });
+    if (!userAuth) {
       throw new appError(ErrorMessage.NOT_AUTHORISED, ErrorCode.NOT_FOUND);
     }
-    const user = await User.findOne({ email, mobile_number });
-    if (user) {
+    const userFound = await User.findOne({ email, mobile_number });
+    if (userFound) {
       throw new appError(ErrorMessage.ALREADY_EXIST, ErrorCode.ALREADY_EXIST);
     }
     payload["employee_id"] = "DEV" + mobile_number.substr(-4);
@@ -134,7 +130,7 @@ module.exports = {
 
     const subject = "Developer Invitation";
     const message = `Hello <br> You are invited as a Developer on Task management system Design platform,<br> Here is your Login Crediantial <br> Email: ${payload.email} <br> Password: ${passGen} <br> Kindly Use this Crediantial for further login`;
-    await sendMailNotify(req.email, subject, message, req.body.email);
+    await sendMailNotify(userAuth.email, subject, message, req.body.email);
 
     helper.sendResponseWithData(
       res,

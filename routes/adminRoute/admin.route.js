@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const adminController = require("../../controllers/admin.controller");
 const auth = require('../../middleware/auth');
-const { upload } = require("../../services/aws/aws");
+const { upload } = require("../../utils/aws/aws");
 
 /**
  * @swagger

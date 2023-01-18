@@ -2,7 +2,7 @@ const { ErrorMessage } = require("../helper/message");
 const { ErrorCode } = require("../helper/statusCode");
 const userModel = require("../models/user.model");
 const jwt = require("jsonwebtoken");
-const appError = require("../utils/errorHandlers/errorHandler");
+const appError = require("../helper/errorHandlers/errorHandler");
 
 exports.verifyToken = async (req, res, next) => {
   try {

@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const logger = require("../utils/logger/logger")
+const logger = require("../helper/logger/logger")
 global.Promise = mongoose.Promise;
 const config = require('../config/config')
 const db_name = `${global.gConfig.database}`;

@@ -2,13 +2,12 @@ const express = require("express");
 const config = require("./config/config.json");
 const db = require("./dbConnectivity/mongodb");
 const index = require("./routes/indexRoute");
-// const morgan = require('morgan');
 const app = express();
 const cors = require("cors");
 app.use(cors());
-const appError = require("./utils/errorHandlers/errorHandler");
-const errorController = require("./utils/errorHandlers/errorController");
-const apiLogger = require("./utils/logger/apiRouteLogger");
+const appError = require("./helper/errorHandlers/errorHandler");
+const errorController = require("./helper/errorHandlers/errorController");
+const apiLogger = require("./helper/logger/apiRouteLogger");
 // const basicAuth = require('express-basic-auth');
 
 

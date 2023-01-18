@@ -4,10 +4,6 @@
     "node_port": 5000,
     "json_indentation": 4,
     "swaggerURL": "localhost:5000",
-    "nodemailer": {
-      "user": "shikha1081998@gmail.com",
-      "pass": "vwlxuktqpfwzyzqp"
-    },
     "user_name": "task_management_project",
     "database": "task_management",
     "password": "NYvDITjmrPvnIMzm",
