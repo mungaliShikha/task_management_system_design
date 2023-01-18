@@ -8,9 +8,9 @@ exports.verifyToken = async (req, res, next) => {
   try {
     let bearerHeader = req.headers.authorization
     if (bearerHeader) {
-        
-        let bearerToken = bearerHeader.split(' '); // converting it to array 
-        let token = bearerToken[1];
+
+      let bearerToken = bearerHeader.split(' '); // converting it to array 
+      let token = bearerToken[1];
       let authcheck = jwt.verify(
         token,
         global.gConfig.jwtSecretKey
@@ -44,6 +44,7 @@ exports.verifyToken = async (req, res, next) => {
       throw new appError(ErrorMessage.NO_TOKEN, ErrorCode.UNAUTHORIZED);
     }
   } catch (error) {
+    console.log("error--", error)
     next(error)
   }
 };

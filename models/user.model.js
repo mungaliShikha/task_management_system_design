@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const logger = require("../utils/logger/logger")
-const {generateHash} = require("../helper/commonFunction")
-const {declaredEnum} = require("../helper/enum/enums")
+const { generateHash } = require("../helper/commonFunction")
+const enums = require("../helper/enum/enums")
 const schema = mongoose.Schema;
 var userModel = new schema(
   {
@@ -34,12 +34,12 @@ var userModel = new schema(
     },
     role: {
       type: String,
-      enum: declaredEnum.role
+      enum: [enums.declaredEnum.role.MANAGER, enums.declaredEnum.role.DEVELOPER, enums.declaredEnum.role.ADMIN]
     },
     status: {
       type: String,
-      enum: declaredEnum.status,
-      default: "ACTIVE",
+      enum: [enums.declaredEnum.status.ACTIVE,enums.declaredEnum.status.BLOCKED,enums.declaredEnum.status.DELETE],
+      default: enums.declaredEnum.status.ACTIVE,
     },
     tech_stack: {
       type: String
@@ -50,7 +50,7 @@ var userModel = new schema(
 
 module.exports = mongoose.model("users", userModel);
 
-mongoose.model("users", userModel).find({ role: "Admin" }, async (err, result) => {
+mongoose.model("users", userModel).find({ role:enums.declaredEnum.role.ADMIN }, async (err, result) => {
   if (err) {
     logger.info(`"DEFAULT ADMIN ERROR", ${err}`);
   }
@@ -64,7 +64,7 @@ mongoose.model("users", userModel).find({ role: "Admin" }, async (err, result) =
       email: "shikha1081998@gmail.com",
       password: generateHash("test@123345"),
       mobile_number: "9998887772",
-      role: "Admin"
+      role: enums.declaredEnum.role.ADMIN
     };
 
 

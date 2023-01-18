@@ -8,7 +8,7 @@ const { ErrorCode, SuccessCode } = require("../helper/statusCode");
 const { compareHash, generateToken, generatePassword, randomPassword, generateHash } = require("../helper/commonFunction");
 const helper = require("../helper/commonResponseHandler");
 const { sendMail, sendMailNotify } = require("../services/nodeMailer/nodemailer");
-
+const enums = require("../helper/enum/enums")
 module.exports = {
   /// **********************************   admin login ************************************************
   login: catchAsync(async (req, res) => {
@@ -152,7 +152,7 @@ module.exports = {
   createManager: catchAsync(async (req, res) => {
     const payload = req.body;
     const { first_name, last_name, email, mobile_number } = payload;
-    const user1 = await User.findOne({ _id: req.userId, role: "Admin" });
+    const user1 = await User.findOne({ _id: req.userId, role: enums.declaredEnum.role.ADMIN });
     if (!user1) {
       throw new appError(ErrorMessage.NOT_AUTHORISED, ErrorCode.NOT_FOUND);
     }
@@ -169,9 +169,9 @@ module.exports = {
 
     const subject = "Manager Invitation"
     const message = `Hello <br> You are invited as a Manager on Task management system Design platform,<br> Here is your Login Crediantial <br> Email: ${payload.email} <br> Password: ${passGen} <br> Kindly Use this Crediantial for further login`
-    await sendMailNotify(user1.email, subject, message,payload.email)
-   
-   helper.sendResponseWithData(
+    await sendMailNotify(user1.email, subject, message, payload.email)
+
+    helper.sendResponseWithData(
       res,
       SuccessCode.SUCCESS,
       SuccessMessage.CREATE_MANAGER,

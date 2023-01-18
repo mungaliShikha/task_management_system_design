@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const { declaredEnum } = require("../helper/enum/enums");
+const enums = require("../helper/enum/enums");
 const schema = mongoose.Schema;
 
 var task_model = new schema(
@@ -20,7 +20,8 @@ var task_model = new schema(
     ],
     status: {
       type: String,
-      enum: declaredEnum.status,
+      enum: [enums.declaredEnum.status.ACTIVE, enums.declaredEnum.status.BLOCKED, enums.declaredEnum.status.DELETE],
+      default: enums.declaredEnum.status.ACTIVE
     },
 
     name: {
@@ -30,18 +31,18 @@ var task_model = new schema(
 
     taskStatus: {
       type: String,
-      enum: declaredEnum.taskStatus,
-      default: "inProgress",
+      enum: [enums.declaredEnum.taskStatus.INPROGRESS,enums.declaredEnum.taskStatus.COMPLETED,enums.declaredEnum.taskStatus.INQA],
+      default: enums.declaredEnum.taskStatus.INPROGRESS,
       required: true,
     },
     type: {
       type: String,
-      enum: declaredEnum.type,
+      enum: [enums.declaredEnum.type.BUG,enums.declaredEnum.type.ENHANCEMENT,enums.declaredEnum.type.NEWFEATURE],
     },
 
     priority: {
       type: String,
-      enum: declaredEnum.priority,
+      enum: [enums.declaredEnum.priority.HIGH,enums.declaredEnum.priority.LOW,enums.declaredEnum.priority.MEDIUM,enums.declaredEnum.priority.URGENT],
     },
 
     start_date: {

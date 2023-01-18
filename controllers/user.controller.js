@@ -17,6 +17,8 @@ const {
   sendMailNotify,
 } = require("../services/nodeMailer/nodemailer");
 
+const enums = require("../helper/enum/enums")
+
 module.exports = {
   // *************************************************** manager login ******************************************
   loginManager: async (req, res) => {
@@ -60,7 +62,7 @@ module.exports = {
   getProfile: catchAsync(async (req, res) => {
     const tokenAuth = await User.findOne({
       _id: req.userId,
-      role: { $in: ["Developer", "Manager"] },
+      role: { $in: [enums.declaredEnum.role.DEVELOPER, enums.declaredEnum.role.MANAGER] },
     });
     if (!tokenAuth) {
       throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
@@ -79,7 +81,7 @@ module.exports = {
       let payload = req.body;
       const tokenAuth = await User.findOne({
         _id: req.userId,
-        role: { $in: ["Developer", "Manager"] },
+        role: { $in: [enums.declaredEnum.role.DEVELOPER, enums.declaredEnum.role.MANAGER] },
       });
       if (!tokenAuth)
         helper.commonResponse(
@@ -115,7 +117,7 @@ module.exports = {
   addDeveloper: catchAsync(async (req, res) => {
     const payload = req.body;
     const { first_name, last_name, email, mobile_number } = payload;
-    const user1 = await User.findById({ _id: req.userId, role: "Manager" });
+    const user1 = await User.findById({ _id: req.userId, role: enums.declaredEnum.role.MANAGER });
     if (!user1) {
       throw new appError(ErrorMessage.NOT_AUTHORISED, ErrorCode.NOT_FOUND);
     }
@@ -127,12 +129,12 @@ module.exports = {
     let passGen = randomPassword();
     console.log(passGen);
     payload["password"] = generateHash(passGen);
-    payload["role"] = "Developer";
+    payload["role"] = enums.declaredEnum.role.DEVELOPER;
     const createDeveloper = await User.create(payload);
 
     const subject = "Developer Invitation";
     const message = `Hello <br> You are invited as a Developer on Task management system Design platform,<br> Here is your Login Crediantial <br> Email: ${payload.email} <br> Password: ${passGen} <br> Kindly Use this Crediantial for further login`;
-    await sendMailNotify(req.email, subject, message,req.body.email);
+    await sendMailNotify(req.email, subject, message, req.body.email);
 
     helper.sendResponseWithData(
       res,

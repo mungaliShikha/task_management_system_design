@@ -35,7 +35,6 @@ module.exports.generatePassword =()=> {
       for (var i = 0; i < value; i++) {
           var rnum = Math.floor(Math.random() * chars.length);
            randomstring += chars.substring(rnum, rnum + 1);
-          console.log("===",randomstring,"Subhra",rnum)
       }
   }
 
