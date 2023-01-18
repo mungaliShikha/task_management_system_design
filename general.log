@@ -271,158 +271,46 @@ Jan-18-2023 12:11:49 [info] success : Mongoose default connection
 Jan-18-2023 12:11:50 [info] Default Admin. 
 Jan-18-2023 12:12:14 [info] disconnected : Mongoose default connection is disconnected 
 Jan-18-2023 12:12:15 [info] success : Mongoose default connection 
-Jan-18-2023 12:46:41 [info] success : Mongoose default connection 
-Jan-18-2023 12:46:41 [info] Default Admin. 
-Jan-18-2023 12:46:42 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-18-2023 12:46:42 [error] 401 - Please provide token. 
-Jan-18-2023 12:47:52 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-18-2023 12:47:52 [error] 500 - invalid signature 
-Jan-18-2023 12:48:58 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-18-2023 12:48:58 [error] 500 - invalid signature 
-Jan-18-2023 12:49:51 [info] success : Mongoose default connection 
-Jan-18-2023 12:49:51 [info] Default Admin. 
-Jan-18-2023 12:49:54 [info] success : Mongoose default connection 
-Jan-18-2023 12:49:54 [info] Default Admin. 
-Jan-18-2023 12:49:58 [info] success : Mongoose default connection 
-Jan-18-2023 12:49:58 [info] Default Admin. 
-Jan-18-2023 12:50:01 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-18-2023 12:50:01 [error] 500 - jwt must be provided 
-Jan-18-2023 12:50:26 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-18-2023 12:50:26 [error] 401 - Please provide token. 
-Jan-18-2023 12:50:48 [info] success : Mongoose default connection 
-Jan-18-2023 12:50:48 [info] Default Admin. 
-Jan-18-2023 12:50:58 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-18-2023 12:50:58 [error] 500 - invalid signature 
-Jan-18-2023 12:51:45 [info] success : Mongoose default connection 
-Jan-18-2023 12:51:45 [info] Default Admin. 
-Jan-18-2023 12:52:47 [info] success : Mongoose default connection 
-Jan-18-2023 12:52:47 [info] Default Admin. 
-Jan-18-2023 12:53:09 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-18-2023 12:55:08 [info] success : Mongoose default connection 
-Jan-18-2023 12:55:08 [info] Default Admin. 
-Jan-18-2023 12:55:14 [info] success : Mongoose default connection 
-Jan-18-2023 12:55:15 [info] success : Mongoose default connection 
-Jan-18-2023 12:55:15 [info] Default Admin. 
-Jan-18-2023 12:55:22 [info] success : Mongoose default connection 
-Jan-18-2023 12:55:22 [info] Default Admin. 
-Jan-18-2023 12:55:27 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-18-2023 12:55:27 [error] 500 - invalid signature 
-Jan-18-2023 12:56:26 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-18-2023 12:56:26 [error] 500 - jwt malformed 
-Jan-18-2023 12:56:35 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-18-2023 12:56:35 [error] 500 - invalid signature 
-Jan-18-2023 12:57:08 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-18-2023 12:57:08 [error] 500 - invalid signature 
-Jan-18-2023 12:57:49 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-18-2023 12:57:49 [error] 500 - invalid signature 
-Jan-18-2023 13:02:25 [info] success : Mongoose default connection 
-Jan-18-2023 13:02:25 [info] Default Admin. 
-Jan-18-2023 13:02:49 [info] success : Mongoose default connection 
-Jan-18-2023 13:02:49 [info] Default Admin. 
-Jan-18-2023 13:03:32 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-18-2023 13:03:32 [error] 500 - invalid signature 
-Jan-18-2023 13:07:52 [info] success : Mongoose default connection 
-Jan-18-2023 13:07:52 [info] Default Admin. 
-Jan-18-2023 13:09:05 [info] success : Mongoose default connection 
-Jan-18-2023 13:09:05 [info] Default Admin. 
-Jan-18-2023 13:09:08 [info] success : Mongoose default connection 
-Jan-18-2023 13:09:08 [info] Default Admin. 
-Jan-18-2023 13:11:43 [info] success : Mongoose default connection 
-Jan-18-2023 13:11:43 [info] Default Admin. 
-Jan-18-2023 13:12:03 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-18-2023 13:12:03 [error] 500 - invalid signature 
-Jan-18-2023 13:20:02 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-18-2023 13:20:02 [error] 500 - invalid signature 
-Jan-18-2023 13:28:33 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-18-2023 13:28:33 [error] 500 - invalid signature 
-Jan-18-2023 13:31:51 [info] success : Mongoose default connection 
-Jan-18-2023 13:31:51 [info] Default Admin. 
-Jan-18-2023 13:31:52 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-18-2023 13:31:52 [error] 500 - invalid signature 
-Jan-18-2023 13:31:53 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-18-2023 13:31:53 [error] 500 - invalid signature 
-Jan-18-2023 13:31:59 [info] success : Mongoose default connection 
-Jan-18-2023 13:32:00 [info] Default Admin. 
-Jan-18-2023 13:34:20 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-18-2023 13:34:20 [error] 500 - invalid signature 
-Jan-18-2023 13:34:22 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-18-2023 13:34:22 [error] 500 - invalid signature 
-Jan-18-2023 13:34:34 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-18-2023 13:34:34 [error] 500 - invalid signature 
-Jan-18-2023 13:35:22 [info] success : Mongoose default connection 
-Jan-18-2023 13:35:22 [info] Default Admin. 
-Jan-18-2023 13:35:29 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-18-2023 13:35:54 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-18-2023 13:35:54 [error] 403 - The requested user cannot access the data 
-Jan-18-2023 13:55:39 [info] success : Mongoose default connection 
-Jan-18-2023 13:55:40 [info] Default Admin. 
-Jan-18-2023 14:04:10 [info] success : Mongoose default connection 
-Jan-18-2023 14:04:10 [info] Default Admin. 
-Jan-18-2023 14:04:13 [info] success : Mongoose default connection 
-Jan-18-2023 14:04:14 [info] Default Admin. 
-Jan-18-2023 14:04:20 [info] success : Mongoose default connection 
-Jan-18-2023 14:04:21 [info] Default Admin. 
-Jan-18-2023 14:06:06 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-18-2023 14:09:23 [info] success : Mongoose default connection 
-Jan-18-2023 14:09:24 [info] Default Admin. 
-Jan-18-2023 14:09:25 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-18-2023 14:11:49 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-18-2023 14:11:49 [error] 404 - Provided email is not registered. 
-Jan-18-2023 14:12:00 [info] success : Mongoose default connection 
-Jan-18-2023 14:12:00 [info] "DEFAULT ADMIN Created", {
-  _id: 63c7b0d8b8f2983b9d5bd26d,
-  first_name: 'Shikha',
-  last_name: 'Mungali',
-  email: 'shikha1081998@gmail.com',
-  password: '$2b$10$4wUx9vUOlEEiK/6lVgoYyOL4ULdwLhNiUoIgmK1XutF0pkr7us4WK',
-  mobile_number: '9998887772',
-  role: 'Admin',
-  createdAt: 2023-01-18T08:42:00.507Z,
-  updatedAt: 2023-01-18T08:42:00.507Z,
-  __v: 0
-} 
-Jan-18-2023 14:12:07 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-18-2023 14:12:25 [info] success : Mongoose default connection 
-Jan-18-2023 14:12:25 [info] Default Admin. 
-Jan-18-2023 14:14:09 [info] success : Mongoose default connection 
-Jan-18-2023 14:14:09 [info] Default Admin. 
-Jan-18-2023 14:14:15 [info] success : Mongoose default connection 
-Jan-18-2023 14:14:15 [info] Default Admin. 
-Jan-18-2023 14:14:23 [info] success : Mongoose default connection 
-Jan-18-2023 14:14:23 [info] Default Admin. 
-Jan-18-2023 14:14:33 [info] success : Mongoose default connection 
-Jan-18-2023 14:14:34 [info] Default Admin. 
-Jan-18-2023 14:15:08 [info] success : Mongoose default connection 
-Jan-18-2023 14:15:08 [info] Default Admin. 
-Jan-18-2023 14:15:20 [info] success : Mongoose default connection 
-Jan-18-2023 14:15:20 [info] Default Admin. 
-Jan-18-2023 14:15:23 [info] success : Mongoose default connection 
-Jan-18-2023 14:15:23 [info] Default Admin. 
-Jan-18-2023 14:15:28 [info] success : Mongoose default connection 
-Jan-18-2023 14:15:28 [info] Default Admin. 
-Jan-18-2023 14:16:56 [info] success : Mongoose default connection 
-Jan-18-2023 14:16:57 [info] Default Admin. 
-Jan-18-2023 14:17:10 [info] success : Mongoose default connection 
-Jan-18-2023 14:17:10 [info] Default Admin. 
-Jan-18-2023 14:17:29 [info] success : Mongoose default connection 
-Jan-18-2023 14:17:30 [info] "DEFAULT ADMIN Created", {
-  status: 'ACTIVE',
-  _id: 63c7b222679a8749d6552421,
-  first_name: 'Shikha',
-  last_name: 'Mungali',
-  email: 'shikha1081998@gmail.com',
-  password: '$2b$10$ha/LsCAQyTMgDXy/3zwIv.wkYq0dYUELiom5kenDelcveug6rhwzq',
-  mobile_number: '9998887772',
-  role: 'Admin',
-  createdAt: 2023-01-18T08:47:30.156Z,
-  updatedAt: 2023-01-18T08:47:30.156Z,
-  __v: 0
-} 
-Jan-18-2023 14:18:50 [info] success : Mongoose default connection 
-Jan-18-2023 14:18:50 [info] Default Admin. 
-Jan-18-2023 15:24:29 [info] success : Mongoose default connection 
-Jan-18-2023 15:24:29 [info] Default Admin. 
-Jan-18-2023 15:25:18 [info] success : Mongoose default connection 
-Jan-18-2023 15:25:18 [info] Default Admin. 
-Jan-18-2023 15:25:22 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
-Jan-18-2023 15:25:23 [error] 404 - This user does not exist. 
+Jan-18-2023 12:58:24 [info] success : Mongoose default connection 
+Jan-18-2023 12:58:24 [info] Default Admin. 
+Jan-18-2023 12:58:43 [info] http://localhost:5000/api/user/loginManager - POST METHOD  
+Jan-18-2023 12:59:19 [info] http://localhost:5000/api/project/viewProject/63c64b1b0e84e1074c76cab5 - GET METHOD  
+Jan-18-2023 12:59:19 [error] 500 - jwt malformed 
+Jan-18-2023 12:59:29 [info] http://localhost:5000/api/project/viewProject/63c64b1b0e84e1074c76cab5 - GET METHOD  
+Jan-18-2023 12:59:29 [error] 500 - jwt malformed 
+Jan-18-2023 13:00:30 [info] http://localhost:5000/api/project/viewProject/63c64b1b0e84e1074c76cab5 - GET METHOD  
+Jan-18-2023 13:00:30 [error] 500 - jwt malformed 
+Jan-18-2023 13:01:18 [info] success : Mongoose default connection 
+Jan-18-2023 13:01:19 [info] Default Admin. 
+Jan-18-2023 13:01:19 [info] http://localhost:5000/api/project/viewProject/63c64b1b0e84e1074c76cab5 - GET METHOD  
+Jan-18-2023 13:01:19 [error] 500 - jwt malformed 
+Jan-18-2023 13:01:37 [info] http://localhost:5000/api/project/viewProject/63c64b1b0e84e1074c76cab5 - GET METHOD  
+Jan-18-2023 13:02:02 [info] http://localhost:5000/api/project/viewProject/63c64b1b0e84e1074c76cab5 - GET METHOD  
+Jan-18-2023 13:02:02 [error] 500 - invalid signature 
+Jan-18-2023 13:02:53 [info] http://localhost:5000/api/project/viewProject/63c64b1b0e84e1074c76cab5 - GET METHOD  
+Jan-18-2023 13:10:12 [info] http://localhost:5000/api/task/addDeveloperToTask - POST METHOD  
+Jan-18-2023 13:10:12 [error] 404 - Requested URL http://localhost:5000/api/task/addDeveloperToTask not found! 
+Jan-18-2023 13:10:43 [info] http://localhost:5000/api/task/addDeveloperToTask - PUT METHOD  
+Jan-18-2023 13:10:43 [error] 500 - Plan executor error during findAndModify :: caused by :: Cannot apply $addToSet to non-array field. Field named 'developer_assigned' has non-array type objectId 
+Jan-18-2023 13:11:31 [info] http://localhost:5000/api/task/addDeveloperToTask - PUT METHOD  
+Jan-18-2023 13:11:59 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-18-2023 13:14:18 [info] http://localhost:5000/api/project/viewProject/63c64b1b0e84e1074c76cab5 - GET METHOD  
+Jan-18-2023 13:31:14 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-18-2023 13:31:49 [info] http://localhost:5000/api/user/loginManager - POST METHOD  
+Jan-18-2023 13:32:03 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-18-2023 13:43:41 [info] success : Mongoose default connection 
+Jan-18-2023 13:43:41 [info] Default Admin. 
+Jan-18-2023 13:46:23 [info] success : Mongoose default connection 
+Jan-18-2023 13:46:23 [info] Default Admin. 
+Jan-18-2023 13:46:51 [info] success : Mongoose default connection 
+Jan-18-2023 13:46:51 [info] Default Admin. 
+Jan-18-2023 13:51:46 [info] success : Mongoose default connection 
+Jan-18-2023 13:51:46 [info] Default Admin. 
+Jan-18-2023 13:59:09 [info] success : Mongoose default connection 
+Jan-18-2023 13:59:09 [info] Default Admin. 
+Jan-18-2023 14:00:12 [info] success : Mongoose default connection 
+Jan-18-2023 14:00:12 [info] Default Admin. 
+Jan-18-2023 14:00:15 [info] success : Mongoose default connection 
+Jan-18-2023 14:00:15 [info] Default Admin. 
+Jan-18-2023 15:58:40 [info] success : Mongoose default connection 
+Jan-18-2023 15:58:40 [info] Default Admin. 

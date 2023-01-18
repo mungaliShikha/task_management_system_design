@@ -2,7 +2,6 @@ const express = require("express");
 const config = require("./config/config.json");
 const db = require("./dbConnectivity/mongodb");
 const index = require("./routes/indexRoute");
-// const morgan = require('morgan');
 const app = express();
 const cors = require("cors");
 app.use(cors());

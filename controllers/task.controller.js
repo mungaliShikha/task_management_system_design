@@ -136,13 +136,18 @@ module.exports = {
         );
     }),
 
-    viewAllTask: catchAsync(async (req, res) => {
-        const allTask = await task.find().populate("developer_assigned");
-        helper.commonResponse(
-            res,
-            SuccessCode.SUCCESS,
-            allTask,
-            SuccessMessage.DATA_FOUND
-        );
-    }),
+  viewAllTask: catchAsync(async (req, res) => {
+    const allTask = await task.find().populate("developer_assigned");
+    helper.commonResponse(
+      res,
+      SuccessCode.SUCCESS,
+      allTask,
+      SuccessMessage.DATA_FOUND
+    );
+  }),
+
+removeDeveloperFromTask:catchAsync(async(req,res)=>{
+    
+})
+
 };
