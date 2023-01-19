@@ -1,7 +1,9 @@
 module.exports.ErrorMessage = Object.freeze({
+  DATA_SHOULD_BE_ARRAY:"Entered data should be an array",
   CANNOT_ACCESS_DATA: "The requested user cannot access the data",
   PROJECT_NOT_EXIST: "Project not found",
   TASK_DELETED:"Task deleted",
+  PROJECT_STATUS:"Project is already completed",
   PROJECT_DELETED: "Project deleted",
   MANAGER_NOT_EXIST: "Manager does not exist",
   NOT_AUTHORISED: "Only admin can create the manager",

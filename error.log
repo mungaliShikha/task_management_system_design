@@ -47,3 +47,12 @@ Jan-19-2023 10:09:59 [error] 401 - Please provide token.
 Jan-19-2023 10:15:10 [error] 404 - Project deleted 
 Jan-19-2023 10:15:26 [error] 404 - Project deleted 
 Jan-19-2023 10:18:00 [error] 404 - Task deleted 
+Jan-19-2023 12:05:53 [error] 422 - Entered data should be an array 
+Jan-19-2023 12:07:22 [error] 401 - Please provide token. 
+Jan-19-2023 12:37:15 [error] 404 - Project not found 
+Jan-19-2023 13:14:52 [error] 403 - The requested user cannot access the data 
+Jan-19-2023 13:20:46 [error] 404 - Project is already completed 
+Jan-19-2023 13:20:55 [error] 404 - Project is already completed 
+Jan-19-2023 13:21:03 [error] 404 - Project is already completed 
+Jan-19-2023 13:23:40 [error] 403 - Data not found 
+Jan-19-2023 13:24:28 [error] 403 - The requested user cannot access the data 
