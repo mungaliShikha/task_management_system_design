@@ -1,5 +1,3 @@
-const User = require("../models/user.model");
-const Token = require("../models/token.model");
 const catchAsync = require("../helper/catchAsync");
 const appError = require("../helper/errorHandlers/errorHandler");
 const { ErrorMessage, SuccessMessage } = require("../helper/message");
@@ -16,6 +14,10 @@ const {
   sendMail,
   sendMailNotify,
 } = require("../utils/nodeMailer/nodemailer");
+const {
+  getOneUser ,getAllUser,getUserById, getUserAndUpdate, getOneToken, createUser
+} = require("../services/user.service")
+
 const enums = require("../helper/enum/enums")
 
 module.exports = {
@@ -24,7 +26,7 @@ module.exports = {
   loginManager: async (req, res,next) => {
     try {
       const { email, password } = req.body;
-      const loggedInUser = await User.findOne({ email });
+      const loggedInUser = await getOneUser({ email });
       if (!loggedInUser || !compareHash(password, loggedInUser.password)) {
         throw new appError(
           ErrorMessage.EMAIL_NOT_REGISTERED,
@@ -56,7 +58,7 @@ module.exports = {
   // *********************************************** get profile for Manager,Developer *******************************
 
   getProfile: catchAsync(async (req, res) => {
-    const tokenAuth = await User.findOne({
+    const tokenAuth = await getOneUser({
       _id: req.userId,
       role: { $in: [enums.declaredEnum.role.DEVELOPER, enums.declaredEnum.role.MANAGER] },
     });
@@ -75,7 +77,7 @@ module.exports = {
   updateProfile: async (req, res) => {
     try {
       let payload = req.body;
-      const tokenAuth = await User.findOne({
+      const tokenAuth = await getOneUser({
         _id: req.userId,
         role: { $in: [enums.declaredEnum.role.DEVELOPER, enums.declaredEnum.role.MANAGER] },
       });
@@ -88,7 +90,8 @@ module.exports = {
       if (req.files) {
         payload["profile_pic"] = req.files[0].location;
       }
-      let updateRes = await User.findByIdAndUpdate(
+      let updateRes = await getUserAndUpdate
+      (
         { _id: tokenAuth._id },
         { $set: payload },
         { new: true }
@@ -113,11 +116,11 @@ module.exports = {
   addDeveloper: catchAsync(async (req, res) => {
     const payload = req.body;
     const { first_name, last_name, email, mobile_number } = payload;
-    const userAuth = await User.findById({ _id: req.userId, role: enums.declaredEnum.role.MANAGER });
+    const userAuth = await getOneUser({ _id: req.userId, role: enums.declaredEnum.role.MANAGER });
     if (!userAuth) {
       throw new appError(ErrorMessage.NOT_AUTHORISED, ErrorCode.NOT_FOUND);
     }
-    const userFound = await User.findOne({ email, mobile_number });
+    const userFound = await getOneUser({ email, mobile_number });
     if (userFound) {
       throw new appError(ErrorMessage.ALREADY_EXIST, ErrorCode.ALREADY_EXIST);
     }
@@ -126,7 +129,7 @@ module.exports = {
     console.log(passGen);
     payload["password"] = generateHash(passGen);
     payload["role"] = enums.declaredEnum.role.DEVELOPER;
-    const createDeveloper = await User.create(payload);
+    const createDeveloper = await createUser(payload);
 
     const subject = "Developer Invitation";
     const message = `Hello <br> You are invited as a Developer on Task management system Design platform,<br> Here is your Login Crediantial <br> Email: ${payload.email} <br> Password: ${passGen} <br> Kindly Use this Crediantial for further login`;
@@ -145,7 +148,7 @@ module.exports = {
   developerLogin: async (req, res) => {
     try {
       const { email, password } = req.body;
-      let developerDetails = await User.findOne({ email });
+      let developerDetails = await getOneUser({ email });
       if (!developerDetails)
         helper.commonResponse(
           res,
