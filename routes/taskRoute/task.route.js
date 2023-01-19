@@ -17,6 +17,7 @@ router.put(
   auth.verifyToken,
   taskController.addDeveloperToTask
 );
+
 router.get("/viewAllTask",taskController.viewAllTask)
 
 module.exports = router;
