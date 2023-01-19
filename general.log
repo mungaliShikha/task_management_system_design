@@ -662,3 +662,64 @@ Jan-19-2023 16:07:03 [info] Default Admin.
 Jan-19-2023 16:09:02 [info] success : Mongoose default connection 
 Jan-19-2023 16:09:02 [info] Default Admin. 
 Jan-19-2023 16:09:06 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 17:48:15 [info] success : Mongoose default connection 
+Jan-19-2023 17:48:15 [info] Default Admin. 
+Jan-19-2023 17:48:39 [info] http://localhost:5000/api/user/loginManager - POST METHOD  
+Jan-19-2023 17:48:39 [error] 404 - Provided email is not registered. 
+Jan-19-2023 17:49:30 [info] success : Mongoose default connection 
+Jan-19-2023 17:49:30 [info] Default Admin. 
+Jan-19-2023 17:49:45 [info] http://localhost:5000/api/user/loginManager - POST METHOD  
+Jan-19-2023 17:49:45 [error] 404 - Provided email is not registered. 
+Jan-19-2023 17:50:29 [info] http://localhost:5000/api/user/loginManager - POST METHOD  
+Jan-19-2023 17:50:29 [error] 404 - Provided email is not registered. 
+Jan-19-2023 17:52:43 [info] success : Mongoose default connection 
+Jan-19-2023 17:52:43 [info] Default Admin. 
+Jan-19-2023 17:52:45 [info] success : Mongoose default connection 
+Jan-19-2023 17:52:45 [info] Default Admin. 
+Jan-19-2023 17:52:53 [info] success : Mongoose default connection 
+Jan-19-2023 17:52:53 [info] Default Admin. 
+Jan-19-2023 17:53:00 [info] success : Mongoose default connection 
+Jan-19-2023 17:53:00 [info] Default Admin. 
+Jan-19-2023 17:53:07 [info] http://localhost:5000/api/user/loginManager - POST METHOD  
+Jan-19-2023 17:53:24 [info] success : Mongoose default connection 
+Jan-19-2023 17:53:24 [info] Default Admin. 
+Jan-19-2023 17:53:26 [info] http://localhost:5000/api/user/loginManager - POST METHOD  
+Jan-19-2023 17:53:26 [error] 404 - Provided email is not registered. 
+Jan-19-2023 17:53:36 [info] success : Mongoose default connection 
+Jan-19-2023 17:53:36 [info] Default Admin. 
+Jan-19-2023 17:54:36 [info] success : Mongoose default connection 
+Jan-19-2023 17:54:36 [info] Default Admin. 
+Jan-19-2023 17:54:38 [info] success : Mongoose default connection 
+Jan-19-2023 17:54:38 [info] Default Admin. 
+Jan-19-2023 17:55:05 [info] success : Mongoose default connection 
+Jan-19-2023 17:55:06 [info] Default Admin. 
+Jan-19-2023 17:55:12 [info] success : Mongoose default connection 
+Jan-19-2023 17:55:12 [info] Default Admin. 
+Jan-19-2023 17:55:15 [info] success : Mongoose default connection 
+Jan-19-2023 17:55:15 [info] Default Admin. 
+Jan-19-2023 17:58:35 [info] success : Mongoose default connection 
+Jan-19-2023 17:58:35 [info] Default Admin. 
+Jan-19-2023 17:58:40 [info] success : Mongoose default connection 
+Jan-19-2023 17:58:40 [info] Default Admin. 
+Jan-19-2023 18:03:20 [info] success : Mongoose default connection 
+Jan-19-2023 18:03:20 [info] Default Admin. 
+Jan-19-2023 18:03:25 [info] http://localhost:5000/api/user/loginManager - POST METHOD  
+Jan-19-2023 18:03:25 [error] 500 - joi.validate is not a function 
+Jan-19-2023 18:03:51 [info] success : Mongoose default connection 
+Jan-19-2023 18:03:51 [info] Default Admin. 
+Jan-19-2023 18:04:40 [info] disconnected : Mongoose default connection is disconnected 
+Jan-19-2023 18:04:40 [info] warning 
+Jan-19-2023 18:04:40 [info] warning 
+Jan-19-2023 18:04:40 [info] warning 
+Jan-19-2023 18:04:46 [info] warning 
+Jan-19-2023 18:06:48 [info] success : Mongoose default connection 
+Jan-19-2023 18:06:48 [info] Default Admin. 
+Jan-19-2023 18:11:44 [info] http://localhost:5000/api/user/loginManager - POST METHOD  
+Jan-19-2023 18:11:44 [error] 500 - child "password" fails because ["password" is required] 
+Jan-19-2023 18:11:54 [info] success : Mongoose default connection 
+Jan-19-2023 18:11:55 [info] Default Admin. 
+Jan-19-2023 18:11:56 [info] disconnected : Mongoose default connection is disconnected 
+Jan-19-2023 18:11:56 [info] warning 
+Jan-19-2023 18:11:56 [info] warning 
+Jan-19-2023 18:11:56 [info] warning 
+Jan-19-2023 18:11:57 [info] warning 

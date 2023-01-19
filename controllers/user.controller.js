@@ -18,16 +18,22 @@ const {
   getOneUser, getAllUser, getUserById, getUserAndUpdate, getOneToken, createUser
 } = require("../services/user.service")
 
-const enums = require("../helper/enum/enums")
+const enums = require("../helper/enum/enums");
+const joi = require("joi")
 
 module.exports = {
 
   // *************************************************** manager login ******************************************
   loginManager: async (req, res, next) => {
+    const validationSchema = {
+      email: joi.string().required(),
+      password: joi.string().required(),
+    };
     try {
-      const { email, password } = req.body;
+      const validatedBody = await joi.validate(req.body, validationSchema)
+      const { email, password } = validationSchema(req.body);
       const loggedInUser = await getOneUser({ email });
-      if (!loggedInUser || !compareHash(password, loggedInUser.password)) {
+      if (!loggedInUser) {
         throw new appError(
           ErrorMessage.EMAIL_NOT_REGISTERED,
           ErrorCode.NOT_FOUND
