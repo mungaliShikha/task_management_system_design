@@ -1,23 +1,32 @@
-const User = require("../models/user.model");
 const task = require("../models/task.model");
-const project = require("../models/project.model");
 const catchAsync = require("../helper/catchAsync");
 const appError = require("../helper/errorHandlers/errorHandler");
 const { ErrorMessage, SuccessMessage } = require("../helper/message");
 const { ErrorCode, SuccessCode } = require("../helper/statusCode");
-const {
-    compareHash,
-    generateToken,
-    generatePassword,
-    randomPassword,
-    generateHash,
-} = require("../helper/commonFunction");
 const helper = require("../helper/commonResponseHandler");
-const {
-    sendMail,
-    sendMailNotify,
-} = require("../utils/nodeMailer/nodemailer");
 const enums = require("../helper/enum/enums")
+const {
+    getOneTask,
+    getAllTask,
+    getTaskById,
+    getTaskByIdAndUpdate,
+    createTask,
+    countTask
+  } = require("../services/task.service")
+  const {
+    getOneUser,
+    getAllUser,
+    getUserById,
+    getUserAndUpdate,
+    getOneToken
+  } = require("../services/user.service")
+
+  const {
+    getOneProject,
+    getAllProject,
+    getProjectById,
+    getProjectByIdAndUpdate
+  } = require("../services/project.service")
 
 module.exports = {
     createTaskToProject: catchAsync(async (req, res) => {
@@ -30,7 +39,7 @@ module.exports = {
             due_date,
             developer_assigned,
         } = req.body;
-        const managerAuth = await User.findOne({
+        const managerAuth = await getOneUser({
             _id: req.userId,
             role: enums.declaredEnum.role.MANAGER,
         });
@@ -38,7 +47,7 @@ module.exports = {
             throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
         }
 
-        const projectRes = await project.findOne({ _id: projectId });
+        const projectRes = await getOneProject({ _id: projectId });
         if (!projectRes) {
             throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
         }
@@ -46,7 +55,7 @@ module.exports = {
         req.body.manager = managerAuth._id;
         req.body.projectId = projectRes._id;
 
-        let taskRes = await task.create(req.body);
+        let taskRes = await createTask(req.body);
 
         helper.commonResponse(
             res,
@@ -61,14 +70,14 @@ module.exports = {
         if (req.body.search) {
             query.name = new RegExp("^" + req.body.search, "i");
         }
-        const allAuthRes = await User.findOne({ _id: req.userId });
+        const allAuthRes = await getOneUser({ _id: req.userId });
         if (!allAuthRes) {
             throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
         }
         if (allAuthRes && allAuthRes.role !==enums.declaredEnum.role.MANAGER) {
             throw new appError(ErrorMessage.CANNOT_ACCESS_DATA, ErrorCode.FORBIDDEN);
         }
-        const projectFindRes = await project.findOne({ _id: _id });
+        const projectFindRes = await getOneProject({ _id: _id });
         if (!projectFindRes) {
             throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
         }
@@ -82,13 +91,12 @@ module.exports = {
         let { page, limit } = req.query;
         page = req.query.page || 1;
         limit = req.query.limit || 10;
-        const taskListRes = await task
-            .find(queryMade)
+        const taskListRes = await task.find(queryMade)
             .populate("projectId manager developer_assigned")
             .limit(limit * 1)
             .skip((page - 1) * limit)
             .exec();
-        const count = await task.countDocuments();
+        const count = await countTask();
         if (taskListRes.length == 0) {
             throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
         }
@@ -107,23 +115,23 @@ module.exports = {
 
     addDeveloperToTask: catchAsync(async (req, res) => {
         let { developers, taskId } = req.body;
-        const managerAuthCheck = await User.findOne({ _id: req.userId });
+        const managerAuthCheck = await getOneUser({ _id: req.userId });
         if (managerAuthCheck && managerAuthCheck.role != enums.declaredEnum.role.MANAGER) {
             throw new appError(ErrorMessage.INVALID_TOKEN, ErrorCode.NOT_ALLOWED);
         } else if (!managerAuthCheck) {
             throw new appError(ErrorMessage.MANAGER_NOT_EXIST, ErrorCode.NOT_FOUND);
         }
-        let developerCheckRes = await User.findOne({ _id: developers });
+        let developerCheckRes = await getOneUser({ _id: developers });
         if (!developerCheckRes) {
             throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
         }
-        const taskCheckRes = await task.findById(taskId);
-        if (taskCheckRes && taskCheckRes.active_status == enums.declaredEnum.taskStatus.DELETE) {
-            throw new appError(ErrorMessage.PROJECT_DELETED, ErrorCode.NOT_FOUND);
+        const taskCheckRes = await getTaskById(taskId);
+        if (taskCheckRes && taskCheckRes.status == enums.declaredEnum.taskStatus.DELETE) {
+            throw new appError(ErrorMessage.TASK_DELETED, ErrorCode.NOT_FOUND);
         } else if (!taskCheckRes) {
             throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
         }
-        const newProject = await task.findOneAndUpdate(
+        const newProject = await getTaskByIdAndUpdate(
             { _id: taskId },
             { $addToSet: { developer_assigned: developers } },
             { new: true }
@@ -138,6 +146,9 @@ module.exports = {
 
   viewAllTask: catchAsync(async (req, res) => {
     const allTask = await task.find().populate("developer_assigned");
+    if(!allTask){
+        throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
+    }
     helper.commonResponse(
       res,
       SuccessCode.SUCCESS,

@@ -17,7 +17,7 @@ const {
 } = require("../utils/nodeMailer/nodemailer");
 const enums = require("../helper/enum/enums");
 const {
-  getOneUser ,getAllUser,getUserById, getUserAndUpdate, getOneToken
+  getOneUser ,getAllUser,getUserById, getUserAndUpdate, getOneToken, createUser
 } = require("../services/user.service")
 module.exports = {
   /// **********************************   admin login ************************************************
@@ -190,7 +190,7 @@ module.exports = {
     console.log(passGen);
     payload["password"] = generateHash(passGen);
     payload["role"] = "Manager";
-    const createManager = await User.create(payload);
+    const createManager = await createUser(payload);
 
     const subject = "Manager Invitation";
     const message = `Hello <br> You are invited as a Manager on Task management system Design platform,<br> Here is your Login Crediantial <br> Email: ${payload.email} <br> Password: ${passGen} <br> Kindly Use this Crediantial for further login`;
