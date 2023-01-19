@@ -554,3 +554,37 @@ Jan-18-2023 17:50:24 [info] success : Mongoose default connection
 Jan-18-2023 17:50:24 [info] Default Admin. 
 Jan-18-2023 17:50:46 [info] success : Mongoose default connection 
 Jan-18-2023 17:50:46 [info] Default Admin. 
+Jan-19-2023 14:58:13 [info] success : Mongoose default connection 
+Jan-19-2023 14:58:17 [info] success : Mongoose default connection 
+Jan-19-2023 14:58:17 [info] Default Admin. 
+Jan-19-2023 14:58:22 [info] http://localhost:5000/api/user/loginManager - POST METHOD  
+Jan-19-2023 15:01:01 [info] http://localhost:5000/api/task/updateTask - PUT METHOD  
+Jan-19-2023 15:05:46 [info] http://localhost:5000/api/task/removeDeveloperFromTask - DELETE METHOD  
+Jan-19-2023 15:05:46 [error] 404 - This user does not exist. 
+Jan-19-2023 15:06:19 [info] http://localhost:5000/api/task/removeDeveloperFromTask - DELETE METHOD  
+Jan-19-2023 15:07:41 [error] 404 - This user does not exist. 
+Jan-19-2023 15:07:41 [info] disconnected : Mongoose default connection is disconnected 
+Jan-19-2023 15:07:41 [info] http://localhost:5000/api/task/removeDeveloperFromTask - DELETE METHOD  
+Jan-19-2023 15:07:41 [info] success : Mongoose default connection 
+Jan-19-2023 15:12:32 [info] success : Mongoose default connection 
+Jan-19-2023 15:12:32 [info] Default Admin. 
+Jan-19-2023 15:12:47 [info] success : Mongoose default connection 
+Jan-19-2023 15:12:47 [info] Default Admin. 
+Jan-19-2023 15:12:54 [info] success : Mongoose default connection 
+Jan-19-2023 15:12:54 [info] Default Admin. 
+Jan-19-2023 15:14:00 [info] success : Mongoose default connection 
+Jan-19-2023 15:14:00 [info] Default Admin. 
+Jan-19-2023 15:14:07 [info] success : Mongoose default connection 
+Jan-19-2023 15:14:07 [info] Default Admin. 
+Jan-19-2023 15:14:13 [info] http://localhost:5000/api/task/removeDeveloperFromTask - DELETE METHOD  
+Jan-19-2023 15:14:20 [error] 422 - Entered data should be an array 
+Jan-19-2023 15:14:32 [info] http://localhost:5000/api/task/removeDeveloperFromTask - DELETE METHOD  
+Jan-19-2023 15:16:05 [info] http://localhost:5000/api/task/removeDeveloperFromTask - DELETE METHOD  
+Jan-19-2023 15:16:28 [info] success : Mongoose default connection 
+Jan-19-2023 15:16:28 [info] Default Admin. 
+Jan-19-2023 15:17:14 [info] success : Mongoose default connection 
+Jan-19-2023 15:17:14 [info] Default Admin. 
+Jan-19-2023 15:18:10 [info] http://localhost:5000/api/task/updateTask - PUT METHOD  
+Jan-19-2023 15:18:18 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-19-2023 15:19:27 [info] disconnected : Mongoose default connection is disconnected 
+Jan-19-2023 15:19:27 [info] warning 

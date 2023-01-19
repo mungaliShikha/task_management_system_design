@@ -147,15 +147,14 @@ module.exports = {
 
     addDeveloperToTask: catchAsync(async (req, res) => {
         let { developers, taskId } = req.body;
+        if(typeof developers !== "object"){
+            throw new appError(ErrorMessage.DATA_SHOULD_BE_ARRAY, ErrorCode.VALIDATION_FAILED);
+          }
         const managerAuthCheck = await getOneUser({ _id: req.userId });
         if (managerAuthCheck && managerAuthCheck.role != enums.declaredEnum.role.MANAGER) {
             throw new appError(ErrorMessage.INVALID_TOKEN, ErrorCode.NOT_ALLOWED);
         } else if (!managerAuthCheck) {
             throw new appError(ErrorMessage.MANAGER_NOT_EXIST, ErrorCode.NOT_FOUND);
-        }
-        let developerCheckRes = await getOneUser({ _id: developers });
-        if (!developerCheckRes) {
-            throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
         }
         const taskCheckRes = await getTaskById(taskId);
         if (taskCheckRes && taskCheckRes.status == enums.declaredEnum.taskStatus.DELETE) {
@@ -197,24 +196,25 @@ module.exports = {
         } else if (!managerAuthCheck) {
             throw new appError(ErrorMessage.MANAGER_NOT_EXIST, ErrorCode.NOT_FOUND);
         }
-        let developerCheckRes = await getOneUser({ _id: developers });
-        if (!developerCheckRes) {
-            throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
-        }
+        if(typeof developers !== "object"){
+            throw new appError(ErrorMessage.DATA_SHOULD_BE_ARRAY, ErrorCode.VALIDATION_FAILED);
+          }
         const taskCheckRes = await getTaskById(taskId);
         if (taskCheckRes && taskCheckRes.status == enums.declaredEnum.taskStatus.DELETE) {
             throw new appError(ErrorMessage.TASK_DELETED, ErrorCode.NOT_FOUND);
         } else if (!taskCheckRes) {
             throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
         }
-        const newProject = await getTaskByIdAndDelete(
+        const newTask = await getTaskByIdAndUpdate(
             { _id: taskId },
-            { developer_assigned: developers }
+            { $pullAll: {
+                developer_assigned: developers,
+            }},{ new: true }
         );
         helper.commonResponse(
             res,
             SuccessCode.SUCCESS,
-            newProject,
+            newTask,
             SuccessMessage.DEVELOPER_ASSIGNED
         );
     }),
