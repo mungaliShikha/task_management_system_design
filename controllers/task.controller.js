@@ -156,10 +156,6 @@ module.exports = {
         } else if (!managerAuthCheck) {
             throw new appError(ErrorMessage.MANAGER_NOT_EXIST, ErrorCode.NOT_FOUND);
         }
-        let developerCheckRes = await getOneUser({ _id: developers });
-        if (!developerCheckRes) {
-            throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
-        }
         const taskCheckRes = await getTaskById(taskId);
         if (taskCheckRes && taskCheckRes.status == enums.declaredEnum.taskStatus.DELETE) {
             throw new appError(ErrorMessage.TASK_DELETED, ErrorCode.NOT_FOUND);
