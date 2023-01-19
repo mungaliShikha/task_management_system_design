@@ -74,7 +74,7 @@ module.exports = {
         if (!allAuthRes) {
             throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
         }
-        if (allAuthRes && allAuthRes.role !==enums.declaredEnum.role.MANAGER) {
+        if (allAuthRes && allAuthRes.role !== enums.declaredEnum.role.MANAGER) {
             throw new appError(ErrorMessage.CANNOT_ACCESS_DATA, ErrorCode.FORBIDDEN);
         }
         const projectFindRes = await getOneProject({ _id: _id });
@@ -157,8 +157,8 @@ module.exports = {
     );
   }),
 
-removeDeveloperFromTask:catchAsync(async(req,res)=>{
-    
-})
+    removeDeveloperFromTask: catchAsync(async (req, res) => {
+
+    })
 
 };

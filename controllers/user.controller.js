@@ -21,6 +21,7 @@ const {
 const enums = require("../helper/enum/enums")
 
 module.exports = {
+
   // *************************************************** manager login ******************************************
   loginManager: async (req, res,next) => {
     try {
