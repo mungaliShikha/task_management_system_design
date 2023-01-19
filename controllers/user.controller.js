@@ -16,10 +16,10 @@ const {
   sendMail,
   sendMailNotify,
 } = require("../utils/nodeMailer/nodemailer");
-
 const enums = require("../helper/enum/enums")
 
 module.exports = {
+
   // *************************************************** manager login ******************************************
   loginManager: async (req, res,next) => {
     try {
