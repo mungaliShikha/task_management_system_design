@@ -42,7 +42,7 @@ module.exports = {
     } = req.body;
     const managerAuthCheck = await getOneUser({
       _id: req.userId,
-      role:enums.declaredEnum.role.MANAGER,
+      role: enums.declaredEnum.role.MANAGER,
     });
     if (!managerAuthCheck) {
       throw new appError(ErrorMessage.MANAGER_NOT_EXIST, ErrorCode.NOT_FOUND);
@@ -209,7 +209,7 @@ module.exports = {
     //     },
     //   },
     // ]);
-    const {projectId} = req.params
+    const { projectId } = req.params
     const managerAuthCheck = await getUserById(req.userId);
     if (managerAuthCheck && managerAuthCheck.role !== enums.declaredEnum.role.MANAGER) {
       throw new appError(ErrorMessage.CANNOT_ACCESS_DATA, ErrorCode.FORBIDDEN);

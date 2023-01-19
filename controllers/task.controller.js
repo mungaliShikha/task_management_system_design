@@ -11,22 +11,23 @@ const {
     getTaskById,
     getTaskByIdAndUpdate,
     createTask,
-    countTask
-  } = require("../services/task.service")
-  const {
+    countTask,
+    getTaskByIdAndDelete
+} = require("../services/task.service")
+const {
     getOneUser,
     getAllUser,
     getUserById,
     getUserAndUpdate,
     getOneToken
-  } = require("../services/user.service")
+} = require("../services/user.service")
 
-  const {
+const {
     getOneProject,
     getAllProject,
     getProjectById,
     getProjectByIdAndUpdate
-  } = require("../services/project.service")
+} = require("../services/project.service")
 
 module.exports = {
     createTaskToProject: catchAsync(async (req, res) => {
@@ -47,7 +48,7 @@ module.exports = {
             throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
         }
 
-        const projectRes = await getOneProject({ _id: projectId });
+        const taskResult = await getOneProject({ _id: projectId });
         if (!projectRes) {
             throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
         }
@@ -113,6 +114,36 @@ module.exports = {
         );
     }),
 
+    updateTask: catchAsync(async (req, res) => {
+        const {
+            taskId,
+            name,
+            type,
+            priority,
+            start_date,
+            due_date,
+            developer_assigned,
+        } = req.body;
+        const managerAuth = await getOneUser({
+            _id: req.userId,
+            role: enums.declaredEnum.role.MANAGER,
+        });
+        if (!managerAuth) {
+            throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
+        }
+        const projectRes = await getOneTask({ _id: taskId });
+        if (!projectRes) {
+            throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
+        }
+        let updatedTask = await getTaskByIdAndUpdate(taskId, req.body);
+        helper.commonResponse(
+            res,
+            SuccessCode.SUCCESS,
+            updatedTask,
+            SuccessMessage.TASK_UPDATE
+        );
+    }),
+
     addDeveloperToTask: catchAsync(async (req, res) => {
         let { developers, taskId } = req.body;
         const managerAuthCheck = await getOneUser({ _id: req.userId });
@@ -144,21 +175,72 @@ module.exports = {
         );
     }),
 
-  viewAllTask: catchAsync(async (req, res) => {
-    const allTask = await task.find().populate("developer_assigned");
-    if(!allTask){
-        throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
-    }
-    helper.commonResponse(
-      res,
-      SuccessCode.SUCCESS,
-      allTask,
-      SuccessMessage.DATA_FOUND
-    );
-  }),
+    viewAllTask: catchAsync(async (req, res) => {
+        const allTask = await task.find().populate("developer_assigned");
+        if (allTask.length == 0) {
+            throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
+        }
+        helper.commonResponse(
+            res,
+            SuccessCode.SUCCESS,
+            allTask,
+            SuccessMessage.DATA_FOUND
+        );
+    }),
 
     removeDeveloperFromTask: catchAsync(async (req, res) => {
+        let { developers, taskId } = req.body;
+        const managerAuthCheck = await getOneUser({ _id: req.userId });
+        if (managerAuthCheck && managerAuthCheck.role != enums.declaredEnum.role.MANAGER) {
+            throw new appError(ErrorMessage.INVALID_TOKEN, ErrorCode.NOT_ALLOWED);
+        } else if (!managerAuthCheck) {
+            throw new appError(ErrorMessage.MANAGER_NOT_EXIST, ErrorCode.NOT_FOUND);
+        }
+        let developerCheckRes = await getOneUser({ _id: developers });
+        if (!developerCheckRes) {
+            throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
+        }
+        const taskCheckRes = await getTaskById(taskId);
+        if (taskCheckRes && taskCheckRes.status == enums.declaredEnum.taskStatus.DELETE) {
+            throw new appError(ErrorMessage.TASK_DELETED, ErrorCode.NOT_FOUND);
+        } else if (!taskCheckRes) {
+            throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
+        }
+        const newProject = await getTaskByIdAndDelete(
+            { _id: taskId },
+            { developer_assigned: developers }
+        );
+        helper.commonResponse(
+            res,
+            SuccessCode.SUCCESS,
+            newProject,
+            SuccessMessage.DEVELOPER_ASSIGNED
+        );
+    }),
 
-    })
+    changeTaskStatusByDev: catchAsync(async (req, res) => {
+        const {
+            taskId,
+            taskStatus
+        } = req.body;
+        const developerAuth = await getOneUser({
+            _id: req.userId,
+            role: enums.declaredEnum.role.DEVELOPER,
+        });
+        if (!developerAuth) {
+            throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
+        }
+        const taskResult = await getOneTask({ _id: taskId, developer_assigned: { $in: [developerAuth._id] } });
+        if (!taskResult) {
+            throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
+        }
+        let updatedTask = await getTaskByIdAndUpdate(taskId, taskStatus ,{ new: true });
+        helper.commonResponse(
+            res,
+            SuccessCode.SUCCESS,
+            updatedTask,
+            SuccessMessage.TASK_UPDATE
+        );
+    }),
 
 };

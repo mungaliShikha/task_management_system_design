@@ -15,7 +15,7 @@ const {
   sendMailNotify,
 } = require("../utils/nodeMailer/nodemailer");
 const {
-  getOneUser ,getAllUser,getUserById, getUserAndUpdate, getOneToken, createUser
+  getOneUser, getAllUser, getUserById, getUserAndUpdate, getOneToken, createUser
 } = require("../services/user.service")
 
 const enums = require("../helper/enum/enums")
@@ -23,7 +23,7 @@ const enums = require("../helper/enum/enums")
 module.exports = {
 
   // *************************************************** manager login ******************************************
-  loginManager: async (req, res,next) => {
+  loginManager: async (req, res, next) => {
     try {
       const { email, password } = req.body;
       const loggedInUser = await getOneUser({ email });
@@ -35,6 +35,7 @@ module.exports = {
       } else {
         let token = generateToken({ id: loggedInUser._id });
         let managerRes = {
+          _id: loggedInUser._id,
           email: email,
           first_name: loggedInUser.first_name,
           last_name: loggedInUser.last_name,
@@ -91,11 +92,11 @@ module.exports = {
         payload["profile_pic"] = req.files[0].location;
       }
       let updateRes = await getUserAndUpdate
-      (
-        { _id: tokenAuth._id },
-        { $set: payload },
-        { new: true }
-      );
+        (
+          { _id: tokenAuth._id },
+          { $set: payload },
+          { new: true }
+        );
       helper.commonResponse(
         res,
         SuccessCode.SUCCESS,
@@ -166,6 +167,7 @@ module.exports = {
         role: developerDetails.role,
       });
       let loginRes = {
+        _id: developerDetails._id,
         email: email,
         role: developerDetails.role,
         token: token,
