@@ -588,3 +588,77 @@ Jan-19-2023 15:18:10 [info] http://localhost:5000/api/task/updateTask - PUT METH
 Jan-19-2023 15:18:18 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
 Jan-19-2023 15:19:27 [info] disconnected : Mongoose default connection is disconnected 
 Jan-19-2023 15:19:27 [info] warning 
+Jan-19-2023 15:26:37 [info] success : Mongoose default connection 
+Jan-19-2023 15:26:37 [info] Default Admin. 
+Jan-19-2023 15:26:39 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 15:26:39 [error] 404 - This user does not exist. 
+Jan-19-2023 15:27:48 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 15:27:48 [error] 404 - This user does not exist. 
+Jan-19-2023 15:27:50 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 15:27:50 [error] 404 - This user does not exist. 
+Jan-19-2023 15:28:27 [info] success : Mongoose default connection 
+Jan-19-2023 15:28:27 [info] Default Admin. 
+Jan-19-2023 15:28:33 [info] success : Mongoose default connection 
+Jan-19-2023 15:28:33 [info] Default Admin. 
+Jan-19-2023 15:29:12 [info] success : Mongoose default connection 
+Jan-19-2023 15:29:12 [info] Default Admin. 
+Jan-19-2023 15:29:25 [info] success : Mongoose default connection 
+Jan-19-2023 15:29:25 [info] Default Admin. 
+Jan-19-2023 15:29:29 [info] success : Mongoose default connection 
+Jan-19-2023 15:29:29 [info] Default Admin. 
+Jan-19-2023 15:29:35 [info] success : Mongoose default connection 
+Jan-19-2023 15:29:35 [info] Default Admin. 
+Jan-19-2023 15:29:59 [info] success : Mongoose default connection 
+Jan-19-2023 15:29:59 [info] Default Admin. 
+Jan-19-2023 15:30:03 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 15:30:03 [error] 404 - Only develper can change the status of the task 
+Jan-19-2023 15:30:25 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
+Jan-19-2023 15:30:46 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 15:30:46 [error] 404 - Data not found 
+Jan-19-2023 15:31:35 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 15:33:29 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 15:34:00 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 15:39:12 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 15:39:13 [error] 404 - Data not found 
+Jan-19-2023 15:39:15 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 15:39:15 [error] 404 - Data not found 
+Jan-19-2023 15:41:21 [info] http://localhost:5000/api/task/addDeveloperToTask - PUT METHOD  
+Jan-19-2023 15:41:58 [info] http://localhost:5000/api/task/addDeveloperToTask - PUT METHOD  
+Jan-19-2023 15:42:05 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 15:43:09 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 15:44:42 [info] success : Mongoose default connection 
+Jan-19-2023 15:44:42 [info] Default Admin. 
+Jan-19-2023 15:45:08 [info] success : Mongoose default connection 
+Jan-19-2023 15:45:08 [info] Default Admin. 
+Jan-19-2023 15:45:14 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 15:45:14 [error] 500 - Cannot create property 'updatedAt' on string 'completed' 
+Jan-19-2023 15:48:55 [info] success : Mongoose default connection 
+Jan-19-2023 15:48:55 [info] Default Admin. 
+Jan-19-2023 15:49:01 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 15:49:01 [error] 500 - Cannot create property 'updatedAt' on string 'completed' 
+Jan-19-2023 15:49:15 [info] success : Mongoose default connection 
+Jan-19-2023 15:49:15 [info] Default Admin. 
+Jan-19-2023 15:49:29 [info] success : Mongoose default connection 
+Jan-19-2023 15:49:29 [info] Default Admin. 
+Jan-19-2023 15:49:37 [info] success : Mongoose default connection 
+Jan-19-2023 15:49:37 [info] Default Admin. 
+Jan-19-2023 15:49:49 [info] success : Mongoose default connection 
+Jan-19-2023 15:49:49 [info] Default Admin. 
+Jan-19-2023 15:49:50 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 15:49:50 [error] 500 - Cannot create property 'updatedAt' on string 'completed' 
+Jan-19-2023 15:50:32 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 15:51:36 [info] success : Mongoose default connection 
+Jan-19-2023 15:51:36 [info] Default Admin. 
+Jan-19-2023 15:53:33 [info] success : Mongoose default connection 
+Jan-19-2023 15:53:33 [info] Default Admin. 
+Jan-19-2023 15:53:45 [info] success : Mongoose default connection 
+Jan-19-2023 15:53:45 [info] Default Admin. 
+Jan-19-2023 15:54:17 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-19-2023 15:54:32 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 15:54:48 [error] 500 - Cannot create property 'updatedAt' on string 'completed' 
+Jan-19-2023 16:04:28 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 16:07:03 [info] success : Mongoose default connection 
+Jan-19-2023 16:07:03 [info] Default Admin. 
+Jan-19-2023 16:09:02 [info] success : Mongoose default connection 
+Jan-19-2023 16:09:02 [info] Default Admin. 
+Jan-19-2023 16:09:06 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  

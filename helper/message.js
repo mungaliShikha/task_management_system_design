@@ -1,4 +1,5 @@
 module.exports.ErrorMessage = Object.freeze({
+  DATA_AUTHORIZTAION:"Only develper can change the status of the task",
   DATA_SHOULD_BE_ARRAY:"Entered data should be an array",
   CANNOT_ACCESS_DATA: "The requested user cannot access the data",
   PROJECT_NOT_EXIST: "Project not found",

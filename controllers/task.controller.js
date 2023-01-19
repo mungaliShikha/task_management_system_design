@@ -229,13 +229,14 @@ module.exports = {
             role: enums.declaredEnum.role.DEVELOPER,
         });
         if (!developerAuth) {
-            throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
+            throw new appError(ErrorMessage.DATA_AUTHORIZTAION, ErrorCode.NOT_FOUND);
         }
         const taskResult = await getOneTask({ _id: taskId, developer_assigned: { $in: [developerAuth._id] } });
         if (!taskResult) {
             throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
         }
-        let updatedTask = await getTaskByIdAndUpdate(taskId, taskStatus ,{ new: true });
+
+        let updatedTask = await getTaskByIdAndUpdate({_id:taskId}, {$set:{taskStatus:taskStatus}},{new:true});
         helper.commonResponse(
             res,
             SuccessCode.SUCCESS,

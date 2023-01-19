@@ -12,8 +12,8 @@ const getTaskById = async (id) => {
   return Task.findById(id);
 };
 
-const getTaskByIdAndUpdate = async (id, update) => {
-  return Task.findByIdAndUpdate(id, update, { new: true });
+const getTaskByIdAndUpdate = async (id, update,data) => {
+  return Task.findByIdAndUpdate(id, update,data);
 };
 const createTask = async (body) => {
   return Task.create(body);
