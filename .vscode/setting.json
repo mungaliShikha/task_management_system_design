@@ -1,0 +1,10 @@
+{
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "prettier.singleQuote": false,
+    "prettier.tabWidth": 2,
+    "prettier.semi": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.formatOnType": false
+  }

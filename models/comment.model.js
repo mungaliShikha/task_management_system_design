@@ -23,12 +23,6 @@ var comment_model = new schema(
         ref: "user",
       },
     ],
-    manager: [
-      {
-        type: schema.Types.ObjectId,
-        ref: "user",
-      },
-    ],
   },
   { timestamps: true }
 );

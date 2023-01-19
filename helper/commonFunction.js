@@ -81,3 +81,21 @@ module.exports.generateEmployeeId = (role) => {
     return "DEV" + EmployeeId;
   }
 };
+
+const subjects = {
+  "DEVELOPER" : " DEVELOPER INVITATION",
+  "MANAGER" : " MANAGER INVITATION"
+}
+
+// const messages={
+//   "DEVELOPER": `Hello <br> You are invited as a Developer on Task management system Design platform,<br> Here is your Login Crediantial <br> Email: ${req.body.email} <br> Password: ${passGen} <br> Kindly Use this Crediantial for further login`,
+//   "MANAGER": `Hello <br> You are invited as a Developer on Task management system Design platform,<br> Here is your Login Crediantial <br> Email: ${req.body.email} <br> Password: ${passGen} <br> Kindly Use this Crediantial for further login`,
+// }
+
+module.exports.messages=(email,passGen)=>{
+
+  if(DEVELOPER) `Hello <br> You are invited as a Developer on Task management system Design platform,<br> Here is your Login Crediantial <br> Email: ${email} <br> Password: ${passGen} <br> Kindly Use this Crediantial for further login`
+  if(MANAGER) `Hello <br> You are invited as a Developer on Task management system Design platform,<br> Here is your Login Crediantial <br> Email: ${email} <br> Password: ${passGen} <br> Kindly Use this Crediantial for further login`
+}
+
+module.exports=subjects;

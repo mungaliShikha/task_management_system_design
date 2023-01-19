@@ -153,26 +153,26 @@ module.exports = {
   //************************************************* create manager api ***************************************** */
 
   createManager: catchAsync(async (req, res) => {
-    const payload = req.body;
-    const { first_name, last_name, email, mobile_number } = payload;
-    const user1 = await User.findById({ _id: req.userId, role: "Admin" });
-    if (!user1) {
+    const { first_name, last_name, email, mobile_number } = req.body;
+    const checkRole = await User.findOne({ _id: req.userId, role: "Admin" });
+    if (!checkRole) {
       throw new appError(ErrorMessage.NOT_AUTHORISED, ErrorCode.NOT_FOUND);
     }
     const user = await User.findOne({ email, mobile_number });
     if (user) {
       throw new appError(ErrorMessage.ALREADY_EXIST, ErrorCode.ALREADY_EXIST);
     }
-    payload["employee_id"] = "MAN" + mobile_number.substr(-4);
+    req.body["employee_id"] = "MAN" + mobile_number.substr(-4);
     let passGen = randomPassword();
     console.log(passGen)
-    payload["password"] = generateHash(passGen);
-    payload["role"] = "Manager";
-    const createManager = await User.create(payload);
+    req.body["password"] = generateHash(passGen);
+    req.body["role"] = "Manager";
+    const createManager = await User.create(req.body);
 
-    const subject = "Manager Invitation"
-    const message = `Hello <br> You are invited as a Manager on Task management system Design platform,<br> Here is your Login Crediantial <br> Email: ${payload.email} <br> Password: ${passGen} <br> Kindly Use this Crediantial for further login`
-    await sendMailNotify("shikha1081998@gmail.com", subject, message,payload.email)
+    
+    subjects.PAYMENT_FAILED
+
+    await sendMailNotify("shikha1081998@gmail.com", subjects, message,payload.email)
    
    helper.sendResponseWithData(
       res,
