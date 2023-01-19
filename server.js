@@ -8,6 +8,7 @@ app.use(cors());
 const appError = require("./helper/errorHandlers/errorHandler");
 const errorController = require("./helper/errorHandlers/errorController");
 const apiLogger = require("./helper/logger/apiRouteLogger");
+const logger = require("./helper/logger/logger")
 // const basicAuth = require('express-basic-auth');
 
 

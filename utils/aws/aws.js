@@ -26,7 +26,6 @@ exports.upload = multer({
         bucket: global.gConfig.bucket,
         metadata: function (req, file, callback) {
             callback(null, { fieldName: file.fieldname })
-            // console.log(file.fieldname)
         },
         key: function (req, file, callback) {
             callback(null, `multipleFilesUpload/${file.originalname}`)

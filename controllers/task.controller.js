@@ -65,7 +65,7 @@ module.exports = {
         if (!allAuthRes) {
             throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
         }
-        if (allAuthRes && allAuthRes.role !==enums.declaredEnum.role.MANAGER) {
+        if (allAuthRes && allAuthRes.role !== enums.declaredEnum.role.MANAGER) {
             throw new appError(ErrorMessage.CANNOT_ACCESS_DATA, ErrorCode.FORBIDDEN);
         }
         const projectFindRes = await project.findOne({ _id: _id });
@@ -136,18 +136,19 @@ module.exports = {
         );
     }),
 
-  viewAllTask: catchAsync(async (req, res) => {
-    const allTask = await task.find().populate("developer_assigned");
-    helper.commonResponse(
-      res,
-      SuccessCode.SUCCESS,
-      allTask,
-      SuccessMessage.DATA_FOUND
-    );
-  }),
+    viewAllTask: catchAsync(async (req, res) => {
+        const allTask = await task.find().populate("developer_assigned");
+        if (allTask.length == 0) helper.commonResponse(res,ErrorCode.DATA_NOT_FOUND, ErrorMessage.DATA_NOT_FOUND)
+        helper.commonResponse(
+            res,
+            SuccessCode.SUCCESS,
+            allTask,
+            SuccessMessage.DATA_FOUND
+        );
+    }),
 
-removeDeveloperFromTask:catchAsync(async(req,res)=>{
-    
-})
+    removeDeveloperFromTask: catchAsync(async (req, res) => {
+
+    })
 
 };
