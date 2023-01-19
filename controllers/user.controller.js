@@ -126,14 +126,14 @@ module.exports = {
     if (userFound) {
       throw new appError(ErrorMessage.ALREADY_EXIST, ErrorCode.ALREADY_EXIST);
     }
-    req.body["employee_id"] = "DEV" + mobile_number.substr(-4);
+    payload["employee_id"] = "DEV" + mobile_number.substr(-4);
     let passGen = randomPassword();
     console.log(passGen);
-    req.body["password"] = generateHash(passGen);
-    req.body["role"] = "Developer";
-    const createDeveloper = await User.create(req.body);
+    payload["password"] = generateHash(passGen);
+    payload["role"] = "Developer";
+    const createDeveloper = await User.create(payload);
 
-    await sendMailNotify(checkManager.email, subjects.DEVELOPER, messages(req.body.email,passGen) ,email);
+    await sendMailNotify(checkManager.email, subjects.DEVELOPER, messages(payload.email,passGen) ,email);
 
     helper.sendResponseWithData(
       res,

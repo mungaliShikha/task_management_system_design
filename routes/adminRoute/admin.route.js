@@ -155,21 +155,21 @@ router.put(
   upload.single("profile_image"),
   adminController.updateAdmin
 );
-router.get("/getAdminDetails/:userId", adminController.getAdmin);
+router.get("/getAdminDetails/:userId", adminController.getAdminDetails);
 
 /// admin can create manager
-router.post("/createManager",auth.verifyToken, adminController.createManager);
+router.post("/addManager",auth.verifyToken, adminController.addManager);
 
 router.get("/listManager", adminController.listManager);
 router.get("/viewManager", adminController.viewManager);
 
-router.post(
-  "/addDeveloper/:userId",
-  upload.array("profile_image"),
-  adminController.addDeveloper
-);
-router.post("/loginDeveloper", adminController.loginDeveloper);
-router.get("/listDeveloper", adminController.listDeveloper);
-router.get("/viewDeveloper", adminController.viewDeveloper);
+// router.post(
+//   "/addDeveloper/:userId",
+//   upload.array("profile_image"),
+//   adminController.addDeveloper
+// );
+// router.post("/loginDeveloper", adminController.loginDeveloper);
+// router.get("/listDeveloper", adminController.listDeveloper);
+// router.get("/viewDeveloper", adminController.viewDeveloper);
 
 module.exports = router;

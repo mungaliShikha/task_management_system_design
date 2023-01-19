@@ -29,6 +29,7 @@ const {
   } = require("../services/project.service")
 
 module.exports = {
+
     createTaskToProject: catchAsync(async (req, res) => {
         const {
             projectId,
@@ -158,10 +159,43 @@ module.exports = {
   }),
 
     removeDeveloperFromTask: catchAsync(async (req, res) => {
+        
+        let { developers, taskId } = req.body;
+        const managerAuthCheck = await getOneUser({ _id: req.userId });
+        if (managerAuthCheck && managerAuthCheck.role != enums.declaredEnum.role.MANAGER) {
+            throw new appError(ErrorMessage.INVALID_TOKEN, ErrorCode.NOT_ALLOWED);
+        } else if (!managerAuthCheck) {
+            throw new appError(ErrorMessage.MANAGER_NOT_EXIST, ErrorCode.NOT_FOUND);
+        }
+        let developerCheckRes = await getOneUser({ _id: developers });
+        if (!developerCheckRes) {
+            throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
+        }
+        const taskCheckRes = await getTaskById(taskId);
+        if (taskCheckRes && taskCheckRes.status == enums.declaredEnum.taskStatus.DELETE) {
+            throw new appError(ErrorMessage.TASK_DELETED, ErrorCode.NOT_FOUND);
+        } else if (!taskCheckRes) {
+            throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
+        }
+
+        
+        const newProject = await getTaskByIdAndUpdate(
+            { _id: taskId },
+            { $addToSet: { developer_assigned: null } },
+            { new: true }
+        );
+        helper.commonResponse(
+            res,
+            SuccessCode.SUCCESS,
+            newProject,
+            SuccessMessage.DEVELOPER_REMOVED
+        );
+
 
     })
 
 };
+
 
 
 

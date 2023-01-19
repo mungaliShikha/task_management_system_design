@@ -554,3 +554,20 @@ Jan-18-2023 17:50:24 [info] success : Mongoose default connection
 Jan-18-2023 17:50:24 [info] Default Admin. 
 Jan-18-2023 17:50:46 [info] success : Mongoose default connection 
 Jan-18-2023 17:50:46 [info] Default Admin. 
+Jan-19-2023 12:22:36 [info] success : Mongoose default connection 
+Jan-19-2023 12:22:36 [info] Default Admin. 
+Jan-19-2023 12:30:58 [info] http://localhost:5000/api/user/addDeveloper - POST METHOD  
+Jan-19-2023 12:30:58 [error] 401 - Please provide token. 
+Jan-19-2023 12:59:56 [info] http://localhost:5000/api/admin/login - GET METHOD  
+Jan-19-2023 12:59:56 [error] 404 - Requested URL http://localhost:5000/api/admin/login not found! 
+Jan-19-2023 13:01:35 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-19-2023 13:01:35 [error] 500 - compareHash is not a function 
+Jan-19-2023 14:02:44 [info] http://localhost:5000/api/task/addDeveloperToTask - POST METHOD  
+Jan-19-2023 14:02:44 [error] 404 - Requested URL http://localhost:5000/api/task/addDeveloperToTask not found! 
+Jan-19-2023 14:06:25 [info] http://localhost:5000/api/task/addDeveloperToTask - PUT METHOD  
+Jan-19-2023 14:06:25 [error] 401 - Please provide token. 
+Jan-19-2023 14:11:57 [info] http://localhost:5000/api/user/loginManager - POST METHOD  
+Jan-19-2023 14:11:57 [error] 404 - Provided email is not registered. 
+Jan-19-2023 15:19:07 [info] disconnected : Mongoose default connection is disconnected 
+Jan-19-2023 15:19:07 [info] warning 
+Jan-19-2023 15:19:08 [info] warning 

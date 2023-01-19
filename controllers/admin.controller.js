@@ -16,9 +16,13 @@ const {
   sendMailNotify,
 } = require("../utils/nodeMailer/nodemailer");
 const enums = require("../helper/enum/enums");
+
 const {
   getOneUser ,getAllUser,getUserById, getUserAndUpdate, getOneToken, createUser
 } = require("../services/user.service")
+
+
+
 module.exports = {
   /// **********************************   admin login ************************************************
   login: catchAsync(async (req, res) => {
@@ -171,7 +175,7 @@ module.exports = {
 
   //************************************************* create manager api ***************************************** */
 
-  createManager: catchAsync(async (req, res) => {
+  addManager: catchAsync(async (req, res) => {
     const payload = req.body;
     const { first_name, last_name, email, mobile_number } = payload;
     const userAuth = await getOneUser({
@@ -185,7 +189,7 @@ module.exports = {
     if (userDuplicate) {
       throw new appError(ErrorMessage.ALREADY_EXIST, ErrorCode.ALREADY_EXIST);
     }
-    req.body["employee_id"] = "MAN" + mobile_number.substr(-4);
+    payload["employee_id"] = "MAN" + mobile_number.substr(-4);
     let passGen = randomPassword();
     console.log(passGen);
     payload["password"] = generateHash(passGen);

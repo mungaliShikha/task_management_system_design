@@ -80,4 +80,5 @@ module.exports.SuccessMessage = Object.freeze({
   CREATE_DEVELOPER: "Developer created successfully.",
   TASK_ADD: "Task added Successfully.",
   DEVELOPER_ASSIGNED: "Developer Assigned on task Successfully.",
+  DEVELOPER_REMOVED:"developer removed from task successfully"
 });

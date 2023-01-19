@@ -29,6 +29,7 @@ const {
   createProject,
   countProject
 } = require("../services/project.service")
+
 module.exports = {
   //************************************************create project ************************************** */
   createProject: catchAsync(async (req, res) => {
@@ -223,6 +224,5 @@ module.exports = {
       SuccessMessage.DATA_FOUND
     );
   }),
-
-  listProjectTask: catchAsync(async (req, res) => {}),
+  
 };

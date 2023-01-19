@@ -1,7 +1,7 @@
 {
   "development": {
     "config_id": "development",
-    "node_port": 5000,
+    "node_port": 6000,
     "json_indentation": 4,
     "swaggerURL": "localhost:5000",
     "user_name": "task_management_project",
@@ -35,3 +35,4 @@
     "host": "localhost"
   }
 }
+
