@@ -53,3 +53,5 @@ Jan-19-2023 13:01:35 [error] 500 - compareHash is not a function
 Jan-19-2023 14:02:44 [error] 404 - Requested URL http://localhost:5000/api/task/addDeveloperToTask not found! 
 Jan-19-2023 14:06:25 [error] 401 - Please provide token. 
 Jan-19-2023 14:11:57 [error] 404 - Provided email is not registered. 
+Jan-19-2023 15:27:54 [error] 500 - compareHash is not a function 
+Jan-19-2023 15:53:44 [error] 500 - compareHash is not a function 
