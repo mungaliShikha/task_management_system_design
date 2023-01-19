@@ -7,7 +7,7 @@ router.post("/addDeveloper", auth.verifyToken, userController.addDeveloper);
 
 /**
  * @swagger
- * /api/admin/addDeveloper/:userId:
+ * /api/user/developerLogin:
  *   post:
  *     tags:
  *       - ADMIN_DEVELOPER_DASHBOARD
@@ -15,10 +15,6 @@ router.post("/addDeveloper", auth.verifyToken, userController.addDeveloper);
  *     produces:
  *       - application/json
  *     parameters:
- *       - name: token
- *         description: token
- *         in: header
- *         required: true
  *       - name: email
  *         description: email
  *         in: formData
