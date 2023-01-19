@@ -6,6 +6,28 @@ const schema = mongoose.Schema;
 
 var task_model = new schema(
   {
+
+    projectId:
+    {
+      type: schema.Types.ObjectId,
+      ref: "project",
+    },
+    manager:
+    {
+      type: schema.Types.ObjectId,
+      ref: "users",
+    },
+    developer_assigned:
+    {
+      type: schema.Types.ObjectId,
+      ref: "users",
+    },
+    active_status: {
+      type: String,
+      enum: ["ACTIVE", "BLOCKED", "DELETE"],
+      default: "ACTIVE",
+    },
+
     name: {
       type: String,
       required: true,
@@ -14,7 +36,7 @@ var task_model = new schema(
     status: {
       type: String,
       enum: ["inProgress", "inQA", "completed"],
-      default: "started",
+      default: "inProgress",
       required: true,
     },
     type: {
@@ -28,16 +50,12 @@ var task_model = new schema(
     },
 
     start_date: {
-      type: String,
+      type: Date,
+      default:Date.now()
     },
     due_date: {
-      type: String,
-    },
-    developer_assigned: 
-      {
-        type: schema.Types.ObjectId,
-        ref: "user",
-      }
+      type: Date,
+    }
   },
   { timestamps: true }
 );

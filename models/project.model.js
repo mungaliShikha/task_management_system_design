@@ -17,27 +17,19 @@ var project_model = new schema(
       enum: ["started", "ongoing", "completed"],
       default: "started",
     },
-    active_status: {
-      type: String,
-      enum: ["ACTIVE", "BLOCK", "DELETE"],
-      default: "ACTIVE",
-    },
     project_task: [
       {
-        type: String,
-      }
-    ],
-
-    developer: [
-      {
-        type: String,
-      }
+        type: schema.ObjectId,
+        ref: "task"
+    }
     ],
     manager: [
       {
-        type: String,
-      }
-    ],
+        type: schema.ObjectId,
+        ref: "users"
+    }
+    ]
+    ,
   },
   { timestamps: true }
 );

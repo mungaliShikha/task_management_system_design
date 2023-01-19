@@ -1,12 +1,23 @@
 const router = require("express").Router();
-const {createProject,listProject,addDeveloperToProject,addManagerToProject,viewProject} = require("../../controllers/project.controller")
+const auth = require("../../middleware/auth");
+const projectController = require("../../controllers/project.controller");
 
-
-
-router.post("/createProject/:managerId", createProject);
-router.get("/listProject",listProject)
-router.post("/addDevelopersToProject/:managerId/:projectId",addDeveloperToProject);
-router.post("/addManagerToProject/:managerId/:projectId",addManagerToProject);
-router.get("/viewProject",viewProject)
+router.post(
+  "/createProject",
+  auth.verifyToken,
+  projectController.createProject
+);
+router.post(
+  "/addManagerToProject/:projectId",
+  auth.verifyToken,
+  projectController.addManagerToProject
+);
+router.post(
+  "/addTaskToProject/:projectId",
+  auth.verifyToken,
+  projectController.addTaskToProject
+);
+router.get("/viewProject",auth.verifyToken, projectController.viewProject);
+router.get("/listProject",auth.verifyToken, projectController.listProject);
 
 module.exports = router;

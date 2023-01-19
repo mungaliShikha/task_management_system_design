@@ -1,5 +1,5 @@
 node_modules
 .env
-error.log
-general.log
-extra
+# ./config/fields.json
+#  **/*.log
+*.log
