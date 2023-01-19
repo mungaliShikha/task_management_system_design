@@ -13,6 +13,7 @@ module.exports.generateHash = (data) => {
   return bcrypt.hashSync(String(data), 10);
 };
 
+
 // module.exports.generatePassword = () => {
 //   var chars =
 //     "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%&";
@@ -45,21 +46,24 @@ module.exports.generateToken = (userObject) => {
   console.log("45>>");
   console.log(userObject);
   let expireTime = 6 * 30 * 72 * 60 * 60 * 1000; //6 months
-  return jwt.sign(userObject, s, {
+  return jwt.sign(userObject, global.gConfig.jwtSecretKey, {
     expiresIn: expireTime,
   });
 };
 
-module.exports.generatePassword = () => {
-  var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-  var value = 8;
-  var randomstring = "";
-  for (var i = 0; i < value; i++) {
-    var rnum = Math.floor(Math.random() * chars.length);
-    randomstring += chars.substring(rnum, rnum + 1);
-    console.log("===", randomstring, "Subhra", rnum);
+
+
+
+module.exports.generatePassword =()=> {
+      var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+      var value = 8
+      var randomstring = '';
+      for (var i = 0; i < value; i++) {
+          var rnum = Math.floor(Math.random() * chars.length);
+           randomstring += chars.substring(rnum, rnum + 1);
+      }
   }
-};
+
 
 module.exports.randomPassword = () => {
   var randomstring = Math.random().toString(36).slice(-7);

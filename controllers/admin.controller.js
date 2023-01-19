@@ -1,19 +1,29 @@
-const User = require("../models/user.model");
-const Token = require("../models/token.model");
-const catchAsync = require("../utils/catchAsync");
+const catchAsync = require("../helper/catchAsync");
 const crypto = require("crypto");
-const appError = require("../utils/errorHandlers/errorHandler");
+const appError = require("../helper/errorHandlers/errorHandler");
 const { ErrorMessage, SuccessMessage } = require("../helper/message");
 const { ErrorCode, SuccessCode } = require("../helper/statusCode");
-const { compareHash, generateToken, generatePassword, randomPassword, generateHash } = require("../helper/commonFunction");
+const {
+  compareHash,
+  generateToken,
+  generatePassword,
+  randomPassword,
+  generateHash,
+} = require("../helper/commonFunction");
 const helper = require("../helper/commonResponseHandler");
-const { sendMail, sendMailNotify } = require("../services/nodeMailer/nodemailer");
-
+const {
+  sendMail,
+  sendMailNotify,
+} = require("../utils/nodeMailer/nodemailer");
+const enums = require("../helper/enum/enums");
+const {
+  getOneUser ,getAllUser,getUserById, getUserAndUpdate, getOneToken, createUser
+} = require("../services/user.service")
 module.exports = {
   /// **********************************   admin login ************************************************
   login: catchAsync(async (req, res) => {
     const { email, password } = req.body;
-    const loggedInUser = await User.findOne({ email });
+    const loggedInUser = await getOneUser({ email });
     if (!loggedInUser || !compareHash(password, loggedInUser.password)) {
       throw new appError(
         ErrorMessage.EMAIL_NOT_REGISTERED,
@@ -27,9 +37,14 @@ module.exports = {
         role: loggedInUser.role,
         first_name: loggedInUser.first_name,
         last_name: loggedInUser.last_name,
-        token: token
-      }
-      helper.sendResponseWithData(res, SuccessCode.SUCCESS, SuccessMessage.LOGIN_SUCCESS, finalRes);
+        token: token,
+      };
+      helper.sendResponseWithData(
+        res,
+        SuccessCode.SUCCESS,
+        SuccessMessage.LOGIN_SUCCESS,
+        finalRes
+      );
     }
   }),
 
@@ -37,14 +52,14 @@ module.exports = {
 
   forgetPassword: catchAsync(async (req, res) => {
     const { email } = req.body;
-    const user = await User.findOne({ email });
+    const user = await getOneUser({ email });
     if (!user) {
       throw new appError(
         ErrorMessage.EMAIL_NOT_REGISTERED,
         ErrorCode.NOT_FOUND
       );
     }
-    var tokenFound = await Token.findOne({ userId: user._id });
+    var tokenFound = await getOneToken({ userId: user._id });
     if (!tokenFound) {
       tokenFound = await new Token({
         userId: user._id,
@@ -52,12 +67,12 @@ module.exports = {
       }).save();
     }
 
-    const link = `${global.gFields.db_URL}admin/resetPassword/${user._id}/${tokenFound.token}`;
+    const link = `${global.gConfig.db_URL}admin/resetPassword/${user._id}/${tokenFound.token}`;
     const html = `<h1> Password reset requested </h1><h3> Download link </h3><p>${link}</p>`;
     await sendMail(
-      global.gFields.nodemailer_mail,
+      global.gConfig.nodemailer_mail,
       email,
-      "password reset link",
+      SuccessMessage.FORGET_SUCCESS,
       html
     );
 
@@ -73,7 +88,7 @@ module.exports = {
   resetPassword: catchAsync(async (req, res) => {
     const { userId, token } = req.params;
     const { password } = req.body;
-    const user = await User.findById(userId);
+    const user = await getUserById(userId);
     if (!user) {
       throw new appError(
         ErrorMessage.EMAIL_NOT_REGISTERED,
@@ -81,7 +96,7 @@ module.exports = {
       );
     }
 
-    const tokenFound = await Token.findOne({
+    const tokenFound = await getOneToken({
       userId: user._id,
       token: token,
     });
@@ -105,7 +120,7 @@ module.exports = {
   updateAdmin: catchAsync(async (req, res) => {
     const { first_name, last_name, email, mobile_number, address } = req.body;
     let data = {};
-    const user = await User.findOne({ _id: req.userId });
+    const user = await getOneUser({ _id: req.userId });
     if (!user) {
       throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
     }
@@ -127,7 +142,11 @@ module.exports = {
     if (req.files) {
       data["profile_image"] = req.files[0].location;
     }
-    let update = await User.findByIdAndUpdate({ _id: user._id }, { $set: data }, { new: true });
+    let update = await getUserAndUpdate(
+      { _id: user._id },
+      { $set: data },
+      { new: true }
+    );
     helper.commonResponse(
       res,
       SuccessCode.SUCCESS,
@@ -138,7 +157,7 @@ module.exports = {
 
   ///******************************* get admin api ********************************************* */
   getAdminDetails: catchAsync(async (req, res) => {
-    const userData = await User.findOne({ _id: req.userId });
+    const userData = await getOneUser({ _id: req.userId });
     if (!userData) {
       throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
     }
@@ -153,30 +172,33 @@ module.exports = {
   //************************************************* create manager api ***************************************** */
 
   createManager: catchAsync(async (req, res) => {
-    const { first_name, last_name, email, mobile_number } = req.body;
-    const checkRole = await User.findOne({ _id: req.userId, role: "Admin" });
-    if (!checkRole) {
+    const payload = req.body;
+    const { first_name, last_name, email, mobile_number } = payload;
+    const userAuth = await getOneUser({
+      _id: req.userId,
+      role: enums.declaredEnum.role.ADMIN,
+    });
+    if (!userAuth) {
       throw new appError(ErrorMessage.NOT_AUTHORISED, ErrorCode.NOT_FOUND);
     }
-    const user = await User.findOne({ email, mobile_number });
-    if (user) {
+    const userDuplicate = await getOneUser({ email, mobile_number });
+    if (userDuplicate) {
       throw new appError(ErrorMessage.ALREADY_EXIST, ErrorCode.ALREADY_EXIST);
     }
     req.body["employee_id"] = "MAN" + mobile_number.substr(-4);
     let passGen = randomPassword();
-    console.log(passGen)
-    req.body["password"] = generateHash(passGen);
-    req.body["role"] = "Manager";
-    const createManager = await User.create(req.body);
+    console.log(passGen);
+    payload["password"] = generateHash(passGen);
+    payload["role"] = "Manager";
+    const createManager = await createUser(payload);
 
-    
-    subjects.PAYMENT_FAILED
+    const subject = "Manager Invitation";
+    const message = `Hello <br> You are invited as a Manager on Task management system Design platform,<br> Here is your Login Crediantial <br> Email: ${payload.email} <br> Password: ${passGen} <br> Kindly Use this Crediantial for further login`;
+    await sendMailNotify(userAuth.email, subject, message, payload.email);
 
-    await sendMailNotify("shikha1081998@gmail.com", subjects, message,payload.email)
-   
-   helper.sendResponseWithData(
+    helper.sendResponseWithData(
       res,
-      SuccessCode.SUCCESS,
+      SuccessCode.CREATED,
       SuccessMessage.CREATE_MANAGER,
       createManager
     );

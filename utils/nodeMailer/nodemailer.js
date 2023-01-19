@@ -1,12 +1,13 @@
 const nodemailer = require("nodemailer");
 const config = require("../../config/config.json")
+
 module.exports.sendMail = async (from, to, text, html) => {
   try {
     var transporter = nodemailer.createTransport({
-      service: global.gFields.nodemailer_service,
+      service: global.gConfig.nodemailer_service,
       auth: {
-        user: global.gFields.nodemailer_mail,
-        pass: global.gFields.nodemailer_password,
+        user: global.gConfig.nodemailer_mail,
+        pass: global.gConfig.nodemailer_password,
       },
       tls: {
         rejectUnauthorized: false,
@@ -21,7 +22,7 @@ module.exports.sendMail = async (from, to, text, html) => {
     };
     transporter.sendMail(mailOptions, function (error, info) {
       if (error) {
-        console.log("error",error);
+        console.log("error", error);
       } else {
         console.log("Email sent: " + info.response);
       }
@@ -31,11 +32,9 @@ module.exports.sendMail = async (from, to, text, html) => {
   }
 };
 
-
-
-module.exports.sendMailNotify = async (from, subject, message,to) => {
+module.exports.sendMailNotify = async (from, subject, message, to) => {
   return new Promise((resolve, reject) => {
-      let html = `<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    let html = `<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
         <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
         <head>
         <!--[if gte mso 9]>
@@ -271,34 +270,34 @@ module.exports.sendMailNotify = async (from, subject, message,to) => {
 //         </body>
         
 //         </html>`
-      var transporter = nodemailer.createTransport({
-          host: "smtp.office365.com",
-          port: 587,
-          secure: false,
-          service: global.gFields.nodemailer_service,
-          auth: {
-            user: global.gFields.nodemailer_mail,
-            pass: global.gFields.nodemailer_password,
-          },
-          tls: {
-              rejectUnauthorized: false,
-          },
-      });
+    var transporter = nodemailer.createTransport({
+      host: "smtp.office365.com",
+      port: 587,
+      secure: false,
+      service: global.gConfig.nodemailer_service,
+      auth: {
+        user: global.gConfig.nodemailer_mail,
+        pass: global.gConfig.nodemailer_password,
+      },
+      tls: {
+        rejectUnauthorized: false,
+      },
+    });
 
-      var mailOptions = {
-        from: from,
-        to: to, 
-        subject: subject,
-        html: html,
-      };
+    var mailOptions = {
+      from: from,
+      to: to,
+      subject: subject,
+      html: html,
+    };
 
-      transporter.sendMail(mailOptions, (error, result) => {
-          if (error) {
-              reject(error)
-          }
-          else {
-              resolve(result)
-          }
-      })
+    transporter.sendMail(mailOptions, (error, result) => {
+      if (error) {
+        reject(error)
+      }
+      else {
+        resolve(result)
+      }
+    })
   })
 }

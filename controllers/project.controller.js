@@ -1,23 +1,34 @@
-const User = require("../models/user.model");
 const Project = require("../models/project.model");
-const task = require("../models/task.model");
-const catchAsync = require("../utils/catchAsync");
-const appError = require("../utils/errorHandlers/errorHandler");
+const catchAsync = require("../helper/catchAsync");
+const appError = require("../helper/errorHandlers/errorHandler");
 const { ErrorMessage, SuccessMessage } = require("../helper/message");
 const { ErrorCode, SuccessCode } = require("../helper/statusCode");
-const {
-  compareHash,
-  generateToken,
-  generatePassword,
-  randomPassword,
-  generateHash,
-} = require("../helper/commonFunction");
 const helper = require("../helper/commonResponseHandler");
+const enums = require("../helper/enum/enums")
 const {
-  sendMail,
-  sendMailNotify,
-} = require("../services/nodeMailer/nodemailer");
+  getOneTask,
+  getAllTask,
+  getTaskById,
+  getTaskByIdAndUpdate,
+  createTask,
+  countTask
+} = require("../services/task.service")
+const {
+  getOneUser,
+  getAllUser,
+  getUserById,
+  getUserAndUpdate,
+  getOneToken
+} = require("../services/user.service")
 
+const {
+  getOneProject,
+  getAllProject,
+  getProjectById,
+  getProjectByIdAndUpdate,
+  createProject,
+  countProject
+} = require("../services/project.service")
 module.exports = {
   //************************************************create project ************************************** */
   createProject: catchAsync(async (req, res) => {
@@ -29,14 +40,14 @@ module.exports = {
       developers,
       active_status,
     } = req.body;
-    const managerAuthCheck = await User.findOne({
+    const managerAuthCheck = await getOneUser({
       _id: req.userId,
-      role: "Manager",
+      role:enums.declaredEnum.role.MANAGER,
     });
     if (!managerAuthCheck) {
       throw new appError(ErrorMessage.MANAGER_NOT_EXIST, ErrorCode.NOT_FOUND);
     }
-    const projectName = await Project.findOne({ project_name });
+    const projectName = await getOneProject({ project_name });
     if (projectName) {
       throw new appError(
         ErrorMessage.PROJECT_ALREADY_CREATED,
@@ -54,7 +65,7 @@ module.exports = {
     ) {
       managerId = managerAuthCheck._id.toString();
       req.body.manager = managerId.split(" ");
-      let finalData = await Project.create(req.body);
+      let finalData = await createProject(req.body);
       helper.commonResponse(
         res,
         SuccessCode.SUCCESS,
@@ -67,15 +78,15 @@ module.exports = {
   //*********************************** add manager to project************************* */
   addManagerToProject: catchAsync(async (req, res) => {
     let { projectId } = req.params;
-    const managerAuthCheck = await User.findById(req.userId);
-    if (managerAuthCheck && managerAuthCheck.role != "Manager") {
+    const managerAuthCheck = await getUserById(req.userId);
+    if (managerAuthCheck && managerAuthCheck.role != enums.declaredEnum.role.MANAGER) {
       throw new appError(ErrorMessage.INVALID_TOKEN, ErrorCode.NOT_ALLOWED);
     } else if (!managerAuthCheck) {
       throw new appError(ErrorMessage.MANAGER_NOT_EXIST, ErrorCode.NOT_FOUND);
     }
 
-    const projectAuthCheck = await Project.findById(projectId);
-    if (projectAuthCheck && projectAuthCheck.active_status == "DELETE") {
+    const projectAuthCheck = await getProjectById(projectId);
+    if (projectAuthCheck && projectAuthCheck.active_status == enums.declaredEnum.status.DELETE) {
       throw new appError(ErrorMessage.PROJECT_DELETED, ErrorCode.NOT_FOUND);
     } else if (!projectAuthCheck) {
       throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
@@ -83,7 +94,7 @@ module.exports = {
 
     const { manager } = req.body;
 
-    const newProject = await Project.findOneAndUpdate(
+    const newProject = await getProjectByIdAndUpdate(
       { _id: projectId },
       { $addToSet: { manager: manager } },
       { new: true }
@@ -99,24 +110,23 @@ module.exports = {
 
   //***************************** add task to project ************************************************* */
   addTaskToProject: catchAsync(async (req, res) => {
-    const{projectId}=req.params
-    const { project_task} = req.body;
-    const managerAuthCheck = await User.findById(req.userId);
-    if (managerAuthCheck && managerAuthCheck.role != "Manager") {
+    const { projectId } = req.params;
+    const { project_task } = req.body;
+    const managerAuthCheck = await getUserById(req.userId);
+    if (managerAuthCheck && managerAuthCheck.role != enums.declaredEnum.role.MANAGER) {
       throw new appError(ErrorMessage.INVALID_TOKEN, ErrorCode.NOT_ALLOWED);
     } else if (!managerAuthCheck) {
       throw new appError(ErrorMessage.MANAGER_NOT_EXIST, ErrorCode.NOT_FOUND);
     }
 
-    const projectAuthCheck = await Project.findById(projectId);
-    if (projectAuthCheck && projectAuthCheck.active_status == "DELETE") {
+    const projectAuthCheck = await getProjectById(projectId);
+    if (projectAuthCheck && projectAuthCheck.status == enums.declaredEnum.status.DELETE) {
       throw new appError(ErrorMessage.PROJECT_DELETED, ErrorCode.NOT_FOUND);
     } else if (!projectAuthCheck) {
       throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
     }
 
-
-    const newProject = await Project.findOneAndUpdate(
+    const newProject = await getProjectByIdAndUpdate(
       { _id: projectId },
       { $addToSet: { project_task: project_task } },
       { new: true }
@@ -132,31 +142,37 @@ module.exports = {
 
   //********************************************* list of all the projects *********************************8 */
   listProject: catchAsync(async (req, res) => {
-    const managerAuthCheck = await User.findById(req.userId);
-    if(managerAuthCheck && managerAuthCheck.role !== "Manager"){
+    const managerAuthCheck = await getUserById(req.userId);
+    if (managerAuthCheck && managerAuthCheck.role !== enums.declaredEnum.role.MANAGER) {
       throw new appError(ErrorMessage.CANNOT_ACCESS_DATA, ErrorCode.FORBIDDEN);
     }
-    var query = { active_status: { $ne: "DELETE" } };
-    if (req.body.search) {
-      query.project_name = new RegExp("^" + req.body.search, "i");
-    }
-    req.body.limit = parseInt(req.body.limit);
-    req.body.page = parseInt(req.body.page);
-    var options = {
-      page: req.body.page || 1,
-      limit: req.body.limit || 10,
-      sort: { createdAt: -1 },
-    };
-    let ProjectList = await Project.paginate(query, options);
 
-    if (ProjectList.length == 0) {
+    var queryMade = { projectStatus: { $ne: enums.declaredEnum.status.DELETE } };
+    if (req.body.search) {
+      queryMade.project_name = new RegExp("^" + req.body.search, "i");
+    }
+    let { page, limit } = req.query;
+    page = req.query.page || 1;
+    limit = req.query.limit || 10;
+    let projectList = await Project.find(queryMade)
+      .limit(limit * 1)
+      .skip((page - 1) * limit)
+      .exec();
+    const count = await countProject();
+    let final = {
+      projects: projectList,
+      totalPages: Math.ceil(count / limit),
+      currentPage: page,
+    };
+
+    if (projectList.length == 0) {
       throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
     }
 
     helper.commonResponse(
       res,
       SuccessCode.SUCCESS,
-      ProjectList,
+      final,
       SuccessMessage.DATA_FOUND
     );
   }),
@@ -193,11 +209,13 @@ module.exports = {
     //     },
     //   },
     // ]);
-    const managerAuthCheck = await User.findById(req.userId);
-    if(managerAuthCheck && managerAuthCheck.role !== "Manager"){
+    const {projectId} = req.params
+    const managerAuthCheck = await getUserById(req.userId);
+    if (managerAuthCheck && managerAuthCheck.role !== enums.declaredEnum.role.MANAGER) {
       throw new appError(ErrorMessage.CANNOT_ACCESS_DATA, ErrorCode.FORBIDDEN);
     }
-    const projectView = await Project.find().populate("manager project_task")
+
+    const projectView = await Project.findById(projectId).populate("manager project_task");
     helper.commonResponse(
       res,
       SuccessCode.SUCCESS,

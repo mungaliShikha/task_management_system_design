@@ -1,24 +1,13 @@
 module.exports = {
   commonResponse: (res, statusCode, result, message) => {
     return res.json({
-      result: result || "",
-      response_message: message || "",
+      result: result || null,
+      response_message: message || null,
       response_code: statusCode,
     });
   },
-  sendResponseWithPagination: (
-    responseObj,
-    responseCode,
-    responseMessage,
-    data,
-    paginationData
-  ) => {
-    return responseObj.send({
-      responseCode: responseCode,
-      responseMessage: responseMessage,
-      result: data,
-      paginationData: paginationData || "",
-    });
+  sendResponseWithPagination: (responseObj,responseCode,responseMessage,data,paginationData) => {
+    return responseObj.send({responseCode: responseCode,responseMessage: responseMessage,result: data,paginationData: paginationData || null,});
   },
   sendResponseWithData: (
     responseObj,

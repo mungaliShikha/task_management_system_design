@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
-const mongoosePaginate = require("mongoose-paginate");
-var mongooseAggregatePaginate = require("mongoose-aggregate-paginate");
-const { generateHash } = require("../helper/commonFunction");
+const logger = require("../helper/logger/logger")
+const { generateHash } = require("../helper/commonFunction")
+const enums = require("../helper/enum/enums")
 const schema = mongoose.Schema;
 var userModel = new schema(
   {
@@ -33,12 +33,12 @@ var userModel = new schema(
     },
     role: {
       type: String,
-      enum: ["Manager", "Developer", "Admin"],
+      enum: [enums.declaredEnum.role.MANAGER, enums.declaredEnum.role.DEVELOPER, enums.declaredEnum.role.ADMIN]
     },
     status: {
       type: String,
-      enum: ["ACTIVE", "BLOCKED", "DELETE"],
-      default: "ACTIVE",
+      enum: [enums.declaredEnum.status.ACTIVE,enums.declaredEnum.status.BLOCKED,enums.declaredEnum.status.DELETE],
+      default: enums.declaredEnum.status.ACTIVE,
     },
     tech_stack: {
       type: String,
@@ -46,34 +46,33 @@ var userModel = new schema(
   },
   { timestamps: true }
 );
-userModel.plugin(mongoosePaginate);
-userModel.plugin(mongooseAggregatePaginate);
 
 module.exports = mongoose.model("users", userModel);
 
-mongoose
-  .model("users", userModel)
-  .find({ role: "Admin" }, async (err, result) => {
-    if (err) {
-      console.log("DEFAULT ADMIN ERROR", err);
-    } else if (result.length != 0) {
-      console.log("Default Admin.");
-    } else {
-      let obj = {
-        first_name: "Shikha",
-        last_name: "Mungali",
-        email: "shikha1081998@gmail.com",
-        password: generateHash("test@123345"),
-        mobile_number: "9998887772",
-        role: "Admin",
-      };
+mongoose.model("users", userModel).find({ role:enums.declaredEnum.role.ADMIN }, async (err, result) => {
+  if (err) {
+    logger.info(`"DEFAULT ADMIN ERROR", ${err}`);
+  }
+  else if (result.length != 0) {
+    logger.info("Default Admin.");
+  }
+  else {
+    let obj = {
+      first_name: "Shikha",
+      last_name: "Mungali",
+      email: "shikha1081998@gmail.com",
+      password: generateHash("test@123345"),
+      mobile_number: "9998887772",
+      role: enums.declaredEnum.role.ADMIN
+    };
 
-      mongoose.model("users", userModel).create(obj, async (err1, result1) => {
-        if (err1) {
-          console.log("DEFAULT ADMIN  creation ERROR", err1);
-        } else {
-          console.log("DEFAULT ADMIN Created", result1);
-        }
-      });
-    }
-  });
+
+    mongoose.model("users", userModel).create(obj, async (err1, result1) => {
+      if (err1) {
+        logger.info(`"DEFAULT ADMIN  creation ERROR", ${err1}`);
+      } else {
+        logger.info(`"DEFAULT ADMIN Created", ${result1}`);
+      }
+    });
+  }
+});

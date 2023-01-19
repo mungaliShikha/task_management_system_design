@@ -1,545 +1,556 @@
-Jan-10-2023 16:58:47 [error] object
-Jan-10-2023 17:00:56 [error] object
-Jan-10-2023 17:01:12 [error] object
-Jan-10-2023 17:06:37 [error] object
-Jan-10-2023 17:10:45 [error] object
-Jan-10-2023 17:15:42 [error] object
-Jan-10-2023 17:25:41 [info] http://localhost:3000/api/admin/login - POST METHOD  
-Jan-10-2023 17:26:18 [info] http://localhost:3000/api/admin/logi - POST METHOD  
-Jan-10-2023 17:26:18 [error] statusCode - Requested URL http://localhost:5000/api/admin/logi not found! 
-Jan-10-2023 17:29:51 [info] http://localhost:3000/api/admin/logi - POST METHOD  
-Jan-10-2023 17:29:51 [error] statusCode - Requested URL http://localhost:5000/api/admin/logi not found! 
-Jan-10-2023 17:29:55 [info] http://localhost:3000/api/admin/login - POST METHOD  
-Jan-10-2023 17:32:32 [info] http://localhost:3000/api/admin/login - POST METHOD  
-Jan-10-2023 17:45:22 [info] http://localhost:3000/api/admin/login - POST METHOD  
-Jan-10-2023 17:46:12 [info] http://localhost:3000/api/admin/login - POST METHOD  
-Jan-10-2023 17:46:12 [error] 500 - loggedInUse is not defined 
-Jan-10-2023 17:52:41 [info] http://localhost:3000/api/admin/login - POST METHOD  
-Jan-10-2023 18:00:26 [info] http://localhost:3000/api/admin/login - POST METHOD  
-Jan-10-2023 18:00:27 [error] 500 - tokn is not defined 
-Jan-10-2023 18:00:29 [info] http://localhost:3000/api/admin/login - POST METHOD  
-Jan-10-2023 18:00:29 [error] 500 - tokn is not defined 
-Jan-10-2023 18:00:45 [info] http://localhost:3000/api/admin/login - POST METHOD  
-Jan-11-2023 00:18:26 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 00:18:26 [error] 500 - Assignment to constant variable. 
-Jan-11-2023 00:18:58 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 00:19:23 [error] 500 - sendMail is not a function 
-Jan-11-2023 00:20:24 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 00:21:49 [error] 500 - sendMail is not a function 
-Jan-11-2023 00:23:39 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 00:29:45 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 00:30:28 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 00:34:56 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 00:37:06 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 00:38:36 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 00:39:15 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 00:45:46 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 00:52:14 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 09:58:06 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 09:58:22 [error] 500 - Assignment to constant variable. 
-Jan-11-2023 09:59:41 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 10:01:46 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 10:02:16 [error] 500 - Assignment to constant variable. 
-Jan-11-2023 10:03:45 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 10:04:58 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 10:06:38 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 10:07:48 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 10:09:27 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 10:10:29 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 10:13:08 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 10:41:46 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 10:43:52 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 10:56:56 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 10:58:26 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 11:02:20 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 11:02:20 [error] 404 - Provided email is not registered. 
-Jan-11-2023 11:24:43 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 11:24:43 [error] 404 - Provided email is not registered. 
-Jan-11-2023 11:24:48 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 11:24:48 [error] 500 - Assignment to constant variable. 
-Jan-11-2023 11:24:50 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 11:26:58 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/f670d1dcb7046d5ed44551ea88572c9ea345b515304b50934170a97852007981 - POST METHOD  
-Jan-11-2023 11:26:58 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword/63bd2142a8387822a8122eaa/f670d1dcb7046d5ed44551ea88572c9ea345b515304b50934170a97852007981 not found! 
-Jan-11-2023 11:27:26 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/f670d1dcb7046d5ed44551ea88572c9ea345b515304b50934170a97852007981 - POST METHOD  
-Jan-11-2023 11:27:26 [error] 500 - token.delete is not a function 
-Jan-11-2023 11:27:30 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/f670d1dcb7046d5ed44551ea88572c9ea345b515304b50934170a97852007981 - POST METHOD  
-Jan-11-2023 11:27:30 [error] 500 - token.delete is not a function 
-Jan-11-2023 11:27:54 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/f670d1dcb7046d5ed44551ea88572c9ea345b515304b50934170a97852007981 - POST METHOD  
-Jan-11-2023 11:29:20 [error] 404 - Requested URL http://localhost:5000/password-reset/63bd2142a8387822a8122eaa/f670d1dcb7046d5ed44551ea88572c9ea345b515304b50934170a97852007981 not found! 
-Jan-11-2023 11:29:20 [error] 404 - Requested URL http://localhost:5000/favicon.ico not found! 
-Jan-11-2023 11:29:22 [error] 404 - Requested URL http://localhost:5000/password-reset/63bd2142a8387822a8122eaa/f670d1dcb7046d5ed44551ea88572c9ea345b515304b50934170a97852007981 not found! 
-Jan-11-2023 11:29:24 [error] 404 - Requested URL http://localhost:5000/password-reset/63bd2142a8387822a8122eaa/f670d1dcb7046d5ed44551ea88572c9ea345b515304b50934170a97852007981 not found! 
-Jan-11-2023 11:29:29 [error] 404 - Requested URL http://localhost:5000/password-reset/63bd2142a8387822a8122eaa/f670d1dcb7046d5ed44551ea88572c9ea345b515304b50934170a97852007981 not found! 
-Jan-11-2023 11:32:10 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/f670d1dcb7046d5ed44551ea88572c9ea345b515304b50934170a97852007981 - POST METHOD  
-Jan-11-2023 11:32:10 [error] 500 - Cannot read properties of null (reading 'delete') 
-Jan-11-2023 11:32:43 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 11:32:43 [error] 500 - Assignment to constant variable. 
-Jan-11-2023 11:34:26 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 11:34:41 [info] http://localhost:3000/api//resetPassword/63bd2142a8387822a8122eaa/bd8f1d460ff18089c42b69c81a95987e7f88749a5bbc9a4567d7f24a30883141 - GET METHOD  
-Jan-11-2023 11:34:41 [error] 404 - Requested URL http://localhost:5000/api//resetPassword/63bd2142a8387822a8122eaa/bd8f1d460ff18089c42b69c81a95987e7f88749a5bbc9a4567d7f24a30883141 not found! 
-Jan-11-2023 11:35:30 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 11:35:44 [info] http://localhost:3000/api//admin/resetPassword/63bd2142a8387822a8122eaa/bd8f1d460ff18089c42b69c81a95987e7f88749a5bbc9a4567d7f24a30883141 - GET METHOD  
-Jan-11-2023 11:35:44 [error] 404 - Requested URL http://localhost:5000/api//admin/resetPassword/63bd2142a8387822a8122eaa/bd8f1d460ff18089c42b69c81a95987e7f88749a5bbc9a4567d7f24a30883141 not found! 
-Jan-11-2023 11:36:05 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 11:36:43 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/bd8f1d460ff18089c42b69c81a95987e7f88749a5bbc9a4567d7f24a30883141 - GET METHOD  
-Jan-11-2023 11:36:43 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword/63bd2142a8387822a8122eaa/bd8f1d460ff18089c42b69c81a95987e7f88749a5bbc9a4567d7f24a30883141 not found! 
-Jan-11-2023 11:37:38 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/bd8f1d460ff18089c42b69c81a95987e7f88749a5bbc9a4567d7f24a30883141 - POST METHOD  
-Jan-11-2023 11:38:22 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/bd8f1d460ff18089c42b69c81a95987e7f88749a5bbc9a4567d7f24a30883141 - GET METHOD  
-Jan-11-2023 11:38:22 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword/63bd2142a8387822a8122eaa/bd8f1d460ff18089c42b69c81a95987e7f88749a5bbc9a4567d7f24a30883141 not found! 
-Jan-11-2023 11:38:39 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/bd8f1d460ff18089c42b69c81a95987e7f88749a5bbc9a4567d7f24a30883141 - GET METHOD  
-Jan-11-2023 11:38:39 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword/63bd2142a8387822a8122eaa/bd8f1d460ff18089c42b69c81a95987e7f88749a5bbc9a4567d7f24a30883141 not found! 
-Jan-11-2023 11:57:58 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/bd8f1d460ff18089c42b69c81a95987e7f88749a5bbc9a4567d7f24a30883141 - POST METHOD  
-Jan-11-2023 11:57:59 [error] 500 - Cannot read properties of null (reading 'delete') 
-Jan-11-2023 11:58:05 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 11:58:05 [error] 500 - Assignment to constant variable. 
-Jan-11-2023 11:58:08 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 12:00:00 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/41c8faf0e8234b2980eff5242b48876639f97d6a59e5ecf40d8d96ec86abfda3 - POST METHOD  
-Jan-11-2023 12:03:20 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 12:03:20 [error] 500 - Assignment to constant variable. 
-Jan-11-2023 12:04:35 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 12:04:36 [error] 500 - Assignment to constant variable. 
-Jan-11-2023 12:05:18 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 12:05:21 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 12:05:23 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 12:07:17 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 12:07:31 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/efd96e8beda74aaedac0deadb1c45c7344530eaba79136bbed8f22e11964a750 - GET METHOD  
-Jan-11-2023 12:07:31 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword/63bd2142a8387822a8122eaa/efd96e8beda74aaedac0deadb1c45c7344530eaba79136bbed8f22e11964a750 not found! 
-Jan-11-2023 12:08:00 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/efd96e8beda74aaedac0deadb1c45c7344530eaba79136bbed8f22e11964a750 - POST METHOD  
-Jan-11-2023 12:09:54 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/efd96e8beda74aaedac0deadb1c45c7344530eaba79136bbed8f22e11964a750 - POST METHOD  
-Jan-11-2023 12:09:54 [error] 400 - Please provide token. 
-Jan-11-2023 12:10:07 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 12:10:32 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/58635b8a637e31b32a0177c8acc572a9641d6dbf53c280b864dd248d6d235c86 - POST METHOD  
-Jan-11-2023 12:10:33 [error] 500 - users validation failed: password: Cast to string failed for value "Promise {
-  <pending>,
-  [Symbol(async_id_symbol)]: 718,
-  [Symbol(trigger_async_id_symbol)]: 702
-}" (type Promise) at path "password" 
-Jan-11-2023 12:12:59 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 12:13:11 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/58635b8a637e31b32a0177c8acc572a9641d6dbf53c280b864dd248d6d235c86 - GET METHOD  
-Jan-11-2023 12:13:11 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword/63bd2142a8387822a8122eaa/58635b8a637e31b32a0177c8acc572a9641d6dbf53c280b864dd248d6d235c86 not found! 
-Jan-11-2023 12:13:35 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/58635b8a637e31b32a0177c8acc572a9641d6dbf53c280b864dd248d6d235c86 - POST METHOD  
-Jan-11-2023 12:14:14 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/58635b8a637e31b32a0177c8acc572a9641d6dbf53c280b864dd248d6d235c86 - POST METHOD  
-Jan-11-2023 12:14:15 [error] 400 - Please provide token. 
-Jan-11-2023 12:16:48 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/58635b8a637e31b32a0177c8acc572a9641d6dbf53c280b864dd248d6d235c86 - POST METHOD  
-Jan-11-2023 12:16:48 [error] 400 - Verifcation link has expired 
-Jan-11-2023 16:07:20 [info] http://localhost:3000/api/admin/login - POST METHOD  
-Jan-11-2023 16:09:05 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-11-2023 16:09:57 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/3a4b0fd831ed0f203624ee96e122e9b949f72a7545eb065bffd0f3a8b5d54679 - POST METHOD  
-Jan-11-2023 16:10:18 [info] http://localhost:3000/api/admin/login - POST METHOD  
-Jan-11-2023 16:11:52 [info] http://localhost:3000/api/admin/login - POST METHOD  
-Jan-11-2023 16:13:31 [info] http://localhost:3000/api/admin/login - POST METHOD  
-Jan-11-2023 16:19:07 [info] http://localhost:3000/api/admin/login - POST METHOD  
-Jan-11-2023 16:19:18 [error] 404 - Provided email is not registered. 
-Jan-11-2023 16:33:02 [info] http://localhost:3000/api/admin/getAdminDetails/63bd2142a8387822a8122eaa - GET METHOD  
-Jan-11-2023 17:21:30 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-11-2023 17:21:30 [error] 500 - Cannot read properties of undefined (reading 'location') 
-Jan-11-2023 17:23:07 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-11-2023 17:23:07 [error] 500 - Cannot read properties of undefined (reading '0') 
-Jan-11-2023 17:23:47 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-11-2023 17:23:47 [error] 500 - Cannot read properties of undefined (reading '0') 
-Jan-11-2023 17:25:11 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-11-2023 17:25:13 [error] 500 - Cannot read properties of undefined (reading '0') 
-Jan-11-2023 17:27:03 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-11-2023 17:27:03 [error] 500 - Cannot read properties of undefined (reading '0') 
-Jan-11-2023 17:29:33 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-11-2023 17:29:33 [error] 500 - Unexpected field 
-Jan-11-2023 17:31:14 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-11-2023 17:31:14 [error] 500 - Unexpected field 
-Jan-11-2023 17:34:02 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-11-2023 17:34:02 [error] 500 - this.client.send is not a function 
-Jan-11-2023 17:39:35 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-11-2023 17:39:35 [error] 500 - this.client.send is not a function 
-Jan-11-2023 17:40:07 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-11-2023 17:40:07 [error] 500 - this.client.send is not a function 
-Jan-11-2023 17:40:09 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-11-2023 17:40:09 [error] 500 - this.client.send is not a function 
-Jan-11-2023 17:41:13 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-11-2023 17:41:13 [error] 500 - Assignment to constant variable. 
-Jan-11-2023 17:42:12 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-11-2023 17:42:12 [error] 500 - userModel is not defined 
-Jan-11-2023 17:42:55 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-11-2023 17:46:36 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-11-2023 17:46:36 [error] 500 - this.client.send is not a function 
-Jan-11-2023 17:47:04 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - POST METHOD  
-Jan-11-2023 17:47:04 [error] 500 - this.client.send is not a function 
-Jan-11-2023 17:47:05 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - POST METHOD  
-Jan-11-2023 17:47:05 [error] 500 - this.client.send is not a function 
-Jan-11-2023 17:47:26 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-11-2023 17:47:26 [error] 500 - this.client.send is not a function 
-Jan-11-2023 17:56:13 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-11-2023 17:57:45 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-11-2023 17:58:42 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-11-2023 18:00:10 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-11-2023 18:00:10 [error] 500 - Cannot read properties of undefined (reading '0') 
-Jan-11-2023 18:00:29 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-11-2023 18:00:29 [error] 500 - Cannot read properties of undefined (reading '0') 
-Jan-11-2023 18:00:30 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-11-2023 18:00:30 [error] 500 - Cannot read properties of undefined (reading '0') 
-Jan-11-2023 18:00:31 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-11-2023 18:00:31 [error] 500 - Cannot read properties of undefined (reading '0') 
-Jan-11-2023 18:00:32 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-11-2023 18:00:32 [error] 500 - Cannot read properties of undefined (reading '0') 
-Jan-11-2023 18:00:52 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-11-2023 18:00:52 [error] 500 - Cannot read properties of undefined (reading '0') 
-Jan-11-2023 18:02:09 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-11-2023 18:03:07 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-11-2023 18:03:07 [error] 500 - Cannot read properties of undefined (reading '0') 
-Jan-11-2023 18:03:12 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-11-2023 18:03:12 [error] 500 - Cannot read properties of undefined (reading '0') 
-Jan-11-2023 18:04:50 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-11-2023 18:05:57 [error] 500 - Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: null } 
-Jan-11-2023 18:09:40 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-11-2023 18:10:08 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-11-2023 18:11:46 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-11-2023 18:13:59 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-12-2023 09:30:55 [error] 404 - Requested URL http://localhost:5000/ not found! 
-Jan-12-2023 09:34:25 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-12-2023 09:36:36 [error] 404 - Requested URL http://localhost:5000/requested.html not found! 
-Jan-12-2023 09:37:45 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-12-2023 09:59:16 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-12-2023 10:06:30 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-12-2023 10:12:17 [info] http://localhost:3000/api/admin/login - POST METHOD  
-Jan-12-2023 10:12:17 [error] 404 - Provided email is not registered. 
-Jan-12-2023 10:12:43 [info] http://localhost:3000/api/admin/login - POST METHOD  
-Jan-12-2023 10:12:56 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-12-2023 10:13:20 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/766900f36c0d201c27465a7f3b43db9fc23a8a46486efdb34a74033147b99cd0 - GET METHOD  
-Jan-12-2023 10:13:20 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword/63bd2142a8387822a8122eaa/766900f36c0d201c27465a7f3b43db9fc23a8a46486efdb34a74033147b99cd0 not found! 
-Jan-12-2023 10:13:43 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/766900f36c0d201c27465a7f3b43db9fc23a8a46486efdb34a74033147b99cd0 - POST METHOD  
-Jan-12-2023 10:14:08 [info] http://localhost:3000/api/admin/getAdminDetails/63bd2142a8387822a8122eaa - GET METHOD  
-Jan-12-2023 10:14:44 [info] http://localhost:3000/api/admin/updateAdmin/63bd2142a8387822a8122eaa - PUT METHOD  
-Jan-12-2023 11:32:25 [info] http://localhost:3000/api/user/listDeveloper - GET METHOD  
-Jan-12-2023 11:58:49 [info] http://localhost:3000/api/user/viewDeveloper?_id=63bea075262aac54ae4cf0f1 - GET METHOD  
-Jan-12-2023 14:53:28 [info] http://localhost:3000/api/admin/login - POST METHOD  
-Jan-12-2023 14:53:28 [error] 404 - Provided email is not registered. 
-Jan-12-2023 14:53:56 [info] http://localhost:3000/api/admin/resetPassword/63bd2142a8387822a8122eaa/766900f36c0d201c27465a7f3b43db9fc23a8a46486efdb34a74033147b99cd0 - POST METHOD  
-Jan-12-2023 14:53:56 [error] 404 - Provided email is not registered. 
-Jan-12-2023 14:54:04 [info] http://localhost:3000/api/admin/login - POST METHOD  
-Jan-12-2023 14:54:04 [error] 404 - Provided email is not registered. 
-Jan-12-2023 14:54:12 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-12-2023 14:54:12 [error] 404 - Provided email is not registered. 
-Jan-12-2023 14:55:50 [info] http://localhost:3000/api/admin/login - POST METHOD  
-Jan-12-2023 15:00:00 [info] http://localhost:3000/api/admin/forgetPassword - POST METHOD  
-Jan-12-2023 15:00:43 [info] http://localhost:3000/api/admin/resetPassword/63bfd1e810c6d75c1008da21/9700dc160cd0f10234a9296a4be036bbc7ed27c73848a8adf81df53ee8e46e67 - POST METHOD  
-Jan-12-2023 15:01:25 [info] http://localhost:3000/api/admin/getAdminDetails/63bfd1e810c6d75c1008da21 - GET METHOD  
-Jan-12-2023 15:01:40 [info] http://localhost:3000/api/admin/updateAdmin/63bfd1e810c6d75c1008da21 - PUT METHOD  
-Jan-12-2023 15:04:04 [error] 400 - Unexpected token e in JSON at position 188 
-Jan-12-2023 15:07:32 [info] http://localhost:3000/api/user/addDeveloper - POST METHOD  
-Jan-12-2023 15:07:32 [error] 404 - Requested URL http://localhost:5000/api/user/addDeveloper not found! 
-Jan-12-2023 15:07:51 [info] http://localhost:3000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 15:07:51 [error] 500 - to is not defined 
-Jan-12-2023 15:08:58 [info] http://localhost:3000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 15:09:38 [error] 500 - to is not defined 
-Jan-12-2023 15:13:41 [info] http://localhost:3000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 15:13:46 [error] 500 - mailOption is not defined 
-Jan-12-2023 15:14:33 [info] http://localhost:3000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 15:17:02 [info] http://localhost:3000/api/user/loginDeveloper - POST METHOD  
-Jan-12-2023 15:17:02 [error] 404 - Requested URL http://localhost:5000/api/user/loginDeveloper not found! 
-Jan-12-2023 15:17:14 [info] http://localhost:3000/api/admin/loginDeveloper - POST METHOD  
-Jan-12-2023 15:17:47 [info] http://localhost:3000/api/admin/listDeveloper - GET METHOD  
-Jan-12-2023 15:19:54 [info] http://localhost:3000/api/user/viewDeveloper?_id=63bea075262aac54ae4cf0f1 - GET METHOD  
-Jan-12-2023 15:19:54 [error] 404 - Requested URL http://localhost:5000/api/user/viewDeveloper not found! 
-Jan-12-2023 15:20:06 [info] http://localhost:3000/api/admin/viewDeveloper?_id=63bea075262aac54ae4cf0f1 - GET METHOD  
-Jan-12-2023 15:22:01 [info] http://localhost:3000/api/admin/addDeveloper - POST METHOD  
-Jan-12-2023 15:41:14 [info] http://localhost:3000/api/admin/createManager - POST METHOD  
-Jan-12-2023 15:41:14 [error] 500 - Cannot read properties of null (reading 'role') 
-Jan-12-2023 15:41:47 [info] http://localhost:3000/api/admin/createManager - POST METHOD  
-Jan-12-2023 15:43:25 [info] http://localhost:3000/api/admin/createManager/63bfd1e810c6d75c1008da21 - POST METHOD  
-Jan-12-2023 15:43:25 [error] 404 - Requested URL http://localhost:5000/api/admin/createManager/63bfd1e810c6d75c1008da21 not found! 
-Jan-12-2023 15:44:46 [info] http://localhost:3000/api/admin/createManager/63bfd1e810c6d75c1008da21 - POST METHOD  
-Jan-12-2023 15:49:35 [error] 409 - Already exists. 
-Jan-12-2023 15:49:35 [info] http://localhost:3000/api/admin/createManager/63bfd1e810c6d75c1008da21 - POST METHOD  
-Jan-12-2023 15:51:50 [info] http://localhost:3000/api/admin/createManager/63bfd1e810c6d75c1008da21 - POST METHOD  
-Jan-12-2023 15:51:55 [error] 409 - Already exists. 
-Jan-12-2023 15:52:07 [info] http://localhost:3000/api/admin/createManager/63bfd1e810c6d75c1008da21 - POST METHOD  
-Jan-12-2023 15:52:28 [error] 500 - E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: "9718272919" } 
-Jan-12-2023 15:52:45 [info] http://localhost:3000/api/admin/createManager/63bfd1e810c6d75c1008da21 - POST METHOD  
-Jan-12-2023 15:52:46 [error] 500 - E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: "9718272919" } 
-Jan-12-2023 15:53:38 [info] http://localhost:3000/api/admin/createManager/63bfd1e810c6d75c1008da21 - POST METHOD  
-Jan-12-2023 15:53:38 [error] 500 - E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: "9718272919" } 
-Jan-12-2023 15:53:48 [info] http://localhost:3000/api/admin/createManager/63bfd1e810c6d75c1008da21 - POST METHOD  
-Jan-12-2023 15:55:33 [info] http://localhost:3000/api/admin/createManager/63bfd1e810c6d75c1008da21 - POST METHOD  
-Jan-12-2023 15:55:33 [error] 409 - Already exists. 
-Jan-12-2023 16:01:02 [info] http://localhost:3000/api/admin/createManager/63bfd1e810c6d75c1008da21 - POST METHOD  
-Jan-12-2023 16:01:30 [info] http://localhost:3000/api/admin/addDeveloper/63bfe166ef6a2a821c58b801 - POST METHOD  
-Jan-12-2023 16:02:24 [info] http://localhost:3000/api/admin/addDeveloper/63bfe166ef6a2a821c58b801 - POST METHOD  
-Jan-12-2023 16:03:20 [info] http://localhost:3000/api/admin/addDeveloper/63bfe166ef6a2a821c58b801 - POST METHOD  
-Jan-12-2023 16:04:38 [info] http://localhost:3000/api/admin/addDeveloper/63bfe166ef6a2a821c58b801 - POST METHOD  
-Jan-12-2023 16:04:57 [info] http://localhost:3000/api/admin/addDeveloper/63bfe166ef6a2a821c58b801 - POST METHOD  
-Jan-12-2023 16:06:33 [error] 404 - This user does not exist. 
-Jan-12-2023 16:10:32 [info] http://localhost:3000/api/admin/addDeveloper/63bfe166ef6a2a821c58b801 - POST METHOD  
-Jan-12-2023 16:10:58 [error] 404 - This email already exists. 
-Jan-12-2023 16:11:54 [info] http://localhost:3000/api/admin/addDeveloper/63bfe166ef6a2a821c58b801 - POST METHOD  
-Jan-12-2023 16:12:01 [error] 500 - E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: "687987987987" } 
-Jan-12-2023 16:12:08 [info] http://localhost:3000/api/admin/addDeveloper/63bfe166ef6a2a821c58b801 - POST METHOD  
-Jan-12-2023 16:12:38 [info] http://localhost:3000/api/admin/createManager/63bfd1e810c6d75c1008da21 - POST METHOD  
-Jan-12-2023 16:12:38 [error] 409 - Already exists. 
-Jan-12-2023 16:13:29 [info] http://localhost:3000/api/admin/createManager/63bfd1e810c6d75c1008da21 - POST METHOD  
-Jan-12-2023 16:14:59 [info] http://localhost:3000/api/admin/createManager/63bfd1e810c6d75c1008da21 - POST METHOD  
-Jan-12-2023 16:16:39 [info] http://localhost:3000/api/admin/loginManager - POST METHOD  
-Jan-12-2023 16:17:04 [info] http://localhost:3000/api/admin/loginManager - POST METHOD  
-Jan-12-2023 16:17:49 [info] http://localhost:3000/api/admin/loginManager - POST METHOD  
-Jan-12-2023 16:18:29 [info] http://localhost:3000/api/admin/loginManager - POST METHOD  
-Jan-12-2023 16:19:59 [info] http://localhost:3000/api/admin/loginManager - POST METHOD  
-Jan-12-2023 16:38:00 [info] http://localhost:5000/api/admin/listDeveloper - GET METHOD  
-Jan-13-2023 10:43:24 [info] http://localhost:5000/api/v1/admin/login - POST METHOD  
-Jan-13-2023 10:43:24 [error] 404 - Requested URL http://localhost:5000/api/v1/admin/login not found! 
-Jan-13-2023 10:43:56 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-13-2023 10:43:57 [error] 404 - Provided email is not registered. 
-Jan-13-2023 10:45:04 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-13-2023 10:45:14 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-13-2023 10:54:40 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-13-2023 15:42:26 [error] 404 - Requested URL http://localhost:5000//api/admin/addDeveloper not found! 
-Jan-13-2023 15:43:18 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-13-2023 15:43:18 [error] 404 - This user does not exist. 
-Jan-13-2023 15:47:48 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-13-2023 15:50:00 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-13-2023 15:50:00 [error] 404 - This user does not exist. 
-Jan-13-2023 15:50:56 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-13-2023 15:50:56 [error] 404 - This user does not exist. 
-Jan-13-2023 15:52:47 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-13-2023 15:55:11 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-13-2023 15:55:40 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-13-2023 15:57:03 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-13-2023 15:57:56 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-13-2023 15:59:27 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-13-2023 16:01:08 [info] http://localhost:5000/api/admin/addDeveloper - POST METHOD  
-Jan-13-2023 16:08:40 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-13-2023 16:08:54 [info] http://localhost:5000/api/admin/addDeveloper?userId=63c12974360a9538b5758e1e - POST METHOD  
-Jan-13-2023 16:08:54 [error] 404 - This user does not exist. 
-Jan-13-2023 16:10:10 [info] http://localhost:5000/api/admin/addDeveloper?userId=63c12974360a9538b5758e1e - POST METHOD  
-Jan-13-2023 16:10:10 [error] 404 - This user does not exist. 
-Jan-13-2023 16:10:28 [info] http://localhost:5000/api/admin/addDeveloper?userId=63c12974360a9538b5758e1e - POST METHOD  
-Jan-13-2023 16:10:28 [error] 500 - Cannot read properties of null (reading 'email') 
-Jan-13-2023 16:10:54 [info] http://localhost:5000/api/admin/addDeveloper?userId=63c12974360a9538b5758e1e - POST METHOD  
-Jan-13-2023 16:10:54 [error] 500 - Cannot read properties of null (reading '_id') 
-Jan-13-2023 16:11:10 [info] http://localhost:5000/api/admin/addDeveloper?userId=63c12974360a9538b5758e1e - POST METHOD  
-Jan-13-2023 16:12:33 [info] http://localhost:5000/api/admin/addDeveloper?userId=63c12974360a9538b5758e1e - POST METHOD  
-Jan-13-2023 16:12:33 [error] 404 - This email already exists. 
-Jan-13-2023 16:12:49 [info] http://localhost:5000/api/admin/addDeveloper?userId=63c12974360a9538b5758e1e - POST METHOD  
-Jan-13-2023 16:12:50 [error] 500 - E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: "9956386576" } 
-Jan-13-2023 16:12:59 [info] http://localhost:5000/api/admin/addDeveloper?userId=63c12974360a9538b5758e1e - POST METHOD  
-Jan-13-2023 16:34:41 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
-Jan-13-2023 16:34:42 [error] 500 - Converting circular structure to JSON
-    --> starting at object with constructor 'Socket'
-    |     property 'parser' -> object with constructor 'HTTPParser'
-    --- property 'socket' closes the circle 
-Jan-13-2023 16:36:19 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
-Jan-13-2023 16:36:36 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
-Jan-13-2023 16:38:25 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
-Jan-13-2023 16:40:37 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
-Jan-13-2023 16:41:05 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
-Jan-13-2023 16:41:57 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
-Jan-13-2023 16:42:31 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
-Jan-13-2023 16:43:38 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
-Jan-13-2023 16:44:21 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
-Jan-13-2023 16:45:36 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
-Jan-13-2023 16:48:50 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
-Jan-13-2023 16:52:09 [info] http://localhost:5000/api/user/login - POST METHOD  
-Jan-13-2023 16:52:09 [error] 404 - Requested URL http://localhost:5000/api/user/login not found! 
-Jan-13-2023 16:52:25 [error] 404 - Requested URL http://localhost:5000/admin/user/login not found! 
-Jan-13-2023 16:52:40 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-13-2023 16:52:40 [error] 500 - Cannot read properties of null (reading 'password') 
-Jan-13-2023 16:53:45 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-13-2023 16:53:45 [error] 500 - Cannot read properties of null (reading 'password') 
-Jan-13-2023 16:54:13 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-13-2023 16:54:13 [error] 500 - Cannot read properties of null (reading 'password') 
-Jan-13-2023 16:54:35 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-13-2023 16:54:35 [error] 404 - Provided email is not registered. 
-Jan-13-2023 16:54:37 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-13-2023 16:54:37 [error] 404 - Provided email is not registered. 
-Jan-13-2023 16:54:39 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-13-2023 16:54:39 [error] 404 - Provided email is not registered. 
-Jan-13-2023 16:55:10 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-13-2023 16:55:10 [error] 404 - Provided email is not registered. 
-Jan-13-2023 16:56:18 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-13-2023 16:56:18 [error] 404 - Provided email is not registered. 
-Jan-13-2023 16:56:57 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
-Jan-13-2023 16:58:23 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
-Jan-13-2023 16:59:10 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
-Jan-13-2023 17:00:35 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
-Jan-13-2023 17:01:21 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
-Jan-13-2023 17:03:48 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
-Jan-13-2023 17:04:33 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
-Jan-13-2023 17:06:03 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
-Jan-13-2023 17:06:39 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
-Jan-13-2023 17:07:53 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
-Jan-13-2023 17:08:39 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
-Jan-13-2023 17:08:55 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
-Jan-13-2023 17:15:25 [info] http://localhost:5000/api/user/getDeveloperProfile - GET METHOD  
-Jan-16-2023 11:16:50 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-16-2023 11:18:44 [info] http://localhost:5000/api/admin/getAdmin?userId=63c2aa0499a9884740a9f94f - GET METHOD  
-Jan-16-2023 11:18:44 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdmin not found! 
-Jan-16-2023 11:18:55 [info] http://localhost:5000/api/admin/getAdmin/63c2aa0499a9884740a9f94f - GET METHOD  
-Jan-16-2023 11:18:55 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdmin/63c2aa0499a9884740a9f94f not found! 
-Jan-16-2023 11:23:00 [info] http://localhost:5000/api/admin/getAdmin - GET METHOD  
-Jan-16-2023 11:23:00 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdmin not found! 
-Jan-16-2023 11:23:13 [info] http://localhost:5000/api/admin/getAdmin - GET METHOD  
-Jan-16-2023 11:23:13 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdmin not found! 
-Jan-16-2023 11:27:04 [info] http://localhost:5000/api/admin/getAdmin - GET METHOD  
-Jan-16-2023 11:27:04 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdmin not found! 
-Jan-16-2023 11:28:47 [info] http://localhost:5000/api/admin/getAdmin - GET METHOD  
-Jan-16-2023 11:28:47 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdmin not found! 
-Jan-16-2023 11:29:43 [info] http://localhost:5000/api/admin/getAdmin - GET METHOD  
-Jan-16-2023 11:29:43 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdmin not found! 
-Jan-16-2023 11:30:23 [info] http://localhost:5000/api/admin/getAdmin - GET METHOD  
-Jan-16-2023 11:30:23 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdmin not found! 
-Jan-16-2023 11:31:41 [info] http://localhost:5000/api/admin/getAdminDetails - GET METHOD  
-Jan-16-2023 11:32:26 [info] http://localhost:5000/api/admin/getAdminDetails - GET METHOD  
-Jan-16-2023 11:34:25 [info] http://localhost:5000/api/admin/getAdminDetails?userId=63c2aa0499a9884740a9f94f - GET METHOD  
-Jan-16-2023 11:34:25 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdminDetails not found! 
-Jan-16-2023 11:40:15 [info] http://localhost:5000/api/admin/getAdminDetails/63c2aa0499a9884740a9f94f - GET METHOD  
-Jan-16-2023 11:40:15 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdminDetails/63c2aa0499a9884740a9f94f not found! 
-Jan-16-2023 11:42:07 [info] http://localhost:5000/api/admin/getAdminDetails/63c2aa0499a9884740a9f94f - GET METHOD  
-Jan-16-2023 11:42:07 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdminDetails/63c2aa0499a9884740a9f94f not found! 
-Jan-16-2023 11:47:32 [info] http://localhost:5000/api/admin/getAdminDetails/63c2aa0499a9884740a9f94f - GET METHOD  
-Jan-16-2023 11:47:32 [error] 404 - Requested URL http://localhost:5000/api/admin/getAdminDetails/63c2aa0499a9884740a9f94f not found! 
-Jan-16-2023 12:33:44 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-16-2023 12:33:44 [error] 404 - Provided email is not registered. 
-Jan-16-2023 12:34:33 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-16-2023 12:34:33 [error] 404 - Provided email is not registered. 
-Jan-16-2023 12:35:32 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-16-2023 12:35:32 [error] 404 - Provided email is not registered. 
-Jan-16-2023 12:35:56 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-16-2023 12:42:56 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-16-2023 12:45:31 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-16-2023 12:46:41 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-16-2023 12:48:00 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-16-2023 12:51:11 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-16-2023 12:52:05 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-16-2023 12:55:25 [info] http://localhost:5000/api/admin/getAdminDetails - GET METHOD  
-Jan-16-2023 12:55:25 [error] 404 - This user does not exist. 
-Jan-16-2023 12:56:11 [info] http://localhost:5000/api/admin/getAdminDetails - GET METHOD  
-Jan-16-2023 12:56:11 [error] 404 - This user does not exist. 
-Jan-16-2023 12:57:53 [info] http://localhost:5000/api/admin/getAdminDetails - GET METHOD  
-Jan-16-2023 12:57:54 [error] 404 - This user does not exist. 
-Jan-16-2023 12:58:56 [info] http://localhost:5000/api/admin/getAdminDetails - GET METHOD  
-Jan-16-2023 12:58:56 [error] 404 - This user does not exist. 
-Jan-16-2023 12:59:35 [info] http://localhost:5000/api/admin/getAdminDetails - GET METHOD  
-Jan-16-2023 12:59:35 [error] 404 - This user does not exist. 
-Jan-16-2023 13:01:18 [info] http://localhost:5000/api/admin/getAdminDetails - GET METHOD  
-Jan-16-2023 13:01:55 [info] http://localhost:5000/api/admin/getAdminDetails - GET METHOD  
-Jan-16-2023 13:07:26 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
-Jan-16-2023 13:08:04 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
-Jan-16-2023 13:08:38 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
-Jan-16-2023 13:09:06 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
-Jan-16-2023 13:10:06 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
-Jan-16-2023 13:11:50 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
-Jan-16-2023 13:11:50 [error] 500 - Unexpected field 
-Jan-16-2023 13:11:57 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
-Jan-16-2023 13:11:57 [error] 500 - Unexpected field 
-Jan-16-2023 13:13:36 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
-Jan-16-2023 13:13:38 [error] 500 - Cannot destructure property 'profile_image' of 'req.files' as it is undefined. 
-Jan-16-2023 13:14:09 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
-Jan-16-2023 13:30:27 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
-Jan-16-2023 13:30:27 [error] 404 - Requested URL http://localhost:5000/api/admin/createManager not found! 
-Jan-16-2023 13:31:10 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
-Jan-16-2023 14:58:21 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
-Jan-16-2023 14:58:21 [error] 409 - Already exists. 
-Jan-16-2023 14:58:50 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
-Jan-16-2023 14:58:52 [error] 500 - No recipients defined 
-Jan-16-2023 15:01:39 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
-Jan-16-2023 15:01:41 [error] 500 - No recipients defined 
-Jan-16-2023 15:02:50 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
-Jan-16-2023 15:02:51 [error] 500 - No recipients defined 
-Jan-16-2023 15:08:15 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
-Jan-16-2023 15:09:26 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
-Jan-16-2023 15:10:05 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
-Jan-16-2023 15:10:49 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
-Jan-16-2023 15:13:47 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
-Jan-16-2023 15:14:57 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
-Jan-16-2023 15:19:24 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
-Jan-16-2023 15:21:28 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
-Jan-16-2023 15:30:42 [info] http://localhost:5000/api/admin/loginManager - POST METHOD  
-Jan-16-2023 15:34:37 [info] http://localhost:5000/api/admin/loginManager - POST METHOD  
-Jan-16-2023 15:36:40 [info] http://localhost:5000/api/user/loginManager - POST METHOD  
-Jan-16-2023 15:40:06 [info] http://localhost:5000/api/user/getProfile - GET METHOD  
-Jan-16-2023 15:41:32 [info] http://localhost:5000/api/user/getProfile - GET METHOD  
-Jan-16-2023 15:43:03 [info] http://localhost:5000/api/user/getProfile - GET METHOD  
-Jan-16-2023 15:43:36 [info] http://localhost:5000/api/user/getProfile - GET METHOD  
-Jan-16-2023 16:07:26 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
-Jan-16-2023 16:33:05 [error] 400 - Unexpected token } in JSON at position 169 
-Jan-16-2023 16:33:11 [info] http://localhost:5000/api/project/createProject - POST METHOD  
-Jan-16-2023 16:34:40 [info] http://localhost:5000/api/project/createProject - POST METHOD  
-Jan-16-2023 17:05:30 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
-Jan-16-2023 17:05:30 [error] 500 - task.save is not a function 
-Jan-16-2023 17:06:12 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
-Jan-16-2023 17:06:12 [error] 500 - task validation failed: status: `started` is not a valid enum value for path `status`. 
-Jan-16-2023 17:07:15 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
-Jan-16-2023 17:07:16 [error] 500 - task validation failed: status: `started` is not a valid enum value for path `status`. 
-Jan-16-2023 17:08:20 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
-Jan-16-2023 17:19:03 [info] http://localhost:5000/api/task/addTaskToProject - GET METHOD  
-Jan-16-2023 17:19:03 [error] 404 - Requested URL http://localhost:5000/api/task/addTaskToProject not found! 
-Jan-16-2023 17:19:22 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-16-2023 17:19:22 [error] 500 - Cannot read properties of null (reading '_id') 
-Jan-16-2023 17:19:46 [info] http://localhost:5000/api/task/listTaskOnparticularProject/63c52f49ea7e459099465018 - GET METHOD  
-Jan-16-2023 17:19:46 [error] 404 - Requested URL http://localhost:5000/api/task/listTaskOnparticularProject/63c52f49ea7e459099465018 not found! 
-Jan-16-2023 17:20:20 [info] http://localhost:5000/api/task/listTaskOnparticularProject/63c52f49ea7e459099465018 - GET METHOD  
-Jan-16-2023 17:20:20 [error] 404 - Requested URL http://localhost:5000/api/task/listTaskOnparticularProject/63c52f49ea7e459099465018 not found! 
-Jan-16-2023 17:21:02 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-16-2023 17:21:43 [info] http://localhost:5000/api/task/listTaskOnparticularProject?_id=63c52f49ea7e459099465018 - GET METHOD  
-Jan-16-2023 17:21:43 [error] 404 - Requested URL http://localhost:5000/api/task/listTaskOnparticularProject not found! 
-Jan-16-2023 17:22:00 [info] http://localhost:5000/api/task/listTaskOnparticularProject?_id=63c52f49ea7e459099465018 - GET METHOD  
-Jan-16-2023 17:22:00 [error] 404 - Requested URL http://localhost:5000/api/task/listTaskOnparticularProject not found! 
-Jan-16-2023 17:22:32 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-17-2023 12:24:26 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-17-2023 12:24:27 [error] 500 - Cannot read properties of null (reading '_id') 
-Jan-17-2023 12:26:13 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-17-2023 12:27:13 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
-Jan-17-2023 12:27:18 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-17-2023 12:39:41 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
-Jan-17-2023 12:40:15 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-17-2023 12:41:53 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-17-2023 12:41:54 [error] 500 - Schema hasn't been registered for model "user".
-Use mongoose.model(name, schema) 
-Jan-17-2023 12:41:58 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-17-2023 12:41:58 [error] 500 - Schema hasn't been registered for model "user".
-Use mongoose.model(name, schema) 
-Jan-17-2023 12:42:31 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-17-2023 12:45:39 [info] http://localhost:5000/api/project/createProject - POST METHOD  
-Jan-17-2023 12:45:59 [info] http://localhost:5000/api/project/listProject - GET METHOD  
-Jan-17-2023 12:46:21 [info] http://localhost:5000/api/project/listProject - GET METHOD  
-Jan-17-2023 12:46:48 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
-Jan-17-2023 12:48:19 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
-Jan-17-2023 12:48:20 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
-Jan-17-2023 12:48:23 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
-Jan-17-2023 12:51:53 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
-Jan-17-2023 12:56:23 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
-Jan-17-2023 14:31:50 [info] http://localhost:5000/api/user/loginManager - POST METHOD  
-Jan-17-2023 14:33:12 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
-Jan-17-2023 14:33:12 [error] 404 - Data not found 
-Jan-17-2023 14:34:13 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
-Jan-17-2023 14:34:51 [info] http://localhost:5000/api/project/addDevelopersToProject/63c2da688032f65ddcab6fbe - POST METHOD  
-Jan-17-2023 14:34:51 [error] 404 - Requested URL http://localhost:5000/api/project/addDevelopersToProject/63c2da688032f65ddcab6fbe not found! 
-Jan-17-2023 14:35:24 [info] http://localhost:5000/api/project/addTaskToProject/63c2da688032f65ddcab6fbe - POST METHOD  
-Jan-17-2023 14:35:24 [error] 404 - Project not found 
-Jan-17-2023 14:35:51 [info] http://localhost:5000/api/project/addTaskToProject/63c64b1b0e84e1074c76cab5 - POST METHOD  
-Jan-17-2023 14:35:57 [info] http://localhost:5000/api/project/addTaskToProject/63c64b1b0e84e1074c76cab5 - POST METHOD  
-Jan-17-2023 14:37:45 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
-Jan-17-2023 14:39:44 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-17-2023 14:39:45 [error] 500 - Cannot read properties of null (reading '_id') 
-Jan-17-2023 14:41:35 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-17-2023 14:41:35 [error] 500 - Cannot read properties of null (reading '_id') 
-Jan-17-2023 14:42:53 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-17-2023 14:44:02 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
-Jan-17-2023 15:02:26 [info] http://localhost:5000/api/task/lviewTask - GET METHOD  
-Jan-17-2023 15:02:26 [error] 404 - Requested URL http://localhost:5000/api/task/lviewTask not found! 
-Jan-17-2023 15:02:35 [info] http://localhost:5000/api/task/viewTask - GET METHOD  
-Jan-17-2023 15:02:35 [error] 404 - Requested URL http://localhost:5000/api/task/viewTask not found! 
-Jan-17-2023 15:02:40 [info] http://localhost:5000/api/task/viewTask - GET METHOD  
-Jan-17-2023 15:02:40 [error] 404 - Requested URL http://localhost:5000/api/task/viewTask not found! 
-Jan-17-2023 15:02:56 [info] http://localhost:5000/api/task/viewAllTask - GET METHOD  
-Jan-17-2023 15:02:56 [error] 500 - Task is not defined 
-Jan-17-2023 15:03:28 [info] http://localhost:5000/api/task/viewAllTask - GET METHOD  
-Jan-17-2023 15:04:44 [info] http://localhost:5000/api/project/listProject - GET METHOD  
-Jan-17-2023 15:05:22 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
-Jan-17-2023 15:07:56 [info] http://localhost:5000/api/task/viewAllTask - GET METHOD  
-Jan-17-2023 15:07:58 [info] http://localhost:5000/api/task/viewAllTask - GET METHOD  
-Jan-17-2023 15:08:22 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-17-2023 15:11:38 [info] http://localhost:5000/api/task/viewAllTask - GET METHOD  
-Jan-17-2023 15:11:42 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-17-2023 15:11:51 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-17-2023 15:12:03 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-17-2023 15:12:21 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-17-2023 15:12:21 [error] 500 - Cannot set headers after they are sent to the client 
-Jan-17-2023 15:16:35 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
-Jan-17-2023 15:16:35 [error] 405 - The requested user cannot access the data 
+Jan-18-2023 09:13:26 [error] 404 - Requested URL http://localhost:5000/ not found! 
+Jan-18-2023 09:14:01 [error] 404 - Requested URL http://localhost:5000/requested.html not found! 
+Jan-18-2023 09:38:07 [warn] success 
+Jan-18-2023 09:38:48 [warn] success 
+Jan-18-2023 09:41:44 [warn] success 
+Jan-18-2023 09:42:03 [info] success 
+Jan-18-2023 09:42:25 [info] success Mongoose default connection 
+Jan-18-2023 09:44:38 [info] success Mongoose default connection 
+Jan-18-2023 09:44:43 [info] success Mongoose default connection 
+Jan-18-2023 09:44:55 [info] success Mongoose default connection 
+Jan-18-2023 09:44:59 [info] success Mongoose default connection 
+Jan-18-2023 09:45:03 [info] success Mongoose default connection 
+Jan-18-2023 09:45:08 [info] success : Mongoose default connection 
+Jan-18-2023 09:45:59 [info] success : Mongoose default connection 
+Jan-18-2023 09:46:18 [info] success : Mongoose default connection 
+Jan-18-2023 09:46:26 [info] success : Mongoose default connection 
+Jan-18-2023 09:46:35 [info] success : Mongoose default connection 
+Jan-18-2023 09:46:45 [info] success : Mongoose default connection 
+Jan-18-2023 09:46:48 [info] success : Mongoose default connection 
+Jan-18-2023 09:46:55 [info] success : Mongoose default connection 
+Jan-18-2023 09:47:04 [info] success : Mongoose default connection 
+Jan-18-2023 09:47:08 [info] success : Mongoose default connection 
+Jan-18-2023 09:47:18 [info] success : Mongoose default connection 
+Jan-18-2023 09:47:22 [info] success : Mongoose default connection 
+Jan-18-2023 09:47:41 [info] success : Mongoose default connection 
+Jan-18-2023 09:47:52 [info] success : Mongoose default connection 
+Jan-18-2023 09:48:01 [info] success : Mongoose default connection 
+Jan-18-2023 09:48:01 [info] Default Admin. 
+Jan-18-2023 09:49:18 [info] success : Mongoose default connection 
+Jan-18-2023 09:49:18 [info] Default Admin. 
+Jan-18-2023 09:49:32 [info] success : Mongoose default connection 
+Jan-18-2023 09:49:32 [info] Default Admin. 
+Jan-18-2023 09:49:39 [info] success : Mongoose default connection 
+Jan-18-2023 09:49:39 [info] Default Admin. 
+Jan-18-2023 09:50:03 [info] success : Mongoose default connection 
+Jan-18-2023 09:50:03 [info] Default Admin. 
+Jan-18-2023 09:50:10 [info] success : Mongoose default connection 
+Jan-18-2023 09:50:10 [info] Default Admin. 
+Jan-18-2023 09:50:29 [info] success : Mongoose default connection 
+Jan-18-2023 09:50:29 [info] Default Admin. 
+Jan-18-2023 09:50:40 [info] success : Mongoose default connection 
+Jan-18-2023 09:50:40 [info] Default Admin. 
+Jan-18-2023 09:50:51 [info] success : Mongoose default connection 
+Jan-18-2023 09:50:51 [info] Default Admin. 
+Jan-18-2023 09:53:07 [info] success : Mongoose default connection 
+Jan-18-2023 09:53:07 [info] Default Admin. 
+Jan-18-2023 09:54:08 [info] success : Mongoose default connection 
+Jan-18-2023 09:54:08 [info] Default Admin. 
+Jan-18-2023 09:54:15 [info] success : Mongoose default connection 
+Jan-18-2023 09:54:16 [info] Default Admin. 
+Jan-18-2023 09:54:21 [info] success : Mongoose default connection 
+Jan-18-2023 09:54:21 [info] Default Admin. 
+Jan-18-2023 09:54:33 [info] success : Mongoose default connection 
+Jan-18-2023 09:54:33 [info] Default Admin. 
+Jan-18-2023 09:54:38 [info] success : Mongoose default connection 
+Jan-18-2023 09:54:38 [info] Default Admin. 
+Jan-18-2023 09:54:49 [info] success : Mongoose default connection 
+Jan-18-2023 09:54:49 [info] Default Admin. 
+Jan-18-2023 09:56:03 [info] success : Mongoose default connection 
+Jan-18-2023 09:56:03 [info] Default Admin. 
+Jan-18-2023 09:57:53 [info] success : Mongoose default connection 
+Jan-18-2023 09:57:53 [info] Default Admin. 
+Jan-18-2023 09:57:57 [info] success : Mongoose default connection 
+Jan-18-2023 09:57:57 [info] Default Admin. 
+Jan-18-2023 09:58:17 [info] success : Mongoose default connection 
+Jan-18-2023 09:58:17 [info] Default Admin. 
+Jan-18-2023 09:58:25 [info] success : Mongoose default connection 
+Jan-18-2023 09:58:25 [info] Default Admin. 
+Jan-18-2023 10:02:23 [info] success : Mongoose default connection 
+Jan-18-2023 10:02:23 [info] Default Admin. 
+Jan-18-2023 10:06:29 [info] success : Mongoose default connection 
+Jan-18-2023 10:06:29 [info] Default Admin. 
+Jan-18-2023 10:06:50 [info] success : Mongoose default connection 
+Jan-18-2023 10:06:50 [info] Default Admin. 
+Jan-18-2023 10:06:54 [info] success : Mongoose default connection 
+Jan-18-2023 10:06:54 [info] Default Admin. 
+Jan-18-2023 10:07:00 [info] success : Mongoose default connection 
+Jan-18-2023 10:07:00 [info] Default Admin. 
+Jan-18-2023 10:07:44 [info] success : Mongoose default connection 
+Jan-18-2023 10:07:44 [info] Default Admin. 
+Jan-18-2023 10:11:46 [info] success : Mongoose default connection 
+Jan-18-2023 10:11:46 [info] Default Admin. 
+Jan-18-2023 10:12:51 [info] success : Mongoose default connection 
+Jan-18-2023 10:12:51 [info] Default Admin. 
+Jan-18-2023 10:19:02 [info] http://localhost:5000/api/admin/getAdminDetails - GET METHOD  
+Jan-18-2023 10:19:59 [info] success : Mongoose default connection 
+Jan-18-2023 10:19:59 [info] Default Admin. 
+Jan-18-2023 10:20:03 [info] http://localhost:5000/api/admin/getAdminDetails - GET METHOD  
+Jan-18-2023 10:20:40 [info] success : Mongoose default connection 
+Jan-18-2023 10:20:41 [info] Default Admin. 
+Jan-18-2023 10:20:44 [info] http://localhost:5000/api/admin/getAdminDetails - GET METHOD  
+Jan-18-2023 10:20:44 [error] 401 - Please provide token. 
+Jan-18-2023 10:21:15 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-18-2023 10:21:40 [info] http://localhost:5000/api/admin/getAdminDetails - GET METHOD  
+Jan-18-2023 10:23:08 [info] success : Mongoose default connection 
+Jan-18-2023 10:23:08 [info] Default Admin. 
+Jan-18-2023 10:23:58 [info] http://localhost:5000/api/admin/getAdminDetails - GET METHOD  
+Jan-18-2023 10:24:18 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-18-2023 10:25:24 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
+Jan-18-2023 10:28:11 [info] http://localhost:5000/api/user/loginManager - POST METHOD  
+Jan-18-2023 10:28:34 [info] http://localhost:5000/api/user/getProfile - GET METHOD  
+Jan-18-2023 10:29:09 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
+Jan-18-2023 10:31:12 [info] http://localhost:5000/api/user/addDeveloper - POST METHOD  
+Jan-18-2023 10:32:41 [info] http://localhost:5000/api/user/viewDeveloper - GET METHOD  
+Jan-18-2023 10:32:41 [error] 404 - Requested URL http://localhost:5000/api/user/viewDeveloper not found! 
+Jan-18-2023 10:33:21 [info] http://localhost:5000/api/user/getProfile - GET METHOD  
+Jan-18-2023 10:33:21 [error] 401 - Please provide token. 
+Jan-18-2023 10:33:35 [info] http://localhost:5000/api/user/getProfile - GET METHOD  
+Jan-18-2023 10:36:23 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
+Jan-18-2023 10:38:09 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
+Jan-18-2023 10:38:59 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
+Jan-18-2023 10:42:18 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
+Jan-18-2023 11:05:08 [info] http://localhost:5000/api/project/listProject - GET METHOD  
+Jan-18-2023 11:05:08 [error] 401 - Please provide token. 
+Jan-18-2023 11:06:53 [info] http://localhost:5000/api/project/listProject - GET METHOD  
+Jan-18-2023 11:06:53 [error] 500 - Project.paginate is not a function 
+Jan-18-2023 11:14:11 [info] success : Mongoose default connection 
+Jan-18-2023 11:14:11 [info] Default Admin. 
+Jan-18-2023 11:14:45 [info] success : Mongoose default connection 
+Jan-18-2023 11:14:45 [info] Default Admin. 
+Jan-18-2023 11:16:31 [info] success : Mongoose default connection 
+Jan-18-2023 11:16:31 [info] Default Admin. 
+Jan-18-2023 11:19:04 [info] success : Mongoose default connection 
+Jan-18-2023 11:19:05 [info] Default Admin. 
+Jan-18-2023 11:20:12 [info] success : Mongoose default connection 
+Jan-18-2023 11:20:12 [info] Default Admin. 
+Jan-18-2023 11:20:19 [info] success : Mongoose default connection 
+Jan-18-2023 11:20:19 [info] Default Admin. 
+Jan-18-2023 11:20:48 [info] success : Mongoose default connection 
+Jan-18-2023 11:20:48 [info] Default Admin. 
+Jan-18-2023 11:21:00 [info] success : Mongoose default connection 
+Jan-18-2023 11:21:00 [info] Default Admin. 
+Jan-18-2023 11:21:22 [info] success : Mongoose default connection 
+Jan-18-2023 11:21:22 [info] Default Admin. 
+Jan-18-2023 11:21:31 [info] success : Mongoose default connection 
+Jan-18-2023 11:21:31 [info] Default Admin. 
+Jan-18-2023 11:22:00 [info] success : Mongoose default connection 
+Jan-18-2023 11:22:00 [info] Default Admin. 
+Jan-18-2023 11:22:48 [info] success : Mongoose default connection 
+Jan-18-2023 11:22:49 [info] Default Admin. 
+Jan-18-2023 11:23:05 [info] success : Mongoose default connection 
+Jan-18-2023 11:23:05 [info] Default Admin. 
+Jan-18-2023 11:24:03 [info] http://localhost:5000/api/project/listProject - GET METHOD  
+Jan-18-2023 11:24:04 [error] 500 - Assignment to constant variable. 
+Jan-18-2023 11:26:09 [info] success : Mongoose default connection 
+Jan-18-2023 11:26:09 [info] Default Admin. 
+Jan-18-2023 11:26:14 [info] success : Mongoose default connection 
+Jan-18-2023 11:26:14 [info] Default Admin. 
+Jan-18-2023 11:26:19 [info] success : Mongoose default connection 
+Jan-18-2023 11:26:20 [info] Default Admin. 
+Jan-18-2023 11:27:05 [info] success : Mongoose default connection 
+Jan-18-2023 11:27:05 [info] Default Admin. 
+Jan-18-2023 11:28:12 [info] success : Mongoose default connection 
+Jan-18-2023 11:28:12 [info] Default Admin. 
+Jan-18-2023 11:28:23 [info] success : Mongoose default connection 
+Jan-18-2023 11:28:23 [info] Default Admin. 
+Jan-18-2023 11:28:33 [info] success : Mongoose default connection 
+Jan-18-2023 11:28:33 [info] Default Admin. 
+Jan-18-2023 11:29:08 [info] success : Mongoose default connection 
+Jan-18-2023 11:29:08 [info] Default Admin. 
+Jan-18-2023 11:29:27 [info] success : Mongoose default connection 
+Jan-18-2023 11:29:28 [info] Default Admin. 
+Jan-18-2023 11:29:53 [info] success : Mongoose default connection 
+Jan-18-2023 11:29:53 [info] Default Admin. 
+Jan-18-2023 11:30:12 [info] success : Mongoose default connection 
+Jan-18-2023 11:30:12 [info] Default Admin. 
+Jan-18-2023 11:30:14 [info] http://localhost:5000/api/project/listProject - GET METHOD  
+Jan-18-2023 11:30:14 [error] 500 - Assignment to constant variable. 
+Jan-18-2023 11:30:40 [info] http://localhost:5000/api/project/listProject - GET METHOD  
+Jan-18-2023 11:30:41 [info] success : Mongoose default connection 
+Jan-18-2023 11:30:41 [info] Default Admin. 
+Jan-18-2023 11:30:41 [error] 500 - query is not defined 
+Jan-18-2023 11:31:02 [info] success : Mongoose default connection 
+Jan-18-2023 11:31:02 [info] Default Admin. 
+Jan-18-2023 11:31:05 [info] http://localhost:5000/api/project/listProject - GET METHOD  
+Jan-18-2023 11:31:05 [error] 500 - projectList is not defined 
+Jan-18-2023 11:31:21 [info] success : Mongoose default connection 
+Jan-18-2023 11:31:21 [info] Default Admin. 
+Jan-18-2023 11:31:25 [info] http://localhost:5000/api/project/listProject - GET METHOD  
+Jan-18-2023 11:31:25 [error] 500 - ProjectList is not defined 
+Jan-18-2023 11:31:28 [info] http://localhost:5000/api/project/listProject - GET METHOD  
+Jan-18-2023 11:31:28 [error] 500 - ProjectList is not defined 
+Jan-18-2023 11:31:47 [info] success : Mongoose default connection 
+Jan-18-2023 11:31:47 [info] Default Admin. 
+Jan-18-2023 11:31:47 [info] http://localhost:5000/api/project/listProject - GET METHOD  
+Jan-18-2023 11:32:37 [info] http://localhost:5000/api/project/createProject - POST METHOD  
+Jan-18-2023 11:32:37 [error] 401 - Please provide token. 
+Jan-18-2023 11:33:14 [info] http://localhost:5000/api/project/createProject - POST METHOD  
+Jan-18-2023 11:34:57 [info] http://localhost:5000/api/project/listProject - GET METHOD  
+Jan-18-2023 11:36:52 [info] success : Mongoose default connection 
+Jan-18-2023 11:36:52 [info] Default Admin. 
+Jan-18-2023 11:37:26 [info] http://localhost:5000/api/project/viewProject - GET METHOD  
+Jan-18-2023 11:49:55 [info] success : Mongoose default connection 
+Jan-18-2023 11:49:56 [info] Default Admin. 
+Jan-18-2023 11:50:06 [info] http://localhost:5000/api/project/viewProject/63c64b1b0e84e1074c76cab5 - GET METHOD  
+Jan-18-2023 11:50:06 [error] 500 - Cast to ObjectId failed for value "{ projectId: '63c64b1b0e84e1074c76cab5' }" (type Object) at path "_id" for model "project" 
+Jan-18-2023 11:50:25 [info] success : Mongoose default connection 
+Jan-18-2023 11:50:25 [info] Default Admin. 
+Jan-18-2023 11:50:52 [info] http://localhost:5000/api/project/viewProject/63c64b1b0e84e1074c76cab5 - GET METHOD  
+Jan-18-2023 11:51:14 [info] success : Mongoose default connection 
+Jan-18-2023 11:51:14 [info] Default Admin. 
+Jan-18-2023 11:51:56 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-18-2023 11:51:56 [error] 401 - Please provide token. 
+Jan-18-2023 11:53:45 [info] success : Mongoose default connection 
+Jan-18-2023 11:53:45 [info] Default Admin. 
+Jan-18-2023 11:54:02 [info] success : Mongoose default connection 
+Jan-18-2023 11:54:02 [info] Default Admin. 
+Jan-18-2023 11:54:17 [info] success : Mongoose default connection 
+Jan-18-2023 11:54:17 [info] Default Admin. 
+Jan-18-2023 11:54:24 [info] success : Mongoose default connection 
+Jan-18-2023 11:54:24 [info] Default Admin. 
+Jan-18-2023 11:54:35 [info] success : Mongoose default connection 
+Jan-18-2023 11:54:35 [info] Default Admin. 
+Jan-18-2023 11:54:42 [info] success : Mongoose default connection 
+Jan-18-2023 11:54:42 [info] Default Admin. 
+Jan-18-2023 11:54:47 [info] success : Mongoose default connection 
+Jan-18-2023 11:54:47 [info] Default Admin. 
+Jan-18-2023 11:54:52 [info] success : Mongoose default connection 
+Jan-18-2023 11:54:52 [info] Default Admin. 
+Jan-18-2023 11:54:56 [info] success : Mongoose default connection 
+Jan-18-2023 11:54:56 [info] Default Admin. 
+Jan-18-2023 11:55:12 [info] success : Mongoose default connection 
+Jan-18-2023 11:55:12 [info] Default Admin. 
+Jan-18-2023 11:55:29 [info] success : Mongoose default connection 
+Jan-18-2023 11:55:29 [info] Default Admin. 
+Jan-18-2023 11:55:48 [info] success : Mongoose default connection 
+Jan-18-2023 11:55:48 [info] Default Admin. 
+Jan-18-2023 11:56:01 [info] success : Mongoose default connection 
+Jan-18-2023 11:56:01 [info] Default Admin. 
+Jan-18-2023 11:56:07 [info] success : Mongoose default connection 
+Jan-18-2023 11:56:07 [info] Default Admin. 
+Jan-18-2023 11:56:17 [info] success : Mongoose default connection 
+Jan-18-2023 11:56:17 [info] Default Admin. 
+Jan-18-2023 11:56:22 [info] success : Mongoose default connection 
+Jan-18-2023 11:56:22 [info] Default Admin. 
+Jan-18-2023 11:56:40 [info] success : Mongoose default connection 
+Jan-18-2023 11:56:40 [info] Default Admin. 
+Jan-18-2023 11:56:54 [info] success : Mongoose default connection 
+Jan-18-2023 11:56:55 [info] Default Admin. 
+Jan-18-2023 11:59:10 [info] success : Mongoose default connection 
+Jan-18-2023 11:59:10 [info] Default Admin. 
+Jan-18-2023 11:59:17 [info] success : Mongoose default connection 
+Jan-18-2023 11:59:17 [info] Default Admin. 
+Jan-18-2023 12:01:50 [info] success : Mongoose default connection 
+Jan-18-2023 12:01:50 [info] Default Admin. 
+Jan-18-2023 12:01:59 [info] success : Mongoose default connection 
+Jan-18-2023 12:01:59 [info] Default Admin. 
+Jan-18-2023 12:02:49 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-18-2023 12:02:49 [error] 403 - The requested user cannot access the data 
+Jan-18-2023 12:03:38 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-18-2023 12:03:38 [error] 403 - The requested user cannot access the data 
+Jan-18-2023 12:04:26 [info] success : Mongoose default connection 
+Jan-18-2023 12:04:26 [info] Default Admin. 
+Jan-18-2023 12:04:31 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-18-2023 12:04:32 [error] 500 - query is not defined 
+Jan-18-2023 12:05:08 [info] success : Mongoose default connection 
+Jan-18-2023 12:05:08 [info] Default Admin. 
+Jan-18-2023 12:05:09 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-18-2023 12:06:50 [info] success : Mongoose default connection 
+Jan-18-2023 12:06:50 [info] Default Admin. 
+Jan-18-2023 12:07:38 [info] success : Mongoose default connection 
+Jan-18-2023 12:07:38 [info] Default Admin. 
+Jan-18-2023 12:07:47 [info] success : Mongoose default connection 
+Jan-18-2023 12:07:47 [info] Default Admin. 
+Jan-18-2023 12:09:10 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-18-2023 12:09:10 [error] 401 - Please provide token. 
+Jan-18-2023 12:09:35 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-18-2023 12:10:02 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-18-2023 12:10:28 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-18-2023 12:11:49 [info] success : Mongoose default connection 
+Jan-18-2023 12:11:50 [info] Default Admin. 
+Jan-18-2023 12:12:14 [info] disconnected : Mongoose default connection is disconnected 
+Jan-18-2023 12:12:15 [info] success : Mongoose default connection 
+Jan-18-2023 12:58:24 [info] success : Mongoose default connection 
+Jan-18-2023 12:58:24 [info] Default Admin. 
+Jan-18-2023 12:58:43 [info] http://localhost:5000/api/user/loginManager - POST METHOD  
+Jan-18-2023 12:59:19 [info] http://localhost:5000/api/project/viewProject/63c64b1b0e84e1074c76cab5 - GET METHOD  
+Jan-18-2023 12:59:19 [error] 500 - jwt malformed 
+Jan-18-2023 12:59:29 [info] http://localhost:5000/api/project/viewProject/63c64b1b0e84e1074c76cab5 - GET METHOD  
+Jan-18-2023 12:59:29 [error] 500 - jwt malformed 
+Jan-18-2023 13:00:30 [info] http://localhost:5000/api/project/viewProject/63c64b1b0e84e1074c76cab5 - GET METHOD  
+Jan-18-2023 13:00:30 [error] 500 - jwt malformed 
+Jan-18-2023 13:01:18 [info] success : Mongoose default connection 
+Jan-18-2023 13:01:19 [info] Default Admin. 
+Jan-18-2023 13:01:19 [info] http://localhost:5000/api/project/viewProject/63c64b1b0e84e1074c76cab5 - GET METHOD  
+Jan-18-2023 13:01:19 [error] 500 - jwt malformed 
+Jan-18-2023 13:01:37 [info] http://localhost:5000/api/project/viewProject/63c64b1b0e84e1074c76cab5 - GET METHOD  
+Jan-18-2023 13:02:02 [info] http://localhost:5000/api/project/viewProject/63c64b1b0e84e1074c76cab5 - GET METHOD  
+Jan-18-2023 13:02:02 [error] 500 - invalid signature 
+Jan-18-2023 13:02:53 [info] http://localhost:5000/api/project/viewProject/63c64b1b0e84e1074c76cab5 - GET METHOD  
+Jan-18-2023 13:10:12 [info] http://localhost:5000/api/task/addDeveloperToTask - POST METHOD  
+Jan-18-2023 13:10:12 [error] 404 - Requested URL http://localhost:5000/api/task/addDeveloperToTask not found! 
+Jan-18-2023 13:10:43 [info] http://localhost:5000/api/task/addDeveloperToTask - PUT METHOD  
+Jan-18-2023 13:10:43 [error] 500 - Plan executor error during findAndModify :: caused by :: Cannot apply $addToSet to non-array field. Field named 'developer_assigned' has non-array type objectId 
+Jan-18-2023 13:11:31 [info] http://localhost:5000/api/task/addDeveloperToTask - PUT METHOD  
+Jan-18-2023 13:11:59 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-18-2023 13:14:18 [info] http://localhost:5000/api/project/viewProject/63c64b1b0e84e1074c76cab5 - GET METHOD  
+Jan-18-2023 13:31:14 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-18-2023 13:31:49 [info] http://localhost:5000/api/user/loginManager - POST METHOD  
+Jan-18-2023 13:32:03 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-18-2023 13:43:41 [info] success : Mongoose default connection 
+Jan-18-2023 13:43:41 [info] Default Admin. 
+Jan-18-2023 13:46:23 [info] success : Mongoose default connection 
+Jan-18-2023 13:46:23 [info] Default Admin. 
+Jan-18-2023 13:46:51 [info] success : Mongoose default connection 
+Jan-18-2023 13:46:51 [info] Default Admin. 
+Jan-18-2023 13:51:46 [info] success : Mongoose default connection 
+Jan-18-2023 13:51:46 [info] Default Admin. 
+Jan-18-2023 13:59:09 [info] success : Mongoose default connection 
+Jan-18-2023 13:59:09 [info] Default Admin. 
+Jan-18-2023 14:00:12 [info] success : Mongoose default connection 
+Jan-18-2023 14:00:12 [info] Default Admin. 
+Jan-18-2023 14:00:15 [info] success : Mongoose default connection 
+Jan-18-2023 14:00:15 [info] Default Admin. 
+Jan-18-2023 15:58:40 [info] success : Mongoose default connection 
+Jan-18-2023 15:58:40 [info] Default Admin. 
+Jan-18-2023 16:01:56 [info] success : Mongoose default connection 
+Jan-18-2023 16:01:56 [info] Default Admin. 
+Jan-18-2023 16:03:14 [info] success : Mongoose default connection 
+Jan-18-2023 16:03:14 [info] Default Admin. 
+Jan-18-2023 16:03:21 [info] success : Mongoose default connection 
+Jan-18-2023 16:03:21 [info] Default Admin. 
+Jan-18-2023 16:06:51 [info] success : Mongoose default connection 
+Jan-18-2023 16:06:51 [info] Default Admin. 
+Jan-18-2023 16:06:55 [info] success : Mongoose default connection 
+Jan-18-2023 16:06:55 [info] Default Admin. 
+Jan-18-2023 16:07:07 [info] success : Mongoose default connection 
+Jan-18-2023 16:07:07 [info] Default Admin. 
+Jan-18-2023 16:07:17 [info] success : Mongoose default connection 
+Jan-18-2023 16:07:17 [info] Default Admin. 
+Jan-18-2023 16:07:22 [info] success : Mongoose default connection 
+Jan-18-2023 16:07:22 [info] Default Admin. 
+Jan-18-2023 16:09:22 [info] success : Mongoose default connection 
+Jan-18-2023 16:09:23 [info] Default Admin. 
+Jan-18-2023 16:10:09 [info] success : Mongoose default connection 
+Jan-18-2023 16:10:09 [info] Default Admin. 
+Jan-18-2023 16:11:57 [info] success : Mongoose default connection 
+Jan-18-2023 16:11:57 [info] Default Admin. 
+Jan-18-2023 16:12:08 [info] success : Mongoose default connection 
+Jan-18-2023 16:12:08 [info] Default Admin. 
+Jan-18-2023 16:12:30 [info] success : Mongoose default connection 
+Jan-18-2023 16:12:30 [info] Default Admin. 
+Jan-18-2023 16:12:39 [info] success : Mongoose default connection 
+Jan-18-2023 16:12:39 [info] Default Admin. 
+Jan-18-2023 16:14:12 [info] success : Mongoose default connection 
+Jan-18-2023 16:14:12 [info] Default Admin. 
+Jan-18-2023 16:14:26 [info] success : Mongoose default connection 
+Jan-18-2023 16:14:26 [info] Default Admin. 
+Jan-18-2023 16:14:53 [info] success : Mongoose default connection 
+Jan-18-2023 16:14:54 [info] Default Admin. 
+Jan-18-2023 16:18:39 [info] success : Mongoose default connection 
+Jan-18-2023 16:18:39 [info] Default Admin. 
+Jan-18-2023 16:18:55 [info] success : Mongoose default connection 
+Jan-18-2023 16:18:55 [info] Default Admin. 
+Jan-18-2023 16:19:15 [info] success : Mongoose default connection 
+Jan-18-2023 16:19:15 [info] Default Admin. 
+Jan-18-2023 16:19:54 [info] success : Mongoose default connection 
+Jan-18-2023 16:19:54 [info] Default Admin. 
+Jan-18-2023 16:20:57 [info] success : Mongoose default connection 
+Jan-18-2023 16:20:57 [info] Default Admin. 
+Jan-18-2023 16:21:28 [info] success : Mongoose default connection 
+Jan-18-2023 16:21:28 [info] Default Admin. 
+Jan-18-2023 16:22:04 [info] success : Mongoose default connection 
+Jan-18-2023 16:22:04 [info] Default Admin. 
+Jan-18-2023 16:22:11 [info] success : Mongoose default connection 
+Jan-18-2023 16:22:11 [info] Default Admin. 
+Jan-18-2023 16:22:18 [info] success : Mongoose default connection 
+Jan-18-2023 16:22:18 [info] Default Admin. 
+Jan-18-2023 16:22:23 [info] success : Mongoose default connection 
+Jan-18-2023 16:22:23 [info] Default Admin. 
+Jan-18-2023 16:22:29 [info] success : Mongoose default connection 
+Jan-18-2023 16:22:29 [info] Default Admin. 
+Jan-18-2023 16:23:29 [info] success : Mongoose default connection 
+Jan-18-2023 16:23:29 [info] Default Admin. 
+Jan-18-2023 16:23:40 [info] success : Mongoose default connection 
+Jan-18-2023 16:23:41 [info] Default Admin. 
+Jan-18-2023 16:48:02 [info] success : Mongoose default connection 
+Jan-18-2023 16:48:03 [info] Default Admin. 
+Jan-18-2023 17:00:40 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-18-2023 17:00:40 [error] 403 - The requested user cannot access the data 
+Jan-18-2023 17:01:00 [info] http://localhost:5000/api/user/loginManager - POST METHOD  
+Jan-18-2023 17:01:22 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-18-2023 17:01:22 [error] 403 - The requested user cannot access the data 
+Jan-18-2023 17:02:30 [info] http://localhost:5000/api/user/loginManager - POST METHOD  
+Jan-18-2023 17:03:26 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-18-2023 17:03:26 [error] 403 - The requested user cannot access the data 
+Jan-18-2023 17:06:14 [info] success : Mongoose default connection 
+Jan-18-2023 17:06:14 [info] Default Admin. 
+Jan-18-2023 17:06:36 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-18-2023 17:07:11 [info] success : Mongoose default connection 
+Jan-18-2023 17:07:11 [info] Default Admin. 
+Jan-18-2023 17:07:19 [info] success : Mongoose default connection 
+Jan-18-2023 17:07:19 [info] Default Admin. 
+Jan-18-2023 17:07:28 [info] success : Mongoose default connection 
+Jan-18-2023 17:07:28 [info] Default Admin. 
+Jan-18-2023 17:07:45 [info] success : Mongoose default connection 
+Jan-18-2023 17:07:45 [info] Default Admin. 
+Jan-18-2023 17:07:49 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-18-2023 17:08:35 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-18-2023 17:08:49 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-18-2023 17:08:55 [error] 403 - The requested user cannot access the data 
+Jan-18-2023 17:09:49 [info] success : Mongoose default connection 
+Jan-18-2023 17:09:49 [info] Default Admin. 
+Jan-18-2023 17:09:56 [info] success : Mongoose default connection 
+Jan-18-2023 17:09:56 [info] Default Admin. 
+Jan-18-2023 17:09:59 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-18-2023 17:10:34 [error] 403 - The requested user cannot access the data 
+Jan-18-2023 17:10:34 [info] disconnected : Mongoose default connection is disconnected 
+Jan-18-2023 17:10:44 [info] success : Mongoose default connection 
+Jan-18-2023 17:10:57 [info] http://localhost:5000/api/user/loginManager - POST METHOD  
+Jan-18-2023 17:11:17 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-18-2023 17:13:44 [info] success : Mongoose default connection 
+Jan-18-2023 17:13:44 [info] Default Admin. 
+Jan-18-2023 17:13:54 [info] success : Mongoose default connection 
+Jan-18-2023 17:13:54 [info] Default Admin. 
+Jan-18-2023 17:14:26 [info] success : Mongoose default connection 
+Jan-18-2023 17:14:26 [info] Default Admin. 
+Jan-18-2023 17:15:24 [info] success : Mongoose default connection 
+Jan-18-2023 17:15:24 [info] Default Admin. 
+Jan-18-2023 17:15:31 [info] success : Mongoose default connection 
+Jan-18-2023 17:15:31 [info] Default Admin. 
+Jan-18-2023 17:15:47 [info] success : Mongoose default connection 
+Jan-18-2023 17:15:47 [info] Default Admin. 
+Jan-18-2023 17:17:01 [info] success : Mongoose default connection 
+Jan-18-2023 17:17:01 [info] Default Admin. 
+Jan-18-2023 17:17:27 [info] success : Mongoose default connection 
+Jan-18-2023 17:17:27 [info] Default Admin. 
+Jan-18-2023 17:19:16 [info] success : Mongoose default connection 
+Jan-18-2023 17:19:16 [info] Default Admin. 
+Jan-18-2023 17:20:41 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-18-2023 17:20:47 [error] 404 - This user does not exist. 
+Jan-18-2023 17:21:11 [info] success : Mongoose default connection 
+Jan-18-2023 17:21:11 [info] Default Admin. 
+Jan-18-2023 17:21:12 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-18-2023 17:21:17 [error] 403 - The requested user cannot access the data 
+Jan-18-2023 17:21:40 [info] success : Mongoose default connection 
+Jan-18-2023 17:21:40 [info] Default Admin. 
+Jan-18-2023 17:22:02 [info] success : Mongoose default connection 
+Jan-18-2023 17:22:02 [info] Default Admin. 
+Jan-18-2023 17:22:06 [info] success : Mongoose default connection 
+Jan-18-2023 17:22:10 [info] success : Mongoose default connection 
+Jan-18-2023 17:22:10 [info] Default Admin. 
+Jan-18-2023 17:22:13 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-18-2023 17:26:07 [info] success : Mongoose default connection 
+Jan-18-2023 17:26:07 [info] Default Admin. 
+Jan-18-2023 17:26:20 [info] success : Mongoose default connection 
+Jan-18-2023 17:26:20 [info] Default Admin. 
+Jan-18-2023 17:26:32 [info] success : Mongoose default connection 
+Jan-18-2023 17:26:32 [info] Default Admin. 
+Jan-18-2023 17:26:48 [info] success : Mongoose default connection 
+Jan-18-2023 17:26:48 [info] Default Admin. 
+Jan-18-2023 17:27:01 [info] success : Mongoose default connection 
+Jan-18-2023 17:27:01 [info] Default Admin. 
+Jan-18-2023 17:27:06 [info] success : Mongoose default connection 
+Jan-18-2023 17:27:06 [info] Default Admin. 
+Jan-18-2023 17:27:12 [info] success : Mongoose default connection 
+Jan-18-2023 17:27:12 [info] Default Admin. 
+Jan-18-2023 17:27:19 [info] success : Mongoose default connection 
+Jan-18-2023 17:27:19 [info] Default Admin. 
+Jan-18-2023 17:27:24 [info] success : Mongoose default connection 
+Jan-18-2023 17:27:24 [info] Default Admin. 
+Jan-18-2023 17:27:30 [info] success : Mongoose default connection 
+Jan-18-2023 17:27:30 [info] Default Admin. 
+Jan-18-2023 17:27:45 [info] success : Mongoose default connection 
+Jan-18-2023 17:27:45 [info] Default Admin. 
+Jan-18-2023 17:27:49 [info] success : Mongoose default connection 
+Jan-18-2023 17:27:49 [info] Default Admin. 
+Jan-18-2023 17:27:57 [info] success : Mongoose default connection 
+Jan-18-2023 17:27:57 [info] Default Admin. 
+Jan-18-2023 17:28:06 [info] success : Mongoose default connection 
+Jan-18-2023 17:28:06 [info] Default Admin. 
+Jan-18-2023 17:28:12 [info] success : Mongoose default connection 
+Jan-18-2023 17:28:12 [info] Default Admin. 
+Jan-18-2023 17:28:19 [info] success : Mongoose default connection 
+Jan-18-2023 17:28:19 [info] Default Admin. 
+Jan-18-2023 17:30:41 [info] success : Mongoose default connection 
+Jan-18-2023 17:30:42 [info] Default Admin. 
+Jan-18-2023 17:30:51 [info] success : Mongoose default connection 
+Jan-18-2023 17:30:51 [info] Default Admin. 
+Jan-18-2023 17:31:10 [info] success : Mongoose default connection 
+Jan-18-2023 17:31:10 [info] Default Admin. 
+Jan-18-2023 17:31:19 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-18-2023 17:31:30 [info] success : Mongoose default connection 
+Jan-18-2023 17:31:30 [info] Default Admin. 
+Jan-18-2023 17:31:36 [info] success : Mongoose default connection 
+Jan-18-2023 17:31:37 [info] Default Admin. 
+Jan-18-2023 17:31:40 [info] success : Mongoose default connection 
+Jan-18-2023 17:31:40 [info] Default Admin. 
+Jan-18-2023 17:31:47 [info] success : Mongoose default connection 
+Jan-18-2023 17:31:48 [info] Default Admin. 
+Jan-18-2023 17:31:54 [info] success : Mongoose default connection 
+Jan-18-2023 17:31:55 [info] Default Admin. 
+Jan-18-2023 17:32:02 [info] success : Mongoose default connection 
+Jan-18-2023 17:32:02 [info] Default Admin. 
+Jan-18-2023 17:32:45 [info] success : Mongoose default connection 
+Jan-18-2023 17:32:45 [info] Default Admin. 
+Jan-18-2023 17:32:50 [info] success : Mongoose default connection 
+Jan-18-2023 17:32:50 [info] Default Admin. 
+Jan-18-2023 17:34:26 [info] success : Mongoose default connection 
+Jan-18-2023 17:34:26 [info] Default Admin. 
+Jan-18-2023 17:34:48 [info] success : Mongoose default connection 
+Jan-18-2023 17:34:48 [info] Default Admin. 
+Jan-18-2023 17:34:53 [info] success : Mongoose default connection 
+Jan-18-2023 17:34:53 [info] Default Admin. 
+Jan-18-2023 17:35:27 [info] success : Mongoose default connection 
+Jan-18-2023 17:35:27 [info] Default Admin. 
+Jan-18-2023 17:35:31 [info] success : Mongoose default connection 
+Jan-18-2023 17:35:31 [info] Default Admin. 
+Jan-18-2023 17:36:16 [info] success : Mongoose default connection 
+Jan-18-2023 17:36:16 [info] Default Admin. 
+Jan-18-2023 17:36:25 [info] success : Mongoose default connection 
+Jan-18-2023 17:36:25 [info] Default Admin. 
+Jan-18-2023 17:36:30 [info] success : Mongoose default connection 
+Jan-18-2023 17:36:30 [info] Default Admin. 
+Jan-18-2023 17:36:35 [info] success : Mongoose default connection 
+Jan-18-2023 17:36:35 [info] Default Admin. 
+Jan-18-2023 17:36:41 [info] success : Mongoose default connection 
+Jan-18-2023 17:36:41 [info] Default Admin. 
+Jan-18-2023 17:36:46 [info] success : Mongoose default connection 
+Jan-18-2023 17:36:46 [info] Default Admin. 
+Jan-18-2023 17:37:00 [info] success : Mongoose default connection 
+Jan-18-2023 17:37:00 [info] Default Admin. 
+Jan-18-2023 17:37:10 [info] success : Mongoose default connection 
+Jan-18-2023 17:37:10 [info] Default Admin. 
+Jan-18-2023 17:38:31 [info] success : Mongoose default connection 
+Jan-18-2023 17:38:31 [info] Default Admin. 
+Jan-18-2023 17:39:03 [info] success : Mongoose default connection 
+Jan-18-2023 17:39:03 [info] Default Admin. 
+Jan-18-2023 17:39:18 [info] success : Mongoose default connection 
+Jan-18-2023 17:39:18 [info] Default Admin. 
+Jan-18-2023 17:39:30 [info] success : Mongoose default connection 
+Jan-18-2023 17:39:31 [info] Default Admin. 
+Jan-18-2023 17:39:42 [info] http://localhost:5000/api/admin/getAdminDetails - GET METHOD  
+Jan-18-2023 17:39:43 [error] 404 - This user does not exist. 
+Jan-18-2023 17:39:50 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-18-2023 17:40:01 [info] http://localhost:5000/api/admin/getAdminDetails - GET METHOD  
+Jan-18-2023 17:40:14 [info] success : Mongoose default connection 
+Jan-18-2023 17:40:14 [info] Default Admin. 
+Jan-18-2023 17:40:29 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-18-2023 17:40:54 [info] success : Mongoose default connection 
+Jan-18-2023 17:40:54 [info] Default Admin. 
+Jan-18-2023 17:44:28 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-18-2023 17:48:51 [info] success : Mongoose default connection 
+Jan-18-2023 17:48:51 [info] Default Admin. 
+Jan-18-2023 17:49:30 [info] success : Mongoose default connection 
+Jan-18-2023 17:49:30 [info] Default Admin. 
+Jan-18-2023 17:49:41 [info] success : Mongoose default connection 
+Jan-18-2023 17:49:41 [info] Default Admin. 
+Jan-18-2023 17:49:50 [info] success : Mongoose default connection 
+Jan-18-2023 17:49:50 [info] Default Admin. 
+Jan-18-2023 17:50:19 [info] success : Mongoose default connection 
+Jan-18-2023 17:50:19 [info] Default Admin. 
+Jan-18-2023 17:50:24 [info] success : Mongoose default connection 
+Jan-18-2023 17:50:24 [info] Default Admin. 
+Jan-18-2023 17:50:46 [info] success : Mongoose default connection 
+Jan-18-2023 17:50:46 [info] Default Admin. 

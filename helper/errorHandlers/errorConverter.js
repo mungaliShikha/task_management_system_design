@@ -1,8 +1,8 @@
-const ApiError = require("../../utils/errorHandlers/errorHandler")
+const ApiError = require("./errorHandler")
 const mongoose = require('mongoose')
 
-const { ErrorMessage, SuccessMessage } = require("../../helper/message");
-const { ErrorCode, SuccessCode } = require("../../helper/statusCode");
+const { ErrorMessage, SuccessMessage } = require("../message");
+const { ErrorCode, SuccessCode } = require("../statusCode");
 module.exports = (err, req, res, next) => {
     let error = err;
     if (!(error instanceof ApiError)) {

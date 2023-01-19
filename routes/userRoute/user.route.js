@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { upload } = require("../../services/aws/aws");
+const { upload } = require("../../utils/aws/aws");
 const auth = require("../../middleware/auth");
 const userController = require("../../controllers/user.controller");
 

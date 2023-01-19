@@ -1,19 +1,7 @@
 const router = require("express").Router();
 const adminController = require("../../controllers/admin.controller");
-const { upload } = require("../../services/aws/aws");
-const auth = require("../../middleware/auth");
-const Token = require("../../helper/commonFunction");
-const { verifyToken } = require("../../middleware/auth");
-
-// const {
-//   login,
-//   createManager,
-//   getManager,
-//   forgetPassword,
-//   resetPassword,
-//   updateAdmin,
-//   getAdmin,
-// } = require("../../controllers/admin.controller");
+const auth = require('../../middleware/auth');
+const { upload } = require("../../utils/aws/aws");
 
 /**
  * @swagger

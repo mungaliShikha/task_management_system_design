@@ -3,9 +3,9 @@ const multer = require('multer')
 const multerS3 = require('multer-s3')
 
 const s3 = new aws.S3({
-    accessKeyId:global.gFields.accessKeyId,
-    secretAccessKey: global.gFields.secretAccessKey,
-    region: global.gFields.region 
+    accessKeyId:global.gConfig.accessKeyId,
+    secretAccessKey: global.gConfig.secretAccessKey,
+    region: global.gConfig.region 
 })
 
 
@@ -23,10 +23,9 @@ exports.upload = multer({
     storage: multerS3({
         s3,
         ACLs: "public-read",
-        bucket: global.gFields.bucket,
+        bucket: global.gConfig.bucket,
         metadata: function (req, file, callback) {
             callback(null, { fieldName: file.fieldname })
-            // console.log(file.fieldname)
         },
         key: function (req, file, callback) {
             callback(null, `multipleFilesUpload/${file.originalname}`)

@@ -1,7 +1,5 @@
-const User = require("../models/user.model");
-const Token = require("../models/token.model");
-const catchAsync = require("../utils/catchAsync");
-const appError = require("../utils/errorHandlers/errorHandler");
+const catchAsync = require("../helper/catchAsync");
+const appError = require("../helper/errorHandlers/errorHandler");
 const { ErrorMessage, SuccessMessage } = require("../helper/message");
 const { ErrorCode, SuccessCode } = require("../helper/statusCode");
 const {
@@ -15,16 +13,22 @@ const helper = require("../helper/commonResponseHandler");
 const {
   sendMail,
   sendMailNotify,
-} = require("../services/nodeMailer/nodemailer");
+} = require("../utils/nodeMailer/nodemailer");
+const {
+  getOneUser ,getAllUser,getUserById, getUserAndUpdate, getOneToken, createUser
+} = require("../services/user.service")
+
+const enums = require("../helper/enum/enums")
 
 const {subjects,messages}=require('../helper/commonFunction');
 
 module.exports = {
+
   // *************************************************** manager login ******************************************
-  loginManager: async (req, res) => {
+  loginManager: async (req, res,next) => {
     try {
       const { email, password } = req.body;
-      const loggedInUser = await User.findOne({ email });
+      const loggedInUser = await getOneUser({ email });
       if (!loggedInUser || !compareHash(password, loggedInUser.password)) {
         throw new appError(
           ErrorMessage.EMAIL_NOT_REGISTERED,
@@ -49,20 +53,16 @@ module.exports = {
         );
       }
     } catch (error) {
-      helper.commonResponse(
-        res,
-        ErrorCode.SOMETHING_WRONG,
-        ErrorMessage.SOMETHING_WRONG
-      );
+      next(error)
     }
   },
 
   // *********************************************** get profile for Manager,Developer *******************************
 
   getProfile: catchAsync(async (req, res) => {
-    const tokenAuth = await User.findOne({
+    const tokenAuth = await getOneUser({
       _id: req.userId,
-      role: { $in: ["Developer", "Manager"] },
+      role: { $in: [enums.declaredEnum.role.DEVELOPER, enums.declaredEnum.role.MANAGER] },
     });
     if (!tokenAuth) {
       throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
@@ -79,9 +79,9 @@ module.exports = {
   updateProfile: async (req, res) => {
     try {
       let payload = req.body;
-      const tokenAuth = await User.findOne({
+      const tokenAuth = await getOneUser({
         _id: req.userId,
-        role: { $in: ["Developer", "Manager"] },
+        role: { $in: [enums.declaredEnum.role.DEVELOPER, enums.declaredEnum.role.MANAGER] },
       });
       if (!tokenAuth)
         helper.commonResponse(
@@ -92,7 +92,8 @@ module.exports = {
       if (req.files) {
         payload["profile_pic"] = req.files[0].location;
       }
-      let updateRes = await User.findByIdAndUpdate(
+      let updateRes = await getUserAndUpdate
+      (
         { _id: tokenAuth._id },
         { $set: payload },
         { new: true }
@@ -115,14 +116,14 @@ module.exports = {
   // **************************************** Developer Create ************************
 
   addDeveloper: catchAsync(async (req, res) => {
-    // const payload = req.body;
-    const { first_name, last_name, email, mobile_number } = req.body;
-    const checkManager = await User.findById({ _id: req.userId, role: "Manager" });
-    if (!checkManager) {
+    const payload = req.body;
+    const { first_name, last_name, email, mobile_number } = payload;
+    const userAuth = await getOneUser({ _id: req.userId, role: enums.declaredEnum.role.MANAGER });
+    if (!userAuth) {
       throw new appError(ErrorMessage.NOT_AUTHORISED, ErrorCode.NOT_FOUND);
     }
-    const user = await User.findOne({ email, mobile_number });
-    if (user) {
+    const userFound = await getOneUser({ email, mobile_number });
+    if (userFound) {
       throw new appError(ErrorMessage.ALREADY_EXIST, ErrorCode.ALREADY_EXIST);
     }
     req.body["employee_id"] = "DEV" + mobile_number.substr(-4);
@@ -148,7 +149,7 @@ module.exports = {
   developerLogin: async (req, res) => {
     try {
       const { email, password } = req.body;
-      let developerDetails = await User.findOne({ email });
+      let developerDetails = await getOneUser({ email });
       if (!developerDetails)
         helper.commonResponse(
           res,

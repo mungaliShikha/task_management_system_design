@@ -2,55 +2,50 @@ const { ErrorMessage } = require("../helper/message");
 const { ErrorCode } = require("../helper/statusCode");
 const userModel = require("../models/user.model");
 const jwt = require("jsonwebtoken");
-const appError = require("../utils/errorHandlers/errorHandler");
+const appError = require("../helper/errorHandlers/errorHandler");
 
-exports.verifyToken = (req, res, next) => {
-  if (req.headers.token) {
-    jwt.verify(
-      req.headers.token,
-      global.gFields.jwtSecretKey,
-      (err, result) => {
-        if (err) {
-          throw new appError(
-            ErrorMessage.INCORRECT_JWT,
-            ErrorCode.UNAUTHORIZED
-          );
+exports.verifyToken = async (req, res, next) => {
+  try {
+    let bearerHeader = req.headers.authorization
+    if (bearerHeader) {
+
+      let bearerToken = bearerHeader.split(' '); // converting it to array 
+      let token = bearerToken[1];
+      let authcheck = jwt.verify(
+        token,
+        global.gConfig.jwtSecretKey
+      );
+      if (!authcheck) {
+        throw new appError(ErrorMessage.INCORRECT_JWT, ErrorCode.UNAUTHORIZED);
+      } else {
+        var userCheck = await userModel.findOne({ _id: authcheck.id });
+        if (!userCheck) {
+          throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
         } else {
-          userModel.findOne({ _id: result.id }, (error, result2) => {
-            if (error)
-              throw new appError(
-                ErrorMessage.INTERNAL_ERROR,
-                ErrorCode.INTERNAL_ERROR
-              );
-            else if (!result2) {
-              throw new appError(
-                ErrorMessage.USER_NOT_FOUND,
-                ErrorCode.NOT_FOUND
-              );
-            } else {
-              if (result2.status == "BLOCK") {
-                throw new appError(
-                  ErrorMessage.BLOCKED_BY_ADMIN,
-                  ErrorCode.FORBIDDEN
-                );
-              } else if (result2.status == "DELETE") {
-                throw new appError(
-                  ErrorMessage.DELETED_BY_ADMIN,
-                  ErrorCode.UNAUTHORIZED
-                );
-              } else {
-                req.userId = result.id;
-                req.userDetails = result;
-                req.email = result2.email;
-                next();
-              }
-            }
-          });
+          if (userCheck.status == "BLOCKED") {
+            throw new appError(
+              ErrorMessage.BLOCKED_BY_ADMIN,
+              ErrorCode.FORBIDDEN
+            );
+          } else if (userCheck.status == "DELETE") {
+            throw new appError(
+              ErrorMessage.DELETED_BY_ADMIN,
+              ErrorCode.UNAUTHORIZED
+            );
+          } else {
+            req.userId = authcheck.id;
+            req.userDetails = authcheck;
+            req.email = userCheck.email;
+            next();
+          }
         }
       }
-    );
-  } else {
-    throw new appError( ErrorMessage.NO_TOKEN,ErrorCode.BAD_REQUEST);
+    } else {
+      throw new appError(ErrorMessage.NO_TOKEN, ErrorCode.UNAUTHORIZED);
+    }
+  } catch (error) {
+    console.log("error--", error)
+    next(error)
   }
 };
 
