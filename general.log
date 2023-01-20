@@ -825,3 +825,5 @@ Jan-20-2023 10:53:46 [info] http://localhost:5000/api/admin/updateAdmin - PUT ME
 Jan-20-2023 10:53:46 [error] 404 - Format is not correct 
 Jan-20-2023 11:13:23 [info] success : Mongoose default connection 
 Jan-20-2023 11:13:23 [info] Default Admin. 
+Jan-20-2023 11:13:25 [info] success : Mongoose default connection 
+Jan-20-2023 11:13:25 [info] Default Admin. 
