@@ -8,7 +8,7 @@ router.post(
   projectController.createProject
 );
 router.post(
-  "/addManagerToProject/:projectId",
+  "/addManagerToProject",
   auth.verifyToken,
   projectController.addManagerToProject
 );

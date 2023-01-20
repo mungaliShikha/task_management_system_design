@@ -30,10 +30,9 @@ module.exports = {
       password: joi.string().required(),
     };
     try {
-      const validatedBody = await joi.validate(req.body, validationSchema)
-      const { email, password } = validationSchema(req.body);
+      const { email, password } = await joi.validate(req.body, validationSchema)
       const loggedInUser = await getOneUser({ email });
-      if (!loggedInUser) {
+      if (!loggedInUser || !compareHash(password, loggedInUser.password)) {
         throw new appError(
           ErrorMessage.EMAIL_NOT_REGISTERED,
           ErrorCode.NOT_FOUND
@@ -82,8 +81,14 @@ module.exports = {
   // *********************************************** update Profile for Manager,Developer *******************************
 
   updateProfile: async (req, res) => {
+    const validationSchema = {
+      first_name: joi.string().optional(),
+      last_name: joi.string().optional(),
+      mobile_number: joi.string().optional(),
+      profile_pic: joi.string().optional(),
+    };
     try {
-      let payload = req.body;
+      const payload = await joi.validate(req.body, validationSchema);
       const tokenAuth = await getOneUser({
         _id: req.userId,
         role: { $in: [enums.declaredEnum.role.DEVELOPER, enums.declaredEnum.role.MANAGER] },
@@ -120,41 +125,55 @@ module.exports = {
 
   // **************************************** Developer Create ************************
 
-  addDeveloper: catchAsync(async (req, res) => {
-    const payload = req.body;
-    const { first_name, last_name, email, mobile_number } = payload;
-    const userAuth = await getOneUser({ _id: req.userId, role: enums.declaredEnum.role.MANAGER });
-    if (!userAuth) {
-      throw new appError(ErrorMessage.NOT_AUTHORISED, ErrorCode.NOT_FOUND);
-    }
-    const userFound = await getOneUser({ email, mobile_number });
-    if (userFound) {
-      throw new appError(ErrorMessage.ALREADY_EXIST, ErrorCode.ALREADY_EXIST);
-    }
-    payload["employee_id"] = "DEV" + mobile_number.substr(-4);
-    let passGen = randomPassword();
-    console.log(passGen);
-    payload["password"] = generateHash(passGen);
-    payload["role"] = enums.declaredEnum.role.DEVELOPER;
-    const createDeveloper = await createUser(payload);
+  addDeveloper: catchAsync(async (req, res,next) => {
+    const validationSchema = {
+      first_name: joi.string().optional(),
+      last_name: joi.string().optional(),
+      mobile_number: joi.string().optional(),
+      email: joi.string().required()
+    };
+    try {
+      const payload = await joi.validate(req.body, validationSchema);
+      const userAuth = await getOneUser({ _id: req.userId, role: enums.declaredEnum.role.MANAGER });
+      if (!userAuth) {
+        throw new appError(ErrorMessage.NOT_AUTHORISED, ErrorCode.NOT_FOUND);
+      }
+      const userFound = await getOneUser({ email, mobile_number });
+      if (userFound) {
+        throw new appError(ErrorMessage.ALREADY_EXIST, ErrorCode.ALREADY_EXIST);
+      }
+      payload["employee_id"] = "DEV" + mobile_number.substr(-4);
+      let passGen = randomPassword();
+      console.log(passGen);
+      payload["password"] = generateHash(passGen);
+      payload["role"] = enums.declaredEnum.role.DEVELOPER;
+      const createDeveloper = await createUser(payload);
 
-    const subject = "Developer Invitation";
-    const message = `Hello <br> You are invited as a Developer on Task management system Design platform,<br> Here is your Login Crediantial <br> Email: ${payload.email} <br> Password: ${passGen} <br> Kindly Use this Crediantial for further login`;
-    await sendMailNotify(userAuth.email, subject, message, req.body.email);
+      const subject = "Developer Invitation";
+      const message = `Hello <br> You are invited as a Developer on Task management system Design platform,<br> Here is your Login Crediantial <br> Email: ${payload.email} <br> Password: ${passGen} <br> Kindly Use this Crediantial for further login`;
+      await sendMailNotify(userAuth.email, subject, message, req.body.email);
 
-    helper.sendResponseWithData(
-      res,
-      SuccessCode.SUCCESS,
-      SuccessMessage.CREATE_DEVELOPER,
-      createDeveloper
-    );
-  }),
+      helper.sendResponseWithData(
+        res,
+        SuccessCode.SUCCESS,
+        SuccessMessage.CREATE_DEVELOPER,
+        createDeveloper
+      );
+    }catch(error){
+      next(error)
+    }
+    })
+  ,
 
   // **************************************************** Developer Login ************************
 
   developerLogin: async (req, res) => {
+    const validationSchema = {
+      email: joi.string().optional(),
+      password: joi.string().optional()
+    };
     try {
-      const { email, password } = req.body;
+      const { email, password } = await joi.validate(req.body, validationSchema);
       let developerDetails = await getOneUser({ email });
       if (!developerDetails)
         helper.commonResponse(
