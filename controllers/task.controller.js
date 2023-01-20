@@ -30,6 +30,7 @@ const {
 } = require("../services/project.service")
 
 module.exports = {
+  //******************************** create task to projects *************************************** */
   createTaskToProject: catchAsync(async (req, res) => {
     const {
       projectId,
@@ -65,6 +66,8 @@ module.exports = {
       SuccessMessage.TASK_ADD
     );
   }),
+
+  //******************************** get the list of all tasks ************************************ */
 
   listTaskOnparticularProject: catchAsync(async (req, res) => {
     const { _id } = req.body;
@@ -115,6 +118,7 @@ module.exports = {
     );
   }),
 
+  //********************************************* update the particular task ****************************** */
     updateTask: catchAsync(async (req, res) => {
         const {
             taskId,
@@ -144,6 +148,8 @@ module.exports = {
             SuccessMessage.TASK_UPDATE
         );
     }),
+
+    //**************************************** add developer to particular task ******************************** */
 
     addDeveloperToTask: catchAsync(async (req, res) => {
         let { developers, taskId } = req.body;
@@ -175,6 +181,8 @@ module.exports = {
         );
     }),
 
+
+//************************************* view all tasks ************************************************* */
     viewAllTask: catchAsync(async (req, res) => {
         const allTask = await task.find().populate("developer_assigned");
         if (allTask.length == 0) {
@@ -187,6 +195,8 @@ module.exports = {
             SuccessMessage.DATA_FOUND
         );
     }),
+
+    //******************************* remove developer from a particular task ******************************** */
 
     removeDeveloperFromTask: catchAsync(async (req, res) => {
         let { developers, taskId } = req.body;
@@ -219,6 +229,7 @@ module.exports = {
         );
     }),
 
+    //***************************************** change the status of the task by the developer ********************** */
     changeTaskStatusByDev: catchAsync(async (req, res) => {
         const {
             taskId,

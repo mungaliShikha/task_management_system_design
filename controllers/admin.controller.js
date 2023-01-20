@@ -48,7 +48,7 @@ module.exports = {
     }
   }),
 
-  //************************************ forgetpassword for admin******************************* */
+  //************************************ forgetpassword for admin ******************************* */
 
   forgetPassword: catchAsync(async (req, res) => {
     const { email } = req.body;

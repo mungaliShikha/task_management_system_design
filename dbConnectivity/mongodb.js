@@ -16,21 +16,21 @@ mongoose.connection.openUri(DB_URL, { useNewUrlParser: true, useUnifiedTopology:
 // CONNECTION EVENTS
 // When successfully connected
 mongoose.connection.on('connected', () => {
-     logger.info('success : Mongoose default connection')
+     logger.debug('success : Mongoose default connection')
 });
 // if the connection throw an error
 mongoose.connection.on('error', (err) => {
-     logger.info('error : Mongoose default connection error')
+     logger.debug('error : Mongoose default connection error')
 });
 // when the connectio is disconnected
 mongoose.connection.on('disconnected', () => {
-     logger.info('disconnected : Mongoose default connection is disconnected')
+     logger.debug('disconnected : Mongoose default connection is disconnected')
 });
 // if the node process ends,close the mongoose connection
 
 process.on('SIGINT', () => {
      mongoose.connection.close(() => {
-          logger.info('warning', 'Mongoose default connection disconnected through app termination')
+          logger.debug('warning', 'Mongoose default connection disconnected through app termination')
      });
 });
 
