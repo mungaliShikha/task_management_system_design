@@ -1040,3 +1040,5 @@ Jan-20-2023 17:05:48 [info] http://localhost:5000/api/admin/updateAdmin - PUT ME
 Jan-20-2023 17:05:48 [error] 404 - email must be a valid email 
 Jan-20-2023 17:06:42 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
 Jan-20-2023 17:06:42 [error] 404 - first_name must be a string 
+Jan-20-2023 17:13:40 [info] success : Mongoose default connection 
+Jan-20-2023 17:13:40 [info] Default Admin. 
