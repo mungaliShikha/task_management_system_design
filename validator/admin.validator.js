@@ -4,7 +4,7 @@ module.exports = {
   logIn: (payload) => {
     const schema = Joi.object({
       email: Joi.string().email().lowercase().required(),
-      password: Joi.string().required().min(10),
+      password: Joi.string().required().min(7),
     });
     return schema.validate(payload);
   },
