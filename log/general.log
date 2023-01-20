@@ -13,3 +13,15 @@ Jan-20-2023 15:50:35 [info] http://localhost:5000/api/admin/login - POST METHOD
 Jan-20-2023 15:51:58 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
 Jan-20-2023 15:52:00 [error] 412 - first_name is required 
 Jan-20-2023 15:53:59 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 16:18:08 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-20-2023 16:25:13 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-20-2023 16:25:31 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-20-2023 16:25:31 [error] 412 - password length must be at least 10 characters long 
+Jan-20-2023 16:25:38 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-20-2023 16:25:38 [error] 404 - Provided email is not registered. 
+Jan-20-2023 16:25:48 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
+Jan-20-2023 16:27:15 [info] http://localhost:5000/api/user/loginManager - POST METHOD  
+Jan-20-2023 16:27:15 [error] 404 - Requested URL http://localhost:5000/api/user/loginManager not found! 
+Jan-20-2023 16:27:32 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-20-2023 16:27:32 [error] 404 - Provided email is not registered. 
+Jan-20-2023 16:28:29 [info] http://localhost:5000/api/user/login - POST METHOD  

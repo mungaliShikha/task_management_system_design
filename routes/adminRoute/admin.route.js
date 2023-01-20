@@ -2,7 +2,7 @@ const router = require("express").Router();
 const adminController = require("../../controllers/admin.controller");
 const auth = require('../../middleware/auth');
 const {validationMiddleware}=require("../../middleware/joeValidator")
-const { logIn,updateAdmin } = require("../../validator/admin.validator");
+const { updateAdmin } = require("../../validator/admin.validator");
 const { upload } = require("../../utils/aws/aws");
 const { resetPassword, forgetPassword, createManager } = require("../../controllers/admin.controller");
 
@@ -34,7 +34,7 @@ const { resetPassword, forgetPassword, createManager } = require("../../controll
  *       500:
  *         description: Internal Server Error
  */
-router.post('/login',validationMiddleware(logIn), adminController.login);
+
 
 /**
  * @swagger
