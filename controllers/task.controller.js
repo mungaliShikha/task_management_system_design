@@ -30,6 +30,7 @@ const {
 } = require("../services/project.service")
 
 module.exports = {
+  //******************************** create task to projects *************************************** */
   createTaskToProject: catchAsync(async (req, res) => {
     const validationSchema = {
       name: joi.string().required(),
@@ -65,6 +66,8 @@ module.exports = {
       SuccessMessage.TASK_ADD
     );
   }),
+
+  //******************************** get the list of all tasks ************************************ */
 
   listTaskOnparticularProject: catchAsync(async (req, res) => {
     const validationSchema = {
@@ -118,18 +121,17 @@ module.exports = {
     );
   }),
 
+  //********************************************* update the particular task ****************************** */
   updateTask: catchAsync(async (req, res) => {
-    const validationSchema = {
-      taskId: joi.string().required(),
-      name: joi.string().optional(),
-      type: joi.string().required(),
-      priority: joi.string().required(),
-      start_date: Joi.string().required(),
-      due_date: joi.string().required(),
-      developer_assigned: Joi.array().items(Joi.string()).optional()
-    };
-    const validatedBody = await joi.validate(req.body, validationSchema);
-
+    const {
+      taskId,
+      name,
+      type,
+      priority,
+      start_date,
+      due_date,
+      developer_assigned,
+    } = req.body;
     const managerAuth = await getOneUser({
       _id: req.userId,
       role: enums.declaredEnum.role.MANAGER,
@@ -137,11 +139,11 @@ module.exports = {
     if (!managerAuth) {
       throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
     }
-    const projectRes = await getOneTask({ _id: validatedBody.taskId });
+    const projectRes = await getOneTask({ _id: taskId });
     if (!projectRes) {
       throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
     }
-    let updatedTask = await getTaskByIdAndUpdate(validatedBody.taskId, validatedBody);
+    let updatedTask = await getTaskByIdAndUpdate(taskId, req.body);
     helper.commonResponse(
       res,
       SuccessCode.SUCCESS,
@@ -150,12 +152,10 @@ module.exports = {
     );
   }),
 
+  //**************************************** add developer to particular task ******************************** */
+
   addDeveloperToTask: catchAsync(async (req, res) => {
-    const validationSchema = {
-      taskId: joi.string().required(),
-      developers: Joi.array().items(Joi.string()).required()
-    };
-    const {developers, taskId} = await joi.validate(req.body, validationSchema);
+    let { developers, taskId } = req.body;
     if (typeof developers !== "object") {
       throw new appError(ErrorMessage.DATA_SHOULD_BE_ARRAY, ErrorCode.VALIDATION_FAILED);
     }
@@ -184,6 +184,8 @@ module.exports = {
     );
   }),
 
+
+  //************************************* view all tasks ************************************************* */
   viewAllTask: catchAsync(async (req, res) => {
     const allTask = await task.find().populate("developer_assigned");
     if (allTask.length == 0) {
@@ -197,12 +199,10 @@ module.exports = {
     );
   }),
 
+  //******************************* remove developer from a particular task ******************************** */
+
   removeDeveloperFromTask: catchAsync(async (req, res) => {
-    const validationSchema = {
-      taskId: joi.string().required(),
-      developers: Joi.array().items(Joi.string()).required()
-    };
-    const {developers, taskId} = await joi.validate(req.body, validationSchema);
+    let { developers, taskId } = req.body;
     const managerAuthCheck = await getOneUser({ _id: req.userId });
     if (managerAuthCheck && managerAuthCheck.role != enums.declaredEnum.role.MANAGER) {
       throw new appError(ErrorMessage.INVALID_TOKEN, ErrorCode.NOT_ALLOWED);
@@ -234,13 +234,39 @@ module.exports = {
     );
   }),
 
+  //***************************************** change the status of the task by the developer ********************** */
+  changeTaskStatusByDev: catchAsync(async (req, res) => {
+    const {
+      taskId,
+      taskStatus
+    } = req.body;
+    const developerAuth = await getOneUser({
+      _id: req.userId,
+      role: enums.declaredEnum.role.DEVELOPER,
+    });
+    if (!developerAuth) {
+      throw new appError(ErrorMessage.DATA_AUTHORIZTAION, ErrorCode.NOT_FOUND);
+    }
+    const taskResult = await getOneTask({ _id: taskId, developer_assigned: { $in: [developerAuth._id] } });
+    if (!taskResult) {
+      throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
+    }
+    let updatedTask = await getTaskByIdAndUpdate({ _id: taskId }, { $set: { taskStatus: taskStatus } }, { new: true });
+    helper.commonResponse(
+      res,
+      SuccessCode.SUCCESS,
+      updatedTask,
+      SuccessMessage.DEVELOPER_ASSIGNED
+    );
+  }),
+
   changeTaskStatusByDev: catchAsync(async (req, res) => {
     const validationSchema = {
       taskId: joi.string().required(),
-      taskStatus: Joi.string().valid('inProgress', 'inQA','completed')
+      taskStatus: Joi.string().valid('inProgress', 'inQA', 'completed')
     };
-    const {taskStatus, taskId} = await joi.validate(req.body, validationSchema);
-  
+    const { taskStatus, taskId } = await joi.validate(req.body, validationSchema);
+
     const developerAuth = await getOneUser({
       _id: req.userId,
       role: enums.declaredEnum.role.DEVELOPER,

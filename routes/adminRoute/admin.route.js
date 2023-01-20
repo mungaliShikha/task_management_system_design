@@ -1,37 +1,10 @@
 const router = require("express").Router();
 const adminController = require("../../controllers/admin.controller");
 const auth = require('../../middleware/auth');
+const {validationMiddleware}=require("../../middleware/joeValidator")
+const { updateAdmin,createmanager } = require("../../validator/admin.validator");
 const { upload } = require("../../utils/aws/aws");
-
-/**
- * @swagger
- * /api/admin/login:
- *   post:
- *     tags:
- *       - ADMIN
- *     description: Admin Login
- *     produces:
- *       - application/json
- *     parameters:
- *       - name: email
- *         description: email
- *         in: formData
- *         required: true
- *       - name: password
- *         description: password
- *         in: formData
- *         required: true
- *     responses:
- *       200:
- *         description: Your login is successful.
- *       404:
- *         description: Requested data not found.
- *       402:
- *         description: Invalid login credentials.
- *       500:
- *         description: Internal Server Error
- */
-router.post('/login', adminController.login);
+const { resetPassword, forgetPassword, createManager } = require("../../controllers/admin.controller");
 
 /**
  * @swagger
@@ -143,14 +116,14 @@ router.post('/login', adminController.login);
  *       500:
  *         description: Internal Server Error
  */
-router.post('/forgetPassword',adminController.forgetPassword)
-router.post('/resetPassword/:userId/:token',adminController.resetPassword)
-router.put('/updateAdmin',auth.verifyToken, upload.array("profile_image"),adminController.updateAdmin)
+router.post('/forgetPassword',validationMiddleware(forgetPassword),adminController.forgetPassword)
+router.post('/resetPassword/:userId/:token',validationMiddleware(resetPassword),adminController.resetPassword)
+router.put('/updateAdmin',auth.verifyToken, upload.array("profile_image"),validationMiddleware(updateAdmin),adminController.updateAdmin)
 router.get('/getAdminDetails',auth.verifyToken, adminController.getAdminDetails)
 
 
 /// admin can create manager
-router.post("/createManager",auth.verifyToken, adminController.createManager);
+router.post("/createManager",auth.verifyToken,validationMiddleware(createmanager), adminController.createManager);
 
 
 module.exports = router;

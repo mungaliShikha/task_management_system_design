@@ -2,12 +2,14 @@ const router = require("express").Router();
 const { upload } = require("../../utils/aws/aws");
 const auth = require("../../middleware/auth");
 const userController = require("../../controllers/user.controller");
+const {validationMiddleware}=require("../../middleware/joeValidator")
+const {logIn} = require("../../validator/admin.validator")
 
 router.post("/addDeveloper", auth.verifyToken, userController.addDeveloper);
 
 /**
  * @swagger
- * /api/user/developerLogin:
+ * /api/user/login:
  *   post:
  *     tags:
  *       - ADMIN_DEVELOPER_DASHBOARD
@@ -33,7 +35,7 @@ router.post("/addDeveloper", auth.verifyToken, userController.addDeveloper);
  *       500:
  *         description: Internal Server Error
  */
-router.post("/developerLogin", userController.developerLogin);
+router.post('/login',validationMiddleware(logIn), userController.login);
 
 /**
  * @swagger
@@ -68,6 +70,5 @@ router.put(
   userController.updateProfile
 ); //update api for manager and developer
 
-router.post("/loginManager", userController.loginManager);
 
 module.exports = router;

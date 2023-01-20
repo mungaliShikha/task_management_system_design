@@ -1,3 +1,4 @@
+const Token = require("../models/token.model")
 const catchAsync = require("../helper/catchAsync");
 const crypto = require("crypto");
 const appError = require("../helper/errorHandlers/errorHandler");
@@ -17,38 +18,11 @@ const {
 } = require("../utils/nodeMailer/nodemailer");
 const enums = require("../helper/enum/enums");
 const {
-  getOneUser ,getAllUser,getUserById, getUserAndUpdate, getOneToken, createUser
+  getOneUser, getAllUser, getUserById, getUserAndUpdate, getOneToken, createUser
 } = require("../services/user.service")
 module.exports = {
-  /// **********************************   admin login ************************************************
-  login: catchAsync(async (req, res) => {
-    const { email, password } = req.body;
-    const loggedInUser = await getOneUser({ email });
-    if (!loggedInUser || !compareHash(password, loggedInUser.password)) {
-      throw new appError(
-        ErrorMessage.EMAIL_NOT_REGISTERED,
-        ErrorCode.NOT_FOUND
-      );
-    } else {
-      let token = generateToken({ id: loggedInUser._id });
-      let finalRes = {
-        email: email,
-        mobile_number: loggedInUser.mobile_number,
-        role: loggedInUser.role,
-        first_name: loggedInUser.first_name,
-        last_name: loggedInUser.last_name,
-        token: token,
-      };
-      helper.sendResponseWithData(
-        res,
-        SuccessCode.SUCCESS,
-        SuccessMessage.LOGIN_SUCCESS,
-        finalRes
-      );
-    }
-  }),
 
-  //************************************ forgetpassword for admin******************************* */
+  //************************************ forgetpassword for admin ******************************* */
 
   forgetPassword: catchAsync(async (req, res) => {
     const { email } = req.body;
@@ -59,7 +33,7 @@ module.exports = {
         ErrorCode.NOT_FOUND
       );
     }
-    var tokenFound = await getOneToken({ userId: user._id });
+    var tokenFound = await Token.findOne({ userId: user._id });
     if (!tokenFound) {
       tokenFound = await new Token({
         userId: user._id,
@@ -171,7 +145,7 @@ module.exports = {
 
   //************************************************* create manager api ***************************************** */
 
-  createManager: catchAsync(async (req, res) => {
+  createManager: catchAsync(async (req, res, next) => {
     const payload = req.body;
     const { first_name, last_name, email, mobile_number } = payload;
     const userAuth = await getOneUser({
@@ -182,9 +156,10 @@ module.exports = {
       throw new appError(ErrorMessage.NOT_AUTHORISED, ErrorCode.NOT_FOUND);
     }
     const userDuplicate = await getOneUser({ email, mobile_number });
-    if (userDuplicate) {
-      throw new appError(ErrorMessage.ALREADY_EXIST, ErrorCode.ALREADY_EXIST);
+    if (userDuplicate.email ) {
+      throw new appError(ErrorMessage.EMAIL_ALREADY_EXIST, ErrorCode.ALREADY_EXIST);
     }
+   
     payload["employee_id"] = "MAN" + mobile_number.substr(-4);
     let passGen = randomPassword();
     console.log(passGen);
@@ -202,5 +177,38 @@ module.exports = {
       SuccessMessage.CREATE_MANAGER,
       createManager
     );
-  }),
-};
+  })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // ******************************* End of Export *********************************** 
+
+}
+
+

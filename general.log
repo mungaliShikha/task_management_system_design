@@ -1,0 +1,277 @@
+Jan-20-2023 10:07:32 [info] success : Mongoose default connection 
+Jan-20-2023 10:07:32 [info] Default Admin. 
+Jan-20-2023 10:09:17 [info] success : Mongoose default connection 
+Jan-20-2023 10:09:17 [info] Default Admin. 
+Jan-20-2023 10:10:14 [info] http://localhost:5000/api/user/loginManager - POST METHOD  
+Jan-20-2023 10:10:14 [error] 500 - email is not defined 
+Jan-20-2023 10:10:36 [info] success : Mongoose default connection 
+Jan-20-2023 10:10:36 [info] Default Admin. 
+Jan-20-2023 10:10:42 [info] http://localhost:5000/api/user/loginManager - POST METHOD  
+Jan-20-2023 10:10:42 [error] 404 - Provided email is not registered. 
+Jan-20-2023 10:10:51 [info] http://localhost:5000/api/user/loginManager - POST METHOD  
+Jan-20-2023 10:11:01 [info] success : Mongoose default connection 
+Jan-20-2023 10:11:01 [info] Default Admin. 
+Jan-20-2023 10:11:45 [info] success : Mongoose default connection 
+Jan-20-2023 10:11:46 [info] Default Admin. 
+Jan-20-2023 10:11:49 [info] success : Mongoose default connection 
+Jan-20-2023 10:11:49 [info] Default Admin. 
+Jan-20-2023 10:14:25 [info] success : Mongoose default connection 
+Jan-20-2023 10:14:25 [info] Default Admin. 
+Jan-20-2023 10:14:46 [info] success : Mongoose default connection 
+Jan-20-2023 10:14:46 [info] Default Admin. 
+Jan-20-2023 10:14:54 [info] success : Mongoose default connection 
+Jan-20-2023 10:14:54 [info] Default Admin. 
+Jan-20-2023 10:14:55 [info] success : Mongoose default connection 
+Jan-20-2023 10:14:55 [info] Default Admin. 
+Jan-20-2023 10:14:59 [info] success : Mongoose default connection 
+Jan-20-2023 10:14:59 [info] Default Admin. 
+Jan-20-2023 10:15:03 [info] success : Mongoose default connection 
+Jan-20-2023 10:15:03 [info] Default Admin. 
+Jan-20-2023 10:15:09 [info] success : Mongoose default connection 
+Jan-20-2023 10:15:09 [info] Default Admin. 
+Jan-20-2023 10:15:28 [info] success : Mongoose default connection 
+Jan-20-2023 10:15:28 [info] Default Admin. 
+Jan-20-2023 10:15:39 [info] success : Mongoose default connection 
+Jan-20-2023 10:15:39 [info] Default Admin. 
+Jan-20-2023 10:15:52 [info] success : Mongoose default connection 
+Jan-20-2023 10:15:52 [info] Default Admin. 
+Jan-20-2023 10:16:23 [info] success : Mongoose default connection 
+Jan-20-2023 10:16:23 [info] Default Admin. 
+Jan-20-2023 10:16:41 [info] success : Mongoose default connection 
+Jan-20-2023 10:16:41 [info] Default Admin. 
+Jan-20-2023 10:16:42 [info] success : Mongoose default connection 
+Jan-20-2023 10:16:42 [info] Default Admin. 
+Jan-20-2023 10:16:49 [info] success : Mongoose default connection 
+Jan-20-2023 10:16:49 [info] Default Admin. 
+Jan-20-2023 10:16:59 [info] success : Mongoose default connection 
+Jan-20-2023 10:16:59 [info] Default Admin. 
+Jan-20-2023 10:20:54 [info] success : Mongoose default connection 
+Jan-20-2023 10:20:54 [info] Default Admin. 
+Jan-20-2023 10:21:12 [info] success : Mongoose default connection 
+Jan-20-2023 10:21:12 [info] Default Admin. 
+Jan-20-2023 10:21:24 [info] success : Mongoose default connection 
+Jan-20-2023 10:21:24 [info] Default Admin. 
+Jan-20-2023 10:21:30 [info] success : Mongoose default connection 
+Jan-20-2023 10:21:30 [info] Default Admin. 
+Jan-20-2023 10:21:32 [info] success : Mongoose default connection 
+Jan-20-2023 10:21:32 [info] Default Admin. 
+Jan-20-2023 10:21:37 [info] success : Mongoose default connection 
+Jan-20-2023 10:21:37 [info] Default Admin. 
+Jan-20-2023 10:21:42 [info] success : Mongoose default connection 
+Jan-20-2023 10:21:42 [info] Default Admin. 
+Jan-20-2023 10:21:52 [info] success : Mongoose default connection 
+Jan-20-2023 10:21:52 [info] Default Admin. 
+Jan-20-2023 10:21:54 [info] success : Mongoose default connection 
+Jan-20-2023 10:21:54 [info] Default Admin. 
+Jan-20-2023 10:23:02 [info] success : Mongoose default connection 
+Jan-20-2023 10:23:02 [info] Default Admin. 
+Jan-20-2023 10:23:24 [info] success : Mongoose default connection 
+Jan-20-2023 10:23:24 [info] Default Admin. 
+Jan-20-2023 10:23:28 [info] success : Mongoose default connection 
+Jan-20-2023 10:23:28 [info] Default Admin. 
+Jan-20-2023 10:23:48 [info] success : Mongoose default connection 
+Jan-20-2023 10:23:48 [info] Default Admin. 
+Jan-20-2023 10:24:04 [info] success : Mongoose default connection 
+Jan-20-2023 10:24:04 [info] Default Admin. 
+Jan-20-2023 10:24:08 [info] success : Mongoose default connection 
+Jan-20-2023 10:24:08 [info] Default Admin. 
+Jan-20-2023 10:24:10 [info] success : Mongoose default connection 
+Jan-20-2023 10:24:10 [info] Default Admin. 
+Jan-20-2023 10:24:15 [info] success : Mongoose default connection 
+Jan-20-2023 10:24:15 [info] Default Admin. 
+Jan-20-2023 10:24:46 [info] success : Mongoose default connection 
+Jan-20-2023 10:24:46 [info] Default Admin. 
+Jan-20-2023 10:24:52 [info] success : Mongoose default connection 
+Jan-20-2023 10:24:52 [info] Default Admin. 
+Jan-20-2023 10:26:10 [info] success : Mongoose default connection 
+Jan-20-2023 10:26:10 [info] Default Admin. 
+Jan-20-2023 10:26:15 [info] success : Mongoose default connection 
+Jan-20-2023 10:26:15 [info] Default Admin. 
+Jan-20-2023 10:26:17 [info] success : Mongoose default connection 
+Jan-20-2023 10:26:18 [info] Default Admin. 
+Jan-20-2023 10:26:23 [info] success : Mongoose default connection 
+Jan-20-2023 10:26:23 [info] Default Admin. 
+Jan-20-2023 10:26:26 [info] success : Mongoose default connection 
+Jan-20-2023 10:26:27 [info] success : Mongoose default connection 
+Jan-20-2023 10:26:27 [info] Default Admin. 
+Jan-20-2023 10:26:29 [info] success : Mongoose default connection 
+Jan-20-2023 10:26:29 [info] Default Admin. 
+Jan-20-2023 10:26:32 [info] success : Mongoose default connection 
+Jan-20-2023 10:26:32 [info] Default Admin. 
+Jan-20-2023 10:26:37 [info] success : Mongoose default connection 
+Jan-20-2023 10:26:37 [info] Default Admin. 
+Jan-20-2023 10:26:38 [info] success : Mongoose default connection 
+Jan-20-2023 10:26:38 [info] Default Admin. 
+Jan-20-2023 10:26:41 [info] success : Mongoose default connection 
+Jan-20-2023 10:26:41 [info] Default Admin. 
+Jan-20-2023 10:26:43 [info] success : Mongoose default connection 
+Jan-20-2023 10:26:43 [info] Default Admin. 
+Jan-20-2023 10:26:45 [info] success : Mongoose default connection 
+Jan-20-2023 10:26:45 [info] Default Admin. 
+Jan-20-2023 10:27:16 [info] success : Mongoose default connection 
+Jan-20-2023 10:27:16 [info] Default Admin. 
+Jan-20-2023 10:27:20 [info] success : Mongoose default connection 
+Jan-20-2023 10:27:20 [info] Default Admin. 
+Jan-20-2023 10:27:28 [info] success : Mongoose default connection 
+Jan-20-2023 10:27:28 [info] Default Admin. 
+Jan-20-2023 10:27:29 [info] success : Mongoose default connection 
+Jan-20-2023 10:27:29 [info] Default Admin. 
+Jan-20-2023 10:27:37 [info] success : Mongoose default connection 
+Jan-20-2023 10:27:37 [info] Default Admin. 
+Jan-20-2023 10:27:42 [info] success : Mongoose default connection 
+Jan-20-2023 10:27:42 [info] Default Admin. 
+Jan-20-2023 10:27:48 [info] success : Mongoose default connection 
+Jan-20-2023 10:27:48 [info] Default Admin. 
+Jan-20-2023 10:28:04 [info] success : Mongoose default connection 
+Jan-20-2023 10:28:05 [info] success : Mongoose default connection 
+Jan-20-2023 10:28:05 [info] Default Admin. 
+Jan-20-2023 10:28:10 [info] success : Mongoose default connection 
+Jan-20-2023 10:28:10 [info] Default Admin. 
+Jan-20-2023 10:28:15 [info] success : Mongoose default connection 
+Jan-20-2023 10:28:16 [info] success : Mongoose default connection 
+Jan-20-2023 10:28:16 [info] Default Admin. 
+Jan-20-2023 10:28:27 [info] success : Mongoose default connection 
+Jan-20-2023 10:28:27 [info] Default Admin. 
+Jan-20-2023 10:29:34 [info] success : Mongoose default connection 
+Jan-20-2023 10:29:35 [info] Default Admin. 
+Jan-20-2023 10:29:40 [info] success : Mongoose default connection 
+Jan-20-2023 10:29:40 [info] Default Admin. 
+Jan-20-2023 10:29:46 [info] success : Mongoose default connection 
+Jan-20-2023 10:29:46 [info] Default Admin. 
+Jan-20-2023 10:29:51 [info] success : Mongoose default connection 
+Jan-20-2023 10:29:51 [info] Default Admin. 
+Jan-20-2023 10:29:55 [info] success : Mongoose default connection 
+Jan-20-2023 10:29:55 [info] Default Admin. 
+Jan-20-2023 10:30:00 [info] success : Mongoose default connection 
+Jan-20-2023 10:30:00 [info] Default Admin. 
+Jan-20-2023 10:30:22 [info] success : Mongoose default connection 
+Jan-20-2023 10:30:23 [info] Default Admin. 
+Jan-20-2023 10:34:04 [info] success : Mongoose default connection 
+Jan-20-2023 10:34:04 [info] Default Admin. 
+Jan-20-2023 10:34:44 [info] success : Mongoose default connection 
+Jan-20-2023 10:34:44 [info] Default Admin. 
+Jan-20-2023 10:34:49 [info] success : Mongoose default connection 
+Jan-20-2023 10:34:49 [info] Default Admin. 
+Jan-20-2023 10:34:55 [info] success : Mongoose default connection 
+Jan-20-2023 10:34:55 [info] Default Admin. 
+Jan-20-2023 10:34:59 [info] success : Mongoose default connection 
+Jan-20-2023 10:34:59 [info] Default Admin. 
+Jan-20-2023 10:35:04 [info] success : Mongoose default connection 
+Jan-20-2023 10:35:04 [info] Default Admin. 
+Jan-20-2023 10:35:22 [info] success : Mongoose default connection 
+Jan-20-2023 10:35:22 [info] Default Admin. 
+Jan-20-2023 10:35:33 [info] success : Mongoose default connection 
+Jan-20-2023 10:35:33 [info] Default Admin. 
+Jan-20-2023 10:35:40 [info] success : Mongoose default connection 
+Jan-20-2023 10:35:40 [info] Default Admin. 
+Jan-20-2023 10:35:44 [info] success : Mongoose default connection 
+Jan-20-2023 10:35:44 [info] Default Admin. 
+Jan-20-2023 10:35:53 [info] success : Mongoose default connection 
+Jan-20-2023 10:35:54 [info] success : Mongoose default connection 
+Jan-20-2023 10:35:54 [info] Default Admin. 
+Jan-20-2023 10:36:20 [info] success : Mongoose default connection 
+Jan-20-2023 10:36:20 [info] Default Admin. 
+Jan-20-2023 10:36:23 [info] success : Mongoose default connection 
+Jan-20-2023 10:36:24 [info] Default Admin. 
+Jan-20-2023 10:36:54 [info] success : Mongoose default connection 
+Jan-20-2023 10:36:55 [info] Default Admin. 
+Jan-20-2023 10:36:57 [info] success : Mongoose default connection 
+Jan-20-2023 10:36:57 [info] Default Admin. 
+Jan-20-2023 10:37:33 [info] success : Mongoose default connection 
+Jan-20-2023 10:37:33 [info] Default Admin. 
+Jan-20-2023 10:38:01 [info] success : Mongoose default connection 
+Jan-20-2023 10:38:01 [info] Default Admin. 
+Jan-20-2023 10:39:12 [info] success : Mongoose default connection 
+Jan-20-2023 10:39:12 [info] Default Admin. 
+Jan-20-2023 10:39:36 [info] success : Mongoose default connection 
+Jan-20-2023 10:39:36 [info] Default Admin. 
+Jan-20-2023 10:39:49 [info] success : Mongoose default connection 
+Jan-20-2023 10:39:49 [info] Default Admin. 
+Jan-20-2023 10:40:19 [info] success : Mongoose default connection 
+Jan-20-2023 10:40:19 [info] Default Admin. 
+Jan-20-2023 10:40:22 [info] success : Mongoose default connection 
+Jan-20-2023 10:40:22 [info] Default Admin. 
+Jan-20-2023 10:41:57 [info] success : Mongoose default connection 
+Jan-20-2023 10:41:58 [info] Default Admin. 
+Jan-20-2023 10:42:02 [info] success : Mongoose default connection 
+Jan-20-2023 10:42:03 [info] Default Admin. 
+Jan-20-2023 10:42:47 [info] success : Mongoose default connection 
+Jan-20-2023 10:42:47 [info] Default Admin. 
+Jan-20-2023 10:44:14 [info] success : Mongoose default connection 
+Jan-20-2023 10:44:14 [info] Default Admin. 
+Jan-20-2023 10:44:59 [info] success : Mongoose default connection 
+Jan-20-2023 10:44:59 [info] Default Admin. 
+Jan-20-2023 10:45:01 [info] success : Mongoose default connection 
+Jan-20-2023 10:45:01 [info] Default Admin. 
+Jan-20-2023 10:45:03 [info] success : Mongoose default connection 
+Jan-20-2023 10:45:03 [info] Default Admin. 
+Jan-20-2023 10:45:50 [info] success : Mongoose default connection 
+Jan-20-2023 10:45:50 [info] Default Admin. 
+Jan-20-2023 10:46:29 [info] success : Mongoose default connection 
+Jan-20-2023 10:46:29 [info] Default Admin. 
+Jan-20-2023 10:47:08 [info] success : Mongoose default connection 
+Jan-20-2023 10:47:08 [info] Default Admin. 
+Jan-20-2023 10:47:14 [info] success : Mongoose default connection 
+Jan-20-2023 10:47:14 [info] Default Admin. 
+Jan-20-2023 10:48:30 [info] success : Mongoose default connection 
+Jan-20-2023 10:48:30 [info] Default Admin. 
+Jan-20-2023 10:48:41 [info] success : Mongoose default connection 
+Jan-20-2023 10:48:41 [info] Default Admin. 
+Jan-20-2023 10:48:46 [info] success : Mongoose default connection 
+Jan-20-2023 10:48:46 [info] Default Admin. 
+Jan-20-2023 10:48:50 [info] success : Mongoose default connection 
+Jan-20-2023 10:48:50 [info] Default Admin. 
+Jan-20-2023 10:48:56 [info] success : Mongoose default connection 
+Jan-20-2023 10:48:56 [info] Default Admin. 
+Jan-20-2023 10:48:59 [info] success : Mongoose default connection 
+Jan-20-2023 10:48:59 [info] Default Admin. 
+Jan-20-2023 10:49:02 [info] success : Mongoose default connection 
+Jan-20-2023 10:49:02 [info] Default Admin. 
+Jan-20-2023 10:49:04 [info] success : Mongoose default connection 
+Jan-20-2023 10:49:04 [info] Default Admin. 
+Jan-20-2023 10:49:09 [info] success : Mongoose default connection 
+Jan-20-2023 10:49:09 [info] Default Admin. 
+Jan-20-2023 10:49:12 [info] success : Mongoose default connection 
+Jan-20-2023 10:49:12 [info] Default Admin. 
+Jan-20-2023 10:49:15 [info] success : Mongoose default connection 
+Jan-20-2023 10:49:15 [info] Default Admin. 
+Jan-20-2023 10:49:19 [info] success : Mongoose default connection 
+Jan-20-2023 10:49:20 [info] Default Admin. 
+Jan-20-2023 10:51:04 [info] success : Mongoose default connection 
+Jan-20-2023 10:51:04 [info] Default Admin. 
+Jan-20-2023 10:51:06 [info] success : Mongoose default connection 
+Jan-20-2023 10:51:07 [info] Default Admin. 
+Jan-20-2023 10:51:11 [info] success : Mongoose default connection 
+Jan-20-2023 10:51:11 [info] Default Admin. 
+Jan-20-2023 10:51:13 [info] success : Mongoose default connection 
+Jan-20-2023 10:51:13 [info] Default Admin. 
+Jan-20-2023 10:51:15 [info] success : Mongoose default connection 
+Jan-20-2023 10:51:15 [info] Default Admin. 
+Jan-20-2023 10:51:21 [info] success : Mongoose default connection 
+Jan-20-2023 10:51:21 [info] Default Admin. 
+Jan-20-2023 10:51:49 [info] success : Mongoose default connection 
+Jan-20-2023 10:51:49 [info] Default Admin. 
+Jan-20-2023 10:52:20 [info] success : Mongoose default connection 
+Jan-20-2023 10:52:20 [info] Default Admin. 
+Jan-20-2023 10:52:45 [info] success : Mongoose default connection 
+Jan-20-2023 10:52:45 [info] Default Admin. 
+Jan-20-2023 11:12:40 [info] disconnected : Mongoose default connection is disconnected 
+Jan-20-2023 11:12:40 [info] warning 
+Jan-20-2023 11:12:40 [info] warning 
+Jan-20-2023 11:12:40 [info] warning 
+Jan-20-2023 11:12:40 [info] warning 
+Jan-20-2023 13:08:19 [info] success : Mongoose default connection 
+Jan-20-2023 13:08:19 [info] Default Admin. 
+Jan-20-2023 15:18:35 [info] success : Mongoose default connection 
+Jan-20-2023 15:18:35 [info] Default Admin. 
+Jan-20-2023 15:22:49 [info] success : Mongoose default connection 
+Jan-20-2023 15:22:49 [info] Default Admin. 
+Jan-20-2023 15:24:03 [info] success : Mongoose default connection 
+Jan-20-2023 15:24:03 [info] Default Admin. 
+Jan-20-2023 15:50:46 [info] disconnected : Mongoose default connection is disconnected 
+Jan-20-2023 15:50:46 [info] warning 
+Jan-20-2023 15:50:46 [info] warning 
+Jan-20-2023 15:50:46 [info] warning 
+Jan-20-2023 15:50:49 [info] warning 
+Jan-20-2023 15:51:05 [info] success : Mongoose default connection 
+Jan-20-2023 15:51:05 [info] Default Admin. 

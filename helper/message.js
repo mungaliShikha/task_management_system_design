@@ -43,6 +43,8 @@ module.exports.ErrorMessage = Object.freeze({
   USER_ALREADY_EXIST: "This address already added as user",
   ADMIN_ALREADY_EXIST: "This address already added as Admin",
   DATA_NOT_FOUND: "Data not found",
+  EMAIL_ALREADY_EXIST:"Email Already Exist.",
+  MOBILE_ALREADY_EXIST:"Mobile Number Already Exist",
 });
 
 module.exports.SuccessMessage = Object.freeze({
@@ -81,4 +83,5 @@ module.exports.SuccessMessage = Object.freeze({
   TASK_ADD: "Task added Successfully.",
   DEVELOPER_ASSIGNED: "Developer Assigned on task Successfully.",
   TASK_UPDATE:"Task Updated Successfully."
+ 
 });
