@@ -1,3 +1,4 @@
+const Token = require("../models/token.model")
 const catchAsync = require("../helper/catchAsync");
 const crypto = require("crypto");
 const appError = require("../helper/errorHandlers/errorHandler");
@@ -59,7 +60,7 @@ module.exports = {
         ErrorCode.NOT_FOUND
       );
     }
-    var tokenFound = await getOneToken({ userId: user._id });
+    var tokenFound = await Token.findOne({ userId: user._id });
     if (!tokenFound) {
       tokenFound = await new Token({
         userId: user._id,

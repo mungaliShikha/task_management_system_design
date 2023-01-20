@@ -1,0 +1,5 @@
+Jan-20-2023 10:11:00 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-20-2023 12:11:23 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-20-2023 12:17:26 [info] http://localhost:5000/api/admin/forgetPassword - POST METHOD  
+Jan-20-2023 12:17:26 [error] 500 - Token is not defined 
+Jan-20-2023 12:18:46 [info] http://localhost:5000/api/admin/forgetPassword - POST METHOD  
