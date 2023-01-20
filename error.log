@@ -134,3 +134,5 @@ Jan-20-2023 16:57:01 [error] 404 - mobile is required
 Jan-20-2023 16:57:52 [error] 404 - email must be a valid email 
 Jan-20-2023 16:59:17 [error] 404 - "email" must be a valid email 
 Jan-20-2023 16:59:33 [error] 404 - email must be a valid email 
+Jan-20-2023 17:05:48 [error] 404 - email must be a valid email 
+Jan-20-2023 17:06:42 [error] 404 - first_name must be a string 
