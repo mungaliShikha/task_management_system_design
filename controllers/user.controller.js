@@ -132,6 +132,7 @@ module.exports = {
       mobile_number: joi.string().optional(),
       email: joi.string().required()
     };
+    
     try {
       const payload = await joi.validate(req.body, validationSchema);
       const userAuth = await getOneUser({ _id: req.userId, role: enums.declaredEnum.role.MANAGER });
