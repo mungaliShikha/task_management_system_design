@@ -554,26 +554,274 @@ Jan-18-2023 17:50:24 [info] success : Mongoose default connection
 Jan-18-2023 17:50:24 [info] Default Admin. 
 Jan-18-2023 17:50:46 [info] success : Mongoose default connection 
 Jan-18-2023 17:50:46 [info] Default Admin. 
-Jan-19-2023 12:22:36 [info] success : Mongoose default connection 
-Jan-19-2023 12:22:36 [info] Default Admin. 
-Jan-19-2023 12:30:58 [info] http://localhost:5000/api/user/addDeveloper - POST METHOD  
-Jan-19-2023 12:30:58 [error] 401 - Please provide token. 
-Jan-19-2023 12:59:56 [info] http://localhost:5000/api/admin/login - GET METHOD  
-Jan-19-2023 12:59:56 [error] 404 - Requested URL http://localhost:5000/api/admin/login not found! 
-Jan-19-2023 13:01:35 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-19-2023 13:01:35 [error] 500 - compareHash is not a function 
-Jan-19-2023 14:02:44 [info] http://localhost:5000/api/task/addDeveloperToTask - POST METHOD  
-Jan-19-2023 14:02:44 [error] 404 - Requested URL http://localhost:5000/api/task/addDeveloperToTask not found! 
-Jan-19-2023 14:06:25 [info] http://localhost:5000/api/task/addDeveloperToTask - PUT METHOD  
-Jan-19-2023 14:06:25 [error] 401 - Please provide token. 
-Jan-19-2023 14:11:57 [info] http://localhost:5000/api/user/loginManager - POST METHOD  
-Jan-19-2023 14:11:57 [error] 404 - Provided email is not registered. 
-Jan-19-2023 15:19:07 [info] disconnected : Mongoose default connection is disconnected 
-Jan-19-2023 15:19:07 [info] warning 
-Jan-19-2023 15:19:08 [info] warning 
-Jan-19-2023 15:27:35 [info] success : Mongoose default connection 
-Jan-19-2023 15:27:35 [info] Default Admin. 
-Jan-19-2023 15:27:54 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-19-2023 15:27:54 [error] 500 - compareHash is not a function 
-Jan-19-2023 15:53:44 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-19-2023 15:53:44 [error] 500 - compareHash is not a function 
+Jan-19-2023 14:58:13 [info] success : Mongoose default connection 
+Jan-19-2023 14:58:17 [info] success : Mongoose default connection 
+Jan-19-2023 14:58:17 [info] Default Admin. 
+Jan-19-2023 14:58:22 [info] http://localhost:5000/api/user/loginManager - POST METHOD  
+Jan-19-2023 15:01:01 [info] http://localhost:5000/api/task/updateTask - PUT METHOD  
+Jan-19-2023 15:05:46 [info] http://localhost:5000/api/task/removeDeveloperFromTask - DELETE METHOD  
+Jan-19-2023 15:05:46 [error] 404 - This user does not exist. 
+Jan-19-2023 15:06:19 [info] http://localhost:5000/api/task/removeDeveloperFromTask - DELETE METHOD  
+Jan-19-2023 15:07:41 [error] 404 - This user does not exist. 
+Jan-19-2023 15:07:41 [info] disconnected : Mongoose default connection is disconnected 
+Jan-19-2023 15:07:41 [info] http://localhost:5000/api/task/removeDeveloperFromTask - DELETE METHOD  
+Jan-19-2023 15:07:41 [info] success : Mongoose default connection 
+Jan-19-2023 15:12:32 [info] success : Mongoose default connection 
+Jan-19-2023 15:12:32 [info] Default Admin. 
+Jan-19-2023 15:12:47 [info] success : Mongoose default connection 
+Jan-19-2023 15:12:47 [info] Default Admin. 
+Jan-19-2023 15:12:54 [info] success : Mongoose default connection 
+Jan-19-2023 15:12:54 [info] Default Admin. 
+Jan-19-2023 15:14:00 [info] success : Mongoose default connection 
+Jan-19-2023 15:14:00 [info] Default Admin. 
+Jan-19-2023 15:14:07 [info] success : Mongoose default connection 
+Jan-19-2023 15:14:07 [info] Default Admin. 
+Jan-19-2023 15:14:13 [info] http://localhost:5000/api/task/removeDeveloperFromTask - DELETE METHOD  
+Jan-19-2023 15:14:20 [error] 422 - Entered data should be an array 
+Jan-19-2023 15:14:32 [info] http://localhost:5000/api/task/removeDeveloperFromTask - DELETE METHOD  
+Jan-19-2023 15:16:05 [info] http://localhost:5000/api/task/removeDeveloperFromTask - DELETE METHOD  
+Jan-19-2023 15:16:28 [info] success : Mongoose default connection 
+Jan-19-2023 15:16:28 [info] Default Admin. 
+Jan-19-2023 15:17:14 [info] success : Mongoose default connection 
+Jan-19-2023 15:17:14 [info] Default Admin. 
+Jan-19-2023 15:18:10 [info] http://localhost:5000/api/task/updateTask - PUT METHOD  
+Jan-19-2023 15:18:18 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-19-2023 15:19:27 [info] disconnected : Mongoose default connection is disconnected 
+Jan-19-2023 15:19:27 [info] warning 
+Jan-19-2023 15:26:37 [info] success : Mongoose default connection 
+Jan-19-2023 15:26:37 [info] Default Admin. 
+Jan-19-2023 15:26:39 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 15:26:39 [error] 404 - This user does not exist. 
+Jan-19-2023 15:27:48 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 15:27:48 [error] 404 - This user does not exist. 
+Jan-19-2023 15:27:50 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 15:27:50 [error] 404 - This user does not exist. 
+Jan-19-2023 15:28:27 [info] success : Mongoose default connection 
+Jan-19-2023 15:28:27 [info] Default Admin. 
+Jan-19-2023 15:28:33 [info] success : Mongoose default connection 
+Jan-19-2023 15:28:33 [info] Default Admin. 
+Jan-19-2023 15:29:12 [info] success : Mongoose default connection 
+Jan-19-2023 15:29:12 [info] Default Admin. 
+Jan-19-2023 15:29:25 [info] success : Mongoose default connection 
+Jan-19-2023 15:29:25 [info] Default Admin. 
+Jan-19-2023 15:29:29 [info] success : Mongoose default connection 
+Jan-19-2023 15:29:29 [info] Default Admin. 
+Jan-19-2023 15:29:35 [info] success : Mongoose default connection 
+Jan-19-2023 15:29:35 [info] Default Admin. 
+Jan-19-2023 15:29:59 [info] success : Mongoose default connection 
+Jan-19-2023 15:29:59 [info] Default Admin. 
+Jan-19-2023 15:30:03 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 15:30:03 [error] 404 - Only develper can change the status of the task 
+Jan-19-2023 15:30:25 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
+Jan-19-2023 15:30:46 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 15:30:46 [error] 404 - Data not found 
+Jan-19-2023 15:31:35 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 15:33:29 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 15:34:00 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 15:39:12 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 15:39:13 [error] 404 - Data not found 
+Jan-19-2023 15:39:15 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 15:39:15 [error] 404 - Data not found 
+Jan-19-2023 15:41:21 [info] http://localhost:5000/api/task/addDeveloperToTask - PUT METHOD  
+Jan-19-2023 15:41:58 [info] http://localhost:5000/api/task/addDeveloperToTask - PUT METHOD  
+Jan-19-2023 15:42:05 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 15:43:09 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 15:44:42 [info] success : Mongoose default connection 
+Jan-19-2023 15:44:42 [info] Default Admin. 
+Jan-19-2023 15:45:08 [info] success : Mongoose default connection 
+Jan-19-2023 15:45:08 [info] Default Admin. 
+Jan-19-2023 15:45:14 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 15:45:14 [error] 500 - Cannot create property 'updatedAt' on string 'completed' 
+Jan-19-2023 15:48:55 [info] success : Mongoose default connection 
+Jan-19-2023 15:48:55 [info] Default Admin. 
+Jan-19-2023 15:49:01 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 15:49:01 [error] 500 - Cannot create property 'updatedAt' on string 'completed' 
+Jan-19-2023 15:49:15 [info] success : Mongoose default connection 
+Jan-19-2023 15:49:15 [info] Default Admin. 
+Jan-19-2023 15:49:29 [info] success : Mongoose default connection 
+Jan-19-2023 15:49:29 [info] Default Admin. 
+Jan-19-2023 15:49:37 [info] success : Mongoose default connection 
+Jan-19-2023 15:49:37 [info] Default Admin. 
+Jan-19-2023 15:49:49 [info] success : Mongoose default connection 
+Jan-19-2023 15:49:49 [info] Default Admin. 
+Jan-19-2023 15:49:50 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 15:49:50 [error] 500 - Cannot create property 'updatedAt' on string 'completed' 
+Jan-19-2023 15:50:32 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 15:51:36 [info] success : Mongoose default connection 
+Jan-19-2023 15:51:36 [info] Default Admin. 
+Jan-19-2023 15:53:33 [info] success : Mongoose default connection 
+Jan-19-2023 15:53:33 [info] Default Admin. 
+Jan-19-2023 15:53:45 [info] success : Mongoose default connection 
+Jan-19-2023 15:53:45 [info] Default Admin. 
+Jan-19-2023 15:54:17 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-19-2023 15:54:32 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 15:54:48 [error] 500 - Cannot create property 'updatedAt' on string 'completed' 
+Jan-19-2023 16:04:28 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 16:07:03 [info] success : Mongoose default connection 
+Jan-19-2023 16:07:03 [info] Default Admin. 
+Jan-19-2023 16:09:02 [info] success : Mongoose default connection 
+Jan-19-2023 16:09:02 [info] Default Admin. 
+Jan-19-2023 16:09:06 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-19-2023 17:41:58 [info] success : Mongoose default connection 
+Jan-19-2023 17:41:58 [info] Default Admin. 
+Jan-19-2023 17:42:14 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-19-2023 17:42:14 [error] 500 - compareHash is not a function 
+Jan-19-2023 17:42:20 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-19-2023 17:42:20 [error] 500 - compareHash is not a function 
+Jan-19-2023 17:45:05 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-19-2023 17:45:05 [error] 500 - compareHash is not a function 
+Jan-19-2023 17:45:07 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-19-2023 17:45:07 [error] 500 - compareHash is not a function 
+Jan-19-2023 17:45:07 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-19-2023 17:45:07 [error] 500 - compareHash is not a function 
+Jan-19-2023 17:45:14 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-19-2023 17:45:14 [error] 500 - compareHash is not a function 
+Jan-19-2023 17:50:21 [info] http://localhost:5000/api/user/addManager - GET METHOD  
+Jan-19-2023 17:50:21 [error] 404 - Requested URL http://localhost:5000/api/user/addManager not found! 
+Jan-19-2023 17:50:27 [info] http://localhost:5000/api/user/addManager - POST METHOD  
+Jan-19-2023 17:50:27 [error] 404 - Requested URL http://localhost:5000/api/user/addManager not found! 
+Jan-19-2023 17:50:50 [info] http://localhost:5000/api/admin/addManager - POST METHOD  
+Jan-19-2023 17:50:50 [error] 500 - randomPassword is not a function 
+Jan-19-2023 17:57:53 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-19-2023 17:57:53 [error] 500 - compareHash is not a function 
+Jan-19-2023 17:59:12 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-19-2023 17:59:12 [error] 500 - compareHash is not a function 
+Jan-19-2023 17:59:53 [info] disconnected : Mongoose default connection is disconnected 
+Jan-19-2023 17:59:53 [info] warning 
+Jan-19-2023 18:02:04 [info] success : Mongoose default connection 
+Jan-19-2023 18:02:04 [info] Default Admin. 
+Jan-19-2023 18:02:18 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-19-2023 18:02:18 [error] 500 - compareHash is not a function 
+Jan-19-2023 18:04:18 [info] disconnected : Mongoose default connection is disconnected 
+Jan-19-2023 18:04:18 [info] warning 
+Jan-19-2023 18:06:00 [info] success : Mongoose default connection 
+Jan-19-2023 18:06:00 [info] Default Admin. 
+Jan-19-2023 18:06:13 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-19-2023 18:06:13 [error] 500 - compareHash is not a function 
+Jan-19-2023 18:06:21 [info] warning 
+Jan-19-2023 18:06:21 [info] disconnected : Mongoose default connection is disconnected 
+Jan-19-2023 18:06:21 [info] warning 
+Jan-19-2023 18:06:57 [info] success : Mongoose default connection 
+Jan-19-2023 18:06:57 [info] Default Admin. 
+Jan-19-2023 18:07:06 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-19-2023 18:07:06 [error] 500 - compareHash is not a function 
+Jan-19-2023 18:10:24 [info] disconnected : Mongoose default connection is disconnected 
+Jan-19-2023 18:10:24 [info] warning 
+Jan-19-2023 18:10:45 [info] success : Mongoose default connection 
+Jan-19-2023 18:10:45 [info] Default Admin. 
+Jan-19-2023 18:10:51 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-19-2023 18:11:47 [info] warning 
+Jan-19-2023 18:11:47 [info] disconnected : Mongoose default connection is disconnected 
+Jan-19-2023 18:11:47 [info] warning 
+Jan-19-2023 18:21:54 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-19-2023 18:22:04 [error] 500 - Operation `users.findOne()` buffering timed out after 10000ms 
+Jan-19-2023 18:22:04 [info] warning 
+Jan-19-2023 18:22:04 [info] warning 
+Jan-19-2023 18:26:57 [info] warning 
+Jan-19-2023 18:26:57 [info] warning 
+Jan-19-2023 18:26:57 [info] warning 
+Jan-19-2023 18:26:57 [info] warning 
+Jan-19-2023 18:30:43 [info] warning 
+Jan-19-2023 18:30:43 [info] warning 
+Jan-19-2023 18:30:43 [info] warning 
+Jan-19-2023 18:30:43 [info] warning 
+Jan-19-2023 18:31:32 [info] warning 
+Jan-19-2023 18:31:32 [info] warning 
+Jan-19-2023 18:31:32 [info] warning 
+Jan-19-2023 18:31:32 [info] warning 
+Jan-19-2023 18:31:47 [info] warning 
+Jan-19-2023 18:31:47 [info] warning 
+Jan-19-2023 18:31:47 [info] warning 
+Jan-19-2023 18:31:47 [info] warning 
+Jan-19-2023 18:33:29 [info] warning 
+Jan-19-2023 18:33:29 [info] warning 
+Jan-19-2023 18:33:30 [info] warning 
+Jan-19-2023 18:33:30 [info] warning 
+Jan-19-2023 18:34:22 [info] success : Mongoose default connection 
+Jan-19-2023 18:34:22 [info] Default Admin. 
+Jan-19-2023 18:34:36 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-19-2023 18:34:36 [error] 500 - error is not defined 
+Jan-19-2023 18:38:29 [info] warning 
+Jan-19-2023 18:38:29 [info] warning 
+Jan-19-2023 18:38:29 [info] disconnected : Mongoose default connection is disconnected 
+Jan-19-2023 18:38:29 [info] warning 
+Jan-19-2023 18:38:29 [info] warning 
+Jan-19-2023 18:38:29 [info] warning 
+Jan-19-2023 18:38:29 [info] warning 
+Jan-19-2023 18:38:55 [info] success : Mongoose default connection 
+Jan-19-2023 18:38:55 [info] Default Admin. 
+Jan-19-2023 18:39:06 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-19-2023 18:39:06 [error] 500 - error is not defined 
+Jan-19-2023 18:39:08 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-19-2023 18:39:08 [error] 500 - error is not defined 
+Jan-19-2023 18:39:09 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-19-2023 18:39:09 [error] 500 - error is not defined 
+Jan-19-2023 18:39:09 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-19-2023 18:39:09 [error] 500 - error is not defined 
+Jan-19-2023 18:42:49 [info] warning 
+Jan-19-2023 18:42:49 [info] warning 
+Jan-19-2023 18:42:49 [info] warning 
+Jan-19-2023 18:42:49 [info] disconnected : Mongoose default connection is disconnected 
+Jan-19-2023 18:42:49 [info] warning 
+Jan-19-2023 18:42:49 [info] warning 
+Jan-19-2023 18:42:49 [info] warning 
+Jan-19-2023 18:42:49 [info] warning 
+Jan-19-2023 18:42:49 [info] warning 
+Jan-19-2023 18:43:48 [info] warning 
+Jan-19-2023 18:43:48 [info] warning 
+Jan-19-2023 18:43:48 [info] warning 
+Jan-19-2023 18:43:48 [info] warning 
+Jan-19-2023 18:43:48 [info] warning 
+Jan-19-2023 18:43:48 [info] warning 
+Jan-19-2023 18:43:48 [info] warning 
+Jan-19-2023 18:43:48 [info] warning 
+Jan-19-2023 22:55:23 [info] success : Mongoose default connection 
+Jan-19-2023 22:55:23 [info] Default Admin. 
+Jan-19-2023 22:56:16 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-19-2023 22:56:16 [error] 500 - error is not defined 
+Jan-19-2023 22:56:49 [info] disconnected : Mongoose default connection is disconnected 
+Jan-19-2023 22:56:49 [info] warning 
+Jan-19-2023 22:57:43 [info] "DEFAULT ADMIN ERROR", MongooseError: Operation `users.find()` buffering timed out after 10000ms 
+Jan-19-2023 22:57:44 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-19-2023 22:57:44 [error] 500 - error is not defined 
+Jan-19-2023 22:57:53 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-19-2023 22:57:53 [error] 500 - error is not defined 
+Jan-19-2023 22:58:14 [info] success : Mongoose default connection 
+Jan-19-2023 23:58:40 [info] disconnected : Mongoose default connection is disconnected 
+Jan-20-2023 00:08:54 [info] success : Mongoose default connection 
+Jan-20-2023 10:21:48 [info] success : Mongoose default connection 
+Jan-20-2023 10:21:48 [info] Default Admin. 
+Jan-20-2023 10:22:09 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-20-2023 10:22:09 [error] 500 - ErrorMessage is not defined 
+Jan-20-2023 10:23:48 [info] success : Mongoose default connection 
+Jan-20-2023 10:23:48 [info] Default Admin. 
+Jan-20-2023 10:23:56 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-20-2023 10:23:56 [error] 500 - ErrorMessage is not defined 
+Jan-20-2023 10:24:25 [info] success : Mongoose default connection 
+Jan-20-2023 10:24:25 [info] Default Admin. 
+Jan-20-2023 10:25:15 [info] success : Mongoose default connection 
+Jan-20-2023 10:25:15 [info] Default Admin. 
+Jan-20-2023 10:25:23 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-20-2023 10:25:23 [error] 404 - Provided email is not registered. 
+Jan-20-2023 10:28:16 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-20-2023 10:28:16 [error] 404 - Provided email is not registered. 
+Jan-20-2023 10:32:03 [info] success : Mongoose default connection 
+Jan-20-2023 10:32:03 [info] Default Admin. 
+Jan-20-2023 10:32:06 [info] success : Mongoose default connection 
+Jan-20-2023 10:32:06 [info] Default Admin. 
+Jan-20-2023 10:32:17 [info] http://localhost:5000/api/admin/login - POST METHOD  
+Jan-20-2023 10:32:17 [error] 404 - Format is not correct 
+Jan-20-2023 10:33:10 [info] success : Mongoose default connection 
+Jan-20-2023 10:33:10 [info] Default Admin. 
+Jan-20-2023 10:36:13 [info] success : Mongoose default connection 
+Jan-20-2023 10:36:13 [info] Default Admin. 
+Jan-20-2023 10:40:14 [info] success : Mongoose default connection 
+Jan-20-2023 10:40:14 [info] Default Admin. 
+Jan-20-2023 10:45:28 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 10:49:00 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 10:53:34 [info] success : Mongoose default connection 
+Jan-20-2023 10:53:34 [info] Default Admin. 
+Jan-20-2023 10:53:46 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 10:53:46 [error] 404 - Format is not correct 
+Jan-20-2023 11:13:23 [info] success : Mongoose default connection 
+Jan-20-2023 11:13:23 [info] Default Admin. 

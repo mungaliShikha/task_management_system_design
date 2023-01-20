@@ -3,29 +3,27 @@ const crypto = require("crypto");
 const appError = require("../helper/errorHandlers/errorHandler");
 const { ErrorMessage, SuccessMessage } = require("../helper/message");
 const { ErrorCode, SuccessCode } = require("../helper/statusCode");
-const {
-  compareHash,
-  generateToken,
-  generatePassword,
-  randomPassword,
-  generateHash,
-} = require("../helper/commonFunction");
+
+
+// const commonFun=require('../helper/commonFunction')
 const helper = require("../helper/commonResponseHandler");
 const {
   sendMail,
-  sendMailNotify,
+  sendMailNotify, 
 } = require("../utils/nodeMailer/nodemailer");
 const enums = require("../helper/enum/enums");
 
 const {
   getOneUser ,getAllUser,getUserById, getUserAndUpdate, getOneToken, createUser
-} = require("../services/user.service")
+} = require("../services/user.service");
+const { compareHash, generateToken } = require("../helper/commonFunction");
 
 
 
 module.exports = {
   /// **********************************   admin login ************************************************
   login: catchAsync(async (req, res) => {
+    console.log("266");
     const { email, password } = req.body;
     const loggedInUser = await getOneUser({ email });
     if (!loggedInUser || !compareHash(password, loggedInUser.password)) {

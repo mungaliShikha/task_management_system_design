@@ -19,5 +19,7 @@ router.post(
 );
 router.get("/viewProject/:projectId",auth.verifyToken, projectController.viewProject);
 router.get("/listProject",auth.verifyToken, projectController.listProject);
+router.delete('/removeManagerFromProject/:projectId',auth.verifyToken,projectController.removeManagerFromProject)
+router.put("/updateProject/:projectId",auth.verifyToken,projectController.updateProject)
 
 module.exports = router;

@@ -1,7 +1,10 @@
 module.exports.ErrorMessage = Object.freeze({
+  DATA_AUTHORIZTAION:"Only develper can change the status of the task",
+  DATA_SHOULD_BE_ARRAY:"Entered data should be an array",
   CANNOT_ACCESS_DATA: "The requested user cannot access the data",
   PROJECT_NOT_EXIST: "Project not found",
   TASK_DELETED:"Task deleted",
+  PROJECT_STATUS:"Project is already completed",
   PROJECT_DELETED: "Project deleted",
   MANAGER_NOT_EXIST: "Manager does not exist",
   NOT_AUTHORISED: "Only admin can create the manager",
@@ -40,6 +43,7 @@ module.exports.ErrorMessage = Object.freeze({
   USER_ALREADY_EXIST: "This address already added as user",
   ADMIN_ALREADY_EXIST: "This address already added as Admin",
   DATA_NOT_FOUND: "Data not found",
+  WRONG_FORMAT:"Format is not correct"
 });
 
 module.exports.SuccessMessage = Object.freeze({
@@ -67,9 +71,6 @@ module.exports.SuccessMessage = Object.freeze({
   INVITATION_SUCCESS: "Invitaion sent",
   SESSION_DETAILS: "Session Join user list",
   REMOVE_SUCCESS: "Remove Successfully",
-  SESSION_SONG_ADD: "Song added in session",
-  SESSION_SONG_REMOVE: "Song removed from session",
-  SONGS_LIST: "Songs list founds",
   LIST_EMPTY: "Empty List ",
   PLAYLIST_ADD: "Playlist has been added successfully.",
   SESSION_END: "Session ended without adding playlist.",
@@ -80,5 +81,6 @@ module.exports.SuccessMessage = Object.freeze({
   CREATE_DEVELOPER: "Developer created successfully.",
   TASK_ADD: "Task added Successfully.",
   DEVELOPER_ASSIGNED: "Developer Assigned on task Successfully.",
-  DEVELOPER_REMOVED:"developer removed from task successfully"
+  DEVELOPER_REMOVED:"developer removed from task successfully",
+  TASK_UPDATE:"Task Updated Successfully."
 });

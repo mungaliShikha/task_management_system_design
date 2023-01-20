@@ -12,16 +12,20 @@ const getTaskById = async (id) => {
   return Task.findById(id);
 };
 
-const getTaskByIdAndUpdate = async (id, update, getData) => {
-  return Task.findByIdAndUpdate(id, update, getData);
+const getTaskByIdAndUpdate = async (id, update,data) => {
+  return Task.findByIdAndUpdate(id, update,data);
 };
 const createTask = async (body) => {
-    return Task.create(body);
-  };
+  return Task.create(body);
+};
 
-  const countTask = async () => {
-    return Task.countDocuments();
-  };
+const countTask = async () => {
+  return Task.countDocuments();
+};
+
+const getTaskByIdAndDelete = async (id, update) => {
+  return Task.findByIdAndDelete(id, update, { new: true })
+}
 
 
 
@@ -31,5 +35,6 @@ module.exports = {
   getTaskById,
   getTaskByIdAndUpdate,
   createTask,
-  countTask
+  countTask,
+  getTaskByIdAndDelete
 };

@@ -12,8 +12,8 @@ const getProjectById = async (id) => {
   return Project.findById(id);
 };
 
-const getProjectByIdAndUpdate = async (id, update, getData) => {
-  return Project.findByIdAndUpdate(id, update, getData);
+const getProjectByIdAndUpdate = async (id, update) => {
+  return Project.findByIdAndUpdate(id, update, {new:true});
 };
 
 const createProject = async (data) => {

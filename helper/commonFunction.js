@@ -86,7 +86,7 @@ module.exports.generateEmployeeId = (role) => {
   }
 };
 
-const subjects = {
+module.exports.subjects = {
   "DEVELOPER" : " DEVELOPER INVITATION",
   "MANAGER" : " MANAGER INVITATION"
 }
@@ -102,4 +102,3 @@ module.exports.messages=(email,passGen)=>{
   if(MANAGER) `Hello <br> You are invited as a Developer on Task management system Design platform,<br> Here is your Login Crediantial <br> Email: ${email} <br> Password: ${passGen} <br> Kindly Use this Crediantial for further login`
 }
 
-module.exports=subjects;

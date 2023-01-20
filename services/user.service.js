@@ -1,5 +1,5 @@
 const User = require("../models/user.model");
-const Token = require("../models/token.model")
+const Token = require("../models/token.model");
 
 const getOneUser = async (params) => {
   return User.findOne(params);
@@ -12,16 +12,16 @@ const getUserById = async (id) => {
   return User.findById(id);
 };
 
-const getUserAndUpdate = async (id, update, getData) => {
-  return User.findByIdAndUpdate(id, update, getData);
+const getUserAndUpdate = async (id, update) => {
+  return User.findByIdAndUpdate(id, update, {new:true});
 };
 const getOneToken = async (params) => {
-    return Token.findOne(params);
-  };
+  return Token.findOne(params);
+};
 
-  const createUser =async (data) => {
-    return User.create(data);
-  };
+const createUser = async (data) => {
+  return User.create(data);
+};
 
 module.exports = {
   getOneUser,
@@ -29,6 +29,6 @@ module.exports = {
   getUserById,
   getUserAndUpdate,
   getOneToken,
-  createUser
+  createUser,
 };
 

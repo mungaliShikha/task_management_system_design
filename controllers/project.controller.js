@@ -43,7 +43,7 @@ module.exports = {
     } = req.body;
     const managerAuthCheck = await getOneUser({
       _id: req.userId,
-      role:enums.declaredEnum.role.MANAGER,
+      role: enums.declaredEnum.role.MANAGER,
     });
     if (!managerAuthCheck) {
       throw new appError(ErrorMessage.MANAGER_NOT_EXIST, ErrorCode.NOT_FOUND);
@@ -87,8 +87,8 @@ module.exports = {
     }
 
     const projectAuthCheck = await getProjectById(projectId);
-    if (projectAuthCheck && projectAuthCheck.active_status == enums.declaredEnum.status.DELETE) {
-      throw new appError(ErrorMessage.PROJECT_DELETED, ErrorCode.NOT_FOUND);
+    if (projectAuthCheck && projectAuthCheck.projectStatus == enums.declaredEnum.projectStatus.COMPLETED) {
+      throw new appError(ErrorMessage.PROJECT_STATUS, ErrorCode.NOT_FOUND);
     } else if (!projectAuthCheck) {
       throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
     }
@@ -121,11 +121,10 @@ module.exports = {
     }
 
     const projectAuthCheck = await getProjectById(projectId);
-    if (projectAuthCheck && projectAuthCheck.status == enums.declaredEnum.status.DELETE) {
-      throw new appError(ErrorMessage.PROJECT_DELETED, ErrorCode.NOT_FOUND);
+    if (projectAuthCheck && projectAuthCheck.projectStatus == enums.declaredEnum.projectStatus.COMPLETED) {
+      throw new appError(ErrorMessage.PROJECT_STATUS, ErrorCode.NOT_FOUND);
     } else if (!projectAuthCheck) {
-      throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
-    }
+      throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);}
 
     const newProject = await getProjectByIdAndUpdate(
       { _id: projectId },
@@ -210,13 +209,21 @@ module.exports = {
     //     },
     //   },
     // ]);
-    const {projectId} = req.params
+    const { projectId } = req.params
     const managerAuthCheck = await getUserById(req.userId);
     if (managerAuthCheck && managerAuthCheck.role !== enums.declaredEnum.role.MANAGER) {
       throw new appError(ErrorMessage.CANNOT_ACCESS_DATA, ErrorCode.FORBIDDEN);
     }
+    const projectAuthCheck = await getProjectById(projectId)
+    if (projectAuthCheck && projectAuthCheck.projectStatus == enums.declaredEnum.projectStatus.COMPLETED) {
+      throw new appError(ErrorMessage.PROJECT_STATUS, ErrorCode.NOT_FOUND);
+    } else if (!projectAuthCheck) {
+      throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);}
 
     const projectView = await Project.findById(projectId).populate("manager project_task");
+    if (!projectView) {
+      throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
+    }
     helper.commonResponse(
       res,
       SuccessCode.SUCCESS,
@@ -224,5 +231,58 @@ module.exports = {
       SuccessMessage.DATA_FOUND
     );
   }),
-  
+  //******************** only admin can remove the manager AND admin  from project ************************ */
+  removeManagerFromProject :catchAsync(async(req,res)=>{
+    const {projectId} = req.params
+    const {manager} = req.body
+    const managerAuthCheck = await getOneUser({_id:req.userId,role:{ $in: [enums.declaredEnum.role.MANAGER, enums.declaredEnum.role.ADMIN] }});
+    if (!managerAuthCheck) {
+      throw new appError(ErrorMessage.CANNOT_ACCESS_DATA, ErrorCode.FORBIDDEN);
+    }
+if(typeof manager !== "object"){
+  throw new appError(ErrorMessage.DATA_SHOULD_BE_ARRAY, ErrorCode.VALIDATION_FAILED);
+}
+const projectExist = await getProjectById(projectId)
+if (projectExist && projectExist.projectStatus == enums.declaredEnum.projectStatus.COMPLETED) {
+  throw new appError(ErrorMessage.PROJECT_STATUS, ErrorCode.NOT_FOUND);
+}
+if (!projectExist) {
+  throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
+}
+const removeManager = await getProjectByIdAndUpdate({_id: projectExist._id },
+  { $pullAll: {
+    manager: manager,
+}},{ new: true })
+
+helper.commonResponse(
+  res,
+  SuccessCode.SUCCESS,
+  removeManager,
+  SuccessMessage.REMOVE_SUCCESS
+);
+  }),
+  //************************* only manager AND ADMIN  can update the project**************** */
+  updateProject:catchAsync(async(req,res)=>{
+    const {projectId} = req.params
+    const managerAuthCheck = await getOneUser({_id:req.userId,role:{ $in: [enums.declaredEnum.role.MANAGER, enums.declaredEnum.role.ADMIN] }});
+    if (!managerAuthCheck) {
+      throw new appError(ErrorMessage.CANNOT_ACCESS_DATA, ErrorCode.FORBIDDEN);
+    }
+const projectExist = await getProjectById(projectId)
+if (projectExist && projectExist.projectStatus == enums.declaredEnum.projectStatus.COMPLETED) {
+  throw new appError(ErrorMessage.PROJECT_STATUS, ErrorCode.NOT_FOUND);
+}
+if (!projectExist) {
+  throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
+}
+const removeProject = await getProjectByIdAndUpdate({_id: projectExist._id },
+  {$set:{projectStatus:enums.declaredEnum.projectStatus.COMPLETED}},{ new: true })
+
+helper.commonResponse(
+  res,
+  SuccessCode.SUCCESS,
+  removeProject,
+  SuccessMessage.REMOVE_SUCCESS
+);
+  })
 };

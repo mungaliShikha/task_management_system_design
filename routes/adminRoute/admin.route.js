@@ -1,7 +1,9 @@
 const router = require("express").Router();
 const adminController = require("../../controllers/admin.controller");
 const auth = require('../../middleware/auth');
+const { validationMiddleware } = require("../../middleware/joeValidator");
 const { upload } = require("../../utils/aws/aws");
+const { logIn,updateAdmin } = require("../../validator/admin.validator");
 
 /**
  * @swagger
@@ -31,7 +33,7 @@ const { upload } = require("../../utils/aws/aws");
  *       500:
  *         description: Internal Server Error
  */
-router.post('/login', adminController.login);
+router.post('/login',validationMiddleware(logIn),adminController.login);
 
 /**
  * @swagger
@@ -145,7 +147,7 @@ router.post('/login', adminController.login);
  */
 router.post('/forgetPassword',adminController.forgetPassword)
 router.post('/resetPassword/:userId/:token',adminController.resetPassword)
-router.put('/updateAdmin',auth.verifyToken, upload.array("profile_image"),adminController.updateAdmin)
+router.put('/updateAdmin',auth.verifyToken, upload.array("profile_image"),validationMiddleware(updateAdmin),adminController.updateAdmin)
 router.get('/getAdminDetails',auth.verifyToken, adminController.getAdminDetails)
 
 router.post("/forgetPassword", adminController.forgetPassword);

@@ -47,11 +47,51 @@ Jan-19-2023 10:09:59 [error] 401 - Please provide token.
 Jan-19-2023 10:15:10 [error] 404 - Project deleted 
 Jan-19-2023 10:15:26 [error] 404 - Project deleted 
 Jan-19-2023 10:18:00 [error] 404 - Task deleted 
-Jan-19-2023 12:30:58 [error] 401 - Please provide token. 
-Jan-19-2023 12:59:56 [error] 404 - Requested URL http://localhost:5000/api/admin/login not found! 
-Jan-19-2023 13:01:35 [error] 500 - compareHash is not a function 
-Jan-19-2023 14:02:44 [error] 404 - Requested URL http://localhost:5000/api/task/addDeveloperToTask not found! 
-Jan-19-2023 14:06:25 [error] 401 - Please provide token. 
-Jan-19-2023 14:11:57 [error] 404 - Provided email is not registered. 
-Jan-19-2023 15:27:54 [error] 500 - compareHash is not a function 
-Jan-19-2023 15:53:44 [error] 500 - compareHash is not a function 
+Jan-19-2023 12:15:40 [error] 404 - Requested URL http://localhost:5000/api/user/managerLogin not found! 
+Jan-19-2023 12:16:43 [error] 404 - Provided email is not registered. 
+Jan-19-2023 12:53:02 [error] 401 - Please provide token. 
+Jan-19-2023 12:57:14 [error] 500 - Cannot create property 'updatedAt' on string 'completed' 
+Jan-19-2023 12:57:25 [error] 500 - Cannot create property 'updatedAt' on string 'COMPLETED' 
+Jan-19-2023 15:05:46 [error] 404 - This user does not exist. 
+Jan-19-2023 15:07:41 [error] 404 - This user does not exist. 
+Jan-19-2023 15:14:20 [error] 422 - Entered data should be an array 
+Jan-19-2023 15:26:39 [error] 404 - This user does not exist. 
+Jan-19-2023 15:27:48 [error] 404 - This user does not exist. 
+Jan-19-2023 15:27:50 [error] 404 - This user does not exist. 
+Jan-19-2023 15:30:03 [error] 404 - Only develper can change the status of the task 
+Jan-19-2023 15:30:46 [error] 404 - Data not found 
+Jan-19-2023 15:39:13 [error] 404 - Data not found 
+Jan-19-2023 15:39:15 [error] 404 - Data not found 
+Jan-19-2023 15:45:14 [error] 500 - Cannot create property 'updatedAt' on string 'completed' 
+Jan-19-2023 15:49:01 [error] 500 - Cannot create property 'updatedAt' on string 'completed' 
+Jan-19-2023 15:49:50 [error] 500 - Cannot create property 'updatedAt' on string 'completed' 
+Jan-19-2023 15:54:48 [error] 500 - Cannot create property 'updatedAt' on string 'completed' 
+Jan-19-2023 17:42:14 [error] 500 - compareHash is not a function 
+Jan-19-2023 17:42:20 [error] 500 - compareHash is not a function 
+Jan-19-2023 17:45:05 [error] 500 - compareHash is not a function 
+Jan-19-2023 17:45:07 [error] 500 - compareHash is not a function 
+Jan-19-2023 17:45:07 [error] 500 - compareHash is not a function 
+Jan-19-2023 17:45:14 [error] 500 - compareHash is not a function 
+Jan-19-2023 17:50:21 [error] 404 - Requested URL http://localhost:5000/api/user/addManager not found! 
+Jan-19-2023 17:50:27 [error] 404 - Requested URL http://localhost:5000/api/user/addManager not found! 
+Jan-19-2023 17:50:50 [error] 500 - randomPassword is not a function 
+Jan-19-2023 17:57:53 [error] 500 - compareHash is not a function 
+Jan-19-2023 17:59:12 [error] 500 - compareHash is not a function 
+Jan-19-2023 18:02:18 [error] 500 - compareHash is not a function 
+Jan-19-2023 18:06:13 [error] 500 - compareHash is not a function 
+Jan-19-2023 18:07:06 [error] 500 - compareHash is not a function 
+Jan-19-2023 18:22:04 [error] 500 - Operation `users.findOne()` buffering timed out after 10000ms 
+Jan-19-2023 18:34:36 [error] 500 - error is not defined 
+Jan-19-2023 18:39:06 [error] 500 - error is not defined 
+Jan-19-2023 18:39:08 [error] 500 - error is not defined 
+Jan-19-2023 18:39:09 [error] 500 - error is not defined 
+Jan-19-2023 18:39:09 [error] 500 - error is not defined 
+Jan-19-2023 22:56:16 [error] 500 - error is not defined 
+Jan-19-2023 22:57:44 [error] 500 - error is not defined 
+Jan-19-2023 22:57:53 [error] 500 - error is not defined 
+Jan-20-2023 10:22:09 [error] 500 - ErrorMessage is not defined 
+Jan-20-2023 10:23:56 [error] 500 - ErrorMessage is not defined 
+Jan-20-2023 10:25:23 [error] 404 - Provided email is not registered. 
+Jan-20-2023 10:28:16 [error] 404 - Provided email is not registered. 
+Jan-20-2023 10:32:17 [error] 404 - Format is not correct 
+Jan-20-2023 10:53:46 [error] 404 - Format is not correct 
