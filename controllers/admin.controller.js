@@ -4,21 +4,20 @@ const appError = require("../helper/errorHandlers/errorHandler");
 const { ErrorMessage, SuccessMessage } = require("../helper/message");
 const { ErrorCode, SuccessCode } = require("../helper/statusCode");
 
-
 // const commonFun=require('../helper/commonFunction')
 const helper = require("../helper/commonResponseHandler");
-const {
-  sendMail,
-  sendMailNotify, 
-} = require("../utils/nodeMailer/nodemailer");
+const { sendMail, sendMailNotify } = require("../utils/nodeMailer/nodemailer");
 const enums = require("../helper/enum/enums");
 
 const {
-  getOneUser ,getAllUser,getUserById, getUserAndUpdate, getOneToken, createUser
+  getOneUser,
+  getAllUser,
+  getUserById,
+  getUserAndUpdate,
+  getOneToken,
+  createUser,
 } = require("../services/user.service");
 const { compareHash, generateToken } = require("../helper/commonFunction");
-
-
 
 module.exports = {
   /// **********************************   admin login ************************************************
@@ -117,7 +116,7 @@ module.exports = {
     );
   }),
 
-  //****************************************** updateAdmin api ***************************** */
+  //****************************************** updateAdmin api ******************************/
 
   updateAdmin: catchAsync(async (req, res) => {
     const { first_name, last_name, email, mobile_number, address } = req.body;

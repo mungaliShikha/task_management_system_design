@@ -54,15 +54,15 @@ module.exports.generateToken = (userObject) => {
 
 
 
-module.exports.generatePassword =()=> {
-      var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
-      var value = 8
-      var randomstring = '';
-      for (var i = 0; i < value; i++) {
-          var rnum = Math.floor(Math.random() * chars.length);
-           randomstring += chars.substring(rnum, rnum + 1);
-      }
+module.exports.generatePassword = () => {
+  var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+  var value = 8
+  var randomstring = '';
+  for (var i = 0; i < value; i++) {
+    var rnum = Math.floor(Math.random() * chars.length);
+    randomstring += chars.substring(rnum, rnum + 1);
   }
+}
 
 
 module.exports.randomPassword = () => {
@@ -87,8 +87,8 @@ module.exports.generateEmployeeId = (role) => {
 };
 
 module.exports.subjects = {
-  "DEVELOPER" : " DEVELOPER INVITATION",
-  "MANAGER" : " MANAGER INVITATION"
+  "DEVELOPER": " DEVELOPER INVITATION",
+  "MANAGER": " MANAGER INVITATION"
 }
 
 // const messages={
@@ -96,9 +96,9 @@ module.exports.subjects = {
 //   "MANAGER": `Hello <br> You are invited as a Developer on Task management system Design platform,<br> Here is your Login Crediantial <br> Email: ${req.body.email} <br> Password: ${passGen} <br> Kindly Use this Crediantial for further login`,
 // }
 
-module.exports.messages=(email,passGen)=>{
+module.exports.messages = (email, passGen) => {
 
-  if(DEVELOPER) `Hello <br> You are invited as a Developer on Task management system Design platform,<br> Here is your Login Crediantial <br> Email: ${email} <br> Password: ${passGen} <br> Kindly Use this Crediantial for further login`
-  if(MANAGER) `Hello <br> You are invited as a Developer on Task management system Design platform,<br> Here is your Login Crediantial <br> Email: ${email} <br> Password: ${passGen} <br> Kindly Use this Crediantial for further login`
+  if (DEVELOPER)`Hello <br> You are invited as a Developer on Task management system Design platform,<br> Here is your Login Crediantial <br> Email: ${email} <br> Password: ${passGen} <br> Kindly Use this Crediantial for further login`
+  if (MANAGER)`Hello <br> You are invited as a Developer on Task management system Design platform,<br> Here is your Login Crediantial <br> Email: ${email} <br> Password: ${passGen} <br> Kindly Use this Crediantial for further login`
 }
 

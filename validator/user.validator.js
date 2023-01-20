@@ -5,14 +5,14 @@ module.exports= {
         const schema = Joi.object({
             first_name: Joi.string().required(),
             last_name: Joi.string().required(),
-            email: Joi.string().email().lowercase().required(),
+            email: Joi.string().email().required(),
             mobile: Joi.string().required(),
         })
         return schema.validate(payload)
         },
 
 
-        
+
 }
 
 

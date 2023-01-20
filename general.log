@@ -829,3 +829,208 @@ Jan-20-2023 11:13:25 [info] success : Mongoose default connection
 Jan-20-2023 11:13:25 [info] Default Admin. 
 Jan-20-2023 11:23:27 [info] success : Mongoose default connection 
 Jan-20-2023 11:23:28 [info] Default Admin. 
+Jan-20-2023 13:37:51 [info] success : Mongoose default connection 
+Jan-20-2023 13:37:51 [info] Default Admin. 
+Jan-20-2023 13:38:10 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 13:38:10 [error] 404 - Format is not correct 
+Jan-20-2023 13:38:26 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 13:38:26 [error] 404 - Format is not correct 
+Jan-20-2023 13:39:04 [info] disconnected : Mongoose default connection is disconnected 
+Jan-20-2023 13:39:04 [info] warning 
+Jan-20-2023 13:39:04 [info] warning 
+Jan-20-2023 13:40:26 [info] success : Mongoose default connection 
+Jan-20-2023 13:40:27 [info] Default Admin. 
+Jan-20-2023 13:40:31 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 13:40:41 [error] 500 - Operation `users.findOne()` buffering timed out after 10000ms 
+Jan-20-2023 13:51:04 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 13:51:14 [error] 500 - Operation `users.findOne()` buffering timed out after 10000ms 
+Jan-20-2023 15:11:22 [info] disconnected : Mongoose default connection is disconnected 
+Jan-20-2023 15:11:32 [info] success : Mongoose default connection 
+Jan-20-2023 15:12:05 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 15:12:15 [error] 500 - Operation `users.findOne()` buffering timed out after 10000ms 
+Jan-20-2023 15:20:25 [info] warning 
+Jan-20-2023 15:20:26 [info] disconnected : Mongoose default connection is disconnected 
+Jan-20-2023 15:20:26 [info] warning 
+Jan-20-2023 15:20:29 [info] warning 
+Jan-20-2023 15:20:29 [info] warning 
+Jan-20-2023 15:21:19 [info] success : Mongoose default connection 
+Jan-20-2023 15:21:19 [info] Default Admin. 
+Jan-20-2023 15:21:30 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 15:21:31 [error] 404 - Format is not correct 
+Jan-20-2023 15:26:50 [info] warning 
+Jan-20-2023 15:26:50 [info] warning 
+Jan-20-2023 15:26:50 [info] disconnected : Mongoose default connection is disconnected 
+Jan-20-2023 15:26:50 [info] warning 
+Jan-20-2023 15:26:50 [info] warning 
+Jan-20-2023 15:26:51 [info] warning 
+Jan-20-2023 15:26:50 [info] warning 
+Jan-20-2023 15:27:49 [info] success : Mongoose default connection 
+Jan-20-2023 15:27:49 [info] Default Admin. 
+Jan-20-2023 15:28:05 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 15:28:15 [error] 500 - Operation `users.findOne()` buffering timed out after 10000ms 
+Jan-20-2023 15:28:33 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 15:28:43 [error] 500 - Operation `users.findOne()` buffering timed out after 10000ms 
+Jan-20-2023 15:28:45 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 15:28:55 [error] 500 - Operation `users.findOne()` buffering timed out after 10000ms 
+Jan-20-2023 15:38:48 [info] warning 
+Jan-20-2023 15:38:48 [info] warning 
+Jan-20-2023 15:38:48 [info] warning 
+Jan-20-2023 15:38:48 [info] disconnected : Mongoose default connection is disconnected 
+Jan-20-2023 15:38:48 [info] warning 
+Jan-20-2023 15:38:48 [info] warning 
+Jan-20-2023 15:38:48 [info] warning 
+Jan-20-2023 15:38:48 [info] warning 
+Jan-20-2023 15:38:48 [info] warning 
+Jan-20-2023 15:39:03 [info] warning 
+Jan-20-2023 15:39:03 [info] warning 
+Jan-20-2023 15:39:03 [info] warning 
+Jan-20-2023 15:39:03 [info] warning 
+Jan-20-2023 15:39:04 [info] warning 
+Jan-20-2023 15:39:04 [info] warning 
+Jan-20-2023 15:39:04 [info] warning 
+Jan-20-2023 15:39:04 [info] warning 
+Jan-20-2023 15:42:00 [info] warning 
+Jan-20-2023 15:42:00 [info] warning 
+Jan-20-2023 15:42:00 [info] warning 
+Jan-20-2023 15:42:00 [info] warning 
+Jan-20-2023 15:42:00 [info] warning 
+Jan-20-2023 15:42:00 [info] warning 
+Jan-20-2023 15:42:00 [info] warning 
+Jan-20-2023 15:42:00 [info] warning 
+Jan-20-2023 15:50:19 [info] success : Mongoose default connection 
+Jan-20-2023 15:50:19 [info] Default Admin. 
+Jan-20-2023 15:52:04 [info] success : Mongoose default connection 
+Jan-20-2023 15:52:04 [info] Default Admin. 
+Jan-20-2023 15:52:12 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 15:52:13 [error] 404 - Format is not correct 
+Jan-20-2023 15:52:15 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 15:52:15 [error] 404 - Format is not correct 
+Jan-20-2023 15:52:17 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 15:52:17 [error] 404 - Format is not correct 
+Jan-20-2023 15:52:29 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 15:52:29 [error] 404 - Format is not correct 
+Jan-20-2023 15:52:30 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 15:52:30 [error] 404 - Format is not correct 
+Jan-20-2023 15:53:24 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 15:53:24 [error] 404 - Format is not correct 
+Jan-20-2023 15:54:21 [info] success : Mongoose default connection 
+Jan-20-2023 15:54:21 [info] Default Admin. 
+Jan-20-2023 15:55:46 [info] success : Mongoose default connection 
+Jan-20-2023 15:55:46 [info] Default Admin. 
+Jan-20-2023 15:56:04 [info] success : Mongoose default connection 
+Jan-20-2023 15:56:05 [info] Default Admin. 
+Jan-20-2023 15:56:20 [info] success : Mongoose default connection 
+Jan-20-2023 15:56:20 [info] Default Admin. 
+Jan-20-2023 15:56:56 [info] success : Mongoose default connection 
+Jan-20-2023 15:56:56 [info] Default Admin. 
+Jan-20-2023 15:57:17 [info] success : Mongoose default connection 
+Jan-20-2023 15:57:17 [info] Default Admin. 
+Jan-20-2023 15:57:29 [info] success : Mongoose default connection 
+Jan-20-2023 15:57:29 [info] Default Admin. 
+Jan-20-2023 15:57:58 [info] success : Mongoose default connection 
+Jan-20-2023 15:57:58 [info] Default Admin. 
+Jan-20-2023 15:58:22 [info] success : Mongoose default connection 
+Jan-20-2023 15:58:22 [info] Default Admin. 
+Jan-20-2023 15:58:52 [info] success : Mongoose default connection 
+Jan-20-2023 15:58:52 [info] Default Admin. 
+Jan-20-2023 15:59:00 [info] success : Mongoose default connection 
+Jan-20-2023 15:59:00 [info] Default Admin. 
+Jan-20-2023 16:00:00 [info] success : Mongoose default connection 
+Jan-20-2023 16:00:00 [info] Default Admin. 
+Jan-20-2023 16:00:06 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 16:00:06 [error] 404 - Format is not correct 
+Jan-20-2023 16:00:07 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 16:00:07 [error] 404 - Format is not correct 
+Jan-20-2023 16:00:08 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 16:00:08 [error] 404 - Format is not correct 
+Jan-20-2023 16:00:09 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 16:00:09 [error] 404 - Format is not correct 
+Jan-20-2023 16:00:10 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 16:00:10 [error] 404 - Format is not correct 
+Jan-20-2023 16:00:10 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 16:00:10 [error] 404 - Format is not correct 
+Jan-20-2023 16:00:11 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 16:00:11 [error] 404 - Format is not correct 
+Jan-20-2023 16:00:11 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 16:00:11 [error] 404 - Format is not correct 
+Jan-20-2023 16:00:38 [info] success : Mongoose default connection 
+Jan-20-2023 16:00:38 [info] Default Admin. 
+Jan-20-2023 16:01:02 [info] success : Mongoose default connection 
+Jan-20-2023 16:01:02 [info] Default Admin. 
+Jan-20-2023 16:01:07 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 16:01:07 [error] 404 - Format is not correct 
+Jan-20-2023 16:01:08 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 16:01:08 [error] 404 - Format is not correct 
+Jan-20-2023 16:02:26 [info] success : Mongoose default connection 
+Jan-20-2023 16:02:26 [info] Default Admin. 
+Jan-20-2023 16:02:34 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 16:02:35 [error] 404 - Format is not correct 
+Jan-20-2023 16:03:23 [info] success : Mongoose default connection 
+Jan-20-2023 16:03:23 [info] Default Admin. 
+Jan-20-2023 16:04:31 [info] success : Mongoose default connection 
+Jan-20-2023 16:04:31 [info] Default Admin. 
+Jan-20-2023 16:12:39 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 16:12:39 [error] 404 - Format is not correct 
+Jan-20-2023 16:13:36 [info] success : Mongoose default connection 
+Jan-20-2023 16:13:37 [info] Default Admin. 
+Jan-20-2023 16:18:40 [info] success : Mongoose default connection 
+Jan-20-2023 16:18:41 [info] Default Admin. 
+Jan-20-2023 16:18:47 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 16:18:47 [error] 404 - Format is not correct 
+Jan-20-2023 16:25:37 [info] success : Mongoose default connection 
+Jan-20-2023 16:25:37 [info] Default Admin. 
+Jan-20-2023 16:30:45 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 16:30:45 [error] 404 - Format is not correct 
+Jan-20-2023 16:50:20 [info] success : Mongoose default connection 
+Jan-20-2023 16:50:21 [info] Default Admin. 
+Jan-20-2023 16:50:35 [info] success : Mongoose default connection 
+Jan-20-2023 16:50:35 [info] Default Admin. 
+Jan-20-2023 16:51:05 [info] success : Mongoose default connection 
+Jan-20-2023 16:51:05 [info] Default Admin. 
+Jan-20-2023 16:51:16 [info] success : Mongoose default connection 
+Jan-20-2023 16:51:16 [info] Default Admin. 
+Jan-20-2023 16:51:22 [info] success : Mongoose default connection 
+Jan-20-2023 16:51:22 [info] Default Admin. 
+Jan-20-2023 16:51:29 [info] success : Mongoose default connection 
+Jan-20-2023 16:51:32 [info] success : Mongoose default connection 
+Jan-20-2023 16:51:32 [info] Default Admin. 
+Jan-20-2023 16:52:04 [info] success : Mongoose default connection 
+Jan-20-2023 16:52:04 [info] Default Admin. 
+Jan-20-2023 16:52:22 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 16:52:22 [error] 404 - Format is not correct 
+Jan-20-2023 16:53:37 [info] success : Mongoose default connection 
+Jan-20-2023 16:53:37 [info] Default Admin. 
+Jan-20-2023 16:54:18 [info] success : Mongoose default connection 
+Jan-20-2023 16:54:18 [info] Default Admin. 
+Jan-20-2023 16:54:19 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 16:54:19 [error] 404 - ValidationError: "address" is required 
+Jan-20-2023 16:54:55 [info] success : Mongoose default connection 
+Jan-20-2023 16:54:55 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 16:54:55 [info] Default Admin. 
+Jan-20-2023 16:54:55 [error] 404 - ValidationError: "address" is required 
+Jan-20-2023 16:55:43 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 16:55:43 [info] success : Mongoose default connection 
+Jan-20-2023 16:55:43 [info] Default Admin. 
+Jan-20-2023 16:55:43 [error] 404 - ValidationError: "address" is required 
+Jan-20-2023 16:56:08 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 16:56:09 [info] success : Mongoose default connection 
+Jan-20-2023 16:56:09 [info] Default Admin. 
+Jan-20-2023 16:56:09 [error] 404 - "address" is required 
+Jan-20-2023 16:56:43 [info] success : Mongoose default connection 
+Jan-20-2023 16:56:43 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 16:56:43 [info] Default Admin. 
+Jan-20-2023 16:56:43 [error] 404 - address is required 
+Jan-20-2023 16:57:01 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 16:57:01 [error] 404 - mobile is required 
+Jan-20-2023 16:57:51 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 16:57:52 [error] 404 - email must be a valid email 
+Jan-20-2023 16:58:43 [info] success : Mongoose default connection 
+Jan-20-2023 16:58:43 [info] Default Admin. 
+Jan-20-2023 16:59:17 [info] success : Mongoose default connection 
+Jan-20-2023 16:59:17 [info] Default Admin. 
+Jan-20-2023 16:59:17 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 16:59:17 [error] 404 - "email" must be a valid email 
+Jan-20-2023 16:59:32 [info] success : Mongoose default connection 
+Jan-20-2023 16:59:32 [info] Default Admin. 
+Jan-20-2023 16:59:33 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-20-2023 16:59:33 [error] 404 - email must be a valid email 
