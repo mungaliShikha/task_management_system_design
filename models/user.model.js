@@ -52,10 +52,10 @@ module.exports = mongoose.model("users", userModel);
 
 mongoose.model("users", userModel).find({ role:enums.declaredEnum.role.ADMIN }, async (err, result) => {
   if (err) {
-    logger.info(`"DEFAULT ADMIN ERROR", ${err}`);
+    logger.debug(`"DEFAULT ADMIN ERROR", ${err}`);
   }
   else if (result.length != 0) {
-    logger.info("Default Admin.");
+    logger.debug("Default Admin.");
   }
   else {
     let obj = {
@@ -70,9 +70,9 @@ mongoose.model("users", userModel).find({ role:enums.declaredEnum.role.ADMIN }, 
 
     mongoose.model("users", userModel).create(obj, async (err1, result1) => {
       if (err1) {
-        logger.info(`"DEFAULT ADMIN  creation ERROR", ${err1}`);
+        logger.debug(`"DEFAULT ADMIN  creation ERROR", ${err1}`);
       } else {
-        logger.info(`"DEFAULT ADMIN Created", ${result1}`);
+        logger.debug(`"DEFAULT ADMIN Created", ${result1}`);
       }
     });
   }
