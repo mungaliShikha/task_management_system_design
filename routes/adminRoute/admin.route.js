@@ -1,7 +1,10 @@
 const router = require("express").Router();
 const adminController = require("../../controllers/admin.controller");
 const auth = require('../../middleware/auth');
+const {validationMiddleware}=require("../../middleware/joeValidator")
+const { logIn,updateAdmin } = require("../../validator/admin.validator");
 const { upload } = require("../../utils/aws/aws");
+const { resetPassword, forgetPassword, createManager } = require("../../controllers/admin.controller");
 
 /**
  * @swagger
@@ -31,7 +34,7 @@ const { upload } = require("../../utils/aws/aws");
  *       500:
  *         description: Internal Server Error
  */
-router.post('/login', adminController.login);
+router.post('/login',validationMiddleware(logIn), adminController.login);
 
 /**
  * @swagger
@@ -143,14 +146,14 @@ router.post('/login', adminController.login);
  *       500:
  *         description: Internal Server Error
  */
-router.post('/forgetPassword',adminController.forgetPassword)
-router.post('/resetPassword/:userId/:token',adminController.resetPassword)
-router.put('/updateAdmin',auth.verifyToken, upload.array("profile_image"),adminController.updateAdmin)
+router.post('/forgetPassword',validationMiddleware(forgetPassword),adminController.forgetPassword)
+router.post('/resetPassword/:userId/:token',validationMiddleware(resetPassword),adminController.resetPassword)
+router.put('/updateAdmin',auth.verifyToken, upload.array("profile_image"),validationMiddleware(updateAdmin),adminController.updateAdmin)
 router.get('/getAdminDetails',auth.verifyToken, adminController.getAdminDetails)
 
 
 /// admin can create manager
-router.post("/createManager",auth.verifyToken, adminController.createManager);
+router.post("/createManager",auth.verifyToken,validationMiddleware(createManager), adminController.createManager);
 
 
 module.exports = router;
