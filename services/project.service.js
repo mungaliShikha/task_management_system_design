@@ -12,8 +12,8 @@ const getProjectById = async (id) => {
   return Project.findById(id);
 };
 
-const getProjectByIdAndUpdate = async (id, update) => {
-  return Project.findByIdAndUpdate(id, update, {new:true});
+const getProjectAndUpdate = async (id, update,data) => {
+  return Project.findOneAndUpdate(id, update, data);
 };
 
 const createProject = async (data) => {
@@ -27,7 +27,7 @@ module.exports = {
   getOneProject,
   getAllProject,
   getProjectById,
-  getProjectByIdAndUpdate,
+  getProjectAndUpdate,
   createProject,
   countProject
 };

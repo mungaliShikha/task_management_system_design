@@ -19,7 +19,7 @@ module.exports.generateHash = (data) => {
 
 
 module.exports.generateToken = (userObject) => {
-  let expireTime = 6 * 30 * 72 * 60 * 60 * 1000; //6 months
+  let expireTime = "2h"; 
   return jwt.sign(userObject, global.gConfig.jwtSecretKey, {
     expiresIn: expireTime,
   });
@@ -60,4 +60,15 @@ module.exports.generatePassword =()=> {
       return "DEV" + EmployeeId;
     }
   };
+
+  module.exports.subjects = (role)=>{
+    const subject = `${role} Invitation`;
+    return subject
+  }
+  
+  module.exports.messages = (mail,password)=>{
+    const message = `Hello <br> You are invited as a Manager on Task management system Design platform,<br> Here is your Login Crediantial <br> Email: ${mail} <br> Password: ${password} <br> Kindly Use this Crediantial for further login`
+    return message
+  }
+  
 
