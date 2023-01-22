@@ -8,6 +8,8 @@ const {
   generatePassword,
   randomPassword,
   generateHash,
+  subjects,
+  messages
 } = require("../helper/commonFunction");
 const helper = require("../helper/commonResponseHandler");
 const {
@@ -68,8 +70,8 @@ module.exports = {
   }),
   // *********************************************** update Profile for Manager,Developer *******************************
 
-  updateProfile: async (req, res) => {
-    try {
+  updateProfile: catchAsync(async (req, res) => {
+   
       let payload = req.body;
       const tokenAuth = await getOneUser({
         _id: req.userId,
@@ -81,9 +83,9 @@ module.exports = {
           ErrorCode.NOT_FOUND,
           ErrorMessage.USER_NOT_FOUND
         );
-      if (req.files) {
-        payload["profile_pic"] = req.files[0].location;
-      }
+       if(req.files.length!==0){
+        payload["profile_image"]=req.files[0].location;
+            }
       let updateRes = await getUserAndUpdate
         (
           { _id: tokenAuth._id },
@@ -96,14 +98,8 @@ module.exports = {
         updateRes,
         SuccessMessage.UPDATE_SUCCESS
       );
-    } catch (error) {
-      helper.commonResponse(
-        res,
-        ErrorCode.SOMETHING_WRONG,
-        ErrorMessage.SOMETHING_WRONG
-      );
-    }
-  },
+    
+  }),
 
   // **************************************** Developer Create ************************
 
@@ -125,8 +121,9 @@ module.exports = {
     payload["role"] = enums.declaredEnum.role.DEVELOPER;
     const createDeveloper = await createUser(payload);
 
-    const subject = "Developer Invitation";
-    const message = `Hello <br> You are invited as a Developer on Task management system Design platform,<br> Here is your Login Crediantial <br> Email: ${payload.email} <br> Password: ${passGen} <br> Kindly Use this Crediantial for further login`;
+    const subject = subjects(enums.declaredEnum.role.DEVELOPER);
+    const message = messages(payload.email,passGen)
+
     await sendMailNotify(userAuth.email, subject, message, req.body.email);
 
     helper.sendResponseWithData(

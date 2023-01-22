@@ -25,7 +25,7 @@ const {
   getOneProject,
   getAllProject,
   getProjectById,
-  getProjectByIdAndUpdate,
+  getProjectAndUpdate,
   createProject,
   countProject,
 } = require("../services/project.service");
@@ -309,6 +309,7 @@ module.exports = {
   //************************* only manager AND ADMIN  can update the project**************** */
   updateProject: catchAsync(async (req, res) => {
     const { projectId } = req.params;
+    const projectStatus = req.body;
     const managerAuthCheck = await getOneUser({
       _id: req.userId,
       role: {
@@ -328,16 +329,16 @@ module.exports = {
     if (!projectExist) {
       throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
     }
-    const removeProject = await getProjectByIdAndUpdate(
+    const statusOfProject = await getProjectAndUpdate(
       { _id: projectExist._id },
-      { $set: { projectStatus: enums.declaredEnum.projectStatus.COMPLETED } },
+      { $set: projectStatus },
       { new: true }
     );
 
     helper.commonResponse(
       res,
       SuccessCode.SUCCESS,
-      removeProject,
+      statusOfProject,
       SuccessMessage.REMOVE_SUCCESS
     );
   }),
