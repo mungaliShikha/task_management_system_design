@@ -1,7 +1,7 @@
 const catchAsync = require("../helper/catchAsync");
 const appError = require("../helper/errorHandlers/errorHandler");
 const { ErrorMessage, SuccessMessage } = require("../helper/message");
-const User = require("../models/user.model")
+const User = require("../models/user.model");
 const { ErrorCode, SuccessCode } = require("../helper/statusCode");
 const {
   compareHash,
@@ -10,54 +10,70 @@ const {
   randomPassword,
   generateHash,
   subjects,
-  messages
+  messages,
 } = require("../helper/commonFunction");
 const helper = require("../helper/commonResponseHandler");
+const { sendMail, sendMailNotify } = require("../utils/nodeMailer/nodemailer");
 const {
-  sendMail,
-  sendMailNotify,
-} = require("../utils/nodeMailer/nodemailer");
-const {
-  getOneUser, getAllUser, getUserById, getUserAndUpdate, getOneToken, createUser
-} = require("../services/user.service")
+  getOneUser,
+  getAllUser,
+  getUserById,
+  getUserAndUpdate,
+  getOneToken,
+  createUser,
+} = require("../services/user.service");
 
-const enums = require("../helper/enum/enums")
+const enums = require("../helper/enum/enums");
 
 module.exports = {
   //******************************** common login api for manager developer admin ************************** */
- login: catchAsync(async (req, res) => {
-  const { email, password } = req.body;
-  const loggedInUser = await getOneUser({ email ,role:{ $in: [ enums.declaredEnum.role.MANAGER, enums.declaredEnum.role.DEVELOPER, enums.declaredEnum.role.ADMIN ] }});
-  if (!loggedInUser || !compareHash(password, loggedInUser.password)) {
-    throw new appError(
-      ErrorMessage.EMAIL_NOT_REGISTERED,
-      ErrorCode.NOT_FOUND
-    );
-  } else {
-    let token = generateToken({ id: loggedInUser._id });
-    let finalRes = {
-      email: email,
-      mobile_number: loggedInUser.mobile_number,
-      role: loggedInUser.role,
-      first_name: loggedInUser.first_name,
-      last_name: loggedInUser.last_name,
-      token: token,
-    };
-    helper.sendResponseWithData(
-      res,
-      SuccessCode.SUCCESS,
-      SuccessMessage.LOGIN_SUCCESS,
-      finalRes
-    );
-  }
-}),
+  login: catchAsync(async (req, res) => {
+    const { email, password } = req.body;
+    const loggedInUser = await getOneUser({
+      email,
+      role: {
+        $in: [
+          enums.declaredEnum.role.MANAGER,
+          enums.declaredEnum.role.DEVELOPER,
+          enums.declaredEnum.role.ADMIN,
+        ],
+      },
+    });
+    if (!loggedInUser || !compareHash(password, loggedInUser.password)) {
+      throw new appError(
+        ErrorMessage.EMAIL_NOT_REGISTERED,
+        ErrorCode.NOT_FOUND
+      );
+    } else {
+      let token = generateToken({ id: loggedInUser._id });
+      let finalRes = {
+        email: email,
+        mobile_number: loggedInUser.mobile_number,
+        role: loggedInUser.role,
+        first_name: loggedInUser.first_name,
+        last_name: loggedInUser.last_name,
+        token: token,
+      };
+      helper.sendResponseWithData(
+        res,
+        SuccessCode.SUCCESS,
+        SuccessMessage.LOGIN_SUCCESS,
+        finalRes
+      );
+    }
+  }),
 
   // *********************************************** get profile for Manager,Developer *******************************
 
   getProfile: catchAsync(async (req, res) => {
     const tokenAuth = await getOneUser({
       _id: req.userId,
-      role: { $in: [enums.declaredEnum.role.DEVELOPER, enums.declaredEnum.role.MANAGER] },
+      role: {
+        $in: [
+          enums.declaredEnum.role.DEVELOPER,
+          enums.declaredEnum.role.MANAGER,
+        ],
+      },
     });
     if (!tokenAuth) {
       throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
@@ -72,34 +88,36 @@ module.exports = {
   // *********************************************** update Profile for Manager,Developer *******************************
 
   updateProfile: catchAsync(async (req, res) => {
-   
-      let payload = req.body;
-      const tokenAuth = await getOneUser({
-        _id: req.userId,
-        role: { $in: [enums.declaredEnum.role.DEVELOPER, enums.declaredEnum.role.MANAGER] },
-      });
-      if (!tokenAuth)
-        helper.commonResponse(
-          res,
-          ErrorCode.NOT_FOUND,
-          ErrorMessage.USER_NOT_FOUND
-        );
-       if(req.files.length){
-        payload["profile_image"]=req.files[0].location;
-            }
-      let updateRes = await getUserAndUpdate
-        (
-          { _id: tokenAuth._id },
-          { $set: payload },
-          { new: true }
-        );
+    let payload = req.body;
+    const tokenAuth = await getOneUser({
+      _id: req.userId,
+      role: {
+        $in: [
+          enums.declaredEnum.role.DEVELOPER,
+          enums.declaredEnum.role.MANAGER,
+        ],
+      },
+    });
+    if (!tokenAuth)
       helper.commonResponse(
         res,
-        SuccessCode.SUCCESS,
-        updateRes,
-        SuccessMessage.UPDATE_SUCCESS
+        ErrorCode.NOT_FOUND,
+        ErrorMessage.USER_NOT_FOUND
       );
-    
+    if (req.files.length) {
+      payload["profile_image"] = req.files[0].location;
+    }
+    let updateRes = await getUserAndUpdate(
+      { _id: tokenAuth._id },
+      { $set: payload },
+      { new: true }
+    );
+    helper.commonResponse(
+      res,
+      SuccessCode.SUCCESS,
+      updateRes,
+      SuccessMessage.UPDATE_SUCCESS
+    );
   }),
 
   // **************************************** Developer Create ************************
@@ -107,7 +125,10 @@ module.exports = {
   addDeveloper: catchAsync(async (req, res) => {
     const payload = req.body;
     const { first_name, last_name, email, mobile_number } = payload;
-    const userAuth = await getOneUser({ _id: req.userId, role: enums.declaredEnum.role.MANAGER });
+    const userAuth = await getOneUser({
+      _id: req.userId,
+      role: enums.declaredEnum.role.MANAGER,
+    });
     if (!userAuth) {
       throw new appError(ErrorMessage.NOT_AUTHORISED, ErrorCode.NOT_FOUND);
     }
@@ -123,7 +144,7 @@ module.exports = {
     const createDeveloper = await createUser(payload);
 
     const subject = subjects(enums.declaredEnum.role.DEVELOPER);
-    const message = messages(payload.email,passGen)
+    const message = messages(payload.email, passGen);
 
     await sendMailNotify(userAuth.email, subject, message, req.body.email);
 
@@ -138,32 +159,36 @@ module.exports = {
   //*********************************** get the list of manager and developers**************************** */
 
   listTheUser: catchAsync(async (req, res) => {
-   
-    if (req.body.search) {
-      query.name = new RegExp("^" + req.body.search, "i");
-    }
-    const allAuthRes = await getOneUser({ _id: req.userId ,role:{$in:[enums.declaredEnum.role.MANAGER, enums.declaredEnum.role.DEVELOPER, enums.declaredEnum.role.ADMIN]}});
+    const allAuthRes = await getOneUser({
+      _id: req.userId,
+      role: {
+        $in: [enums.declaredEnum.role.MANAGER, enums.declaredEnum.role.ADMIN],
+      },
+    });
     if (!allAuthRes) {
       throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
     }
 
-    var query = { status: { $ne: enums.declaredEnum.status.DELETE } };
+    var query = {
+      status: { $ne: enums.declaredEnum.status.DELETE },
+      role: enums.declaredEnum.role.MANAGER,
+    };
+    if (req.body.search) {
+      query.name = new RegExp("^" + req.body.search, "i");
+    }
 
     let { page, limit } = req.query;
     page = req.query.page || 1;
     limit = req.query.limit || 10;
-    const userRes = await User
-      .find(query)
+    const userRes = await User.find(query)
       .limit(limit * 1)
       .skip((page - 1) * limit)
       .exec();
-    const count = await User.countDocuments();
     if (userRes.length == 0) {
       throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
     }
     let final = {
       user: userRes,
-      totalPages: Math.ceil(count / limit),
       currentPage: page,
     };
     helper.commonResponse(
@@ -173,6 +198,4 @@ module.exports = {
       SuccessMessage.DATA_FOUND
     );
   }),
-
-  
 };

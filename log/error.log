@@ -95,3 +95,5 @@ Jan-23-2023 15:49:58 [error] 404 - Data not found
 Jan-23-2023 15:54:13 [error] 404 - Data not found 
 Jan-23-2023 15:54:46 [error] 404 - Requested URL http://localhost:5000/api/user/listTheUse not found! 
 Jan-23-2023 15:56:47 [error] 404 - Data not found 
+Jan-23-2023 16:23:09 [error] 404 - Data not found 
+Jan-23-2023 16:24:13 [error] 500 - userRes.count is not a function 

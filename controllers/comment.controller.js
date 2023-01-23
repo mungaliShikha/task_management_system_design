@@ -9,6 +9,7 @@ const User = require("../models/user.model");
 const enums = require("../helper/enum/enums");
 
 module.exports = {
+  //*********************************** CREATE COMMENTS BY DEVELOPER AND MANAGER ***************************** */
   createComments: catchAsync(async (req, res) => {
     const { taskId } = req.params;
     const { comment, developer, manager, date_comment_created } = req.body;
@@ -51,7 +52,7 @@ module.exports = {
       updateTask.comments_in_task.length
     );
   }),
-
+ //**************************** GET COMMENT  OF PARTICULAR TASK *************************************** */
   getCommentOfParticularTask: catchAsync(async (req, res) => {
     const { taskId } = req.params;
     const roleAuth = await User.findOne({
@@ -83,6 +84,7 @@ module.exports = {
     );
   }),
 
+  //***************************** COMMENT REMOVED SUCCESSFULLY FROM TASK ********************************** */
   removeCommentFromTask: catchAsync(async (req, res) => {
     let { taskId } = req.params;
     let { commentIds } = req.body;
@@ -115,12 +117,10 @@ module.exports = {
         { $set: { isDeleted: true } }
       );
     }
-    helper.sendResponseWithCount(
+    helper.sendResponseWithoutData(
         res,
         SuccessCode.SUCCESS,
-        SuccessMessage.DATA_SAVED,
-        commentCount,
-        commentCount.comments_in_task.length
+        SuccessMessage.REMOVE_SUCCESS
       );
   }),
 };

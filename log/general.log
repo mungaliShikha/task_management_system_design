@@ -643,3 +643,17 @@ Jan-23-2023 16:00:26 [info] http://localhost:5000/api/admin/createManager - POST
 Jan-23-2023 16:02:42 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
 Jan-23-2023 16:07:25 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
 Jan-23-2023 16:10:18 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
+Jan-23-2023 16:19:50 [info] http://localhost:5000/api/user/listTheUser - GET METHOD  
+Jan-23-2023 16:21:03 [info] http://localhost:5000/api/user/listTheUser - GET METHOD  
+Jan-23-2023 16:21:33 [info] http://localhost:5000/api/user/listTheUser - GET METHOD  
+Jan-23-2023 16:22:44 [info] http://localhost:5000/api/user/listTheUser?page=2 - GET METHOD  
+Jan-23-2023 16:23:09 [info] http://localhost:5000/api/user/listTheUser?page=3 - GET METHOD  
+Jan-23-2023 16:23:09 [error] 404 - Data not found 
+Jan-23-2023 16:23:18 [info] http://localhost:5000/api/user/listTheUser?page=2 - GET METHOD  
+Jan-23-2023 16:24:12 [info] http://localhost:5000/api/user/listTheUser?page=2 - GET METHOD  
+Jan-23-2023 16:24:13 [error] 500 - userRes.count is not a function 
+Jan-23-2023 16:25:01 [info] http://localhost:5000/api/user/listTheUser?page=2 - GET METHOD  
+Jan-23-2023 16:25:50 [info] http://localhost:5000/api/user/listTheUser?page=2 - GET METHOD  
+Jan-23-2023 16:26:36 [info] http://localhost:5000/api/user/listTheUser?page=2&limit=5 - GET METHOD  
+Jan-23-2023 16:35:02 [info] http://localhost:5000/api/user/listTheUser?page=2&limit=5 - GET METHOD  
+Jan-23-2023 16:35:39 [info] http://localhost:5000/api/user/listTheUser?page=2&limit=5 - GET METHOD  
