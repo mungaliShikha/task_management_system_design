@@ -23,6 +23,7 @@ router.get(
   projectController.viewProject
 );
 router.get("/listProject", auth.verifyToken, projectController.listProject);
+
 router.delete(
   "/removeManagerFromProject/:projectId",
   auth.verifyToken,

@@ -1,25 +1,19 @@
 const Joi = require("joi");
 
 module.exports = {
-  logIn: (payload) => {
-    const schema = Joi.object({
-      email: Joi.string().email().lowercase().required(),
-      password: Joi.string().required().min(7),
-    });
-    return schema.validate(payload);
-  },
-  forgetPassword: (payload) => {
+
+  forgetPasswordAdmin: (payload) => {
     const schema = Joi.object({ email: Joi.string().email().lowercase().required() });
     return schema.validate(payload);
   }
   ,
 
-  resetPassword: (payload) => {
+  resetPasswordAdmin: (payload) => {
     const schema = Joi.object({ password: Joi.string().required().min(6) });
     return schema.validate(payload);
   },
 
-  updateAdmin: (payload) => {
+  updateAdminValidation: (payload) => {
     const schema = Joi.object({
       first_name: Joi.string().min(2).max(10),
       last_name: Joi.string().min(2).max(10),
@@ -33,9 +27,9 @@ module.exports = {
   },
   createmanager:(payload) => {
     const schema = Joi.object({ 
-        first_name: Joi.string().optional(),
-      last_name: Joi.string().required(),
-      email: Joi.string().email().lowercase().required(),
+        first_name: Joi.string().min(2).max(10).required().error(new Error("First Name is required")),
+      last_name: Joi.string().min(2).max(10).required().error(new Error("Email is not correct")),
+      email: Joi.string().email().lowercase().required().error(new Error("Email is not correct")),
       mobile_number:Joi.string().regex(/^[0-9]{10}$/).required()
      });
     return schema.validate(payload);

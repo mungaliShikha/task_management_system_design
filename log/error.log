@@ -7,14 +7,73 @@ Jan-20-2023 16:25:31 [error] 412 - password length must be at least 10 character
 Jan-20-2023 16:25:38 [error] 404 - Provided email is not registered. 
 Jan-20-2023 16:27:15 [error] 404 - Requested URL http://localhost:5000/api/user/loginManager not found! 
 Jan-20-2023 16:27:32 [error] 404 - Provided email is not registered. 
-Jan-20-2023 17:42:00 [error] 500 - validator is not a function 
-Jan-20-2023 17:43:21 [error] 500 - Cannot destructure property 'error' of 'validator' as it is undefined. 
-Jan-20-2023 17:43:53 [error] 500 - validator is not a function 
-Jan-20-2023 17:47:27 [error] 500 - E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: "8897857778" } 
-Jan-20-2023 17:47:42 [error] 412 - mobile_number with value 88978570000 fails to match the required pattern: /^[0-9]{10}$/ 
-Jan-20-2023 17:47:55 [error] 412 - mobile_number with value 889785700 fails to match the required pattern: /^[0-9]{10}$/ 
-Jan-20-2023 17:49:12 [error] 409 - Already exists. 
-Jan-20-2023 17:51:15 [error] 500 - Already exists. 
-Jan-20-2023 17:52:25 [error] 409 - Email Already Exist. 
-Jan-20-2023 17:54:27 [error] 409 - Email Already Exist. 
-Jan-20-2023 17:54:35 [error] 500 - Cannot read properties of null (reading 'email') 
+Jan-20-2023 17:58:45 [error] 500 - mailTemplate is not defined 
+Jan-20-2023 17:59:18 [error] 409 - Already exists. 
+Jan-20-2023 17:59:47 [error] 500 - No recipients defined 
+Jan-20-2023 18:03:19 [error] 409 - Already exists. 
+Jan-20-2023 18:03:32 [error] 412 - first_name is required 
+Jan-22-2023 13:59:19 [error] 404 - Only admin can create the manager 
+Jan-22-2023 14:00:20 [error] 409 - Already exists. 
+Jan-22-2023 14:00:45 [error] 500 - Cannot access 'subject' before initialization 
+Jan-22-2023 14:00:53 [error] 409 - Already exists. 
+Jan-22-2023 14:10:57 [error] 409 - Already exists. 
+Jan-22-2023 14:12:17 [error] 409 - Already exists. 
+Jan-22-2023 14:30:14 [error] 412 - first_nam is not allowed 
+Jan-22-2023 14:30:25 [error] 500 - Cannot read properties of undefined (reading 'location') 
+Jan-22-2023 14:32:28 [error] 500 - Cannot read properties of undefined (reading 'location') 
+Jan-22-2023 14:36:17 [error] 500 - Cannot read properties of undefined (reading 'location') 
+Jan-22-2023 14:37:14 [error] 500 - Cannot read properties of undefined (reading 'location') 
+Jan-22-2023 14:38:07 [error] 404 - Requested URL http://localhost:5000/ not found! 
+Jan-22-2023 14:42:10 [error] 500 - Cannot read properties of undefined (reading 'profile_pic') 
+Jan-22-2023 14:43:30 [error] 500 - Cannot read properties of undefined (reading 'profile_image') 
+Jan-22-2023 14:43:32 [error] 500 - Cannot read properties of undefined (reading 'profile_image') 
+Jan-22-2023 14:44:24 [error] 500 - Cannot read properties of undefined (reading 'profile_image') 
+Jan-22-2023 14:44:26 [error] 500 - Cannot read properties of undefined (reading 'profile_image') 
+Jan-22-2023 14:46:42 [error] 500 - Cannot read properties of undefined (reading 'profile_image') 
+Jan-22-2023 14:46:44 [error] 500 - Cannot read properties of undefined (reading 'profile_image') 
+Jan-22-2023 14:48:07 [error] 404 - Requested URL http://localhost:5000/ not found! 
+Jan-22-2023 14:48:37 [error] 404 - Requested URL http://localhost:5000/requested.html not found! 
+Jan-22-2023 14:56:06 [error] 500 - Cannot read properties of undefined (reading 'location') 
+Jan-22-2023 14:56:09 [error] 500 - Cannot read properties of undefined (reading 'location') 
+Jan-22-2023 14:57:25 [error] 404 - This user does not exist. 
+Jan-22-2023 14:57:52 [error] 500 - Cannot read properties of undefined (reading 'location') 
+Jan-22-2023 14:58:06 [error] 404 - Requested URL http://localhost:5000/ not found! 
+Jan-22-2023 14:58:35 [error] 404 - Requested URL http://localhost:5000/requested.html not found! 
+Jan-22-2023 14:59:30 [error] 500 - Cannot read properties of undefined (reading 'location') 
+Jan-22-2023 15:00:17 [error] 500 - Cannot read properties of undefined (reading 'location') 
+Jan-22-2023 15:03:08 [error] 500 - Cannot read properties of undefined (reading 'location') 
+Jan-22-2023 15:05:19 [error] 500 - Cannot read properties of undefined (reading 'location') 
+Jan-22-2023 15:05:22 [error] 500 - Cannot read properties of undefined (reading 'location') 
+Jan-22-2023 15:05:23 [error] 500 - Cannot read properties of undefined (reading 'location') 
+Jan-22-2023 15:07:02 [error] 500 - Unexpected field 
+Jan-22-2023 15:07:06 [error] 500 - Unexpected field 
+Jan-22-2023 15:08:06 [error] 404 - Requested URL http://localhost:5000/ not found! 
+Jan-22-2023 15:08:35 [error] 404 - Requested URL http://localhost:5000/requested.html not found! 
+Jan-22-2023 15:10:12 [error] 500 - Cannot read properties of undefined (reading 'location') 
+Jan-22-2023 15:14:10 [error] 500 - Cannot read properties of undefined (reading 'location') 
+Jan-22-2023 15:18:09 [error] 404 - Requested URL http://localhost:5000/ not found! 
+Jan-22-2023 15:18:32 [error] 404 - Provided email is not registered. 
+Jan-22-2023 15:18:38 [error] 404 - Requested URL http://localhost:5000/requested.html not found! 
+Jan-22-2023 15:19:58 [error] 404 - This user does not exist. 
+Jan-22-2023 15:27:52 [error] 404 - This user does not exist. 
+Jan-22-2023 15:30:55 [error] 404 - This user does not exist. 
+Jan-22-2023 15:35:33 [error] 500 - Cannot create property 'updatedAt' on string 'ongoing' 
+Jan-22-2023 15:36:14 [error] 500 - Cannot create property 'updatedAt' on string 'ongoing' 
+Jan-22-2023 15:36:29 [error] 500 - Cannot create property 'updatedAt' on string 'completed' 
+Jan-22-2023 15:37:13 [error] 500 - Cannot create property 'updatedAt' on string 'completed' 
+Jan-22-2023 15:37:49 [error] 500 - Cannot create property 'updatedAt' on string 'completed' 
+Jan-22-2023 15:38:07 [error] 500 - Cannot create property 'updatedAt' on string 'completed' 
+Jan-22-2023 15:43:23 [error] 500 - Cannot create property 'updatedAt' on string 'completed' 
+Jan-22-2023 15:45:17 [error] 500 - Cannot create property 'updatedAt' on string 'completed' 
+Jan-22-2023 15:49:00 [error] 404 - Project is already completed 
+Jan-23-2023 10:22:59 [error] 412 - email is required 
+Jan-23-2023 10:23:54 [error] 500 - Joi.string(...).email(...).lowercase(...).unique is not a function 
+Jan-23-2023 10:25:12 [error] 412 - first_nam is not allowed 
+Jan-23-2023 10:25:23 [error] 500 - Cannot read properties of undefined (reading 'length') 
+Jan-23-2023 10:26:52 [error] 500 - Cannot read properties of undefined (reading 'length') 
+Jan-23-2023 10:27:22 [error] 500 - Cannot read properties of undefined (reading 'length') 
+Jan-23-2023 10:27:24 [error] 500 - Cannot read properties of undefined (reading 'length') 
+Jan-23-2023 10:27:58 [error] 500 - Cannot read properties of undefined (reading 'length') 
+Jan-23-2023 10:30:06 [error] 500 - Cannot read properties of undefined (reading 'length') 
+Jan-23-2023 10:32:15 [error] 500 - Cannot read properties of undefined (reading 'length') 
+Jan-23-2023 10:32:55 [error] 412 - first_na is not allowed 
