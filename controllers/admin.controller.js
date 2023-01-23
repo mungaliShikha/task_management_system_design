@@ -1,3 +1,4 @@
+const Token = require("../models/token.model");
 const catchAsync = require("../helper/catchAsync");
 const crypto = require("crypto");
 const appError = require("../helper/errorHandlers/errorHandler");
@@ -20,36 +21,7 @@ const {
 const { compareHash, generateToken } = require("../helper/commonFunction");
 
 module.exports = {
-  /// **********************************   admin login ************************************************
-  login: catchAsync(async (req, res) => {
-    console.log("266");
-    const { email, password } = req.body;
-    const loggedInUser = await getOneUser({ email });
-    if (!loggedInUser || !compareHash(password, loggedInUser.password)) {
-      throw new appError(
-        ErrorMessage.EMAIL_NOT_REGISTERED,
-        ErrorCode.NOT_FOUND
-      );
-    } else {
-      let token = generateToken({ id: loggedInUser._id });
-      let finalRes = {
-        email: email,
-        mobile_number: loggedInUser.mobile_number,
-        role: loggedInUser.role,
-        first_name: loggedInUser.first_name,
-        last_name: loggedInUser.last_name,
-        token: token,
-      };
-      helper.sendResponseWithData(
-        res,
-        SuccessCode.SUCCESS,
-        SuccessMessage.LOGIN_SUCCESS,
-        finalRes
-      );
-    }
-  }),
-
-  //************************************ forgetpassword for admin******************************* */
+  //************************************ forgetpassword for admin ******************************* */
 
   forgetPassword: catchAsync(async (req, res) => {
     const { email } = req.body;
@@ -60,7 +32,7 @@ module.exports = {
         ErrorCode.NOT_FOUND
       );
     }
-    var tokenFound = await getOneToken({ userId: user._id });
+    var tokenFound = await Token.findOne({ userId: user._id });
     if (!tokenFound) {
       tokenFound = await new Token({
         userId: user._id,

@@ -44,7 +44,6 @@ exports.verifyToken = async (req, res, next) => {
       throw new appError(ErrorMessage.NO_TOKEN, ErrorCode.UNAUTHORIZED);
     }
   } catch (error) {
-    console.log("error--", error)
     next(error)
   }
 };

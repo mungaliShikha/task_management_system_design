@@ -1,9 +1,14 @@
 const router = require("express").Router();
 const adminController = require("../../controllers/admin.controller");
-const auth = require('../../middleware/auth');
+const auth = require("../../middleware/auth");
 const { validationMiddleware } = require("../../middleware/joeValidator");
+const { updateAdmin } = require("../../validator/admin.validator");
 const { upload } = require("../../utils/aws/aws");
-const { logIn,updateAdmin } = require("../../validator/admin.validator");
+const {
+  resetPassword,
+  forgetPassword,
+  createManager,
+} = require("../../controllers/admin.controller");
 
 /**
  * @swagger
@@ -33,7 +38,6 @@ const { logIn,updateAdmin } = require("../../validator/admin.validator");
  *       500:
  *         description: Internal Server Error
  */
-router.post('/login',validationMiddleware(logIn),adminController.login);
 
 /**
  * @swagger
@@ -77,14 +81,13 @@ router.post('/login',validationMiddleware(logIn),adminController.login);
  */
 // router.post('/addDeveloper', adminController.addDeveloper)
 
-
 /**
  * @swagger
  * /api/admin/listDeveloper:
  *   get:
  *     tags:
  *       - ADMIN_DEVELOPER_DASHBOARD
- *     description: Check for Social existence and give the access Token 
+ *     description: Check for Social existence and give the access Token
  *     produces:
  *       - application/json
  *     responses:
@@ -99,14 +102,13 @@ router.post('/login',validationMiddleware(logIn),adminController.login);
  */
 // router.get('/listDeveloper', adminController.listDeveloper)
 
-
 /**
  * @swagger
  * /api/admin/viewDeveloper:
  *   get:
  *     tags:
  *       - ADMIN_DEVELOPER_DASHBOARD
- *     description: Check for Social existence and give the access Token 
+ *     description: Check for Social existence and give the access Token
  *     produces:
  *       - application/json
  *     parameters:
@@ -132,7 +134,7 @@ router.post('/login',validationMiddleware(logIn),adminController.login);
  *   get:
  *     tags:
  *       - ADMIN
- *     description: Check for Social existence and give the access Token 
+ *     description: Check for Social existence and give the access Token
  *     produces:
  *       - application/json
  *     responses:
@@ -145,10 +147,28 @@ router.post('/login',validationMiddleware(logIn),adminController.login);
  *       500:
  *         description: Internal Server Error
  */
-router.post('/forgetPassword',adminController.forgetPassword)
-router.post('/resetPassword/:userId/:token',adminController.resetPassword)
-router.put('/updateAdmin',auth.verifyToken, upload.array("profile_image"),validationMiddleware(updateAdmin),adminController.updateAdmin)
-router.get('/getAdminDetails',auth.verifyToken, adminController.getAdminDetails)
+router.post(
+  "/forgetPassword",
+  validationMiddleware(forgetPassword),
+  adminController.forgetPassword
+);
+router.post(
+  "/resetPassword/:userId/:token",
+  validationMiddleware(resetPassword),
+  adminController.resetPassword
+);
+router.put(
+  "/updateAdmin",
+  auth.verifyToken,
+  upload.array("profile_image"),
+  validationMiddleware(updateAdmin),
+  adminController.updateAdmin
+);
+router.get(
+  "/getAdminDetails",
+  auth.verifyToken,
+  adminController.getAdminDetails
+);
 
 router.post("/forgetPassword", adminController.forgetPassword);
 router.post("/resetPassword/:userId/:token", adminController.resetPassword);
@@ -160,7 +180,12 @@ router.put(
 router.get("/getAdminDetails/:userId", adminController.getAdminDetails);
 
 /// admin can create manager
-router.post("/addManager",auth.verifyToken, adminController.addManager);
+router.post(
+  "/createManager",
+  auth.verifyToken,
+  validationMiddleware(createManager),
+  adminController.createManager
+);
 
 router.get("/listManager", adminController.listManager);
 router.get("/viewManager", adminController.viewManager);

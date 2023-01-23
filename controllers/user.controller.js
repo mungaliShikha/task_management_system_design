@@ -23,40 +23,33 @@ const enums = require("../helper/enum/enums")
 const {subjects,messages}=require('../helper/commonFunction');
 
 module.exports = {
-
-  // *************************************************** manager login ******************************************
-  loginManager: async (req, res, next) => {
-    try {
-      const { email, password } = req.body;
-      const loggedInUser = await getOneUser({ email });
-      if (!loggedInUser || !compareHash(password, loggedInUser.password)) {
-        throw new appError(
-          ErrorMessage.EMAIL_NOT_REGISTERED,
-          ErrorCode.NOT_FOUND
-        );
-      } else {
-        let token = generateToken({ id: loggedInUser._id });
-        let managerRes = {
-          _id: loggedInUser._id,
-          email: email,
-          first_name: loggedInUser.first_name,
-          last_name: loggedInUser.last_name,
-          role: loggedInUser.role,
-          mobile_number: loggedInUser.mobile_number,
-          employee_id: loggedInUser.employee_id,
-          token: token,
-        };
-        helper.sendResponseWithData(
-          res,
-          SuccessCode.SUCCESS,
-          SuccessMessage.LOGIN_SUCCESS,
-          managerRes
-        );
-      }
-    } catch (error) {
-      next(error)
-    }
-  },
+  //******************************** common login api for manager developer admin ************************** */
+ login: catchAsync(async (req, res) => {
+  const { email, password } = req.body;
+  const loggedInUser = await getOneUser({ email ,role:{ $in: [ enums.declaredEnum.role.MANAGER, enums.declaredEnum.role.DEVELOPER, enums.declaredEnum.role.ADMIN ] }});
+  if (!loggedInUser || !compareHash(password, loggedInUser.password)) {
+    throw new appError(
+      ErrorMessage.EMAIL_NOT_REGISTERED,
+      ErrorCode.NOT_FOUND
+    );
+  } else {
+    let token = generateToken({ id: loggedInUser._id });
+    let finalRes = {
+      email: email,
+      mobile_number: loggedInUser.mobile_number,
+      role: loggedInUser.role,
+      first_name: loggedInUser.first_name,
+      last_name: loggedInUser.last_name,
+      token: token,
+    };
+    helper.sendResponseWithData(
+      res,
+      SuccessCode.SUCCESS,
+      SuccessMessage.LOGIN_SUCCESS,
+      finalRes
+    );
+  }
+}),
 
   // *********************************************** get profile for Manager,Developer *******************************
 
@@ -145,48 +138,5 @@ module.exports = {
   }),
   
 
-  // **************************************************** Developer Login ************************
-
-  developerLogin: async (req, res) => {
-    try {
-      const { email, password } = req.body;
-      let developerDetails = await getOneUser({ email });
-      if (!developerDetails)
-        helper.commonResponse(
-          res,
-          ErrorCode.NOT_FOUND,
-          ErrorMessage.USER_NOT_FOUND
-        );
-      else if (!compareHash(password, developerDetails.password))
-        helper.commonResponse(
-          res,
-          ErrorCode.NOT_FOUND,
-          ErrorMessage.INVALID_CREDENTIAL
-        );
-      const token = generateToken({
-        id: developerDetails._id,
-        role: developerDetails.role,
-      });
-      let loginRes = {
-        _id: developerDetails._id,
-        email: email,
-        role: developerDetails.role,
-        token: token,
-        first_name: developerDetails.first_name,
-        last_name: developerDetails.last_name,
-      };
-      helper.commonResponse(
-        res,
-        SuccessCode.SUCCESS,
-        loginRes,
-        SuccessMessage.DATA_FOUND
-      );
-    } catch (error) {
-      helper.commonResponse(
-        res,
-        ErrorCode.SOMETHING_WRONG,
-        ErrorMessage.SOMETHING_WRONG
-      );
-    }
-  },
+  
 };

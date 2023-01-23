@@ -1,0 +1,9 @@
+Jan-20-2023 12:17:26 [error] 500 - Token is not defined 
+Jan-20-2023 15:27:23 [error] 404 -  
+Jan-20-2023 15:35:37 [error] 404 - The requested user cannot access the data 
+Jan-20-2023 15:49:59 [error] 412 - first_name is required 
+Jan-20-2023 15:52:00 [error] 412 - first_name is required 
+Jan-20-2023 16:25:31 [error] 412 - password length must be at least 10 characters long 
+Jan-20-2023 16:25:38 [error] 404 - Provided email is not registered. 
+Jan-20-2023 16:27:15 [error] 404 - Requested URL http://localhost:5000/api/user/loginManager not found! 
+Jan-20-2023 16:27:32 [error] 404 - Provided email is not registered. 

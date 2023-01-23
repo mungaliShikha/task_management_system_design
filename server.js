@@ -8,7 +8,6 @@ app.use(cors());
 const appError = require("./helper/errorHandlers/errorHandler");
 const errorController = require("./helper/errorHandlers/errorController");
 const apiLogger = require("./helper/logger/apiRouteLogger");
-const logger = require("./helper/logger/logger")
 // const basicAuth = require('express-basic-auth');
 
 app.use(express.urlencoded({ extended: true, limit: "1000mb" }));
@@ -56,7 +55,7 @@ app.use("/api", apiLogger,index);
 
 app.all("*", (req, res, next) => {
   throw new appError(
-    `Requested URL http://localhost:${5000}${req.path} not found!`,
+    `Requested URL http://localhost:${global.gConfig.node_port}${req.path} not found!`,
     404
   );
 });
