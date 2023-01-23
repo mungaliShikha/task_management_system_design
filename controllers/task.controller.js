@@ -97,7 +97,7 @@ module.exports = {
     limit = req.query.limit || 10;
     const taskListRes = await task
       .find(queryMade)
-      .populate("projectId manager developer_assigned")
+      .populate("projectId manager developer_assigned comments_in_task")
       .limit(limit * 1)
       .skip((page - 1) * limit)
       .exec();

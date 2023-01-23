@@ -1,6 +1,7 @@
 const catchAsync = require("../helper/catchAsync");
 const appError = require("../helper/errorHandlers/errorHandler");
 const { ErrorMessage, SuccessMessage } = require("../helper/message");
+const User = require("../models/user.model")
 const { ErrorCode, SuccessCode } = require("../helper/statusCode");
 const {
   compareHash,
@@ -131,6 +132,45 @@ module.exports = {
       SuccessCode.SUCCESS,
       SuccessMessage.CREATE_DEVELOPER,
       createDeveloper
+    );
+  }),
+
+  //*********************************** get the list of manager and developers**************************** */
+
+  listTheUser: catchAsync(async (req, res) => {
+   
+    if (req.body.search) {
+      query.name = new RegExp("^" + req.body.search, "i");
+    }
+    const allAuthRes = await getOneUser({ _id: req.userId ,role:{$in:[enums.declaredEnum.role.MANAGER, enums.declaredEnum.role.DEVELOPER, enums.declaredEnum.role.ADMIN]}});
+    if (!allAuthRes) {
+      throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
+    }
+
+    var query = { status: { $ne: enums.declaredEnum.status.DELETE } };
+
+    let { page, limit } = req.query;
+    page = req.query.page || 1;
+    limit = req.query.limit || 10;
+    const userRes = await User
+      .find(query)
+      .limit(limit * 1)
+      .skip((page - 1) * limit)
+      .exec();
+    const count = await User.countDocuments();
+    if (userRes.length == 0) {
+      throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
+    }
+    let final = {
+      user: userRes,
+      totalPages: Math.ceil(count / limit),
+      currentPage: page,
+    };
+    helper.commonResponse(
+      res,
+      SuccessCode.SUCCESS,
+      final,
+      SuccessMessage.DATA_FOUND
     );
   }),
 
