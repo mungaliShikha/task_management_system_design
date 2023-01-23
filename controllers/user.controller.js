@@ -83,7 +83,7 @@ module.exports = {
           ErrorCode.NOT_FOUND,
           ErrorMessage.USER_NOT_FOUND
         );
-       if(req.files.length!==0){
+       if(req.files.length){
         payload["profile_image"]=req.files[0].location;
             }
       let updateRes = await getUserAndUpdate
