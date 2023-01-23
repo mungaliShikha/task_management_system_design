@@ -1,0 +1,126 @@
+const appError = require("../helper/errorHandlers/errorHandler");
+const { ErrorMessage, SuccessMessage } = require("../helper/message");
+const { ErrorCode, SuccessCode } = require("../helper/statusCode");
+const helper = require("../helper/commonResponseHandler");
+const catchAsync = require("../helper/catchAsync");
+const Comment = require("../models/comment.model");
+const Task = require("../models/task.model");
+const User = require("../models/user.model");
+const enums = require("../helper/enum/enums");
+
+module.exports = {
+  createComments: catchAsync(async (req, res) => {
+    const { taskId } = req.params;
+    const { comment, developer, manager, date_comment_created } = req.body;
+
+    const roleAuth = await User.findOne({
+      _id: req.userId,
+      role: {
+        $in: [
+          enums.declaredEnum.role.MANAGER,
+          enums.declaredEnum.role.DEVELOPER,
+        ],
+      },
+    });
+    if (!roleAuth) {
+      throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
+    }
+    if (
+      roleAuth.role == enums.declaredEnum.role.MANAGER ||
+      roleAuth.role == enums.declaredEnum.role.DEVELOPER
+    ) {
+      req.body.user = roleAuth._id;
+    }
+
+    const taskExist = await Task.findById(taskId);
+    if (!taskExist) {
+      throw new appError(ErrorMessage.TASK_NOT_FOUND, ErrorCode.NOT_FOUND);
+    }
+    req.body.taskId = taskExist._id;
+    let createdComment = await Comment.create(req.body);
+    let updateTask = await Task.findByIdAndUpdate(
+      taskId,
+      { $addToSet: { comments_in_task: createdComment._id } },
+      { new: true }
+    );
+    helper.sendResponseWithCount(
+      res,
+      SuccessCode.SUCCESS,
+      SuccessMessage.DATA_SAVED,
+      createdComment,
+      updateTask.comments_in_task.length
+    );
+  }),
+
+  getCommentOfParticularTask: catchAsync(async (req, res) => {
+    const { taskId } = req.params;
+    const roleAuth = await User.findOne({
+      _id: req.userId,
+      role: {
+        $in: [
+          enums.declaredEnum.role.MANAGER,
+          enums.declaredEnum.role.DEVELOPER,
+        ],
+      },
+    });
+    if (!roleAuth) {
+      throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
+    }
+    const taskExist = await Task.findById(taskId);
+    if (!taskExist) {
+      throw new appError(ErrorMessage.TASK_NOT_FOUND, ErrorCode.NOT_FOUND);
+    }
+
+    const getComments = await Comment.find({
+      taskId,
+      isDeleted: false,
+    }).populate("user taskId");
+    helper.commonResponse(
+      res,
+      SuccessCode.SUCCESS,
+      getComments,
+      SuccessMessage.DATA_FOUND
+    );
+  }),
+
+  removeCommentFromTask: catchAsync(async (req, res) => {
+    let { taskId } = req.params;
+    let { commentIds } = req.body;
+
+    const roleAuth = await User.findOne({
+      _id: req.userId,
+      role: {
+        $in: [
+          enums.declaredEnum.role.MANAGER,
+          enums.declaredEnum.role.DEVELOPER,
+        ],
+      },
+    });
+    if (!roleAuth) {
+      throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
+    }
+    const taskExist = await Task.findById(taskId);
+    if (!taskExist) {
+      throw new appError(ErrorMessage.TASK_NOT_FOUND, ErrorCode.NOT_FOUND);
+    }
+
+    const commentCount = await Task.findOneAndUpdate(
+      { _id: taskId },
+      { $pullAll: { comments_in_task: commentIds } }
+    );
+    
+    for (let i = 0; i < commentIds.length; i++) {
+      await Comment.findOneAndUpdate(
+        { _id: commentIds[i] },
+        { $set: { isDeleted: true } }
+      );
+    }
+    helper.sendResponseWithCount(
+        res,
+        SuccessCode.SUCCESS,
+        SuccessMessage.DATA_SAVED,
+        commentCount,
+        commentCount.comments_in_task.length
+      );
+  }),
+};

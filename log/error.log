@@ -77,3 +77,21 @@ Jan-23-2023 10:27:58 [error] 500 - Cannot read properties of undefined (reading 
 Jan-23-2023 10:30:06 [error] 500 - Cannot read properties of undefined (reading 'length') 
 Jan-23-2023 10:32:15 [error] 500 - Cannot read properties of undefined (reading 'length') 
 Jan-23-2023 10:32:55 [error] 412 - first_na is not allowed 
+Jan-23-2023 10:38:59 [error] 412 -  
+Jan-23-2023 10:40:41 [error] 412 - first_name is required 
+Jan-23-2023 10:40:50 [error] 409 - Already exists. 
+Jan-23-2023 11:59:58 [error] 500 - Cannot read properties of undefined (reading 'create') 
+Jan-23-2023 12:03:07 [error] 404 - Data not found 
+Jan-23-2023 12:58:37 [error] 404 - Provided email is not registered. 
+Jan-23-2023 12:58:42 [error] 404 - Provided email is not registered. 
+Jan-23-2023 13:12:13 [error] 401 - Please provide token. 
+Jan-23-2023 13:26:01 [error] 404 - Requested URL http://localhost:5000/api/user/developerLogin not found! 
+Jan-23-2023 13:26:12 [error] 404 - Requested URL http://localhost:5000/api/user/developerLogin not found! 
+Jan-23-2023 13:59:37 [error] 500 - jwt expired 
+Jan-23-2023 14:03:11 [error] 500 - jwt expired 
+Jan-23-2023 14:03:36 [error] 500 - jwt expired 
+Jan-23-2023 14:14:42 [error] 500 - jwt expired 
+Jan-23-2023 15:49:58 [error] 404 - Data not found 
+Jan-23-2023 15:54:13 [error] 404 - Data not found 
+Jan-23-2023 15:54:46 [error] 404 - Requested URL http://localhost:5000/api/user/listTheUse not found! 
+Jan-23-2023 15:56:47 [error] 404 - Data not found 

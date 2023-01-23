@@ -3,33 +3,24 @@ const schema = mongoose.Schema;
 
 var comment_model = new schema(
   {
-    title: {
+    comment: {
       type: String,
       required: true,
     },
-
-    task: [
-      {
-        type: schema.Types.ObjectId,
-        ref: "user",
-      },
-    ],
-    developer: [
-      {
-        type: schema.Types.ObjectId,
-        ref: "user",
-      },
-    ],
-    manager: [
-      {
-        type: schema.Types.ObjectId,
-        ref: "user",
-      },
-    ],
+    user: {
+      type: schema.Types.ObjectId,
+      ref: "users",
+    },
+    taskId: {
+      type: schema.Types.ObjectId,
+      ref: "task",
+    },
+    isDeleted :{
+      type:Boolean,
+      default:false
+    }
   },
-  { timestamps: true }
+  { timestamps: false }
 );
 
-
 module.exports = mongoose.model("comment", comment_model);
-
