@@ -57,7 +57,7 @@ module.exports = {
   getProfile: catchAsync(async (req, res) => {
     const tokenAuth = await getOneUser({
       _id: req.userId,
-      role: { $in: [enums.declaredEnum.role.DEVELOPER, enums.declaredEnum.role.MANAGER] },
+      role: { $in: [enums.declaredEnum.role.DEVELOPER, enums.declaredEnum.role.MANAGER,enums.declaredEnum.role.ADMIN] },
     });
     if (!tokenAuth) {
       throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
@@ -75,7 +75,7 @@ module.exports = {
     let payload = req.body;
     const tokenAuth = await getOneUser({
       _id: req.userId,
-      role: { $in: [enums.declaredEnum.role.DEVELOPER, enums.declaredEnum.role.MANAGER] },
+      role: { $in: [enums.declaredEnum.role.DEVELOPER, enums.declaredEnum.role.MANAGER,enums.declaredEnum.role.ADMIN] },
     });
     if (!tokenAuth)
       helper.commonResponse(
@@ -92,12 +92,7 @@ module.exports = {
         { $set: payload },
         { new: true }
       );
-    helper.commonResponse(
-      res,
-      SuccessCode.SUCCESS,
-      updateRes,
-      SuccessMessage.UPDATE_SUCCESS
-    );
+    helper.commonResponse(res,SuccessCode.SUCCESS,updateRes,SuccessMessage.UPDATE_SUCCESS);
 
   }),
 
@@ -143,7 +138,5 @@ module.exports = {
       next(error)
     }
   })
-  ,
-
 
 };

@@ -77,3 +77,25 @@ Jan-23-2023 10:27:58 [error] 500 - Cannot read properties of undefined (reading 
 Jan-23-2023 10:30:06 [error] 500 - Cannot read properties of undefined (reading 'length') 
 Jan-23-2023 10:32:15 [error] 500 - Cannot read properties of undefined (reading 'length') 
 Jan-23-2023 10:32:55 [error] 412 - first_na is not allowed 
+Jan-23-2023 12:05:44 [error] 404 - Provided email is not registered. 
+Jan-23-2023 12:09:02 [error] 404 - Provided email is not registered. 
+Jan-23-2023 12:18:08 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword not found! 
+Jan-23-2023 12:18:45 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword not found! 
+Jan-23-2023 12:22:29 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword not found! 
+Jan-23-2023 12:23:23 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword not found! 
+Jan-23-2023 13:10:15 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword not found! 
+Jan-23-2023 13:17:08 [error] 401 - Please provide token. 
+Jan-23-2023 13:17:26 [error] 500 - invalid signature 
+Jan-23-2023 13:20:17 [error] 401 - Please provide token. 
+Jan-23-2023 13:27:58 [error] 500 - Unexpected field 
+Jan-23-2023 13:50:20 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword/63ce2baa58860af9687124e79c23b280dacc8feeeeae54b6658e9b00a3adff59c3286c2162d2930f3fabf9d3 not found! 
+Jan-23-2023 13:55:43 [error] 412 -  
+Jan-23-2023 13:56:59 [error] 412 -  
+Jan-23-2023 13:57:46 [error] 500 - Cannot read properties of null (reading 'email') 
+Jan-23-2023 13:58:58 [error] 409 - Email Already Exist. 
+Jan-23-2023 13:59:09 [error] 500 - E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: "8897859007" } 
+Jan-23-2023 13:59:39 [error] 500 - E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: "8897859007" } 
+Jan-23-2023 14:02:31 [error] 412 -  
+Jan-23-2023 14:03:12 [error] 412 -  
+Jan-23-2023 14:03:24 [error] 412 -  
+Jan-23-2023 14:03:55 [error] 412 -  

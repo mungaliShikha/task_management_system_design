@@ -229,3 +229,64 @@ Jan-23-2023 10:32:55 [info] http://localhost:5000/api/user/updateProfile - PUT M
 Jan-23-2023 10:32:55 [error] 412 - first_na is not allowed 
 Jan-23-2023 10:33:33 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
 Jan-23-2023 10:34:30 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
+Jan-23-2023 12:05:44 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-23-2023 12:05:44 [error] 404 - Provided email is not registered. 
+Jan-23-2023 12:09:02 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-23-2023 12:09:02 [error] 404 - Provided email is not registered. 
+Jan-23-2023 12:09:46 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-23-2023 12:18:08 [info] http://localhost:5000/api/admin/resetPassword?userId=63ce2baa58860af9687124e7&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzY2UyYmFhNTg4NjBhZjk2ODcxMjRlNyIsImlhdCI6MTY3NDQ1NTk4NiwiZXhwIjoxNjc0NDYzMTg2fQ.XNygSw9YofC-7MYbIAH1ma%0AYZYuNH7AjzYNRU18Hmkn8 - POST METHOD  
+Jan-23-2023 12:18:08 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword not found! 
+Jan-23-2023 12:18:45 [info] http://localhost:5000/api/admin/resetPassword?userId=63ce2baa58860af9687124e7&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzY2UyYmFhNTg4NjBhZjk2ODcxMjRlNyIsImlhdCI6MTY3NDQ1NTk4NiwiZXhwIjoxNjc0NDYzMTg2fQ.XNygSw9YofC-7MYbIAH1ma%0AYZYuNH7AjzYNRU18Hmkn8 - POST METHOD  
+Jan-23-2023 12:18:45 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword not found! 
+Jan-23-2023 12:22:29 [info] http://localhost:5000/api/admin/resetPassword?userId=63ce2baa58860af9687124e7&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzY2UyYmFhNTg4NjBhZjk2ODcxMjRlNyIsImlhdCI6MTY3NDQ1NTk4NiwiZXhwIjoxNjc0NDYzMTg2fQ.XNygSw9YofC-7MYbIAH1ma%0AYZYuNH7AjzYNRU18Hmkn8 - POST METHOD  
+Jan-23-2023 12:22:29 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword not found! 
+Jan-23-2023 12:23:23 [info] http://localhost:5000/api/admin/resetPassword?userId=63ce2baa58860af9687124e7&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzY2UyYmFhNTg4NjBhZjk2ODcxMjRlNyIsImlhdCI6MTY3NDQ1NTk4NiwiZXhwIjoxNjc0NDYzMTg2fQ.XNygSw9YofC-7MYbIAH1ma%0AYZYuNH7AjzYNRU18Hmkn8 - POST METHOD  
+Jan-23-2023 12:23:23 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword not found! 
+Jan-23-2023 13:10:15 [info] http://localhost:5000/api/admin/resetPassword?userId=63ce2baa58860af9687124e7&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzY2UyYmFhNTg4NjBhZjk2ODcxMjRlNyIsImlhdCI6MTY3NDQ1NTk4NiwiZXhwIjoxNjc0NDYzMTg2fQ.XNygSw9YofC-7MYbIAH1ma%0AYZYuNH7AjzYNRU18Hmkn8 - POST METHOD  
+Jan-23-2023 13:10:15 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword not found! 
+Jan-23-2023 13:17:08 [info] http://localhost:5000/api/user/getProfile - GET METHOD  
+Jan-23-2023 13:17:08 [error] 401 - Please provide token. 
+Jan-23-2023 13:17:26 [info] http://localhost:5000/api/user/getProfile - GET METHOD  
+Jan-23-2023 13:17:26 [error] 500 - invalid signature 
+Jan-23-2023 13:20:17 [info] http://localhost:5000/api/user/getProfile - GET METHOD  
+Jan-23-2023 13:20:17 [error] 401 - Please provide token. 
+Jan-23-2023 13:21:07 [info] http://localhost:5000/api/user/getProfile - GET METHOD  
+Jan-23-2023 13:27:57 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-23-2023 13:27:58 [error] 500 - Unexpected field 
+Jan-23-2023 13:28:19 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-23-2023 13:32:53 [info] http://localhost:5000/api/admin/resetPassword/63ce2baa58860af9687124e/88fe2109e73736a0055590b3e381e29157af8c4fdd8439bb2615e4ce736cdb4b - POST METHOD  
+Jan-23-2023 13:33:57 [info] http://localhost:5000/api/admin/resetPassword/63ce2baa58860af9687124e/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzY2UyYmFhNTg4NjBhZjk2ODcxMjRlNyIsImlhdCI6MTY3NDQ1NTk4NiwiZXhwIjoxNjc0NDYzMTg2fQ.XNygSw9YofC-7MYbIAH1maYZYuNH7AjzYNRU18Hmkn8 - POST METHOD  
+Jan-23-2023 13:35:05 [info] http://localhost:5000/api/admin/resetPassword/63ce2baa58860af9687124e/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzY2UyYmFhNTg4NjBhZjk2ODcxMjRlNyIsImlhdCI6MTY3NDQ1NTk4NiwiZXhwIjoxNjc0NDYzMTg2fQ.XNygSw9YofC-7MYbIAH1maYZYuNH7AjzYNRU18Hmkn8 - POST METHOD  
+Jan-23-2023 13:35:46 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-23-2023 13:40:03 [info] http://localhost:5000/api/admin/resetPassword/63ce2baa58860af9687124e/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzY2UyYmFhNTg4NjBhZjk2ODcxMjRlNyIsImlhdCI6MTY3NDQ1NTk4NiwiZXhwIjoxNjc0NDYzMTg2fQ.XNygSw9YofC-7MYbIAH1maYZYuNH7AjzYNRU18Hmkn8 - POST METHOD  
+Jan-23-2023 13:40:55 [info] http://localhost:5000/api/admin/resetPassword/63ce2baa58860af9687124e7/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzY2UyYmFhNTg4NjBhZjk2ODcxMjRlNyIsImlhdCI6MTY3NDQ1NTk4NiwiZXhwIjoxNjc0NDYzMTg2fQ.XNygSw9YofC-7MYbIAH1maYZYuNH7AjzYNRU18Hmkn8 - POST METHOD  
+Jan-23-2023 13:41:31 [info] http://localhost:5000/api/admin/resetPassword/63ce2baa58860af9687124e7/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzY2UyYmFhNTg4NjBhZjk2ODcxMjRlNyIsImlhdCI6MTY3NDQ1NTk4NiwiZXhwIjoxNjc0NDYzMTg2fQ.XNygSw9YofC-7MYbIAH1maYZYuNH7AjzYNRU18Hmkn8 - POST METHOD  
+Jan-23-2023 13:42:05 [info] http://localhost:5000/api/admin/resetPassword/63ce2baa58860af9687124e7/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzY2UyYmFhNTg4NjBhZjk2ODcxMjRlNyIsImlhdCI6MTY3NDQ1NTk4NiwiZXhwIjoxNjc0NDYzMTg2fQ.XNygSw9YofC-7MYbIAH1maYZYuNH7AjzYNRU18Hmkn8 - POST METHOD  
+Jan-23-2023 13:43:05 [info] http://localhost:5000/api/admin/resetPassword/63ce2baa58860af9687124e7/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzY2UyYmFhNTg4NjBhZjk2ODcxMjRlNyIsImlhdCI6MTY3NDQ1NTk4NiwiZXhwIjoxNjc0NDYzMTg2fQ.XNygSw9YofC-7MYbIAH1maYZYuNH7AjzYNRU18Hmkn8 - POST METHOD  
+Jan-23-2023 13:43:08 [info] http://localhost:5000/api/admin/resetPassword/63ce2baa58860af9687124e7/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzY2UyYmFhNTg4NjBhZjk2ODcxMjRlNyIsImlhdCI6MTY3NDQ1NTk4NiwiZXhwIjoxNjc0NDYzMTg2fQ.XNygSw9YofC-7MYbIAH1maYZYuNH7AjzYNRU18Hmkn8 - POST METHOD  
+Jan-23-2023 13:48:40 [info] http://localhost:5000/api/admin/forgetPassword - POST METHOD  
+Jan-23-2023 13:50:20 [info] http://localhost:5000/api/admin/resetPassword/63ce2baa58860af9687124e79c23b280dacc8feeeeae54b6658e9b00a3adff59c3286c2162d2930f3fabf9d3 - POST METHOD  
+Jan-23-2023 13:50:20 [error] 404 - Requested URL http://localhost:5000/api/admin/resetPassword/63ce2baa58860af9687124e79c23b280dacc8feeeeae54b6658e9b00a3adff59c3286c2162d2930f3fabf9d3 not found! 
+Jan-23-2023 13:50:50 [info] http://localhost:5000/api/admin/resetPassword/63ce2baa58860af9687124e7/9c23b280dacc8feeeeae54b6658e9b00a3adff59c3286c2162d2930f3fabf9d3 - POST METHOD  
+Jan-23-2023 13:51:25 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-23-2023 13:55:43 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
+Jan-23-2023 13:55:43 [error] 412 -  
+Jan-23-2023 13:56:59 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
+Jan-23-2023 13:56:59 [error] 412 -  
+Jan-23-2023 13:57:46 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
+Jan-23-2023 13:57:46 [error] 500 - Cannot read properties of null (reading 'email') 
+Jan-23-2023 13:58:52 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
+Jan-23-2023 13:58:58 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
+Jan-23-2023 13:58:58 [error] 409 - Email Already Exist. 
+Jan-23-2023 13:59:09 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
+Jan-23-2023 13:59:09 [error] 500 - E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: "8897859007" } 
+Jan-23-2023 13:59:39 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
+Jan-23-2023 13:59:39 [error] 500 - E11000 duplicate key error collection: task_management.users index: mobile_number_1 dup key: { mobile_number: "8897859007" } 
+Jan-23-2023 14:02:31 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
+Jan-23-2023 14:02:31 [error] 412 -  
+Jan-23-2023 14:03:12 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
+Jan-23-2023 14:03:12 [error] 412 -  
+Jan-23-2023 14:03:24 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
+Jan-23-2023 14:03:24 [error] 412 -  
+Jan-23-2023 14:03:55 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
+Jan-23-2023 14:03:55 [error] 412 -  

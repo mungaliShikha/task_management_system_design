@@ -9,7 +9,7 @@ module.exports = {
   ,
 
   resetPasswordAdmin: (payload) => {
-    const schema = Joi.object({ password: Joi.string().required().min(6) });
+    const schema = Joi.object({ password: Joi.string().required() });
     return schema.validate(payload);
   },
 
@@ -25,13 +25,13 @@ module.exports = {
     });
     return schema.validate(payload);
   },
-  createmanager:(payload) => {
-    const schema = Joi.object({ 
-        first_name: Joi.string().min(2).max(10).required().error(new Error("First Name is required")),
-      last_name: Joi.string().min(2).max(10).required().error(new Error("Email is not correct")),
+  createmanager: (payload) => {
+    const schema = Joi.object({
+      first_name: Joi.string().min(2).max(10).required().error(new Error("First Name is required")),
+      last_name: Joi.string().min(2).max(10).required().error(new Error("Last Name is  correct")),
       email: Joi.string().email().lowercase().required().error(new Error("Email is not correct")),
-      mobile_number:Joi.string().regex(/^[0-9]{10}$/).required()
-     });
+      mobile_number: Joi.string().regex(/^[0-9]{10}$/).required()
+    });
     return schema.validate(payload);
   },
 };

@@ -10,7 +10,7 @@ router.post("/addDeveloper", auth.verifyToken,validationMiddleware(createDevelop
 router.post('/login',validationMiddleware(logIn), userController.login);
 
 
-router.get("/getProfile", auth.verifyToken, userController.getProfile); // get profile for manager and developer
+router.get("/getProfile", auth.verifyToken, userController.getProfile); 
 
 router.put(
   "/updateProfile",

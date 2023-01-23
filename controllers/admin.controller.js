@@ -10,7 +10,7 @@ const {
   generatePassword,
   randomPassword,
   generateHash,
-  subjects,messages
+  subjects, messages
 } = require("../helper/commonFunction");
 const helper = require("../helper/commonResponseHandler");
 const {
@@ -60,49 +60,61 @@ module.exports = {
 
   //*************************************** reset link reset password **************************************** */
 
-  resetPassword: catchAsync(async (req, res) => {
-    const { userId, token } = req.params;
-    const { password } = req.body;
-    const user = await getUserById(userId);
-    if (!user) {
-      throw new appError(
-        ErrorMessage.EMAIL_NOT_REGISTERED,
-        ErrorCode.NOT_FOUND
+  resetPassword: async (req, res) => {
+    try {
+      const { userId, token } = req.params;
+      const { password } = req.body;
+      const user = await getUserById(userId);
+      if (!user) {
+        throw new appError(
+          ErrorMessage.EMAIL_NOT_REGISTERED,
+          ErrorCode.NOT_FOUND
+        );
+      }
+
+      const tokenFound = await getOneToken({
+        userId: user._id,
+        token: token,
+      });
+      console.log("tokenFound--",tokenFound)
+      if (!tokenFound) {
+        throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.BAD_REQUEST);
+      }
+
+      user.password = generateHash(password);
+      await user.save();
+      await tokenFound.delete();
+
+      helper.sendResponseWithoutData(
+        res,
+        SuccessCode.SUCCESS,
+        SuccessMessage.RESET_SUCCESS
       );
+    } catch (error) {
+      console.log("==logggigig",error)
+      helper.sendResponseWithoutData(
+        res,
+        ErrorCode.SOMETHING_WRONG,
+        ErrorMessage.SOMETHING_WRONG)
+      // response(res, ErrorCode.SOMETHING_WRONG, [], ErrorMessage.SOMETHING_WRONG);
+
     }
+  },
 
-    const tokenFound = await getOneToken({
-      userId: user._id,
-      token: token,
-    });
-    if (!tokenFound) {
-      throw new appError(ErrorMessage.LINK_EXPIRED, ErrorCode.BAD_REQUEST);
-    }
-
-    user.password = generateHash(password);
-    await user.save();
-    await tokenFound.delete();
-
-    helper.sendResponseWithoutData(
-      res,
-      SuccessCode.SUCCESS,
-      SuccessMessage.RESET_SUCCESS
-    );
-  }),
 
   //****************************************** updateAdmin api ***************************** */
 
   updateAdmin: catchAsync(async (req, res) => {
     let payload = req.body;
-    
-    const user = await getOneUser({ _id: req.userId ,role: { $in: [enums.declaredEnum.role.ADMIN] }});
+
+    const user = await getOneUser({ _id: req.userId, role: { $in: [enums.declaredEnum.role.ADMIN] } });
     if (!user) {
       throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
     }
-    if(req.files.length !== 0){
-      payload["profile_image"]=req.files[0].location;
+    if (req.files.length !== 0) {
+      payload["profile_image"] = req.files[0].location;
     }
-    
+
     let update = await getUserAndUpdate(
       { _id: user._id },
       { $set: payload },
@@ -143,10 +155,12 @@ module.exports = {
       throw new appError(ErrorMessage.NOT_AUTHORISED, ErrorCode.NOT_FOUND);
     }
     const userDuplicate = await getOneUser({ email, mobile_number });
-    if (userDuplicate.email ) {
+    if (userDuplicate) {
+      if(userDuplicate.email)
       throw new appError(ErrorMessage.EMAIL_ALREADY_EXIST, ErrorCode.ALREADY_EXIST);
+      if(userDuplicate.mobile_number)
+      throw new appError(ErrorMessage.MOBILE_ALREADY_EXIST, ErrorCode.ALREADY_EXIST);
     }
-   
     payload["employee_id"] = "MAN" + mobile_number.substr(-4);
     let passGen = randomPassword();
     console.log(passGen);
@@ -155,8 +169,8 @@ module.exports = {
     const createManager = await createUser(payload);
 
     const subject = subjects(createManager.role);
-    const message = messages(payload.email,passGen)
-    
+    const message = messages(payload.email, passGen)
+
     await sendMailNotify(userAuth.email, subject, message, payload.email);
 
     helper.sendResponseWithData(
