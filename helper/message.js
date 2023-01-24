@@ -1,4 +1,5 @@
 module.exports.ErrorMessage = Object.freeze({
+  CANNOT_UPDATE:"Only admin can update his profile",
   TASK_NOT_FOUND:"Task not found",
   DATA_AUTHORIZTAION:"Only develper can change the status of the task",
   DATA_SHOULD_BE_ARRAY:"Entered data should be an array",

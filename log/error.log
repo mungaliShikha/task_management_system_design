@@ -97,3 +97,24 @@ Jan-23-2023 15:54:46 [error] 404 - Requested URL http://localhost:5000/api/user/
 Jan-23-2023 15:56:47 [error] 404 - Data not found 
 Jan-23-2023 16:23:09 [error] 404 - Data not found 
 Jan-23-2023 16:24:13 [error] 500 - userRes.count is not a function 
+Jan-24-2023 09:40:18 [error] 404 - This user does not exist. 
+Jan-24-2023 09:42:06 [error] 404 - Only admin can update his profile 
+Jan-24-2023 09:42:22 [error] 404 - Only admin can update his profile 
+Jan-24-2023 09:42:26 [error] 404 - Only admin can update his profile 
+Jan-24-2023 09:42:38 [error] 404 - Only admin can update his profile 
+Jan-24-2023 09:43:04 [error] 404 - Only admin can update his profile 
+Jan-24-2023 09:43:10 [error] 404 - Only admin can update his profile 
+Jan-24-2023 09:43:13 [error] 404 - Only admin can update his profile 
+Jan-24-2023 09:43:18 [error] 404 - Only admin can update his profile 
+Jan-24-2023 09:43:24 [error] 404 - Only admin can update his profile 
+Jan-24-2023 10:32:37 [error] 500 - User is not defined 
+Jan-24-2023 11:26:40 [error] 500 - ISODate is not defined 
+Jan-24-2023 11:36:43 [error] 500 - Cannot set headers after they are sent to the client 
+Jan-24-2023 11:37:12 [error] 500 - Cannot set headers after they are sent to the client 
+Jan-24-2023 11:48:10 [error] 500 - ISODate is not defined 
+Jan-24-2023 12:06:33 [error] 404 - Data not found 
+Jan-24-2023 12:24:25 [error] 404 - Data not found 
+Jan-24-2023 12:27:11 [error] 404 - Data not found 
+Jan-24-2023 12:27:57 [error] 404 - Data not found 
+Jan-24-2023 12:50:24 [error] 500 - jwt expired 
+Jan-24-2023 15:08:50 [error] 500 - jwt expired 
