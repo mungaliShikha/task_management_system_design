@@ -20,7 +20,11 @@ router.put(
   userController.updateProfile
 ); //update api for manager and developer
 
-router.get("/listTheUser", auth.verifyToken, userController.listTheUser);
+router.get("/listTheManager", auth.verifyToken, userController.listTheManager);
+
+router.get("/listTheDeveloper",auth.verifyToken, userController.listTheDeveloper)
+
+
 
 
 module.exports = router;

@@ -1,28 +1,29 @@
-const Token = require("../models/token.model")
+const Token = require("../models/token.model");
 const catchAsync = require("../helper/catchAsync");
+const User = require("../models/user.model");
 const crypto = require("crypto");
 const appError = require("../helper/errorHandlers/errorHandler");
 const { ErrorMessage, SuccessMessage } = require("../helper/message");
 const { ErrorCode, SuccessCode } = require("../helper/statusCode");
 const {
-  compareHash,
-  generateToken,
-  generatePassword,
   randomPassword,
   generateHash,
-  subjects,messages
+  subjects,
+  messages,
 } = require("../helper/commonFunction");
 const helper = require("../helper/commonResponseHandler");
-const {
-  sendMail,
-  sendMailNotify,
-} = require("../utils/nodeMailer/nodemailer");
+const { sendMail, sendMailNotify } = require("../utils/nodeMailer/nodemailer");
 const enums = require("../helper/enum/enums");
 const {
-  getOneUser ,getAllUser,getUserById, getUserAndUpdate, getOneToken, createUser
-} = require("../services/user.service")
+  getOneUser,
+  getAllUser,
+  getUserById,
+  getUserAndUpdate,
+  getOneToken,
+  createUser,
+  getUserData,
+} = require("../services/user.service");
 module.exports = {
-  
   //************************************ forgetpassword for admin ******************************* */
 
   forgetPassword: catchAsync(async (req, res) => {
@@ -94,15 +95,19 @@ module.exports = {
 
   updateAdmin: catchAsync(async (req, res) => {
     let payload = req.body;
-    
-    const user = await getOneUser({ _id: req.userId ,role: { $in: [enums.declaredEnum.role.ADMIN] }});
+
+    const user = await getOneUser({
+      _id: req.userId,
+      role: { $in: [enums.declaredEnum.role.ADMIN] },
+    });
     if (!user) {
       throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
     }
-    if(req.files.length !== 0){
-      payload["profile_image"]=req.files[0].location;
+
+    if (req.files.length !== 0) {
+      payload["profile_image"] = req.files[0].location;
     }
-    
+
     let update = await getUserAndUpdate(
       { _id: user._id },
       { $set: payload },
@@ -154,17 +159,97 @@ module.exports = {
     const createManager = await createUser(payload);
 
     const subject = subjects(createManager.role);
-    const message = messages(payload.email,passGen)
-    
+    const message = messages(payload.email, passGen);
+
     await sendMailNotify(userAuth.email, subject, message, payload.email);
 
-    helper.sendResponseWithData(
+    helper.commonResponse(
       res,
       SuccessCode.CREATED,
-      SuccessMessage.CREATE_MANAGER,
-      createManager
+      createManager,
+      SuccessMessage.CREATE_MANAGER
     );
   }),
 
-  
+  /***************************** admin can get the list of all users ******************************* */
+
+  listAllUsers: catchAsync(async (req, res) => {
+    const queryData = { role: { $ne: enums.declaredEnum.role.ADMIN } };
+    const queryMade = req.query;
+    const { fName, lName, status, role, fromDate, toDate } = queryMade;
+    if (Object.keys(queryMade).length == 0) {
+      let filterData = await getAllUser({
+        status: { $ne: enums.declaredEnum.status.DELETE },
+        role: { $ne: enums.declaredEnum.role.ADMIN },
+      });
+
+      helper.commonResponse(
+        res,
+        SuccessCode.SUCCESS,
+        filterData,
+        SuccessMessage.DATA_FOUND
+      );
+    }
+
+    if (fName || lName || status || role || fromDate || toDate) {
+      if (fName) {
+        queryData["first_name"] = { $regex: fName, $options: "i" };
+      }
+      if (lName) {
+        queryData["last_name"] = { $regex: lName, $options: "i" };
+      }
+      if (status) {
+        queryData["status"] = {
+          $ne: enums.declaredEnum.status.DELETE,
+          $regex: status,
+          $options: "i",
+        };
+      }
+      if (role) {
+        queryData["role"] = {
+          $ne: enums.declaredEnum.role.ADMIN,
+          $regex: role,
+          $options: "i",
+        };
+      }
+      if (fromDate && toDate) {
+        queryData["createdAt"] = {
+          $gte: new Date(fromDate),
+          $lt: new Date(toDate),
+        };
+      }
+      if (fromDate) {
+        queryData.createdAt = { $gte: new Date(fromDate) };
+      }
+      if (toDate) {
+        queryData.createdAt = { $lt: new Date(toDate) };
+      }
+    }
+
+    let { page, limit } = req.query;
+    page = parseInt(req.query.page) || 1;
+    limit = parseInt(req.query.limit) || 10;
+    const dataFound = await User.find(queryData)
+      .limit(limit * 1)
+      .skip((page - 1) * limit)
+      .select({ password: 0 })
+      .exec();
+    if (dataFound.length == 0) {
+      throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
+    }
+    const length = await User.find(queryData).countDocuments();
+    let finalData = {
+      data: dataFound,
+      limit: limit,
+      currentPage: page,
+      totalPages: Math.ceil(length / limit),
+      totalDocuments: length,
+    };
+    helper.commonResponse(
+      res,
+      SuccessCode.SUCCESS,
+      finalData,
+      SuccessMessage.DATA_FOUND
+    );
+  }),
 };

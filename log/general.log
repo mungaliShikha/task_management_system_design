@@ -657,3 +657,103 @@ Jan-23-2023 16:25:50 [info] http://localhost:5000/api/user/listTheUser?page=2 - 
 Jan-23-2023 16:26:36 [info] http://localhost:5000/api/user/listTheUser?page=2&limit=5 - GET METHOD  
 Jan-23-2023 16:35:02 [info] http://localhost:5000/api/user/listTheUser?page=2&limit=5 - GET METHOD  
 Jan-23-2023 16:35:39 [info] http://localhost:5000/api/user/listTheUser?page=2&limit=5 - GET METHOD  
+Jan-23-2023 17:25:18 [info] http://localhost:5000/api/user/listTheManager - GET METHOD  
+Jan-24-2023 09:38:35 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-24-2023 09:38:52 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-24-2023 09:40:16 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-24-2023 09:40:18 [error] 404 - This user does not exist. 
+Jan-24-2023 09:42:04 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-24-2023 09:42:06 [error] 404 - Only admin can update his profile 
+Jan-24-2023 09:42:20 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-24-2023 09:42:22 [error] 404 - Only admin can update his profile 
+Jan-24-2023 09:42:24 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-24-2023 09:42:26 [error] 404 - Only admin can update his profile 
+Jan-24-2023 09:42:36 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-24-2023 09:42:38 [error] 404 - Only admin can update his profile 
+Jan-24-2023 09:43:01 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-24-2023 09:43:04 [error] 404 - Only admin can update his profile 
+Jan-24-2023 09:43:07 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-24-2023 09:43:10 [error] 404 - Only admin can update his profile 
+Jan-24-2023 09:43:11 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-24-2023 09:43:13 [error] 404 - Only admin can update his profile 
+Jan-24-2023 09:43:16 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-24-2023 09:43:18 [error] 404 - Only admin can update his profile 
+Jan-24-2023 09:43:21 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-24-2023 09:43:24 [error] 404 - Only admin can update his profile 
+Jan-24-2023 10:31:53 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-24-2023 10:32:37 [info] http://localhost:5000/api/admin/listAllUser - GET METHOD  
+Jan-24-2023 10:32:37 [error] 500 - User is not defined 
+Jan-24-2023 10:33:20 [info] http://localhost:5000/api/admin/listAllUser - GET METHOD  
+Jan-24-2023 11:26:40 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-12&toDate=2023-01-23 - GET METHOD  
+Jan-24-2023 11:26:40 [error] 500 - ISODate is not defined 
+Jan-24-2023 11:27:38 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-12&toDate=2023-01-23 - GET METHOD  
+Jan-24-2023 11:28:28 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:29:42 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:29:52 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:30:27 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:32:37 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:33:19 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:36:11 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:36:42 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:36:43 [error] 500 - Cannot set headers after they are sent to the client 
+Jan-24-2023 11:37:00 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:37:12 [error] 500 - Cannot set headers after they are sent to the client 
+Jan-24-2023 11:38:38 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:39:22 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:40:02 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:40:30 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:42:09 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:46:08 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:48:06 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:48:10 [error] 500 - ISODate is not defined 
+Jan-24-2023 11:51:23 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:52:40 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:56:21 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10 - GET METHOD  
+Jan-24-2023 11:56:33 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-20 - GET METHOD  
+Jan-24-2023 11:58:19 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-20 - GET METHOD  
+Jan-24-2023 11:58:40 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-12&toDate=2023-01-20 - GET METHOD  
+Jan-24-2023 12:00:01 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-12&toDate=2023-01-20&fName=Radha - GET METHOD  
+Jan-24-2023 12:00:37 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-12&toDate=2023-01-20 - GET METHOD  
+Jan-24-2023 12:00:47 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-12&toDate=2023-01-20&fName=SUHANA - GET METHOD  
+Jan-24-2023 12:01:06 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-11&toDate=2023-01-11&fName=SUHANA - GET METHOD  
+Jan-24-2023 12:06:32 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-11&toDate=2023-01-11&fName=SUHANA - GET METHOD  
+Jan-24-2023 12:06:33 [error] 404 - Data not found 
+Jan-24-2023 12:24:25 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-11&toDate=2023-01-11&role=developer - GET METHOD  
+Jan-24-2023 12:24:25 [error] 404 - Data not found 
+Jan-24-2023 12:24:34 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-11&toDate=2023-01-13&role=developer - GET METHOD  
+Jan-24-2023 12:27:11 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-11&toDate=2023-01-13&role=admin - GET METHOD  
+Jan-24-2023 12:27:11 [error] 404 - Data not found 
+Jan-24-2023 12:27:17 [info] http://localhost:5000/api/admin/listAllUser?role=admin - GET METHOD  
+Jan-24-2023 12:27:57 [info] http://localhost:5000/api/admin/listAllUser?role=admin - GET METHOD  
+Jan-24-2023 12:27:57 [error] 404 - Data not found 
+Jan-24-2023 12:28:37 [info] http://localhost:5000/api/admin/listAllUser?role=manager - GET METHOD  
+Jan-24-2023 12:31:10 [info] http://localhost:5000/api/admin/listAllUser?role=manager - GET METHOD  
+Jan-24-2023 12:50:24 [info] http://localhost:5000/api/admin/listAllUser?role=manager - GET METHOD  
+Jan-24-2023 12:50:24 [error] 500 - jwt expired 
+Jan-24-2023 12:50:32 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-24-2023 12:50:48 [info] http://localhost:5000/api/admin/listAllUser?role=manager - GET METHOD  
+Jan-24-2023 12:51:25 [info] http://localhost:5000/api/admin/listAllUser?role=manager - GET METHOD  
+Jan-24-2023 12:54:02 [info] http://localhost:5000/api/admin/listAllUser?role=manager - GET METHOD  
+Jan-24-2023 12:54:23 [info] http://localhost:5000/api/admin/listAllUser?role=manager&page=2 - GET METHOD  
+Jan-24-2023 12:55:32 [info] http://localhost:5000/api/admin/listAllUser?role=manager&page=2 - GET METHOD  
+Jan-24-2023 12:55:54 [info] http://localhost:5000/api/admin/listAllUser?role=manager&page=2&limit=3 - GET METHOD  
+Jan-24-2023 12:56:07 [info] http://localhost:5000/api/admin/listAllUser?role=manager&page=2&limit=3 - GET METHOD  
+Jan-24-2023 12:57:17 [info] http://localhost:5000/api/admin/listAllUser?role=manager&page=2&limit=3 - GET METHOD  
+Jan-24-2023 12:57:41 [info] http://localhost:5000/api/admin/listAllUser?role=manager&page=2&limit=3 - GET METHOD  
+Jan-24-2023 13:00:00 [info] http://localhost:5000/api/admin/listAllUser?role=manager&page=2&limit=3 - GET METHOD  
+Jan-24-2023 13:01:43 [info] http://localhost:5000/api/admin/listAllUser?role=manager&page=2&limit=3 - GET METHOD  
+Jan-24-2023 13:02:01 [info] http://localhost:5000/api/admin/listAllUser?role=manager&page=2&limit=3 - GET METHOD  
+Jan-24-2023 13:02:33 [info] http://localhost:5000/api/admin/listAllUser?role=manager&page=2&limit=3 - GET METHOD  
+Jan-24-2023 13:07:37 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-11&role=manager - GET METHOD  
+Jan-24-2023 13:08:18 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-11 - GET METHOD  
+Jan-24-2023 13:10:57 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-11 - GET METHOD  
+Jan-24-2023 13:11:10 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-11&role=manager - GET METHOD  
+Jan-24-2023 15:05:08 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-24-2023 15:07:00 [info] http://localhost:5000/api/admin/getAdminDetails - GET METHOD  
+Jan-24-2023 15:08:05 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-24-2023 15:08:50 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-11&toDate=2023-01-13 - GET METHOD  
+Jan-24-2023 15:08:50 [error] 500 - jwt expired 
+Jan-24-2023 15:09:18 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-11&toDate=2023-01-13 - GET METHOD  
+Jan-24-2023 15:10:59 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-11&toDate=2023-01-13&page=2 - GET METHOD  
+Jan-24-2023 15:11:34 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-11&toDate=2023-01-23&page=2 - GET METHOD  
+Jan-24-2023 15:13:59 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-11&toDate=2023-01-23&limit=3 - GET METHOD  
