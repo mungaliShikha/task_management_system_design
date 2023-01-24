@@ -8,18 +8,18 @@ module.exports = {
     });
     return schema.validate(payload);
   },
-  forgetPassword: (payload) => {
+  forgetPasswordAdmin: (payload) => {
     const schema = Joi.object({
       email: Joi.string().email().lowercase().required(),
     });
     return schema.validate(payload);
   },
-  resetPassword: (payload) => {
+  resetPasswordAdmin: (payload) => {
     const schema = Joi.object({ password: Joi.string().required().min(6) });
     return schema.validate(payload);
   },
 
-  updateAdmin: (payload) => {
+  updateAdminValidation: (payload) => {
     const schema = Joi.object({
       first_name: Joi.string().min(2).max(10),
       last_name: Joi.string().min(2).max(10),
@@ -31,7 +31,7 @@ module.exports = {
     });
     return schema.validate(payload);
   },
-  createManager: (payload) => {
+  createmanager: (payload) => {
     const schema = Joi.object({
       first_name: Joi.string().min(2).max(10).required(),
       last_name: Joi.string().min(2).max(10).required(),

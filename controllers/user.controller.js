@@ -8,6 +8,8 @@ const {
   generatePassword,
   randomPassword,
   generateHash,
+  subjects,
+  messages,
 } = require("../helper/commonFunction");
 const helper = require("../helper/commonResponseHandler");
 const { sendMail, sendMailNotify } = require("../utils/nodeMailer/nodemailer");
@@ -87,46 +89,38 @@ module.exports = {
 
   // *********************************************** update Profile for Manager,Developer *******************************
 
-  updateProfile: async (req, res) => {
-    try {
-      let payload = req.body;
-      const tokenAuth = await getOneUser({
-        _id: req.userId,
-        role: {
-          $in: [
-            enums.declaredEnum.role.DEVELOPER,
-            enums.declaredEnum.role.MANAGER,
-          ],
-        },
-      });
-      if (!tokenAuth)
-        helper.commonResponse(
-          res,
-          ErrorCode.NOT_FOUND,
-          ErrorMessage.USER_NOT_FOUND
-        );
-      if (req.files) {
-        payload["profile_pic"] = req.files[0].location;
-      }
-      let updateRes = await getUserAndUpdate(
-        { _id: tokenAuth._id },
-        { $set: payload },
-        { new: true }
-      );
+  updateProfile: catchAsync(async (req, res) => {
+    let payload = req.body;
+    const tokenAuth = await getOneUser({
+      _id: req.userId,
+      role: {
+        $in: [
+          enums.declaredEnum.role.DEVELOPER,
+          enums.declaredEnum.role.MANAGER,
+        ],
+      },
+    });
+    if (!tokenAuth)
       helper.commonResponse(
         res,
-        SuccessCode.SUCCESS,
-        updateRes,
-        SuccessMessage.UPDATE_SUCCESS
+        ErrorCode.NOT_FOUND,
+        ErrorMessage.USER_NOT_FOUND
       );
-    } catch (error) {
-      helper.commonResponse(
-        res,
-        ErrorCode.SOMETHING_WRONG,
-        ErrorMessage.SOMETHING_WRONG
-      );
+    if (req.files.length !== 0) {
+      payload["profile_image"] = req.files[0].location;
     }
-  },
+    let updateRes = await getUserAndUpdate(
+      { _id: tokenAuth._id },
+      { $set: payload },
+      { new: true }
+    );
+    helper.commonResponse(
+      res,
+      SuccessCode.SUCCESS,
+      updateRes,
+      SuccessMessage.UPDATE_SUCCESS
+    );
+  }),
 
   // **************************************** Developer Create ************************
 
@@ -151,12 +145,10 @@ module.exports = {
     payload["role"] = "Developer";
     const createDeveloper = await User.create(payload);
 
-    await sendMailNotify(
-      checkManager.email,
-      subjects.DEVELOPER,
-      messages(payload.email, passGen),
-      email
-    );
+    const subject = subjects(enums.declaredEnum.role.DEVELOPER);
+    const message = messages(payload.email, passGen);
+
+    await sendMailNotify(userAuth.email, subject, message, req.body.email);
 
     helper.sendResponseWithData(
       res,
