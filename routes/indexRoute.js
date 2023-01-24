@@ -5,9 +5,6 @@ const task = require("../routes/taskRoute/task.route");
 const project = require("../routes/projectRoute/project.route");
 const comment = require("../routes/commentRoute/comment.route");
 
-
-
-
 router.use("/user", user);
 router.use("/admin", admin);
 router.use("/task", task);

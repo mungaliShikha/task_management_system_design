@@ -29,8 +29,9 @@ const {
   createProject,
   countProject,
 } = require("../services/project.service");
+
+//************************************************create project ************************************** */
 module.exports = {
-  //************************************************create project ************************************** */
   createProject: catchAsync(async (req, res) => {
     const {
       project_name,
@@ -342,4 +343,54 @@ module.exports = {
       SuccessMessage.REMOVE_SUCCESS
     );
   }),
+
+  //************************* complete project status*****************//
+
+  completeProjectStatus: catchAsync(async (req, res) => {
+    console.log("dwcdcf", req.query.projectId);
+    // const managerAuthCheck = await getUserById(req.userId);
+    // if (
+    //   managerAuthCheck &&
+    //   managerAuthCheck.role !== enums.declaredEnum.role.MANAGER
+    // ) {
+    //   throw new appError(ErrorMessage.CANNOT_ACCESS_DATA, ErrorCode.FORBIDDEN);
+    // }
+
+    const projectAuthCheck = await getProjectById(req.query.projectId);
+    console.log({ projectAuthCheck });
+
+    if (!projectAuthCheck) {
+      throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
+    }
+
+    const task = await getAllTask(projectId);
+    if (!task) {
+      throw new appError(ErrorMessage.TASK_NOT_EXIST, ErrorCode.NOT_FOUND);
+    }
+    let taskCompleted = true;
+
+    for (let taskData of task) {
+      const { taskStatus } = taskData;
+      if (taskStatus !== enums.declaredEnum.taskStatus.COMPLETED) {
+        taskCompleted = false;
+        break;
+      }
+    }
+    if (taskCompleted) {
+      const statusOfProject = await getProjectAndUpdate(
+        { _id: projectAuthCheck._id },
+        { $set: { projectStatus: COMPLETED } },
+        { new: true }
+      );
+
+      helper.commonResponse(
+        res,
+        SuccessCode.SUCCESS,
+        statusOfProject,
+        SuccessMessage.REMOVE_SUCCESS
+      );
+    }
+  }),
+
+  removeProject: catchAsync(async (req, res) => {}),
 };

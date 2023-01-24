@@ -34,4 +34,10 @@ router.put(
   projectController.updateProject
 );
 
+router.put(
+  "/completeProjectStatus",
+  // auth.verifyToken,
+  projectController.completeProjectStatus
+);
+
 module.exports = router;

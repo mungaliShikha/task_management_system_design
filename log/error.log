@@ -66,3 +66,96 @@ Jan-22-2023 15:38:07 [error] 500 - Cannot create property 'updatedAt' on string 
 Jan-22-2023 15:43:23 [error] 500 - Cannot create property 'updatedAt' on string 'completed' 
 Jan-22-2023 15:45:17 [error] 500 - Cannot create property 'updatedAt' on string 'completed' 
 Jan-22-2023 15:49:00 [error] 404 - Project is already completed 
+Jan-23-2023 11:53:27 [error] 404 - This user does not exist. 
+Jan-23-2023 11:58:17 [error] 404 - This user does not exist. 
+Jan-23-2023 11:58:48 [error] 404 - This user does not exist. 
+Jan-23-2023 14:05:54 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
+Jan-23-2023 14:10:47 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
+Jan-23-2023 15:06:19 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
+Jan-23-2023 15:08:47 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
+Jan-23-2023 15:08:48 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
+Jan-23-2023 15:08:49 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
+Jan-23-2023 15:08:49 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
+Jan-23-2023 15:08:49 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
+Jan-23-2023 15:08:50 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
+Jan-23-2023 15:08:50 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
+Jan-23-2023 15:08:50 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
+Jan-23-2023 15:10:39 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
+Jan-23-2023 15:10:40 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
+Jan-23-2023 15:10:41 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
+Jan-23-2023 15:10:42 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
+Jan-23-2023 15:10:43 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
+Jan-23-2023 15:10:45 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
+Jan-23-2023 15:11:44 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
+Jan-23-2023 15:11:46 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
+Jan-23-2023 15:11:47 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
+Jan-23-2023 15:11:56 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
+Jan-23-2023 15:13:16 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
+Jan-23-2023 15:32:43 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
+Jan-23-2023 17:44:50 [error] 401 - Please provide token. 
+Jan-23-2023 21:43:26 [error] 404 - This user does not exist. 
+Jan-23-2023 21:43:44 [error] 404 - This user does not exist. 
+Jan-23-2023 21:44:28 [error] 404 - Requested URL http://localhost:5000/api/admin/login not found! 
+Jan-23-2023 21:48:47 [error] 412 - password is not allowed 
+Jan-23-2023 21:49:40 [error] 409 - Already exists. 
+Jan-23-2023 22:00:42 [error] 412 - password is required 
+Jan-23-2023 22:01:46 [error] 404 - Provided email is not registered. 
+Jan-23-2023 22:01:54 [error] 404 - Provided email is not registered. 
+Jan-23-2023 22:01:55 [error] 404 - Provided email is not registered. 
+Jan-23-2023 22:01:56 [error] 404 - Provided email is not registered. 
+Jan-23-2023 22:02:43 [error] 404 - Provided email is not registered. 
+Jan-23-2023 22:06:09 [error] 401 - Please provide token. 
+Jan-23-2023 22:06:41 [error] 404 - Project not found 
+Jan-23-2023 22:06:42 [error] 404 - Project not found 
+Jan-23-2023 22:07:41 [error] 404 - Project not found 
+Jan-23-2023 22:07:42 [error] 404 - Project not found 
+Jan-23-2023 22:07:43 [error] 404 - Project not found 
+Jan-23-2023 22:07:44 [error] 404 - Project not found 
+Jan-23-2023 22:07:44 [error] 404 - Project not found 
+Jan-23-2023 22:19:57 [error] 404 - Project not found 
+Jan-23-2023 22:35:45 [error] 404 - Project not found 
+Jan-23-2023 23:07:23 [error] 404 - Project not found 
+Jan-23-2023 23:08:53 [error] 404 - Project not found 
+Jan-23-2023 23:10:51 [error] 404 - Project not found 
+Jan-23-2023 23:10:55 [error] 404 - Project not found 
+Jan-23-2023 23:14:37 [error] 404 - Project not found 
+Jan-23-2023 23:18:20 [error] 500 - Operation `projects.findOne()` buffering timed out after 10000ms 
+Jan-23-2023 23:18:59 [error] 404 - Project not found 
+Jan-23-2023 23:19:28 [error] 404 - Project not found 
+Jan-23-2023 23:25:21 [error] 404 - Project not found 
+Jan-23-2023 23:25:37 [error] 404 - Project not found 
+Jan-23-2023 23:27:43 [error] 500 - projectAuthCheck is not defined 
+Jan-23-2023 23:28:35 [error] 500 - projectAuthCheck is not defined 
+Jan-23-2023 23:28:39 [error] 500 - projectAuthCheck is not defined 
+Jan-23-2023 23:37:34 [error] 500 - Operation `tasks.find()` buffering timed out after 10000ms 
+Jan-23-2023 23:38:00 [error] 500 - Operation `tasks.find()` buffering timed out after 10000ms 
+Jan-23-2023 23:41:37 [error] 500 - Parameter "filter" to findOne() must be an object, got 63ceb3f288050c26307b8b93 
+Jan-23-2023 23:42:10 [error] 500 - Parameter "filter" to findOne() must be an object, got 63ceb3f288050c26307b8b93 
+Jan-23-2023 23:43:55 [error] 500 - Operation `projects.findOne()` buffering timed out after 10000ms 
+Jan-23-2023 23:45:23 [error] 500 - Operation `projects.findOne()` buffering timed out after 10000ms 
+Jan-23-2023 23:45:54 [error] 500 - Operation `projects.findOne()` buffering timed out after 10000ms 
+Jan-23-2023 23:47:14 [error] 500 - Operation `projects.findOne()` buffering timed out after 10000ms 
+Jan-23-2023 23:47:40 [error] 500 - Operation `projects.findOne()` buffering timed out after 10000ms 
+Jan-23-2023 23:48:56 [error] 500 - Operation `projects.findOne()` buffering timed out after 10000ms 
+Jan-23-2023 23:50:40 [error] 500 - Operation `projects.findOne()` buffering timed out after 10000ms 
+Jan-23-2023 23:51:09 [error] 500 - Operation `projects.findOne()` buffering timed out after 10000ms 
+Jan-23-2023 23:51:54 [error] 500 - Parameter "filter" to findOne() must be an object, got 63ceb3f288050c26307b8b93 
+Jan-24-2023 00:05:43 [error] 500 - Cannot read properties of undefined (reading 'ObjectId') 
+Jan-24-2023 00:08:19 [error] 500 - Unexpected token c in JSON at position 2 
+Jan-24-2023 00:08:38 [error] 500 - Unexpected token c in JSON at position 2 
+Jan-24-2023 00:10:17 [error] 500 - Unexpected token c in JSON at position 2 
+Jan-24-2023 00:11:56 [error] 500 - Unexpected token o in JSON at position 1 
+Jan-24-2023 00:12:28 [error] 500 - Unexpected token o in JSON at position 1 
+Jan-24-2023 00:14:32 [error] 404 - Project not found 
+Jan-24-2023 00:18:06 [error] 404 - Project not found 
+Jan-24-2023 00:18:43 [error] 404 - Project not found 
+Jan-24-2023 00:19:32 [error] 404 - Project not found 
+Jan-24-2023 00:21:09 [error] 404 - Project not found 
+Jan-24-2023 00:21:56 [error] 500 - Argument passed in must be a single String of 12 bytes or a string of 24 hex characters 
+Jan-24-2023 00:22:57 [error] 500 - Argument passed in must be a single String of 12 bytes or a string of 24 hex characters 
+Jan-24-2023 00:23:10 [error] 404 - Project not found 
+Jan-24-2023 00:24:39 [error] 404 - Project not found 
+Jan-24-2023 00:25:38 [error] 404 - Project not found 
+Jan-24-2023 00:27:00 [error] 404 - Project not found 
+Jan-24-2023 00:27:02 [error] 404 - Project not found 
+Jan-24-2023 00:32:26 [error] 404 - Project not found 

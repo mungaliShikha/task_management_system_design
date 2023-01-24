@@ -13,7 +13,7 @@ const getUserById = async (id) => {
 };
 
 const getUserAndUpdate = async (id, update) => {
-  return User.findByIdAndUpdate(id, update, {new:true});
+  return User.findByIdAndUpdate(id, update, { new: true });
 };
 const getOneToken = async (params) => {
   return Token.findOne(params);
@@ -31,4 +31,3 @@ module.exports = {
   getOneToken,
   createUser,
 };
-

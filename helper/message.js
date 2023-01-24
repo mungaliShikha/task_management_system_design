@@ -1,10 +1,10 @@
 module.exports.ErrorMessage = Object.freeze({
-  DATA_AUTHORIZTAION:"Only develper can change the status of the task",
-  DATA_SHOULD_BE_ARRAY:"Entered data should be an array",
+  DATA_AUTHORIZTAION: "Only develper can change the status of the task",
+  DATA_SHOULD_BE_ARRAY: "Entered data should be an array",
   CANNOT_ACCESS_DATA: "The requested user cannot access the data",
   PROJECT_NOT_EXIST: "Project not found",
-  TASK_DELETED:"Task deleted",
-  PROJECT_STATUS:"Project is already completed",
+  TASK_DELETED: "Task deleted",
+  PROJECT_STATUS: "Project is already completed",
   PROJECT_DELETED: "Project deleted",
   MANAGER_NOT_EXIST: "Manager does not exist",
   NOT_AUTHORISED: "Only admin can create the manager",
@@ -43,13 +43,13 @@ module.exports.ErrorMessage = Object.freeze({
   USER_ALREADY_EXIST: "This address already added as user",
   ADMIN_ALREADY_EXIST: "This address already added as Admin",
   DATA_NOT_FOUND: "Data not found",
-  WRONG_FORMAT:"Format is not correct"
+  WRONG_FORMAT: "Format is not correct",
 });
 
 module.exports.SuccessMessage = Object.freeze({
   PROJECT_ADDED: "Project added sucessfully",
   SIGNUP_SUCCESSFULLY: "Thanks, You have successfully signed up.",
-  DATA_FOUND: "Requested data found.",
+  PROFILE_FOUND: "Requested profile data found successfully.",
   DEVELOPER_ADD: "Developer added successfully",
   LOGIN_SUCCESS: "Your login is successful.",
   FORGET_SUCCESS: "A password reset link has been sent to your registered ID.",
@@ -61,7 +61,7 @@ module.exports.SuccessMessage = Object.freeze({
   PASSWORD_UPDATE: "Your password has been updated successfully.",
   DATA_SAVED: "Data is saved successfully.",
   DETAIL_GET: "Details have been fetched successfully.",
-  DATA_FOUND: "Requested data found.",
+  PROFILE_FOUND: "Requested profile data found successfully.",
   PROFILE_DETAILS: "Your profile details has been updated sucessfully.",
   STATUS_UPDATED: "Your Status has been changed successfully.",
   UPDATE_SUCCESS: "Successfully updated.",
@@ -81,7 +81,7 @@ module.exports.SuccessMessage = Object.freeze({
   CREATE_DEVELOPER: "Developer created successfully.",
   TASK_ADD: "Task added Successfully.",
   DEVELOPER_ASSIGNED: "Developer Assigned on task Successfully.",
-  DEVELOPER_REMOVED:"developer removed from task successfully",
-  TASK_UPDATE:"Task Updated Successfully.",
-  VERIFIED:"its  validated"
+  DEVELOPER_REMOVED: "developer removed from task successfully",
+  TASK_UPDATE: "Task Updated Successfully.",
+  VERIFIED: "its  validated",
 });

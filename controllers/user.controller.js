@@ -24,7 +24,7 @@ const {
 
 const enums = require("../helper/enum/enums");
 
-const { subjects, messages } = require("../helper/commonFunction");
+// const { subjects, messages } = require("../helper/commonFunction");
 
 module.exports = {
   //******************************** common login api for manager developer admin ************************** */
@@ -64,7 +64,7 @@ module.exports = {
     }
   }),
 
-  // *********************************************** get profile for Manager,Developer *******************************
+  // *********************************************** common get profile for Manager,Developer and admin  *******************************
 
   getProfile: catchAsync(async (req, res) => {
     const tokenAuth = await getOneUser({
@@ -73,6 +73,7 @@ module.exports = {
         $in: [
           enums.declaredEnum.role.DEVELOPER,
           enums.declaredEnum.role.MANAGER,
+          enums.declaredEnum.role.ADMIN,
         ],
       },
     });
@@ -83,7 +84,7 @@ module.exports = {
       res,
       SuccessCode.SUCCESS,
       tokenAuth,
-      SuccessMessage.DATA_FOUND
+      SuccessMessage.PROFILE_FOUND
     );
   }),
 

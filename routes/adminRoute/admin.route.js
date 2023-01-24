@@ -2,19 +2,24 @@ const router = require("express").Router();
 const adminController = require("../../controllers/admin.controller");
 const auth = require("../../middleware/auth");
 const { validationMiddleware } = require("../../middleware/joeValidator");
+
 const {
   updateAdminValidation,
   createmanager,
   resetPasswordAdmin,
   forgetPasswordAdmin,
 } = require("../../validator/admin.validator");
+
 const { upload } = require("../../utils/aws/aws");
+
 const {
   resetPassword,
   forgetPassword,
-  createManager,
+  addManager,
   getAdminDetails,
   updateAdmin,
+  listManager,
+  viewManager,
 } = require("../../controllers/admin.controller");
 
 router.post(
@@ -44,7 +49,7 @@ router.post(
   "/createManager",
   auth.verifyToken,
   validationMiddleware(createmanager),
-  createManager
+  addManager
 );
 
 router.get("/listManager", adminController.listManager);
