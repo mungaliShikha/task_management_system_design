@@ -6,8 +6,8 @@ module.exports = {
       response_code: statusCode,
     });
   },
-  sendResponseWithPagination: (responseObj,responseCode,responseMessage,data,paginationData) => {
-    return responseObj.send({responseCode: responseCode,responseMessage: responseMessage,result: data,paginationData: paginationData || null,});
+  sendResponseWithCount: (responseObj,responseCode,responseMessage,data,no_of_comments) => {
+    return responseObj.send({responseCode: responseCode,responseMessage: responseMessage,result: data,commentCount: no_of_comments || null,});
   },
   sendResponseWithData: (
     responseObj,

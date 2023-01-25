@@ -202,198 +202,458 @@ Jan-22-2023 15:45:17 [error] 500 - Cannot create property 'updatedAt' on string 
 Jan-22-2023 15:46:31 [info] http://localhost:5000/api/project/updateProject/63cd0ae1ecb8b03d24664b36 - PUT METHOD  
 Jan-22-2023 15:48:50 [info] http://localhost:5000/api/project/updateProject/63cd0ae1ecb8b03d24664b36 - PUT METHOD  
 Jan-22-2023 15:49:00 [error] 404 - Project is already completed 
-Jan-23-2023 11:53:27 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
-Jan-23-2023 11:53:27 [error] 404 - This user does not exist. 
-Jan-23-2023 11:58:17 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
-Jan-23-2023 11:58:17 [error] 404 - This user does not exist. 
-Jan-23-2023 11:58:48 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
-Jan-23-2023 11:58:48 [error] 404 - This user does not exist. 
-Jan-23-2023 14:05:54 [info] http://localhost:5000/api/project/compeleteProjectStatus - GET METHOD  
-Jan-23-2023 14:05:54 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
-Jan-23-2023 14:10:47 [info] http://localhost:5000/api/project/compeleteProjectStatus - GET METHOD  
-Jan-23-2023 14:10:47 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
-Jan-23-2023 15:06:19 [info] http://localhost:5000/api/project/compeleteProjectStatus - GET METHOD  
-Jan-23-2023 15:06:19 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
-Jan-23-2023 15:08:47 [info] http://localhost:5000/api/project/compeleteProjectStatus - GET METHOD  
-Jan-23-2023 15:08:47 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
-Jan-23-2023 15:08:48 [info] http://localhost:5000/api/project/compeleteProjectStatus - GET METHOD  
-Jan-23-2023 15:08:48 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
-Jan-23-2023 15:08:49 [info] http://localhost:5000/api/project/compeleteProjectStatus - GET METHOD  
-Jan-23-2023 15:08:49 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
-Jan-23-2023 15:08:49 [info] http://localhost:5000/api/project/compeleteProjectStatus - GET METHOD  
-Jan-23-2023 15:08:49 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
-Jan-23-2023 15:08:49 [info] http://localhost:5000/api/project/compeleteProjectStatus - GET METHOD  
-Jan-23-2023 15:08:49 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
-Jan-23-2023 15:08:50 [info] http://localhost:5000/api/project/compeleteProjectStatus - GET METHOD  
-Jan-23-2023 15:08:50 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
-Jan-23-2023 15:08:50 [info] http://localhost:5000/api/project/compeleteProjectStatus - GET METHOD  
-Jan-23-2023 15:08:50 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
-Jan-23-2023 15:08:50 [info] http://localhost:5000/api/project/compeleteProjectStatus - GET METHOD  
-Jan-23-2023 15:08:50 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
-Jan-23-2023 15:10:39 [info] http://localhost:5000/api/project/compeleteProjectStatus - GET METHOD  
-Jan-23-2023 15:10:39 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
-Jan-23-2023 15:10:40 [info] http://localhost:5000/api/project/compeleteProjectStatus - GET METHOD  
-Jan-23-2023 15:10:40 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
-Jan-23-2023 15:10:41 [info] http://localhost:5000/api/project/compeleteProjectStatus - GET METHOD  
-Jan-23-2023 15:10:41 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
-Jan-23-2023 15:10:42 [info] http://localhost:5000/api/project/compeleteProjectStatus - GET METHOD  
-Jan-23-2023 15:10:42 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
-Jan-23-2023 15:10:43 [info] http://localhost:5000/api/project/compeleteProjectStatus - GET METHOD  
-Jan-23-2023 15:10:43 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
-Jan-23-2023 15:10:45 [info] http://localhost:5000/api/project/compeleteProjectStatus - GET METHOD  
-Jan-23-2023 15:10:45 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
-Jan-23-2023 15:11:44 [info] http://localhost:5000/api/project/compeleteProjectStatus - GET METHOD  
-Jan-23-2023 15:11:44 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
-Jan-23-2023 15:11:46 [info] http://localhost:5000/api/project/compeleteProjectStatus - GET METHOD  
-Jan-23-2023 15:11:46 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
-Jan-23-2023 15:11:47 [info] http://localhost:5000/api/project/compeleteProjectStatus - GET METHOD  
-Jan-23-2023 15:11:47 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
-Jan-23-2023 15:11:56 [info] http://localhost:5000/api/project/compeleteProjectStatus - GET METHOD  
-Jan-23-2023 15:11:56 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
-Jan-23-2023 15:13:16 [info] http://localhost:5000/api/project/compeleteProjectStatus - GET METHOD  
-Jan-23-2023 15:13:16 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
-Jan-23-2023 15:32:43 [info] http://localhost:5000/api/project/compeleteProjectStatus - GET METHOD  
-Jan-23-2023 15:32:43 [error] 404 - Requested URL http://localhost:5000/api/project/compeleteProjectStatus not found! 
-Jan-23-2023 17:44:50 [info] http://localhost:5000/api/project/completeProjectStatus - GET METHOD  
-Jan-23-2023 17:44:50 [error] 401 - Please provide token. 
-Jan-23-2023 21:43:26 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
-Jan-23-2023 21:43:26 [error] 404 - This user does not exist. 
-Jan-23-2023 21:43:44 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
-Jan-23-2023 21:43:44 [error] 404 - This user does not exist. 
-Jan-23-2023 21:44:28 [info] http://localhost:5000/api/admin/login - POST METHOD  
-Jan-23-2023 21:44:28 [error] 404 - Requested URL http://localhost:5000/api/admin/login not found! 
-Jan-23-2023 21:45:02 [info] http://localhost:5000/api/user/login - POST METHOD  
-Jan-23-2023 21:46:26 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
-Jan-23-2023 21:48:47 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
-Jan-23-2023 21:48:47 [error] 412 - password is not allowed 
-Jan-23-2023 21:49:40 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
-Jan-23-2023 21:49:40 [error] 409 - Already exists. 
-Jan-23-2023 21:51:05 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
-Jan-23-2023 22:00:42 [info] http://localhost:5000/api/user/login - POST METHOD  
-Jan-23-2023 22:00:42 [error] 412 - password is required 
-Jan-23-2023 22:01:45 [info] http://localhost:5000/api/user/login - POST METHOD  
-Jan-23-2023 22:01:46 [error] 404 - Provided email is not registered. 
-Jan-23-2023 22:01:54 [info] http://localhost:5000/api/user/login - POST METHOD  
-Jan-23-2023 22:01:54 [error] 404 - Provided email is not registered. 
-Jan-23-2023 22:01:55 [info] http://localhost:5000/api/user/login - POST METHOD  
-Jan-23-2023 22:01:55 [error] 404 - Provided email is not registered. 
-Jan-23-2023 22:01:56 [info] http://localhost:5000/api/user/login - POST METHOD  
-Jan-23-2023 22:01:56 [error] 404 - Provided email is not registered. 
-Jan-23-2023 22:02:42 [info] http://localhost:5000/api/user/login - POST METHOD  
-Jan-23-2023 22:02:43 [error] 404 - Provided email is not registered. 
-Jan-23-2023 22:06:09 [info] http://localhost:5000/api/project/completeProjectStatus - PUT METHOD  
-Jan-23-2023 22:06:09 [error] 401 - Please provide token. 
-Jan-23-2023 22:06:40 [info] http://localhost:5000/api/project/completeProjectStatus - PUT METHOD  
-Jan-23-2023 22:06:41 [error] 404 - Project not found 
-Jan-23-2023 22:06:42 [info] http://localhost:5000/api/project/completeProjectStatus - PUT METHOD  
-Jan-23-2023 22:06:42 [error] 404 - Project not found 
-Jan-23-2023 22:07:41 [info] http://localhost:5000/api/project/completeProjectStatus - PUT METHOD  
-Jan-23-2023 22:07:41 [error] 404 - Project not found 
-Jan-23-2023 22:07:42 [info] http://localhost:5000/api/project/completeProjectStatus - PUT METHOD  
-Jan-23-2023 22:07:42 [error] 404 - Project not found 
-Jan-23-2023 22:07:43 [info] http://localhost:5000/api/project/completeProjectStatus - PUT METHOD  
-Jan-23-2023 22:07:43 [error] 404 - Project not found 
-Jan-23-2023 22:07:43 [info] http://localhost:5000/api/project/completeProjectStatus - PUT METHOD  
-Jan-23-2023 22:07:44 [error] 404 - Project not found 
-Jan-23-2023 22:07:44 [info] http://localhost:5000/api/project/completeProjectStatus - PUT METHOD  
-Jan-23-2023 22:07:44 [error] 404 - Project not found 
-Jan-23-2023 22:19:56 [info] http://localhost:5000/api/project/completeProjectStatus - PUT METHOD  
-Jan-23-2023 22:19:57 [error] 404 - Project not found 
-Jan-23-2023 22:35:42 [info] http://localhost:5000/api/project/completeProjectStatus - PUT METHOD  
-Jan-23-2023 22:35:45 [error] 404 - Project not found 
-Jan-23-2023 23:07:23 [info] http://localhost:5000/api/project/completeProjectStatus - PUT METHOD  
-Jan-23-2023 23:07:23 [error] 404 - Project not found 
-Jan-23-2023 23:08:53 [info] http://localhost:5000/api/project/completeProjectStatus - PUT METHOD  
-Jan-23-2023 23:08:53 [error] 404 - Project not found 
-Jan-23-2023 23:10:51 [info] http://localhost:5000/api/project/completeProjectStatus - PUT METHOD  
-Jan-23-2023 23:10:51 [error] 404 - Project not found 
-Jan-23-2023 23:10:55 [info] http://localhost:5000/api/project/completeProjectStatus - PUT METHOD  
-Jan-23-2023 23:10:55 [error] 404 - Project not found 
-Jan-23-2023 23:14:36 [info] http://localhost:5000/api/project/completeProjectStatus - PUT METHOD  
-Jan-23-2023 23:14:37 [error] 404 - Project not found 
-Jan-23-2023 23:18:10 [info] http://localhost:5000/api/project/completeProjectStatus - PUT METHOD  
-Jan-23-2023 23:18:20 [error] 500 - Operation `projects.findOne()` buffering timed out after 10000ms 
-Jan-23-2023 23:18:59 [info] http://localhost:5000/api/project/completeProjectStatus - PUT METHOD  
-Jan-23-2023 23:18:59 [error] 404 - Project not found 
-Jan-23-2023 23:19:28 [info] http://localhost:5000/api/project/completeProjectStatus - PUT METHOD  
-Jan-23-2023 23:19:28 [error] 404 - Project not found 
-Jan-23-2023 23:25:21 [info] http://localhost:5000/api/project/completeProjectStatus - PUT METHOD  
-Jan-23-2023 23:25:21 [error] 404 - Project not found 
-Jan-23-2023 23:25:37 [info] http://localhost:5000/api/project/completeProjectStatus - PUT METHOD  
-Jan-23-2023 23:25:37 [error] 404 - Project not found 
-Jan-23-2023 23:27:43 [info] http://localhost:5000/api/project/completeProjectStatus - PUT METHOD  
-Jan-23-2023 23:27:43 [error] 500 - projectAuthCheck is not defined 
-Jan-23-2023 23:28:35 [info] http://localhost:5000/api/project/completeProjectStatus - PUT METHOD  
-Jan-23-2023 23:28:35 [error] 500 - projectAuthCheck is not defined 
-Jan-23-2023 23:28:39 [info] http://localhost:5000/api/project/completeProjectStatus - PUT METHOD  
-Jan-23-2023 23:28:39 [error] 500 - projectAuthCheck is not defined 
-Jan-23-2023 23:32:55 [info] http://localhost:5000/api/project/completeProjectStatus - PUT METHOD  
-Jan-23-2023 23:35:42 [info] http://localhost:5000/api/project/completeProjectStatus - PUT METHOD  
-Jan-23-2023 23:37:24 [info] http://localhost:5000/api/project/completeProjectStatus - PUT METHOD  
-Jan-23-2023 23:37:34 [error] 500 - Operation `tasks.find()` buffering timed out after 10000ms 
-Jan-23-2023 23:37:50 [info] http://localhost:5000/api/project/completeProjectStatus - PUT METHOD  
-Jan-23-2023 23:38:00 [error] 500 - Operation `tasks.find()` buffering timed out after 10000ms 
-Jan-23-2023 23:41:37 [info] http://localhost:5000/api/project/completeProjectStatus?63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-23-2023 23:41:37 [error] 500 - Parameter "filter" to findOne() must be an object, got 63ceb3f288050c26307b8b93 
-Jan-23-2023 23:42:10 [info] http://localhost:5000/api/project/completeProjectStatus?63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-23-2023 23:42:10 [error] 500 - Parameter "filter" to findOne() must be an object, got 63ceb3f288050c26307b8b93 
-Jan-23-2023 23:43:44 [info] http://localhost:5000/api/project/completeProjectStatus?63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-23-2023 23:43:55 [error] 500 - Operation `projects.findOne()` buffering timed out after 10000ms 
-Jan-23-2023 23:44:49 [info] http://localhost:5000/api/project/completeProjectStatus?63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-23-2023 23:45:13 [info] http://localhost:5000/api/project/completeProjectStatus?63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-23-2023 23:45:23 [error] 500 - Operation `projects.findOne()` buffering timed out after 10000ms 
-Jan-23-2023 23:45:44 [info] http://localhost:5000/api/project/completeProjectStatus/?63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-23-2023 23:45:54 [error] 500 - Operation `projects.findOne()` buffering timed out after 10000ms 
-Jan-23-2023 23:46:24 [info] http://localhost:5000/api/project/completeProjectStatus/?projectId=63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-23-2023 23:47:04 [info] http://localhost:5000/api/project/completeProjectStatus?projectId=63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-23-2023 23:47:14 [error] 500 - Operation `projects.findOne()` buffering timed out after 10000ms 
-Jan-23-2023 23:47:30 [info] http://localhost:5000/api/project/completeProjectStatus?projectId=63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-23-2023 23:47:40 [error] 500 - Operation `projects.findOne()` buffering timed out after 10000ms 
-Jan-23-2023 23:47:55 [info] http://localhost:5000/api/project/completeProjectStatus/?projectId=63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-23-2023 23:48:46 [info] http://localhost:5000/api/project/completeProjectStatus/?projectId=63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-23-2023 23:48:56 [error] 500 - Operation `projects.findOne()` buffering timed out after 10000ms 
-Jan-23-2023 23:50:30 [info] http://localhost:5000/api/project/completeProjectStatus/?projectId=63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-23-2023 23:50:40 [error] 500 - Operation `projects.findOne()` buffering timed out after 10000ms 
-Jan-23-2023 23:50:59 [info] http://localhost:5000/api/project/completeProjectStatus/?projectId=63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-23-2023 23:51:09 [error] 500 - Operation `projects.findOne()` buffering timed out after 10000ms 
-Jan-23-2023 23:51:39 [info] http://localhost:5000/api/project/completeProjectStatus/?projectId=63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-23-2023 23:51:54 [info] http://localhost:5000/api/project/completeProjectStatus/?projectId=63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-23-2023 23:51:54 [error] 500 - Parameter "filter" to findOne() must be an object, got 63ceb3f288050c26307b8b93 
-Jan-24-2023 00:05:43 [info] http://localhost:5000/api/project/completeProjectStatus/?projectId=63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-24-2023 00:05:43 [error] 500 - Cannot read properties of undefined (reading 'ObjectId') 
-Jan-24-2023 00:08:19 [info] http://localhost:5000/api/project/completeProjectStatus/?projectId=63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-24-2023 00:08:19 [error] 500 - Unexpected token c in JSON at position 2 
-Jan-24-2023 00:08:38 [info] http://localhost:5000/api/project/completeProjectStatus/?projectId=63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-24-2023 00:08:38 [error] 500 - Unexpected token c in JSON at position 2 
-Jan-24-2023 00:10:17 [info] http://localhost:5000/api/project/completeProjectStatus/?projectId=63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-24-2023 00:10:17 [error] 500 - Unexpected token c in JSON at position 2 
-Jan-24-2023 00:11:56 [info] http://localhost:5000/api/project/completeProjectStatus/?projectId=63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-24-2023 00:11:56 [error] 500 - Unexpected token o in JSON at position 1 
-Jan-24-2023 00:12:28 [info] http://localhost:5000/api/project/completeProjectStatus/?projectId=63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-24-2023 00:12:28 [error] 500 - Unexpected token o in JSON at position 1 
-Jan-24-2023 00:14:32 [info] http://localhost:5000/api/project/completeProjectStatus/?projectId=63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-24-2023 00:14:32 [error] 404 - Project not found 
-Jan-24-2023 00:18:06 [info] http://localhost:5000/api/project/completeProjectStatus/?projectId=63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-24-2023 00:18:06 [error] 404 - Project not found 
-Jan-24-2023 00:18:43 [info] http://localhost:5000/api/project/completeProjectStatus/?projectId=63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-24-2023 00:18:43 [error] 404 - Project not found 
-Jan-24-2023 00:19:32 [info] http://localhost:5000/api/project/completeProjectStatus/?projectId=63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-24-2023 00:19:32 [error] 404 - Project not found 
-Jan-24-2023 00:21:09 [info] http://localhost:5000/api/project/completeProjectStatus/?projectId=63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-24-2023 00:21:09 [error] 404 - Project not found 
-Jan-24-2023 00:21:56 [info] http://localhost:5000/api/project/completeProjectStatus/?projectId=63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-24-2023 00:21:56 [error] 500 - Argument passed in must be a single String of 12 bytes or a string of 24 hex characters 
-Jan-24-2023 00:22:57 [info] http://localhost:5000/api/project/completeProjectStatus/?projectId=63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-24-2023 00:22:57 [error] 500 - Argument passed in must be a single String of 12 bytes or a string of 24 hex characters 
-Jan-24-2023 00:23:10 [info] http://localhost:5000/api/project/completeProjectStatus/?projectId=63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-24-2023 00:23:10 [error] 404 - Project not found 
-Jan-24-2023 00:24:39 [info] http://localhost:5000/api/project/completeProjectStatus/?projectId=63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-24-2023 00:24:39 [error] 404 - Project not found 
-Jan-24-2023 00:25:38 [info] http://localhost:5000/api/project/completeProjectStatus/?projectId=63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-24-2023 00:25:38 [error] 404 - Project not found 
-Jan-24-2023 00:27:00 [info] http://localhost:5000/api/project/completeProjectStatus/?projectId=63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-24-2023 00:27:00 [error] 404 - Project not found 
-Jan-24-2023 00:27:02 [info] http://localhost:5000/api/project/completeProjectStatus/?projectId=63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-24-2023 00:27:02 [error] 404 - Project not found 
-Jan-24-2023 00:32:26 [info] http://localhost:5000/api/project/completeProjectStatus/?projectId=63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-24-2023 00:32:26 [error] 404 - Project not found 
+Jan-23-2023 10:22:59 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-23-2023 10:22:59 [error] 412 - email is required 
+Jan-23-2023 10:23:16 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-23-2023 10:23:54 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
+Jan-23-2023 10:23:54 [error] 500 - Joi.string(...).email(...).lowercase(...).unique is not a function 
+Jan-23-2023 10:25:12 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
+Jan-23-2023 10:25:12 [error] 412 - first_nam is not allowed 
+Jan-23-2023 10:25:23 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
+Jan-23-2023 10:25:23 [error] 500 - Cannot read properties of undefined (reading 'length') 
+Jan-23-2023 10:26:05 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
+Jan-23-2023 10:26:52 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
+Jan-23-2023 10:26:52 [error] 500 - Cannot read properties of undefined (reading 'length') 
+Jan-23-2023 10:27:22 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
+Jan-23-2023 10:27:22 [error] 500 - Cannot read properties of undefined (reading 'length') 
+Jan-23-2023 10:27:23 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
+Jan-23-2023 10:27:24 [error] 500 - Cannot read properties of undefined (reading 'length') 
+Jan-23-2023 10:27:50 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
+Jan-23-2023 10:27:58 [error] 500 - Cannot read properties of undefined (reading 'length') 
+Jan-23-2023 10:28:42 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
+Jan-23-2023 10:30:06 [error] 500 - Cannot read properties of undefined (reading 'length') 
+Jan-23-2023 10:30:06 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
+Jan-23-2023 10:31:29 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
+Jan-23-2023 10:32:15 [error] 500 - Cannot read properties of undefined (reading 'length') 
+Jan-23-2023 10:32:55 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
+Jan-23-2023 10:32:55 [error] 412 - first_na is not allowed 
+Jan-23-2023 10:33:33 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
+Jan-23-2023 10:34:30 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
+Jan-23-2023 10:38:31 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-23-2023 10:38:59 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
+Jan-23-2023 10:38:59 [error] 412 -  
+Jan-23-2023 10:40:41 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
+Jan-23-2023 10:40:41 [error] 412 - first_name is required 
+Jan-23-2023 10:40:50 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
+Jan-23-2023 10:40:50 [error] 409 - Already exists. 
+Jan-23-2023 10:41:40 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
+Jan-23-2023 11:54:35 [info] http://localhost:5000/api/task/viewAllTask - GET METHOD  
+Jan-23-2023 11:55:15 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-23-2023 11:59:57 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 11:59:58 [error] 500 - Cannot read properties of undefined (reading 'create') 
+Jan-23-2023 12:01:37 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:02:09 [info] http://localhost:5000/api/task/viewAllTask - GET METHOD  
+Jan-23-2023 12:03:07 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-23-2023 12:03:07 [error] 404 - Data not found 
+Jan-23-2023 12:04:59 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-23-2023 12:08:22 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-23-2023 12:14:54 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:15:13 [info] http://localhost:5000/api/task/viewAllTask - GET METHOD  
+Jan-23-2023 12:16:49 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:17:56 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:18:15 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:18:53 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:24:02 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-23-2023 12:27:24 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-23-2023 12:28:26 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:28:28 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:28:29 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:28:30 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:28:31 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:28:37 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-23-2023 12:41:21 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:42:50 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:42:50 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:42:51 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:42:51 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:42:51 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:42:52 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:42:52 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:42:52 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:42:53 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:42:53 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:42:53 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:42:54 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:42:54 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:42:54 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:42:54 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:42:55 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:42:55 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:42:55 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:42:56 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:42:56 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:42:56 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:42:56 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:42:57 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:42:57 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:42:57 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:42:58 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:42:58 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:42:58 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:42:59 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:42:59 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:42:59 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:00 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:00 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:00 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:00 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:01 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:01 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:01 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:02 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:02 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:02 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:03 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:03 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:03 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:04 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:04 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:04 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:04 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:05 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:05 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:05 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:06 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:06 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:06 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:07 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:07 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:07 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:08 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:08 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:08 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:08 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:09 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:09 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:09 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:10 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:10 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:10 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:10 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:11 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:11 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:11 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:12 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:12 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:12 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:13 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:13 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:13 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:14 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:14 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:14 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:15 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:15 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:15 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:16 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:16 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:16 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:16 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:17 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:17 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:17 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:17 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:18 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:18 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:18 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:19 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:19 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:19 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:19 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:20 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:20 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:21 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:21 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:21 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:21 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:22 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:22 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:22 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:23 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:23 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:23 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:24 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:24 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:24 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:24 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:25 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:25 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:25 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:26 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:26 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:26 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:27 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:27 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:27 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:28 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:28 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:43:28 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:44:10 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-23-2023 12:44:36 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:44:37 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:44:37 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:44:37 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:44:38 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:44:38 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:44:38 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:44:39 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:44:39 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:44:39 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:44:40 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:44:40 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:44:40 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:44:41 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:44:41 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:44:41 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:44:41 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:44:42 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:44:42 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:44:42 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:44:43 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:44:43 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:44:43 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:44:43 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:44:44 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:44:44 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:44:44 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:42 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:43 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:43 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:44 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:44 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:44 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:45 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:45 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:45 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:45 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:46 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:46 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:46 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:46 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:47 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:47 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:47 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:47 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:48 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:48 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:48 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:49 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:49 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:49 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:49 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:50 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:50 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:50 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:50 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:51 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:51 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:51 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:52 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:52 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:53 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:53 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:54 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:54 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:55 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:55 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:56 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:56 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:56 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:57 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:57 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:57 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:58 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:58 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:58 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:58 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:59 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:59 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:45:59 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:00 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:00 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:00 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:00 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:01 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:01 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:01 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:02 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:02 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:02 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:03 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:03 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:03 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:04 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:04 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:04 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:05 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:05 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:05 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:06 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:06 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:06 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:06 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:07 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:07 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:07 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:08 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:08 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:08 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:09 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:09 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:09 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:09 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:10 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:10 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:10 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:11 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:11 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:11 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:11 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:12 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:12 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:12 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:13 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:13 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:13 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:14 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:14 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:14 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:15 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:15 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:15 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:15 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:16 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:16 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:16 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:17 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:17 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:17 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:17 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:18 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:18 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:18 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:19 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:19 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:19 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:20 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:20 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:20 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:20 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:21 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:21 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:21 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:22 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:22 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:22 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:23 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:23 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:23 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:23 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:46:28 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-23-2023 12:46:34 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-23-2023 12:46:36 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-23-2023 12:46:38 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-23-2023 12:46:39 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-23-2023 12:46:40 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-23-2023 12:46:42 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-23-2023 12:49:37 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:52:06 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:52:26 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 12:58:37 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-23-2023 12:58:37 [error] 404 - Provided email is not registered. 
+Jan-23-2023 12:58:42 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-23-2023 12:58:42 [error] 404 - Provided email is not registered. 
+Jan-23-2023 12:59:18 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-23-2023 13:12:13 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/getCommentOfTask - GET METHOD  
+Jan-23-2023 13:12:13 [error] 401 - Please provide token. 
+Jan-23-2023 13:12:36 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/getCommentOfTask - GET METHOD  
+Jan-23-2023 13:14:20 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/getCommentOfTask - GET METHOD  
+Jan-23-2023 13:14:32 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 13:14:36 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/getCommentOfTask - GET METHOD  
+Jan-23-2023 13:20:24 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/getCommentOfTask - GET METHOD  
+Jan-23-2023 13:24:33 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/getCommentOfTask - GET METHOD  
+Jan-23-2023 13:25:44 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 13:26:01 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
+Jan-23-2023 13:26:01 [error] 404 - Requested URL http://localhost:5000/api/user/developerLogin not found! 
+Jan-23-2023 13:26:12 [info] http://localhost:5000/api/user/developerLogin - POST METHOD  
+Jan-23-2023 13:26:12 [error] 404 - Requested URL http://localhost:5000/api/user/developerLogin not found! 
+Jan-23-2023 13:26:50 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-23-2023 13:36:46 [info] http://localhost:5000/api/task/viewAllTask - GET METHOD  
+Jan-23-2023 13:38:56 [info] http://localhost:5000/api/task/viewAllTask - GET METHOD  
+Jan-23-2023 13:39:11 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 13:39:13 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 13:39:21 [info] http://localhost:5000/api/task/viewAllTask - GET METHOD  
+Jan-23-2023 13:39:32 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/getCommentOfTask - GET METHOD  
+Jan-23-2023 13:40:55 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/getCommentOfTask - GET METHOD  
+Jan-23-2023 13:41:54 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 13:41:59 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/getCommentOfTask - GET METHOD  
+Jan-23-2023 13:42:12 [info] http://localhost:5000/api/task/viewAllTask - GET METHOD  
+Jan-23-2023 13:49:20 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/removeCommentFromTask - DELETE METHOD  
+Jan-23-2023 13:49:46 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/getCommentOfTask - GET METHOD  
+Jan-23-2023 13:49:51 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/getCommentOfTask - GET METHOD  
+Jan-23-2023 13:50:57 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/removeCommentFromTask - DELETE METHOD  
+Jan-23-2023 13:51:38 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/getCommentOfTask - GET METHOD  
+Jan-23-2023 13:51:53 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/removeCommentFromTask - DELETE METHOD  
+Jan-23-2023 13:53:03 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/removeCommentFromTask - DELETE METHOD  
+Jan-23-2023 13:53:06 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/removeCommentFromTask - DELETE METHOD  
+Jan-23-2023 13:54:09 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/removeCommentFromTask - DELETE METHOD  
+Jan-23-2023 13:58:43 [info] http://localhost:5000/api/task/viewAllTask - GET METHOD  
+Jan-23-2023 13:59:37 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/removeCommentFromTask - DELETE METHOD  
+Jan-23-2023 13:59:37 [error] 500 - jwt expired 
+Jan-23-2023 14:00:31 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-23-2023 14:00:51 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/removeCommentFromTask - DELETE METHOD  
+Jan-23-2023 14:01:34 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/removeCommentFromTask - DELETE METHOD  
+Jan-23-2023 14:03:11 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 14:03:11 [error] 500 - jwt expired 
+Jan-23-2023 14:03:20 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 14:03:29 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 14:03:36 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/getCommentOfTask - GET METHOD  
+Jan-23-2023 14:03:36 [error] 500 - jwt expired 
+Jan-23-2023 14:03:46 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/getCommentOfTask - GET METHOD  
+Jan-23-2023 14:04:58 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/removeCommentFromTask - DELETE METHOD  
+Jan-23-2023 14:05:21 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/removeCommentFromTask - DELETE METHOD  
+Jan-23-2023 14:05:31 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/removeCommentFromTask - DELETE METHOD  
+Jan-23-2023 14:06:11 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/removeCommentFromTask - DELETE METHOD  
+Jan-23-2023 14:07:14 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/removeCommentFromTask - DELETE METHOD  
+Jan-23-2023 14:07:27 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 14:07:28 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-23-2023 14:07:33 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/getCommentOfTask - GET METHOD  
+Jan-23-2023 14:08:07 [info] http://localhost:5000/api/task/viewAllTask - GET METHOD  
+Jan-23-2023 14:08:25 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/removeCommentFromTask - DELETE METHOD  
+Jan-23-2023 14:09:45 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/removeCommentFromTask - DELETE METHOD  
+Jan-23-2023 14:10:19 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/removeCommentFromTask - DELETE METHOD  
+Jan-23-2023 14:14:42 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
+Jan-23-2023 14:14:42 [error] 500 - jwt expired 
+Jan-23-2023 14:15:17 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-23-2023 14:15:34 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
+Jan-23-2023 15:49:35 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-23-2023 15:49:58 [info] http://localhost:5000/api/user/getProfile - GET METHOD  
+Jan-23-2023 15:49:58 [error] 404 - Data not found 
+Jan-23-2023 15:54:13 [info] http://localhost:5000/api/user/getProfile - GET METHOD  
+Jan-23-2023 15:54:13 [error] 404 - Data not found 
+Jan-23-2023 15:54:46 [info] http://localhost:5000/api/user/listTheUse - GET METHOD  
+Jan-23-2023 15:54:46 [error] 404 - Requested URL http://localhost:5000/api/user/listTheUse not found! 
+Jan-23-2023 15:54:55 [info] http://localhost:5000/api/user/listTheUser - GET METHOD  
+Jan-23-2023 15:56:47 [info] http://localhost:5000/api/user/getProfile - GET METHOD  
+Jan-23-2023 15:56:47 [error] 404 - Data not found 
+Jan-23-2023 15:57:14 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-23-2023 15:57:30 [info] http://localhost:5000/api/user/getProfile - GET METHOD  
+Jan-23-2023 15:57:39 [info] http://localhost:5000/api/user/listTheUser - GET METHOD  
+Jan-23-2023 16:00:26 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
+Jan-23-2023 16:02:42 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
+Jan-23-2023 16:07:25 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
+Jan-23-2023 16:10:18 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
+Jan-23-2023 16:19:50 [info] http://localhost:5000/api/user/listTheUser - GET METHOD  
+Jan-23-2023 16:21:03 [info] http://localhost:5000/api/user/listTheUser - GET METHOD  
+Jan-23-2023 16:21:33 [info] http://localhost:5000/api/user/listTheUser - GET METHOD  
+Jan-23-2023 16:22:44 [info] http://localhost:5000/api/user/listTheUser?page=2 - GET METHOD  
+Jan-23-2023 16:23:09 [info] http://localhost:5000/api/user/listTheUser?page=3 - GET METHOD  
+Jan-23-2023 16:23:09 [error] 404 - Data not found 
+Jan-23-2023 16:23:18 [info] http://localhost:5000/api/user/listTheUser?page=2 - GET METHOD  
+Jan-23-2023 16:24:12 [info] http://localhost:5000/api/user/listTheUser?page=2 - GET METHOD  
+Jan-23-2023 16:24:13 [error] 500 - userRes.count is not a function 
+Jan-23-2023 16:25:01 [info] http://localhost:5000/api/user/listTheUser?page=2 - GET METHOD  
+Jan-23-2023 16:25:50 [info] http://localhost:5000/api/user/listTheUser?page=2 - GET METHOD  
+Jan-23-2023 16:26:36 [info] http://localhost:5000/api/user/listTheUser?page=2&limit=5 - GET METHOD  
+Jan-23-2023 16:35:02 [info] http://localhost:5000/api/user/listTheUser?page=2&limit=5 - GET METHOD  
+Jan-23-2023 16:35:39 [info] http://localhost:5000/api/user/listTheUser?page=2&limit=5 - GET METHOD  

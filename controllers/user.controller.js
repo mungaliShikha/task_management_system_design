@@ -1,6 +1,7 @@
 const catchAsync = require("../helper/catchAsync");
 const appError = require("../helper/errorHandlers/errorHandler");
 const { ErrorMessage, SuccessMessage } = require("../helper/message");
+const User = require("../models/user.model");
 const { ErrorCode, SuccessCode } = require("../helper/statusCode");
 const {
   compareHash,
@@ -23,8 +24,6 @@ const {
 } = require("../services/user.service");
 
 const enums = require("../helper/enum/enums");
-
-// const { subjects, messages } = require("../helper/commonFunction");
 
 module.exports = {
   //******************************** common login api for manager developer admin ************************** */
@@ -73,7 +72,6 @@ module.exports = {
         $in: [
           enums.declaredEnum.role.DEVELOPER,
           enums.declaredEnum.role.MANAGER,
-          enums.declaredEnum.role.ADMIN,
         ],
       },
     });
@@ -107,7 +105,7 @@ module.exports = {
         ErrorCode.NOT_FOUND,
         ErrorMessage.USER_NOT_FOUND
       );
-    if (req.files.length !== 0) {
+    if (req.files.length) {
       payload["profile_image"] = req.files[0].location;
     }
     let updateRes = await getUserAndUpdate(
@@ -156,6 +154,49 @@ module.exports = {
       SuccessCode.SUCCESS,
       SuccessMessage.CREATE_DEVELOPER,
       createDeveloper
+    );
+  }),
+
+  //*********************************** get the list of manager and developers**************************** */
+
+  listTheUser: catchAsync(async (req, res) => {
+    const allAuthRes = await getOneUser({
+      _id: req.userId,
+      role: {
+        $in: [enums.declaredEnum.role.MANAGER, enums.declaredEnum.role.ADMIN],
+      },
+    });
+    if (!allAuthRes) {
+      throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
+    }
+
+    var query = {
+      status: { $ne: enums.declaredEnum.status.DELETE },
+      role: enums.declaredEnum.role.MANAGER,
+    };
+    if (req.body.search) {
+      query.name = new RegExp("^" + req.body.search, "i");
+    }
+
+    let { page, limit } = req.query;
+    page = req.query.page || 1;
+    limit = req.query.limit || 10;
+    const userRes = await User.find(query)
+      .limit(limit * 1)
+      .skip((page - 1) * limit)
+      .exec();
+    if (userRes.length == 0) {
+      throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
+    }
+    let final = {
+      user: userRes,
+      currentPage: page,
+    };
+    helper.commonResponse(
+      res,
+      SuccessCode.SUCCESS,
+      final,
+      SuccessMessage.DATA_FOUND
     );
   }),
 };

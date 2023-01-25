@@ -51,6 +51,11 @@ var task_model = new schema(
     due_date: {
       type: Date,
     },
+    comments_in_task:[
+      {
+      type: schema.Types.ObjectId,
+      ref: "comment",
+    }]
   },
   { timestamps: true }
 );
