@@ -1,5 +1,6 @@
 module.exports.ErrorMessage = Object.freeze({
   TASK_NOT_FOUND: "Task not found",
+  TASK_NOT_COMPLETE: "tast is incomplete",
   DATA_AUTHORIZTAION: "Only develper can change the status of the task",
   DATA_SHOULD_BE_ARRAY: "Entered data should be an array",
   CANNOT_ACCESS_DATA: "The requested user cannot access the data",
@@ -20,7 +21,7 @@ module.exports.ErrorMessage = Object.freeze({
   RESET_PASSWORD_EXPIRED: "Your Token has expired.",
   WRONG_PASSWORD: "Please enter valid password.",
   INVALID_MOBILE: "This mobile number is not valid.",
-  EMAIL_EXIST: "This email already exists.",
+  EMAIL_EXIST: "This email is already exists.",
   NOT_FOUND: "Requested data not found.",
   USER_NOT_FOUND: "This user does not exist.",
   UPDATE_NOT: "Unexpected error during update, please try again.",
@@ -72,6 +73,7 @@ module.exports.SuccessMessage = Object.freeze({
   INVITATION_SUCCESS: "Invitaion sent",
   SESSION_DETAILS: "Session Join user list",
   REMOVE_SUCCESS: "Remove Successfully",
+  CANCEL_SUCCESS: "Canceled successfully",
   LIST_EMPTY: "Empty List ",
   PLAYLIST_ADD: "Playlist has been added successfully.",
   SESSION_END: "Session ended without adding playlist.",

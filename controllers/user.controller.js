@@ -90,28 +90,32 @@ module.exports = {
 
   updateProfile: catchAsync(async (req, res) => {
     let payload = req.body;
+
+    console.log("aaaaaaa");
     const tokenAuth = await getOneUser({
       _id: req.userId,
       role: {
         $in: [
           enums.declaredEnum.role.DEVELOPER,
           enums.declaredEnum.role.MANAGER,
+          enums.declaredEnum.role.ADMIN,
         ],
       },
     });
+    console.log("tokenAuth>>>>>", tokenAuth);
+
     if (!tokenAuth)
       helper.commonResponse(
         res,
         ErrorCode.NOT_FOUND,
         ErrorMessage.USER_NOT_FOUND
       );
-    if (req.files.length) {
+    if (req.files.length !== 0) {
       payload["profile_image"] = req.files[0].location;
     }
     let updateRes = await getUserAndUpdate(
       { _id: tokenAuth._id },
-      { $set: payload },
-      { new: true }
+      { $set: payload }
     );
     helper.commonResponse(
       res,

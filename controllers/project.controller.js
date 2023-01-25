@@ -307,7 +307,7 @@ module.exports = {
       SuccessMessage.REMOVE_SUCCESS
     );
   }),
-  //************************* only manager AND ADMIN  can update the project**************** */
+  //************************* only manager AND ADMIN  can update the project**************** *//
   updateProject: catchAsync(async (req, res) => {
     const { projectId } = req.params;
     const projectStatus = req.body;
@@ -347,40 +347,45 @@ module.exports = {
   //************************* complete project status*****************//
 
   completeProjectStatus: catchAsync(async (req, res) => {
-    console.log("dwcdcf", req.query.projectId);
-    // const managerAuthCheck = await getUserById(req.userId);
-    // if (
-    //   managerAuthCheck &&
-    //   managerAuthCheck.role !== enums.declaredEnum.role.MANAGER
-    // ) {
-    //   throw new appError(ErrorMessage.CANNOT_ACCESS_DATA, ErrorCode.FORBIDDEN);
-    // }
+    const { projectId } = req.params;
 
-    const projectAuthCheck = await getProjectById(req.query.projectId);
-    console.log({ projectAuthCheck });
+    const managerAuthCheck = await getUserById(req.userId);
+    if (
+      managerAuthCheck &&
+      managerAuthCheck.role !== enums.declaredEnum.role.MANAGER
+    ) {
+      throw new appError(ErrorMessage.CANNOT_ACCESS_DATA, ErrorCode.FORBIDDEN);
+    }
+
+    const projectAuthCheck = await getProjectById({
+      _id: req.params.projectId,
+    });
 
     if (!projectAuthCheck) {
       throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
     }
 
-    const task = await getAllTask(projectId);
+    const task = await getAllTask({ projectId });
+    // console.log("task>>>>>", task);
+
     if (!task) {
       throw new appError(ErrorMessage.TASK_NOT_EXIST, ErrorCode.NOT_FOUND);
     }
-    let taskCompleted = true;
 
-    for (let taskData of task) {
-      const { taskStatus } = taskData;
-      if (taskStatus !== enums.declaredEnum.taskStatus.COMPLETED) {
-        taskCompleted = false;
+    let completedTask = true;
+    for (const data of task) {
+      // console.log("data>>>>>", data);
+      if (data.status === "inProgress") {
+        completedTask = false;
+        throw new appError(ErrorMessage.TASK_NOT_COMPLETE, ErrorCode.NOT_FOUND);
         break;
       }
     }
-    if (taskCompleted) {
+
+    if (completedTask) {
       const statusOfProject = await getProjectAndUpdate(
         { _id: projectAuthCheck._id },
-        { $set: { projectStatus: COMPLETED } },
-        { new: true }
+        { $set: { projectStatus: COMPLETED } }
       );
 
       helper.commonResponse(
@@ -392,5 +397,37 @@ module.exports = {
     }
   }),
 
-  removeProject: catchAsync(async (req, res) => {}),
+  removeProject: catchAsync(async (req, res) => {
+    let { projectId } = req.params;
+    const projectStatus = req.body;
+
+    const managerAuthCheck = await getUserById({
+      _id: req.userId,
+      role: enums.declaredEnum.role.MANAGER,
+    });
+    if (!managerAuthCheck) {
+      throw new appError(ErrorMessage.CANNOT_ACCESS_DATA, ErrorCode.FORBIDDEN);
+    }
+    const projectAuthCheck = await Project.findOne(projectId);
+    console.log("projectAuthCheck", projectAuthCheck);
+
+    if (!projectAuthCheck) {
+      throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
+    }
+
+    const statusOfProject = await getProjectAndUpdate(
+      { _id: projectAuthCheck._id },
+      { $set: projectStatus }
+    );
+    helper.commonResponse(
+      res,
+      SuccessCode.SUCCESS,
+      statusOfProject,
+      SuccessMessage.CANCEL_SUCCESS
+    );
+  }),
 };
+
+// let arr = ["jan", "march", "april", "may", "june"];
+
+// arr.splice(0, 1, "feb");

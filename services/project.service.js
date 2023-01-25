@@ -9,11 +9,11 @@ const getAllProject = async () => {
 };
 
 const getProjectById = async (id) => {
-  return Project.findById(id);
+  return Project.findOne(id);
 };
 
-const getProjectAndUpdate = async (id, update, data) => {
-  return Project.findOneAndUpdate(id, update, data);
+const getProjectAndUpdate = async (id, update) => {
+  return Project.findOneAndUpdate(id, update, { new: true });
 };
 
 const createProject = async (data) => {

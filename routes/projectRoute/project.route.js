@@ -36,9 +36,15 @@ router.put(
 );
 
 router.put(
-  "/completeProjectStatus",
-  // auth.verifyToken,
+  "/completeProjectStatus/:projectId",
+  auth.verifyToken,
   projectController.completeProjectStatus
+);
+
+router.put(
+  "/removeProject/:projectIdt",
+  auth.verifyToken,
+  projectController.removeProject
 );
 
 module.exports = router;

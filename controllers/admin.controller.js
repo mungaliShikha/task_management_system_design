@@ -150,9 +150,13 @@ module.exports = {
     if (!userAuth) {
       throw new appError(ErrorMessage.NOT_AUTHORISED, ErrorCode.NOT_FOUND);
     }
-    const userDuplicate = await getOneUser({ email, mobile_number });
-    if (userDuplicate) {
-      throw new appError(ErrorMessage.ALREADY_EXIST, ErrorCode.ALREADY_EXIST);
+    const duplicateEmail = await getOneUser({ email });
+    if (duplicateEmail) {
+      throw new appError(ErrorMessage.EMAIL_EXIST, ErrorCode.ALREADY_EXIST);
+    }
+    const duplicateMobile = await getOneUser({ mobile_number });
+    if (duplicateMobile) {
+      throw new appError(ErrorMessage.MOBILE_EXIST, ErrorCode.ALREADY_EXIST);
     }
     payload["employee_id"] = "MAN" + mobile_number.substr(-4);
     let passGen = randomPassword();

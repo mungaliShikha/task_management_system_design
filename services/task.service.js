@@ -1,19 +1,18 @@
 const Task = require("../models/task.model");
 
-
 const getOneTask = async (params) => {
   return Task.findOne(params);
 };
-const getAllTask = async () => {
-  return Task.find()
+const getAllTask = async (id) => {
+  return Task.find(id);
 };
 
-const getTaskById = async (id) => {
-  return Task.findById(id);
+const getTaskById = async () => {
+  return Task.findById();
 };
 
-const getTaskByIdAndUpdate = async (id, update,data) => {
-  return Task.findByIdAndUpdate(id, update,data);
+const getTaskByIdAndUpdate = async (id, update, data) => {
+  return Task.findByIdAndUpdate(id, update, data);
 };
 const createTask = async (body) => {
   return Task.create(body);
@@ -24,10 +23,8 @@ const countTask = async () => {
 };
 
 const getTaskByIdAndDelete = async (id, update) => {
-  return Task.findByIdAndDelete(id, update, { new: true })
-}
-
-
+  return Task.findByIdAndDelete(id, update, { new: true });
+};
 
 module.exports = {
   getOneTask,
@@ -36,5 +33,5 @@ module.exports = {
   getTaskByIdAndUpdate,
   createTask,
   countTask,
-  getTaskByIdAndDelete
+  getTaskByIdAndDelete,
 };
