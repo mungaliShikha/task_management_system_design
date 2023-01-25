@@ -44,12 +44,13 @@ module.exports = {
     const managerAuth = await getOneUser({
       _id: req.userId,
       role: enums.declaredEnum.role.MANAGER,
+      status:enums.declaredEnum.status.ACTIVE
     });
     if (!managerAuth) {
       throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
     }
 
-    const projectRes = await getOneProject({ _id: projectId });
+    const projectRes = await getOneProject({ _id: projectId ,projectStatus:{$ne:enums.declaredEnum.projectStatus.COMPLETED}});
     if (!projectRes) {
       throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
     }
@@ -74,14 +75,14 @@ module.exports = {
     if (req.body.search) {
       query.name = new RegExp("^" + req.body.search, "i");
     }
-    const allAuthRes = await getOneUser({ _id: req.userId });
+    const allAuthRes = await getOneUser({ _id: req.userId,status:enums.declaredEnum.status.ACTIVE });
     if (!allAuthRes) {
       throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
     }
     if (allAuthRes && allAuthRes.role !== enums.declaredEnum.role.MANAGER) {
       throw new appError(ErrorMessage.CANNOT_ACCESS_DATA, ErrorCode.FORBIDDEN);
     }
-    const projectFindRes = await getOneProject({ _id: _id });
+    const projectFindRes = await getOneProject({ _id: _id,projectStatus:{$ne:enums.declaredEnum.projectStatus.COMPLETED} });
     if (!projectFindRes) {
       throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
     }
@@ -132,11 +133,12 @@ module.exports = {
         const managerAuth = await getOneUser({
             _id: req.userId,
             role: enums.declaredEnum.role.MANAGER,
+            status:enums.declaredEnum.status.ACTIVE
         });
         if (!managerAuth) {
             throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
         }
-        const projectRes = await getOneTask({ _id: taskId });
+        const projectRes = await getOneTask({ _id: taskId,taskStatus: {$ne:enums.declaredEnum.taskStatus.COMPLETED}});
         if (!projectRes) {
             throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
         }
@@ -156,14 +158,14 @@ module.exports = {
         if(typeof developers !== "object"){
             throw new appError(ErrorMessage.DATA_SHOULD_BE_ARRAY, ErrorCode.VALIDATION_FAILED);
           }
-        const managerAuthCheck = await getOneUser({ _id: req.userId });
+        const managerAuthCheck = await getOneUser({ _id: req.userId,status:enums.declaredEnum.status.ACTIVE });
         if (managerAuthCheck && managerAuthCheck.role != enums.declaredEnum.role.MANAGER) {
             throw new appError(ErrorMessage.INVALID_TOKEN, ErrorCode.NOT_ALLOWED);
         } else if (!managerAuthCheck) {
             throw new appError(ErrorMessage.MANAGER_NOT_EXIST, ErrorCode.NOT_FOUND);
         }
         const taskCheckRes = await getTaskById(taskId);
-        if (taskCheckRes && taskCheckRes.status == enums.declaredEnum.taskStatus.DELETE) {
+        if (taskCheckRes && taskCheckRes.status == enums.declaredEnum.status.DELETE) {
             throw new appError(ErrorMessage.TASK_DELETED, ErrorCode.NOT_FOUND);
         } else if (!taskCheckRes) {
             throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
@@ -200,7 +202,7 @@ module.exports = {
 
     removeDeveloperFromTask: catchAsync(async (req, res) => {
         let { developers, taskId } = req.body;
-        const managerAuthCheck = await getOneUser({ _id: req.userId });
+        const managerAuthCheck = await getOneUser({ _id: req.userId ,status:enums.declaredEnum.status.ACTIVE});
         if (managerAuthCheck && managerAuthCheck.role != enums.declaredEnum.role.MANAGER) {
             throw new appError(ErrorMessage.INVALID_TOKEN, ErrorCode.NOT_ALLOWED);
         } else if (!managerAuthCheck) {
@@ -210,7 +212,7 @@ module.exports = {
             throw new appError(ErrorMessage.DATA_SHOULD_BE_ARRAY, ErrorCode.VALIDATION_FAILED);
           }
         const taskCheckRes = await getTaskById(taskId);
-        if (taskCheckRes && taskCheckRes.status == enums.declaredEnum.taskStatus.DELETE) {
+        if (taskCheckRes && taskCheckRes.status == enums.declaredEnum.status.DELETE) {
             throw new appError(ErrorMessage.TASK_DELETED, ErrorCode.NOT_FOUND);
         } else if (!taskCheckRes) {
             throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
@@ -238,11 +240,12 @@ module.exports = {
         const developerAuth = await getOneUser({
             _id: req.userId,
             role: enums.declaredEnum.role.DEVELOPER,
+            status:enums.declaredEnum.status.ACTIVE
         });
         if (!developerAuth) {
             throw new appError(ErrorMessage.DATA_AUTHORIZTAION, ErrorCode.NOT_FOUND);
         }
-        const taskResult = await getOneTask({ _id: taskId, developer_assigned: { $in: [developerAuth._id] } });
+        const taskResult = await getOneTask({ _id: taskId, developer_assigned: { $in: [developerAuth._id] } ,taskStatus:{$ne:enums.declaredEnum.taskStatus.COMPLETED}});
         if (!taskResult) {
             throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
         }

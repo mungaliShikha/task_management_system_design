@@ -22,6 +22,7 @@ const {
   getOneToken,
   createUser,
   getUserData,
+  getOneUserAndUpdate,
 } = require("../services/user.service");
 module.exports = {
   //************************************ forgetpassword for admin ******************************* */
@@ -252,4 +253,66 @@ module.exports = {
       SuccessMessage.DATA_FOUND
     );
   }),
+
+  //************************** change status of user by admin **************** */
+
+  changeStatusOfUser: catchAsync(async (req, res) => {
+    const userAuth = await getOneUser({
+      _id: req.userId,
+      role: enums.declaredEnum.role.ADMIN,
+    });
+    if (!userAuth) {
+      throw new appError(ErrorMessage.ADMIN_AUTHORIZE, ErrorCode.NOT_FOUND);
+    }
+    const { status, _id } = req.body;
+    const userCheck = await getUserById(_id)
+    if(userCheck&& userCheck.status == enums.declaredEnum.status.DELETE){
+      throw new appError(ErrorMessage.USER_DELETED, ErrorCode.NOT_FOUND);
+    }
+    if(!userCheck){
+      throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
+    }
+
+    let update = await getOneUserAndUpdate(
+      { _id, role: { $ne: enums.declaredEnum.role.ADMIN } },
+      { $set: { status } },
+      { new: true }
+    );
+    helper.commonResponse(
+      res,
+      SuccessCode.SUCCESS,
+      update,
+      SuccessMessage.PROFILE_DETAILS
+    );
+  }),
+
+  //*************************** delete user by admin ********************* */
+  deleteUserByAdmin: catchAsync(async (req, res) => {
+    const userAuth = await getOneUser({
+      _id: req.userId,
+      role: enums.declaredEnum.role.ADMIN,
+    });
+    if (!userAuth) {
+      throw new appError(ErrorMessage.ADMIN_AUTHORIZE, ErrorCode.NOT_FOUND);
+    }
+    const { status, _id } = req.body;
+    const userCheck = await getUserById(_id)
+    if(!userCheck){
+      throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
+    }
+
+    let update = await getOneUserAndUpdate(
+      { _id, role: { $ne: enums.declaredEnum.role.ADMIN } },
+      { $set: { status } },
+      { new: true }
+    );
+    helper.commonResponse(
+      res,
+      SuccessCode.SUCCESS,
+      update,
+      SuccessMessage.PROFILE_DETAILS
+    );
+  }),
+
+
 };

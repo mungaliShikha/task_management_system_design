@@ -1,4 +1,8 @@
 module.exports.ErrorMessage = Object.freeze({
+  CANNOT_CREATE:"Only Manager can create developer",
+  USER_DELETED:"User not found or deleted",
+  USER_IS_ALREADY_BLOCKED:"User is already blocked",
+  ADMIN_AUTHORIZE:"Only admin can make the changes",
   CANNOT_UPDATE:"Only admin can update his profile",
   TASK_NOT_FOUND:"Task not found",
   DATA_AUTHORIZTAION:"Only develper can change the status of the task",
@@ -63,7 +67,7 @@ module.exports.SuccessMessage = Object.freeze({
   DATA_SAVED: "Data is saved successfully.",
   DETAIL_GET: "Details have been fetched successfully.",
   DATA_FOUND: "Requested data found.",
-  PROFILE_DETAILS: "Your profile details has been updated sucessfully.",
+  PROFILE_DETAILS: "profile details has been updated sucessfully.",
   STATUS_UPDATED: "Your Status has been changed successfully.",
   UPDATE_SUCCESS: "Successfully updated.",
   BLOCK_SUCCESS: "Successfully blocked.",

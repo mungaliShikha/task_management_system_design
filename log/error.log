@@ -118,3 +118,35 @@ Jan-24-2023 12:27:11 [error] 404 - Data not found
 Jan-24-2023 12:27:57 [error] 404 - Data not found 
 Jan-24-2023 12:50:24 [error] 500 - jwt expired 
 Jan-24-2023 15:08:50 [error] 500 - jwt expired 
+Jan-25-2023 09:48:03 [error] 500 - jwt expired 
+Jan-25-2023 09:49:49 [error] 500 - Cannot read properties of undefined (reading 'length') 
+Jan-25-2023 10:39:27 [error] 412 - project_name is required 
+Jan-25-2023 10:40:02 [error] 412 - project_name is required 
+Jan-25-2023 11:01:31 [error] 412 - projectStatus must be one of [started, completed, ongoing] 
+Jan-25-2023 11:01:42 [error] 404 - Project is already completed 
+Jan-25-2023 11:25:32 [error] 404 - Requested URL http://localhost:5000/api/admin/changeStatusOfUser not found! 
+Jan-25-2023 11:28:53 [error] 500 - Cannot create property 'updatedAt' on string 'BLOCKED' 
+Jan-25-2023 11:35:04 [error] 500 - id is not defined 
+Jan-25-2023 11:36:40 [error] 500 - Cannot create property 'updatedAt' on string 'BLOCKED' 
+Jan-25-2023 11:44:34 [error] 404 - User is already blocked 
+Jan-25-2023 12:07:15 [error] 412 - status must be one of [BLOCKED, ACTIVE] 
+Jan-25-2023 12:09:12 [error] 412 - status is required 
+Jan-25-2023 12:09:19 [error] 412 - status is required 
+Jan-25-2023 12:09:21 [error] 412 - status is required 
+Jan-25-2023 12:15:35 [error] 412 - status must be one of [BLOCKED, ACTIVE] 
+Jan-25-2023 12:20:20 [error] 412 - _id with value 63ce6412a32e3766d8e327f fails to match the required pattern: /^[0-9a-fA-F]{24}$/ 
+Jan-25-2023 12:23:23 [error] 404 - This user does not exist. 
+Jan-25-2023 12:35:44 [error] 412 - status must be [DELETE] 
+Jan-25-2023 12:40:18 [error] 412 - _id is not allowed to be empty 
+Jan-25-2023 12:44:36 [error] 404 - This user does not exist. 
+Jan-25-2023 12:47:33 [error] 404 - This user does not exist. 
+Jan-25-2023 12:49:00 [error] 404 - User not found 
+Jan-25-2023 12:51:21 [error] 404 - User not found/deleted 
+Jan-25-2023 12:51:47 [error] 404 - User not found or deleted 
+Jan-25-2023 13:37:23 [error] 404 - Requested URL http://localhost:5000/ not found! 
+Jan-25-2023 13:47:22 [error] 500 - jwt expired 
+Jan-25-2023 15:16:12 [error] 500 - E11000 duplicate key error collection: task_management.users index: email_1 dup key: { email: "wdnarendrakumar+jiraboard@gmail.com" } 
+Jan-25-2023 15:19:10 [error] 500 - jwt expired 
+Jan-25-2023 15:20:29 [error] 404 - Provided email is not registered. 
+Jan-25-2023 17:39:37 [error] 412 - mobile_number with value 971856709 fails to match the required pattern: /^[0-9]{10}$/ 
+Jan-25-2023 17:44:29 [error] 500 - Cannot read properties of undefined (reading 'length') 
