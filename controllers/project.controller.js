@@ -35,10 +35,9 @@ module.exports = {
     const {
       project_name,
       description,
-      status,
+      projectStatus,
       project_task,
-      developers,
-      active_status,
+      developers
     } = req.body;
     const managerAuthCheck = await getOneUser({
       _id: req.userId,
@@ -57,11 +56,10 @@ module.exports = {
     if (
       project_name ||
       description ||
-      status ||
+      projectStatus ||
       project_task ||
       developers ||
-      manager ||
-      active_status
+      manager 
     ) {
       managerId = managerAuthCheck._id.toString();
       req.body.manager = managerId.split(" ");

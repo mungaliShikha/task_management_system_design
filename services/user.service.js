@@ -15,9 +15,15 @@ const getUserById = async (id) => {
   return User.findById(id);
 };
 
-const getUserAndUpdate = async (id, update) => {
-  return User.findByIdAndUpdate(id, update, {new:true});
+const getUserAndUpdate = async (id, update,data) => {
+  return User.findByIdAndUpdate(id, update, data);
 };
+
+
+const getOneUserAndUpdate =async(params,update,data)=>{
+  return User.findOneAndUpdate(params, update, data);
+}
+
 const getOneToken = async (params) => {
   return Token.findOne(params);
 };
@@ -33,5 +39,6 @@ module.exports = {
   getUserAndUpdate,
   getOneToken,
   createUser,
-  getUserData
+  getUserData,
+  getOneUserAndUpdate
 };

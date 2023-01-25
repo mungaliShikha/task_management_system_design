@@ -5,6 +5,9 @@ const helper = require("../helper/commonResponseHandler");
 const catchAsync = require("../helper/catchAsync");
 const Comment = require("../models/comment.model");
 const Task = require("../models/task.model");
+const commentService = require("../services/comment.service")
+const userService = require("../services/user.service")
+const taskService = require("../services/task.service")
 const User = require("../models/user.model");
 const enums = require("../helper/enum/enums");
 
@@ -14,7 +17,7 @@ module.exports = {
     const { taskId } = req.params;
     const { comment, developer, manager, date_comment_created } = req.body;
 
-    const roleAuth = await User.findOne({
+    const roleAuth = await userService.getOneUser({
       _id: req.userId,
       role: {
         $in: [
@@ -33,13 +36,13 @@ module.exports = {
       req.body.user = roleAuth._id;
     }
 
-    const taskExist = await Task.findById(taskId);
+    const taskExist = await taskService.getOneTask(taskId);
     if (!taskExist) {
       throw new appError(ErrorMessage.TASK_NOT_FOUND, ErrorCode.NOT_FOUND);
     }
     req.body.taskId = taskExist._id;
-    let createdComment = await Comment.create(req.body);
-    let updateTask = await Task.findByIdAndUpdate(
+    let createdComment = await commentService.createComment(req.body);
+    let updateTask = await taskService.getTaskByIdAndUpdate(
       taskId,
       { $addToSet: { comments_in_task: createdComment._id } },
       { new: true }
@@ -55,7 +58,7 @@ module.exports = {
  //**************************** GET COMMENT  OF PARTICULAR TASK *************************************** */
   getCommentOfParticularTask: catchAsync(async (req, res) => {
     const { taskId } = req.params;
-    const roleAuth = await User.findOne({
+    const roleAuth = await userService.getOneUser({
       _id: req.userId,
       role: {
         $in: [
@@ -67,7 +70,7 @@ module.exports = {
     if (!roleAuth) {
       throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
     }
-    const taskExist = await Task.findById(taskId);
+    const taskExist = await taskService.getTaskById(taskId);
     if (!taskExist) {
       throw new appError(ErrorMessage.TASK_NOT_FOUND, ErrorCode.NOT_FOUND);
     }
@@ -89,7 +92,7 @@ module.exports = {
     let { taskId } = req.params;
     let { commentIds } = req.body;
 
-    const roleAuth = await User.findOne({
+    const roleAuth = await userService.getOneUser({
       _id: req.userId,
       role: {
         $in: [
@@ -101,20 +104,22 @@ module.exports = {
     if (!roleAuth) {
       throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
     }
-    const taskExist = await Task.findById(taskId);
+    const taskExist = await taskService.getTaskById(taskId);
     if (!taskExist) {
       throw new appError(ErrorMessage.TASK_NOT_FOUND, ErrorCode.NOT_FOUND);
     }
 
-    const commentCount = await Task.findOneAndUpdate(
+    const commentCount = await taskService.getTaskByIdAndUpdate(
       { _id: taskId },
-      { $pullAll: { comments_in_task: commentIds } }
+      { $pullAll: { comments_in_task: commentIds }},
+    {new:true} 
     );
     
     for (let i = 0; i < commentIds.length; i++) {
-      await Comment.findOneAndUpdate(
+      await commentService.getOneCommentAndUpdate(
         { _id: commentIds[i] },
-        { $set: { isDeleted: true } }
+        { $set: { isDeleted: true } },
+        {new:true}
       );
     }
     helper.sendResponseWithoutData(
