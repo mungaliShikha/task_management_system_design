@@ -150,3 +150,4 @@ Jan-25-2023 15:19:10 [error] 500 - jwt expired
 Jan-25-2023 15:20:29 [error] 404 - Provided email is not registered. 
 Jan-25-2023 17:39:37 [error] 412 - mobile_number with value 971856709 fails to match the required pattern: /^[0-9]{10}$/ 
 Jan-25-2023 17:44:29 [error] 500 - Cannot read properties of undefined (reading 'length') 
+Jan-27-2023 12:38:34 [error] 401 - Please provide token. 
