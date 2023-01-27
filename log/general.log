@@ -657,187 +657,103 @@ Jan-23-2023 16:25:50 [info] http://localhost:5000/api/user/listTheUser?page=2 - 
 Jan-23-2023 16:26:36 [info] http://localhost:5000/api/user/listTheUser?page=2&limit=5 - GET METHOD  
 Jan-23-2023 16:35:02 [info] http://localhost:5000/api/user/listTheUser?page=2&limit=5 - GET METHOD  
 Jan-23-2023 16:35:39 [info] http://localhost:5000/api/user/listTheUser?page=2&limit=5 - GET METHOD  
-Jan-24-2023 09:51:11 [info] http://localhost:5000/api/project/completeProjectStatus/?projectId=63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-24-2023 09:51:11 [error] 404 - Project not found 
-Jan-24-2023 09:53:11 [info] http://localhost:5000/api/project/completeProjectStatus/?projectId=63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-24-2023 09:53:11 [error] 404 - Project not found 
-Jan-24-2023 09:54:22 [info] http://localhost:5000/api/project/completeProjectStatus/?projectId=63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-24-2023 09:54:22 [error] 404 - Project not found 
-Jan-24-2023 09:55:22 [info] http://localhost:5000/api/project/completeProjectStatus/?projectId=63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-24-2023 09:55:22 [error] 404 - Project not found 
-Jan-24-2023 09:57:20 [info] http://localhost:5000/api/project/completeProjectStatus/63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-24-2023 09:57:20 [error] 404 - Requested URL http://localhost:5000/api/project/completeProjectStatus/63ceb3f288050c26307b8b93 not found! 
-Jan-24-2023 09:58:47 [info] http://localhost:5000/api/project/completeProjectStatus/63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-24-2023 09:58:47 [error] 404 - Requested URL http://localhost:5000/api/project/completeProjectStatus/63ceb3f288050c26307b8b93 not found! 
-Jan-24-2023 09:59:38 [info] http://localhost:5000/api/project/completeProjectStatus/63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-24-2023 09:59:38 [error] 404 - Project not found 
-Jan-24-2023 10:01:32 [info] http://localhost:5000/api/project/completeProjectStatus/63ceb3f288050c26307b8b93 - PUT METHOD  
-Jan-24-2023 10:01:32 [error] 404 - Project not found 
-Jan-24-2023 10:05:29 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 10:05:29 [error] 404 - Project not found 
-Jan-24-2023 10:06:37 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 10:17:22 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 10:17:22 [error] 500 - Parameter "filter" to findOne() must be an object, got 63c64b1b0e84e1074c76cab5 
-Jan-24-2023 10:20:06 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 10:20:06 [error] 500 - Parameter "filter" to findOne() must be an object, got 63c64b1b0e84e1074c76cab5 
-Jan-24-2023 10:22:35 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 10:22:35 [error] 500 - Parameter "filter" to findOne() must be an object, got 63c64b1b0e84e1074c76cab5 
-Jan-24-2023 10:28:29 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 10:28:29 [error] 500 - Parameter "filter" to findOne() must be an object, got 63c64b1b0e84e1074c76cab5 
-Jan-24-2023 10:56:29 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 10:56:29 [error] 500 - Parameter "filter" to findOne() must be an object, got 63c64b1b0e84e1074c76cab5 
-Jan-24-2023 10:59:11 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 10:59:11 [error] 500 - Parameter "filter" to findOne() must be an object, got 63c64b1b0e84e1074c76cab5 
-Jan-24-2023 11:04:34 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 11:04:34 [error] 404 - Project not found 
-Jan-24-2023 11:05:07 [info] http://localhost:5000/api/project/completeProjectStatus/63c78ba237ce4e6c144eb9c0 - PUT METHOD  
-Jan-24-2023 11:05:07 [error] 404 - Project not found 
-Jan-24-2023 11:06:23 [info] http://localhost:5000/api/project/completeProjectStatus/63c78ba237ce4e6c144eb9c0 - PUT METHOD  
-Jan-24-2023 11:06:23 [error] 500 - Parameter "filter" to find() must be an object, got 63c78ba237ce4e6c144eb9c0 
-Jan-24-2023 11:07:08 [info] http://localhost:5000/api/project/completeProjectStatus/63c78ba237ce4e6c144eb9c0 - PUT METHOD  
-Jan-24-2023 11:07:08 [error] 500 - Parameter "filter" to find() must be an object, got 63c78ba237ce4e6c144eb9c0 
-Jan-24-2023 11:08:10 [info] http://localhost:5000/api/project/completeProjectStatus/63c78ba237ce4e6c144eb9c0 - PUT METHOD  
-Jan-24-2023 11:08:10 [error] 500 - COMPLETED is not defined 
-Jan-24-2023 11:12:42 [info] http://localhost:5000/api/project/completeProjectStatus/63c78ba237ce4e6c144eb9c0 - PUT METHOD  
-Jan-24-2023 11:12:42 [error] 500 - COMPLETED is not defined 
-Jan-24-2023 11:13:33 [info] http://localhost:5000/api/project/completeProjectStatus/63c78ba237ce4e6c144eb9c0 - PUT METHOD  
-Jan-24-2023 11:13:33 [error] 500 - COMPLETED is not defined 
-Jan-24-2023 11:16:07 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 11:16:07 [error] 500 - COMPLETED is not defined 
-Jan-24-2023 11:16:10 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 11:16:10 [error] 500 - COMPLETED is not defined 
-Jan-24-2023 11:16:12 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 11:16:12 [error] 500 - COMPLETED is not defined 
-Jan-24-2023 11:16:26 [info] http://localhost:5000/api/project/completeProjectStatus/63c8c8b22d41d65278ccb702 - PUT METHOD  
-Jan-24-2023 11:16:27 [error] 500 - COMPLETED is not defined 
-Jan-24-2023 11:16:28 [info] http://localhost:5000/api/project/completeProjectStatus/63c8c8b22d41d65278ccb702 - PUT METHOD  
-Jan-24-2023 11:16:28 [error] 500 - COMPLETED is not defined 
-Jan-24-2023 11:16:43 [info] http://localhost:5000/api/project/completeProjectStatus/63c8c8b22d41d65278ccb702 - PUT METHOD  
-Jan-24-2023 11:16:44 [error] 500 - COMPLETED is not defined 
-Jan-24-2023 11:22:03 [info] http://localhost:5000/api/project/completeProjectStatus/63cd0ae1ecb8b03d24664b36 - PUT METHOD  
-Jan-24-2023 11:22:03 [error] 500 - COMPLETED is not defined 
-Jan-24-2023 11:23:00 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 11:23:00 [error] 500 - COMPLETED is not defined 
-Jan-24-2023 11:25:31 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 11:25:31 [error] 500 - COMPLETED is not defined 
-Jan-24-2023 11:31:58 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 11:31:58 [error] 500 - COMPLETED is not defined 
-Jan-24-2023 12:35:08 [info] http://localhost:5000/api/user/login - POST METHOD  
-Jan-24-2023 12:35:54 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 12:35:54 [error] 500 - COMPLETED is not defined 
-Jan-24-2023 12:36:08 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 12:36:08 [error] 500 - COMPLETED is not defined 
-Jan-24-2023 12:51:46 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 12:51:46 [error] 500 - Parameter "filter" to find() must be an object, got 63c6648d5795762098e275ce,63c8c96616e1f12cf0a7ae0d 
-Jan-24-2023 12:57:40 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 12:57:40 [error] 404 -  
-Jan-24-2023 12:59:01 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 12:59:01 [error] 404 -  
-Jan-24-2023 13:18:48 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 13:18:48 [error] 500 - Parameter "filter" to find() must be an object, got 63c64b1b0e84e1074c76cab5 
-Jan-24-2023 13:21:03 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 13:21:03 [error] 500 - COMPLETED is not defined 
-Jan-24-2023 13:22:53 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 13:22:54 [error] 404 -  
-Jan-24-2023 13:38:49 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 13:38:49 [error] 404 -  
-Jan-24-2023 13:50:24 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 13:50:25 [error] 404 -  
-Jan-24-2023 13:51:59 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 13:51:59 [error] 404 -  
-Jan-24-2023 13:53:10 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 13:53:10 [error] 404 -  
-Jan-24-2023 13:55:36 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 13:55:37 [error] 404 -  
-Jan-24-2023 13:57:44 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 13:57:45 [error] 404 -  
-Jan-24-2023 13:58:25 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 13:58:25 [error] 404 -  
-Jan-24-2023 13:59:26 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 13:59:26 [error] 404 -  
-Jan-24-2023 14:02:58 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 14:02:58 [error] 404 -  
-Jan-24-2023 14:05:09 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 14:05:09 [error] 404 -  
-Jan-24-2023 14:05:20 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 14:05:20 [error] 404 -  
-Jan-24-2023 14:53:48 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 14:53:49 [error] 404 -  
-Jan-24-2023 14:54:53 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 14:54:53 [error] 404 -  
-Jan-24-2023 14:57:30 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 14:57:30 [error] 404 -  
-Jan-24-2023 15:04:33 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 15:06:08 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 15:08:53 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 15:11:51 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 15:11:51 [error] 500 - jwt expired 
-Jan-24-2023 15:12:24 [info] http://localhost:5000/api/user/login - POST METHOD  
-Jan-24-2023 15:13:07 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 15:20:17 [info] http://localhost:5000/api/project/cancelProject/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 15:20:17 [error] 404 - Requested URL http://localhost:5000/api/project/cancelProject/63c64b1b0e84e1074c76cab5 not found! 
-Jan-24-2023 15:24:47 [info] http://localhost:5000/api/project/removeProject/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 15:24:47 [error] 404 - Requested URL http://localhost:5000/api/project/removeProject/63c64b1b0e84e1074c76cab5 not found! 
-Jan-24-2023 15:25:40 [info] http://localhost:5000/api/project/removeProject/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 15:25:40 [error] 404 - Requested URL http://localhost:5000/api/project/removeProject/63c64b1b0e84e1074c76cab5 not found! 
-Jan-24-2023 15:26:27 [info] http://localhost:5000/api/project/removeProject/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 15:26:27 [error] 404 - Project not found 
-Jan-24-2023 15:28:23 [info] http://localhost:5000/api/project/removeProject/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 15:28:23 [error] 404 - Project not found 
-Jan-24-2023 15:30:41 [info] http://localhost:5000/api/project/removeProject/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 15:30:41 [error] 404 - Project not found 
-Jan-24-2023 15:32:00 [info] http://localhost:5000/api/project/removeProject/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 15:32:01 [error] 500 - CANCEL is not defined 
-Jan-24-2023 16:01:05 [info] http://localhost:5000/api/project/removeProject/63c64b1b0e84e1074c76cab5 - PUT METHOD  
-Jan-24-2023 16:15:16 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
-Jan-24-2023 16:15:16 [error] 500 - jwt expired 
-Jan-24-2023 16:16:19 [info] http://localhost:5000/api/user/login - POST METHOD  
-Jan-24-2023 16:16:46 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
-Jan-24-2023 16:16:46 [error] 409 - This email is already exists. 
-Jan-24-2023 16:17:18 [info] http://localhost:5000/api/admin/createManager - POST METHOD  
-Jan-24-2023 16:17:18 [error] 409 - This mobile number already exists. 
-Jan-24-2023 16:47:49 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
-Jan-24-2023 16:47:49 [error] 401 - Please provide token. 
-Jan-24-2023 16:48:07 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
-Jan-24-2023 16:48:07 [error] 412 - _id is not allowed 
-Jan-24-2023 16:50:13 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
-Jan-24-2023 16:50:13 [error] 412 - userId is not allowed 
-Jan-24-2023 18:10:21 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
-Jan-24-2023 18:10:21 [error] 412 - userId is not allowed 
-Jan-24-2023 18:10:32 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
-Jan-24-2023 18:10:32 [error] 412 - userId is not allowed 
-Jan-24-2023 18:10:34 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
-Jan-24-2023 18:10:34 [error] 412 - userId is not allowed 
-Jan-24-2023 18:11:31 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
-Jan-24-2023 18:11:31 [error] 412 - _id is not allowed 
-Jan-24-2023 18:16:22 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
-Jan-24-2023 18:16:22 [error] 500 - jwt expired 
-Jan-24-2023 18:16:45 [info] http://localhost:5000/api/user/login - POST METHOD  
-Jan-24-2023 18:17:01 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
-Jan-24-2023 18:17:01 [error] 412 - _id is not allowed 
-Jan-24-2023 18:21:18 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
-Jan-24-2023 18:21:18 [error] 412 - _id is not allowed 
-Jan-24-2023 18:24:12 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
-Jan-24-2023 18:24:12 [error] 412 - _id is not allowed 
-Jan-24-2023 18:24:51 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
-Jan-24-2023 18:24:51 [error] 412 - _id is not allowed 
-Jan-24-2023 18:26:24 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
-Jan-24-2023 18:26:24 [error] 500 - Cannot read properties of undefined (reading 'length') 
-Jan-24-2023 18:28:35 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
-Jan-24-2023 18:28:35 [error] 412 - _id is not allowed 
-Jan-24-2023 18:32:46 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
-Jan-24-2023 18:32:46 [error] 412 - tokenAuth._id is not allowed 
-Jan-24-2023 18:34:29 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
-Jan-24-2023 18:34:29 [error] 500 - Cannot read properties of undefined (reading 'length') 
-Jan-25-2023 09:43:22 [info] http://localhost:5000/api/user/login - POST METHOD  
-Jan-25-2023 09:43:51 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
-Jan-25-2023 09:43:51 [error] 500 - Cannot read properties of undefined (reading 'length') 
-Jan-25-2023 09:45:46 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
-Jan-25-2023 09:45:47 [error] 500 - Cannot read properties of undefined (reading 'length') 
-Jan-25-2023 09:45:48 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
-Jan-25-2023 09:45:48 [error] 500 - Cannot read properties of undefined (reading 'length') 
-Jan-25-2023 09:45:49 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
-Jan-25-2023 09:45:49 [error] 500 - Cannot read properties of undefined (reading 'length') 
-Jan-25-2023 09:47:59 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
-Jan-25-2023 09:48:00 [error] 500 - Cannot read properties of undefined (reading 'length') 
-Jan-25-2023 09:50:26 [info] http://localhost:5000/api/user/updateProfile - PUT METHOD  
+Jan-23-2023 17:25:18 [info] http://localhost:5000/api/user/listTheManager - GET METHOD  
+Jan-24-2023 09:38:35 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-24-2023 09:38:52 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-24-2023 09:40:16 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-24-2023 09:40:18 [error] 404 - This user does not exist. 
+Jan-24-2023 09:42:04 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-24-2023 09:42:06 [error] 404 - Only admin can update his profile 
+Jan-24-2023 09:42:20 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-24-2023 09:42:22 [error] 404 - Only admin can update his profile 
+Jan-24-2023 09:42:24 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-24-2023 09:42:26 [error] 404 - Only admin can update his profile 
+Jan-24-2023 09:42:36 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-24-2023 09:42:38 [error] 404 - Only admin can update his profile 
+Jan-24-2023 09:43:01 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-24-2023 09:43:04 [error] 404 - Only admin can update his profile 
+Jan-24-2023 09:43:07 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-24-2023 09:43:10 [error] 404 - Only admin can update his profile 
+Jan-24-2023 09:43:11 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-24-2023 09:43:13 [error] 404 - Only admin can update his profile 
+Jan-24-2023 09:43:16 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-24-2023 09:43:18 [error] 404 - Only admin can update his profile 
+Jan-24-2023 09:43:21 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-24-2023 09:43:24 [error] 404 - Only admin can update his profile 
+Jan-24-2023 10:31:53 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-24-2023 10:32:37 [info] http://localhost:5000/api/admin/listAllUser - GET METHOD  
+Jan-24-2023 10:32:37 [error] 500 - User is not defined 
+Jan-24-2023 10:33:20 [info] http://localhost:5000/api/admin/listAllUser - GET METHOD  
+Jan-24-2023 11:26:40 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-12&toDate=2023-01-23 - GET METHOD  
+Jan-24-2023 11:26:40 [error] 500 - ISODate is not defined 
+Jan-24-2023 11:27:38 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-12&toDate=2023-01-23 - GET METHOD  
+Jan-24-2023 11:28:28 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:29:42 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:29:52 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:30:27 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:32:37 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:33:19 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:36:11 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:36:42 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:36:43 [error] 500 - Cannot set headers after they are sent to the client 
+Jan-24-2023 11:37:00 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:37:12 [error] 500 - Cannot set headers after they are sent to the client 
+Jan-24-2023 11:38:38 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:39:22 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:40:02 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:40:30 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:42:09 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:46:08 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:48:06 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:48:10 [error] 500 - ISODate is not defined 
+Jan-24-2023 11:51:23 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:52:40 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-12 - GET METHOD  
+Jan-24-2023 11:56:21 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10 - GET METHOD  
+Jan-24-2023 11:56:33 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-20 - GET METHOD  
+Jan-24-2023 11:58:19 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-10&toDate=2023-01-20 - GET METHOD  
+Jan-24-2023 11:58:40 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-12&toDate=2023-01-20 - GET METHOD  
+Jan-24-2023 12:00:01 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-12&toDate=2023-01-20&fName=Radha - GET METHOD  
+Jan-24-2023 12:00:37 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-12&toDate=2023-01-20 - GET METHOD  
+Jan-24-2023 12:00:47 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-12&toDate=2023-01-20&fName=SUHANA - GET METHOD  
+Jan-24-2023 12:01:06 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-11&toDate=2023-01-11&fName=SUHANA - GET METHOD  
+Jan-24-2023 12:06:32 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-11&toDate=2023-01-11&fName=SUHANA - GET METHOD  
+Jan-24-2023 12:06:33 [error] 404 - Data not found 
+Jan-24-2023 12:24:25 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-11&toDate=2023-01-11&role=developer - GET METHOD  
+Jan-24-2023 12:24:25 [error] 404 - Data not found 
+Jan-24-2023 12:24:34 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-11&toDate=2023-01-13&role=developer - GET METHOD  
+Jan-24-2023 12:27:11 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-11&toDate=2023-01-13&role=admin - GET METHOD  
+Jan-24-2023 12:27:11 [error] 404 - Data not found 
+Jan-24-2023 12:27:17 [info] http://localhost:5000/api/admin/listAllUser?role=admin - GET METHOD  
+Jan-24-2023 12:27:57 [info] http://localhost:5000/api/admin/listAllUser?role=admin - GET METHOD  
+Jan-24-2023 12:27:57 [error] 404 - Data not found 
+Jan-24-2023 12:28:37 [info] http://localhost:5000/api/admin/listAllUser?role=manager - GET METHOD  
+Jan-24-2023 12:31:10 [info] http://localhost:5000/api/admin/listAllUser?role=manager - GET METHOD  
+Jan-24-2023 12:50:24 [info] http://localhost:5000/api/admin/listAllUser?role=manager - GET METHOD  
+Jan-24-2023 12:50:24 [error] 500 - jwt expired 
+Jan-24-2023 12:50:32 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-24-2023 12:50:48 [info] http://localhost:5000/api/admin/listAllUser?role=manager - GET METHOD  
+Jan-24-2023 12:51:25 [info] http://localhost:5000/api/admin/listAllUser?role=manager - GET METHOD  
+Jan-24-2023 12:54:02 [info] http://localhost:5000/api/admin/listAllUser?role=manager - GET METHOD  
+Jan-24-2023 12:54:23 [info] http://localhost:5000/api/admin/listAllUser?role=manager&page=2 - GET METHOD  
+Jan-24-2023 12:55:32 [info] http://localhost:5000/api/admin/listAllUser?role=manager&page=2 - GET METHOD  
+Jan-24-2023 12:55:54 [info] http://localhost:5000/api/admin/listAllUser?role=manager&page=2&limit=3 - GET METHOD  
+Jan-24-2023 12:56:07 [info] http://localhost:5000/api/admin/listAllUser?role=manager&page=2&limit=3 - GET METHOD  
+Jan-24-2023 12:57:17 [info] http://localhost:5000/api/admin/listAllUser?role=manager&page=2&limit=3 - GET METHOD  
+Jan-24-2023 12:57:41 [info] http://localhost:5000/api/admin/listAllUser?role=manager&page=2&limit=3 - GET METHOD  
+Jan-24-2023 13:00:00 [info] http://localhost:5000/api/admin/listAllUser?role=manager&page=2&limit=3 - GET METHOD  
+Jan-24-2023 13:01:43 [info] http://localhost:5000/api/admin/listAllUser?role=manager&page=2&limit=3 - GET METHOD  
+Jan-24-2023 13:02:01 [info] http://localhost:5000/api/admin/listAllUser?role=manager&page=2&limit=3 - GET METHOD  
+Jan-24-2023 13:02:33 [info] http://localhost:5000/api/admin/listAllUser?role=manager&page=2&limit=3 - GET METHOD  
+Jan-24-2023 13:07:37 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-11&role=manager - GET METHOD  
+Jan-24-2023 13:08:18 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-11 - GET METHOD  
+Jan-24-2023 13:10:57 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-11 - GET METHOD  
+Jan-24-2023 13:11:10 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-11&role=manager - GET METHOD  
+Jan-24-2023 15:05:08 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-24-2023 15:07:00 [info] http://localhost:5000/api/admin/getAdminDetails - GET METHOD  
+Jan-24-2023 15:08:05 [info] http://localhost:5000/api/admin/updateAdmin - PUT METHOD  
+Jan-24-2023 15:08:50 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-11&toDate=2023-01-13 - GET METHOD  
+Jan-24-2023 15:08:50 [error] 500 - jwt expired 
+Jan-24-2023 15:09:18 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-11&toDate=2023-01-13 - GET METHOD  
+Jan-24-2023 15:10:59 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-11&toDate=2023-01-13&page=2 - GET METHOD  
+Jan-24-2023 15:11:34 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-11&toDate=2023-01-23&page=2 - GET METHOD  
+Jan-24-2023 15:13:59 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-11&toDate=2023-01-23&limit=3 - GET METHOD  

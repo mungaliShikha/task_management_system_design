@@ -7,6 +7,9 @@ const getOneUser = async (params) => {
 const getAllUser = async () => {
   return User.find();
 };
+const getUserData = async(params)=>{
+  return User.find(params)
+}
 
 const getUserById = async (id) => {
   return User.findById(id);
@@ -30,4 +33,5 @@ module.exports = {
   getUserAndUpdate,
   getOneToken,
   createUser,
+  getUserData
 };

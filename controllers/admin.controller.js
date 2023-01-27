@@ -1,13 +1,11 @@
 const Token = require("../models/token.model");
 const catchAsync = require("../helper/catchAsync");
+const User = require("../models/user.model");
 const crypto = require("crypto");
 const appError = require("../helper/errorHandlers/errorHandler");
 const { ErrorMessage, SuccessMessage } = require("../helper/message");
 const { ErrorCode, SuccessCode } = require("../helper/statusCode");
 const {
-  compareHash,
-  generateToken,
-  generatePassword,
   randomPassword,
   generateHash,
   subjects,
@@ -24,9 +22,8 @@ const {
   getUserAndUpdate,
   getOneToken,
   createUser,
+  getUserData,
 } = require("../services/user.service");
-// const { compareHash, generateToken } = require("../helper/commonFunction");
-
 module.exports = {
   //************************************ forgetpassword for admin ******************************* */
 
@@ -170,91 +167,93 @@ module.exports = {
 
     await sendMailNotify(userAuth.email, subject, message, payload.email);
 
-    helper.sendResponseWithData(
+    helper.commonResponse(
       res,
       SuccessCode.CREATED,
-      SuccessMessage.CREATE_MANAGER,
-      createManager
+      createManager,
+      SuccessMessage.CREATE_MANAGER
     );
   }),
 
-  listManager: catchAsync(async (req, res) => {
-    var query = { status: { $ne: "DELETE" }, role: "Manager" };
-    if (req.body.search) {
-      query.name = new RegExp("^" + req.body.search, "i");
-    }
-    req.body.limit = parseInt(req.body.limit);
-    var options = {
-      page: req.body.page || 1,
-      limit: req.body.limit || 10,
-      sort: { createdAt: -1 },
-    };
-    let ManagerList = await User.paginate(query, options);
+  /***************************** admin can get the list of all users ******************************* */
 
-    if (ManagerList.length == 0) {
+  listAllUsers: catchAsync(async (req, res) => {
+    const queryData = { role: { $ne: enums.declaredEnum.role.ADMIN } };
+    const queryMade = req.query;
+    const { fName, lName, status, role, fromDate, toDate } = queryMade;
+    if (Object.keys(queryMade).length == 0) {
+      let filterData = await getAllUser({
+        status: { $ne: enums.declaredEnum.status.DELETE },
+        role: { $ne: enums.declaredEnum.role.ADMIN },
+      });
+
+      helper.commonResponse(
+        res,
+        SuccessCode.SUCCESS,
+        filterData,
+        SuccessMessage.DATA_FOUND
+      );
+    }
+
+    if (fName || lName || status || role || fromDate || toDate) {
+      if (fName) {
+        queryData["first_name"] = { $regex: fName, $options: "i" };
+      }
+      if (lName) {
+        queryData["last_name"] = { $regex: lName, $options: "i" };
+      }
+      if (status) {
+        queryData["status"] = {
+          $ne: enums.declaredEnum.status.DELETE,
+          $regex: status,
+          $options: "i",
+        };
+      }
+      if (role) {
+        queryData["role"] = {
+          $ne: enums.declaredEnum.role.ADMIN,
+          $regex: role,
+          $options: "i",
+        };
+      }
+      if (fromDate && toDate) {
+        queryData["createdAt"] = {
+          $gte: new Date(fromDate),
+          $lt: new Date(toDate),
+        };
+      }
+      if (fromDate) {
+        queryData.createdAt = { $gte: new Date(fromDate) };
+      }
+      if (toDate) {
+        queryData.createdAt = { $lt: new Date(toDate) };
+      }
+    }
+
+    let { page, limit } = req.query;
+    page = parseInt(req.query.page) || 1;
+    limit = parseInt(req.query.limit) || 10;
+    const dataFound = await User.find(queryData)
+      .limit(limit * 1)
+      .skip((page - 1) * limit)
+      .select({ password: 0 })
+      .exec();
+    if (dataFound.length == 0) {
       throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
     }
-
+    const length = await User.find(queryData).countDocuments();
+    let finalData = {
+      data: dataFound,
+      limit: limit,
+      currentPage: page,
+      totalPages: Math.ceil(length / limit),
+      totalDocuments: length,
+    };
     helper.commonResponse(
       res,
       SuccessCode.SUCCESS,
-      ManagerList,
+      finalData,
       SuccessMessage.DATA_FOUND
-    );
-  }),
-
-  viewManager: catchAsync(async (req, res) => {
-    let viewParticularMan = await User.findOne({
-      _id: req.query._id,
-      role: "Manager",
-    });
-    if (!viewParticularMan) {
-      throw new appError(ErrorMessage.DATA_NOT_FOUND_1, ErrorCode.NOT_FOUND);
-    }
-    helper.commonResponse(
-      res,
-      SuccessCode.SUCCESS,
-      viewParticularMan,
-      SuccessMessage.DATA_FOUND
-    );
-  }),
-
-  updateManager: catchAsync(async (req, res) => {
-    const { first_name, last_name, email, mobile_number, address } = req.body;
-    const { userId } = req.params;
-    let data = {};
-
-    const user = await User.findById(userId);
-    if (!user) {
-      throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
-    }
-    if (first_name) {
-      data["first_name"] = first_name;
-    }
-    if (last_name) {
-      data["last_name"] = last_name;
-    }
-    if (email) {
-      data["email"] = email;
-    }
-    if (mobile_number) {
-      data["mobile_number"] = mobile_number;
-    }
-    if (address) {
-      data["address"] = address;
-    }
-    if (req.files) {
-      data["profile_image"] = req.files[0].location;
-    }
-
-    let update = await User.findOneAndUpdate({ _id: userId }, data, {
-      new: true,
-    });
-    helper.commonResponse(
-      res,
-      SuccessCode.SUCCESS,
-      update,
-      SuccessMessage.PROFILE_DETAILS
     );
   }),
 };

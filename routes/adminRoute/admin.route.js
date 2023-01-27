@@ -11,6 +11,14 @@ const {
 } = require("../../validator/admin.validator");
 
 const { upload } = require("../../utils/aws/aws");
+const {
+  resetPassword,
+  forgetPassword,
+  createManager,
+  getAdminDetails,
+  updateAdmin,
+  listAllUsers,
+} = require("../../controllers/admin.controller");
 
 const {
   resetPassword,
@@ -63,5 +71,8 @@ router.get("/viewManager", adminController.viewManager);
 // router.post("/loginDeveloper", adminController.loginDeveloper);
 // router.get("/listDeveloper", adminController.listDeveloper);
 // router.get("/viewDeveloper", adminController.viewDeveloper);
+
+//********************** get the list of all manager and developer ******************************* */
+router.get("/listAllUser", auth.verifyToken, listAllUsers);
 
 module.exports = router;

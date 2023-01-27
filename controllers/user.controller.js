@@ -161,9 +161,9 @@ module.exports = {
     );
   }),
 
-  //*********************************** get the list of manager and developers**************************** */
+  //*********************************** get the list of manager **************************** */
 
-  listTheUser: catchAsync(async (req, res) => {
+  listTheManager: catchAsync(async (req, res) => {
     const allAuthRes = await getOneUser({
       _id: req.userId,
       role: {
@@ -176,7 +176,7 @@ module.exports = {
 
     var query = {
       status: { $ne: enums.declaredEnum.status.DELETE },
-      role: enums.declaredEnum.role.MANAGER,
+      role:enums.declaredEnum.role.MANAGER
     };
     if (req.body.search) {
       query.name = new RegExp("^" + req.body.search, "i");
@@ -203,4 +203,51 @@ module.exports = {
       SuccessMessage.DATA_FOUND
     );
   }),
+
+
+  //*********************************** get the list of developer **************************** */
+
+  listTheDeveloper: catchAsync(async (req, res) => {
+    const allAuthRes = await getOneUser({
+      _id: req.userId,
+      role: {
+        $in: [enums.declaredEnum.role.DEVELOPER, enums.declaredEnum.role.ADMIN],
+      },
+    });
+    if (!allAuthRes) {
+      throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
+    }
+
+    var query = {
+      status: { $ne: enums.declaredEnum.status.DELETE },
+      role:enums.declaredEnum.role.DEVELOPER
+    };
+    if (req.body.search) {
+      query.name = new RegExp("^" + req.body.search, "i");
+    }
+
+    let { page, limit } = req.query;
+    page = req.query.page || 1;
+    limit = req.query.limit || 10;
+    const userRes = await User.find(query)
+      .limit(limit * 1)
+      .skip((page - 1) * limit)
+      .exec();
+    if (userRes.length == 0) {
+      throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
+    }
+    let final = {
+      user: userRes,
+      currentPage: page,
+    };
+    helper.commonResponse(
+      res,
+      SuccessCode.SUCCESS,
+      final,
+      SuccessMessage.DATA_FOUND
+    );
+  }),
+ 
+
+
 };
