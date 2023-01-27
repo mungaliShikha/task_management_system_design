@@ -757,3 +757,249 @@ Jan-24-2023 15:09:18 [info] http://localhost:5000/api/admin/listAllUser?fromDate
 Jan-24-2023 15:10:59 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-11&toDate=2023-01-13&page=2 - GET METHOD  
 Jan-24-2023 15:11:34 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-11&toDate=2023-01-23&page=2 - GET METHOD  
 Jan-24-2023 15:13:59 [info] http://localhost:5000/api/admin/listAllUser?fromDate=2023-01-11&toDate=2023-01-23&limit=3 - GET METHOD  
+Jan-25-2023 12:07:59 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-25-2023 12:09:11 [info] http://localhost:5000/api/project/updateProject/63c64b1b0e84e1074c76cab5 - GET METHOD  
+Jan-25-2023 12:09:11 [error] 404 - Requested URL http://localhost:5000/api/project/updateProject/63c64b1b0e84e1074c76cab5 not found! 
+Jan-25-2023 12:09:20 [info] http://localhost:5000/api/project/updateProject/63c64b1b0e84e1074c76cab5 - PUT METHOD  
+Jan-25-2023 12:09:20 [error] 412 - project_name length must be at least 2 characters long 
+Jan-25-2023 12:11:43 [info] http://localhost:5000/api/project/updateProject/63c64b1b0e84e1074c76cab5 - PUT METHOD  
+Jan-25-2023 12:11:43 [error] 412 - project_name length must be less than or equal to 10 characters long 
+Jan-25-2023 12:12:13 [info] http://localhost:5000/api/project/updateProject/63c64b1b0e84e1074c76cab5 - PUT METHOD  
+Jan-25-2023 12:12:13 [error] 412 - description is required 
+Jan-25-2023 12:12:56 [info] http://localhost:5000/api/project/updateProject/63c64b1b0e84e1074c76cab5 - PUT METHOD  
+Jan-25-2023 12:12:57 [error] 500 - Parameter "filter" to findOne() must be an object, got 63c64b1b0e84e1074c76cab5 
+Jan-25-2023 12:13:03 [info] http://localhost:5000/api/project/updateProject/63c64b1b0e84e1074c76cab5 - PUT METHOD  
+Jan-25-2023 12:13:03 [error] 500 - Parameter "filter" to findOne() must be an object, got 63c64b1b0e84e1074c76cab5 
+Jan-25-2023 12:13:04 [info] http://localhost:5000/api/project/updateProject/63c64b1b0e84e1074c76cab5 - PUT METHOD  
+Jan-25-2023 12:13:04 [error] 500 - Parameter "filter" to findOne() must be an object, got 63c64b1b0e84e1074c76cab5 
+Jan-25-2023 12:30:59 [info] http://localhost:5000/api/project/removeProject/63c64b1b0e84e1074c76cab5 - PUT METHOD  
+Jan-25-2023 12:30:59 [error] 500 - jwt expired 
+Jan-25-2023 12:33:04 [info] http://localhost:5000/api/project/removeProject/63c64b1b0e84e1074c76cab5 - PUT METHOD  
+Jan-25-2023 12:33:04 [error] 412 - projectStatus is not allowed 
+Jan-25-2023 12:33:57 [info] http://localhost:5000/api/project/removeProject/63c64b1b0e84e1074c76cab5 - PUT METHOD  
+Jan-25-2023 12:33:57 [error] 412 - status must be [canceled] 
+Jan-25-2023 12:34:11 [info] http://localhost:5000/api/project/removeProject/63c64b1b0e84e1074c76cab5 - PUT METHOD  
+Jan-25-2023 13:25:27 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 13:25:27 [error] 401 - Please provide token. 
+Jan-25-2023 13:25:51 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 13:25:51 [error] 500 - Unknown date format YYYY-MM-DD 
+Jan-25-2023 14:22:16 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 14:22:16 [error] 500 - jwt expired 
+Jan-25-2023 14:22:21 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 14:22:21 [error] 500 - jwt expired 
+Jan-25-2023 14:23:36 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-25-2023 14:24:07 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 14:24:07 [error] 500 - Unknown date format YYYY-MM-DD 
+Jan-25-2023 14:25:08 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 14:25:09 [error] 500 - Unknown date format YYYY-MM-DD 
+Jan-25-2023 14:25:11 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 14:25:11 [error] 500 - Unknown date format YYYY-MM-DD 
+Jan-25-2023 14:27:33 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 14:27:33 [error] 412 - name is required 
+Jan-25-2023 14:38:11 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 14:38:11 [error] 412 - start_date must be in ISO 8601 date format 
+Jan-25-2023 14:39:17 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 14:39:17 [error] 412 - start_date must be in ISO 8601 date format 
+Jan-25-2023 14:45:57 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 14:45:57 [error] 412 - start_date must be in ISO 8601 date format 
+Jan-25-2023 14:46:17 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 14:46:18 [error] 412 - start_date must be in ISO 8601 date format 
+Jan-25-2023 14:47:34 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 14:47:35 [error] 404 - Data not found 
+Jan-25-2023 14:48:14 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 14:48:14 [error] 412 - projectId is required 
+Jan-25-2023 14:48:44 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 14:48:44 [error] 500 - task validation failed: developer_assigned.0: Cast to [ObjectId] failed for value "["ramu "]" (type string) at path "developer_assigned.0" 
+Jan-25-2023 14:49:27 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 14:49:27 [error] 500 - task validation failed: developer_assigned.0: Cast to [ObjectId] failed for value "["ramu"]" (type string) at path "developer_assigned.0" 
+Jan-25-2023 14:53:36 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 14:53:36 [error] 500 - task validation failed: developer_assigned.0: Cast to [ObjectId] failed for value "["ramesh"]" (type string) at path "developer_assigned.0" 
+Jan-25-2023 14:55:25 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 14:55:25 [error] 500 - task validation failed: developer_assigned.0: Cast to [ObjectId] failed for value "["ramesh"]" (type string) at path "developer_assigned.0" 
+Jan-25-2023 14:57:49 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 14:57:49 [error] 500 - task validation failed: developer_assigned.0: Cast to [ObjectId] failed for value "["ramesh"]" (type string) at path "developer_assigned.0" 
+Jan-25-2023 15:01:18 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:01:18 [error] 412 - developer_assigned is required 
+Jan-25-2023 15:02:02 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:03:17 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:03:17 [error] 412 - developer_assigned must be of type object 
+Jan-25-2023 15:10:47 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:10:47 [error] 412 - developer_assigned must be an array 
+Jan-25-2023 15:11:37 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:11:37 [error] 500 - task validation failed: developer_assigned.0: Cast to [ObjectId] failed for value "["ramesh"]" (type string) at path "developer_assigned.0" 
+Jan-25-2023 15:13:08 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:13:08 [error] 500 - task validation failed: developer_assigned.0: Cast to [ObjectId] failed for value "["ramesh"]" (type string) at path "developer_assigned.0" 
+Jan-25-2023 15:13:11 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:13:11 [error] 500 - task validation failed: developer_assigned.0: Cast to [ObjectId] failed for value "["ramesh"]" (type string) at path "developer_assigned.0" 
+Jan-25-2023 15:13:13 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:13:13 [error] 500 - task validation failed: developer_assigned.0: Cast to [ObjectId] failed for value "["ramesh"]" (type string) at path "developer_assigned.0" 
+Jan-25-2023 15:13:14 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:13:15 [error] 500 - task validation failed: developer_assigned.0: Cast to [ObjectId] failed for value "["ramesh"]" (type string) at path "developer_assigned.0" 
+Jan-25-2023 15:20:08 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:20:08 [error] 412 - developer_assigned must be an array 
+Jan-25-2023 15:20:42 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:20:42 [error] 412 - developer_assigned[0] must be of type object 
+Jan-25-2023 15:21:30 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:21:30 [error] 412 - developer_assigned must be of type object 
+Jan-25-2023 15:21:32 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:21:32 [error] 412 - developer_assigned must be of type object 
+Jan-25-2023 15:22:07 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:22:08 [error] 412 - developer_assigned must be a string 
+Jan-25-2023 15:22:09 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:22:09 [error] 412 - developer_assigned must be a string 
+Jan-25-2023 15:22:24 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:22:24 [error] 500 - task validation failed: developer_assigned.0: Cast to [ObjectId] failed for value "["ramesh"]" (type string) at path "developer_assigned.0" 
+Jan-25-2023 15:22:44 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:22:44 [error] 412 - developer_assigned is not allowed 
+Jan-25-2023 15:22:56 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:22:56 [error] 412 - developer_assigned is not allowed 
+Jan-25-2023 15:22:57 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:22:57 [error] 412 - developer_assigned is not allowed 
+Jan-25-2023 15:23:05 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:23:05 [error] 412 - developer_assigned is not allowed 
+Jan-25-2023 15:23:33 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:25:29 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:25:29 [error] 412 - developer_assigned is not allowed 
+Jan-25-2023 15:25:38 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:26:47 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:26:55 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:26:55 [error] 412 - developer_assigned is not allowed 
+Jan-25-2023 15:27:13 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:27:13 [error] 500 - task validation failed: developer_assigned: Cast to ObjectId failed for value "ramesh" (type string) at path "developer_assigned" 
+Jan-25-2023 15:27:49 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:27:50 [error] 412 - developer_assigned must be of type object 
+Jan-25-2023 15:33:56 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:33:56 [error] 412 - developer_assigned must be a string 
+Jan-25-2023 15:34:12 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:36:15 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:37:58 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:37:59 [error] 500 - Joi.array(...).string is not a function 
+Jan-25-2023 15:38:01 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:38:01 [error] 500 - Joi.array(...).string is not a function 
+Jan-25-2023 15:38:55 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:38:55 [error] 500 - Joi.array(...).string is not a function 
+Jan-25-2023 15:39:16 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:39:16 [error] 500 - Joi.array.string is not a function 
+Jan-25-2023 15:39:17 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:39:17 [error] 500 - Joi.array.string is not a function 
+Jan-25-2023 15:40:45 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:40:46 [error] 500 - Joi.array(...).string is not a function 
+Jan-25-2023 15:44:26 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:44:27 [error] 412 - developer_assigned must be an array 
+Jan-25-2023 15:44:28 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:44:28 [error] 412 - developer_assigned must be an array 
+Jan-25-2023 15:44:30 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:44:30 [error] 412 - developer_assigned must be an array 
+Jan-25-2023 15:44:56 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:44:56 [error] 412 - developer_assigned must be an array 
+Jan-25-2023 15:45:07 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:45:07 [error] 412 - developer_assigned must be an array 
+Jan-25-2023 15:45:07 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:45:07 [error] 412 - developer_assigned must be an array 
+Jan-25-2023 15:45:56 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:45:57 [error] 500 - Joi.array(...).string is not a function 
+Jan-25-2023 15:45:58 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:45:58 [error] 500 - Joi.array(...).string is not a function 
+Jan-25-2023 15:46:03 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:46:03 [error] 500 - Joi.array(...).string is not a function 
+Jan-25-2023 15:46:17 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:46:17 [error] 500 - Joi.array(...).string is not a function 
+Jan-25-2023 15:46:18 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:46:18 [error] 500 - Joi.array(...).string is not a function 
+Jan-25-2023 15:46:18 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:46:18 [error] 500 - Joi.array(...).string is not a function 
+Jan-25-2023 15:46:20 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:46:20 [error] 500 - Joi.array(...).string is not a function 
+Jan-25-2023 15:52:56 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:52:57 [error] 500 - Joi.array(...).string is not a function 
+Jan-25-2023 15:55:32 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:55:32 [error] 500 - Joi.string(...).array is not a function 
+Jan-25-2023 15:56:08 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:56:08 [error] 500 - Cannot read properties of undefined (reading 'required') 
+Jan-25-2023 15:56:10 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:56:10 [error] 500 - Cannot read properties of undefined (reading 'required') 
+Jan-25-2023 15:56:35 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:56:35 [error] 500 - Joi.array.string is not a function 
+Jan-25-2023 15:57:00 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:57:00 [error] 500 - Joi.array(...).string is not a function 
+Jan-25-2023 15:57:02 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:57:02 [error] 500 - Joi.array(...).string is not a function 
+Jan-25-2023 15:57:48 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:57:48 [error] 412 - developer_assigned must be an array 
+Jan-25-2023 15:58:06 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:59:47 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 15:59:47 [error] 500 - Joi.array(...).string is not a function 
+Jan-25-2023 16:00:15 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 16:19:19 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 16:19:19 [error] 500 - Joi.array(...).string is not a function 
+Jan-25-2023 16:19:21 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 16:19:21 [error] 500 - Joi.array(...).string is not a function 
+Jan-25-2023 16:19:36 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 16:19:37 [error] 412 - developer_assigned must be an array 
+Jan-25-2023 16:19:46 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-25-2023 16:21:56 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
+Jan-25-2023 16:21:56 [error] 500 - jwt expired 
+Jan-25-2023 16:22:16 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-25-2023 16:22:41 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
+Jan-25-2023 16:22:41 [error] 404 - tast is incomplete 
+Jan-25-2023 16:22:56 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
+Jan-25-2023 16:22:56 [error] 404 - tast is incomplete 
+Jan-25-2023 16:23:31 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
+Jan-25-2023 16:23:32 [error] 404 - tast is incomplete 
+Jan-25-2023 16:25:44 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
+Jan-25-2023 16:25:44 [error] 404 - tast is incomplete 
+Jan-25-2023 16:32:29 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
+Jan-25-2023 16:32:29 [error] 404 - tast is incomplete 
+Jan-25-2023 17:50:51 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
+Jan-25-2023 17:52:22 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
+Jan-25-2023 17:59:33 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
+Jan-25-2023 18:00:53 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
+Jan-27-2023 10:24:37 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
+Jan-27-2023 10:29:14 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
+Jan-27-2023 10:29:38 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
+Jan-27-2023 10:33:42 [info] http://localhost:5000/api/project/updateProject/63c64b1b0e84e1074c76cab5 - PUT METHOD  
+Jan-27-2023 10:33:42 [error] 500 - jwt expired 
+Jan-27-2023 10:33:54 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-27-2023 10:34:29 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
+Jan-27-2023 10:45:27 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
+Jan-27-2023 10:45:27 [error] 404 - tast is incomplete 
+Jan-27-2023 10:47:08 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
+Jan-27-2023 10:47:08 [error] 404 - task is incomplete 
+Jan-27-2023 10:53:47 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
+Jan-27-2023 10:53:47 [error] 500 - COMPLETED is not defined 
+Jan-27-2023 11:00:47 [info] http://localhost:5000/api/project/completeProjectStatus/63c64b1b0e84e1074c76cab5 - PUT METHOD  
+Jan-27-2023 11:00:48 [error] 404 - task is incomplete 
+Jan-27-2023 12:32:45 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-27-2023 12:32:45 [error] 401 - Please provide token. 
+Jan-27-2023 12:33:54 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-27-2023 12:34:25 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-27-2023 12:35:02 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-27-2023 12:35:03 [error] 412 - comment length must be at least 10 characters long 
+Jan-27-2023 15:22:00 [info] http://localhost:5000/api/task/updateTask - PUT METHOD  
+Jan-27-2023 15:22:00 [error] 412 - developer_assigned must be a string 
+Jan-27-2023 15:23:35 [info] http://localhost:5000/api/task/updateTask - PUT METHOD  
+Jan-27-2023 15:23:35 [error] 412 - projectId is not allowed 
+Jan-27-2023 15:24:35 [info] http://localhost:5000/api/task/updateTask - PUT METHOD  
+Jan-27-2023 15:24:35 [error] 404 - Data not found 
+Jan-27-2023 15:31:03 [info] http://localhost:5000/api/task/updateTask - PUT METHOD  
+Jan-27-2023 15:31:04 [error] 404 - Data not found 
+Jan-27-2023 15:32:10 [info] http://localhost:5000/api/task/updateTask - PUT METHOD  
+Jan-27-2023 15:32:11 [error] 404 - Data not found 
+Jan-27-2023 15:34:47 [info] http://localhost:5000/api/task/updateTask - PUT METHOD  
+Jan-27-2023 15:34:47 [error] 412 - taskId is required 
+Jan-27-2023 15:34:59 [info] http://localhost:5000/api/task/updateTask - PUT METHOD  
+Jan-27-2023 15:34:59 [error] 412 - type must be one of [bug, enchancement, new-feature] 
+Jan-27-2023 15:35:25 [info] http://localhost:5000/api/task/updateTask - PUT METHOD  
+Jan-27-2023 15:39:51 [info] http://localhost:5000/api/task/updateTask - PUT METHOD  
+Jan-27-2023 16:36:51 [info] http://localhost:5000/api/task/removeDeveloperFromTask - DELETE METHOD  
+Jan-27-2023 16:36:51 [error] 422 - Entered data should be an array 
+Jan-27-2023 16:37:55 [info] http://localhost:5000/api/task/removeDeveloperFromTask - DELETE METHOD  
+Jan-27-2023 16:37:55 [error] 412 - developer_assigned must be an array 
+Jan-27-2023 16:39:03 [info] http://localhost:5000/api/task/removeDeveloperFromTask - DELETE METHOD  
+Jan-27-2023 16:39:03 [error] 422 - Entered data should be an array 
+Jan-27-2023 16:53:13 [info] http://localhost:5000/api/task/removeDeveloperFromTask - DELETE METHOD  
+Jan-27-2023 16:53:13 [error] 422 - Entered data should be an array 
+Jan-27-2023 17:07:20 [info] http://localhost:5000/api/task/removeDeveloperFromTask - DELETE METHOD  
+Jan-27-2023 17:07:20 [error] 422 - Entered data should be an array 
+Jan-27-2023 17:08:15 [info] http://localhost:5000/api/task/removeDeveloperFromTask - DELETE METHOD  
+Jan-27-2023 17:08:15 [error] 422 - Entered data should be an array 

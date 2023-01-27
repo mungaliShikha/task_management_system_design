@@ -18,10 +18,15 @@ var task_model = new schema(
         ref: "users",
       },
     ],
+
     status: {
       type: String,
-      enum: [enums.declaredEnum.status.ACTIVE, enums.declaredEnum.status.BLOCKED, enums.declaredEnum.status.DELETE],
-      default: enums.declaredEnum.status.ACTIVE
+      enum: [
+        enums.declaredEnum.status.ACTIVE,
+        enums.declaredEnum.status.BLOCKED,
+        enums.declaredEnum.status.DELETE,
+      ],
+      default: enums.declaredEnum.status.ACTIVE,
     },
 
     name: {
@@ -31,31 +36,45 @@ var task_model = new schema(
 
     taskStatus: {
       type: String,
-      enum: [enums.declaredEnum.taskStatus.INPROGRESS,enums.declaredEnum.taskStatus.COMPLETED,enums.declaredEnum.taskStatus.INQA],
+      enum: [
+        enums.declaredEnum.taskStatus.INPROGRESS,
+        enums.declaredEnum.taskStatus.COMPLETED,
+        enums.declaredEnum.taskStatus.INQA,
+      ],
       default: enums.declaredEnum.taskStatus.INPROGRESS,
       required: true,
     },
     type: {
       type: String,
-      enum: [enums.declaredEnum.type.BUG,enums.declaredEnum.type.ENHANCEMENT,enums.declaredEnum.type.NEWFEATURE],
+      enum: [
+        enums.declaredEnum.type.BUG,
+        enums.declaredEnum.type.ENHANCEMENT,
+        enums.declaredEnum.type.NEWFEATURE,
+      ],
     },
 
     priority: {
       type: String,
-      enum: [enums.declaredEnum.priority.HIGH,enums.declaredEnum.priority.LOW,enums.declaredEnum.priority.MEDIUM,enums.declaredEnum.priority.URGENT],
+      enum: [
+        enums.declaredEnum.priority.HIGH,
+        enums.declaredEnum.priority.LOW,
+        enums.declaredEnum.priority.MEDIUM,
+        enums.declaredEnum.priority.URGENT,
+      ],
     },
 
     start_date: {
-      type: Date
+      type: Date,
     },
     due_date: {
       type: Date,
     },
-    comments_in_task:[
+    comments_in_task: [
       {
-      type: schema.Types.ObjectId,
-      ref: "comment",
-    }]
+        type: schema.Types.ObjectId,
+        ref: "comment",
+      },
+    ],
   },
   { timestamps: true }
 );

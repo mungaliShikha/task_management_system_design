@@ -11,14 +11,6 @@ const {
 } = require("../../validator/admin.validator");
 
 const { upload } = require("../../utils/aws/aws");
-const {
-  resetPassword,
-  forgetPassword,
-  createManager,
-  getAdminDetails,
-  updateAdmin,
-  listAllUsers,
-} = require("../../controllers/admin.controller");
 
 const {
   resetPassword,
@@ -27,6 +19,7 @@ const {
   getAdminDetails,
   updateAdmin,
   listManager,
+  listAllUsers,
   viewManager,
 } = require("../../controllers/admin.controller");
 
@@ -60,8 +53,8 @@ router.post(
   addManager
 );
 
-router.get("/listManager", adminController.listManager);
-router.get("/viewManager", adminController.viewManager);
+// router.get("/listManager", adminController.listManager);
+// router.get("/viewManager", adminController.viewManager);
 
 // router.post(
 //   "/addDeveloper/:userId",

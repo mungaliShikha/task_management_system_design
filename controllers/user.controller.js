@@ -72,6 +72,7 @@ module.exports = {
         $in: [
           enums.declaredEnum.role.DEVELOPER,
           enums.declaredEnum.role.MANAGER,
+          enums.declaredEnum.role.ADMIN,
         ],
       },
     });
@@ -176,7 +177,7 @@ module.exports = {
 
     var query = {
       status: { $ne: enums.declaredEnum.status.DELETE },
-      role:enums.declaredEnum.role.MANAGER
+      role: enums.declaredEnum.role.MANAGER,
     };
     if (req.body.search) {
       query.name = new RegExp("^" + req.body.search, "i");
@@ -203,7 +204,6 @@ module.exports = {
       SuccessMessage.DATA_FOUND
     );
   }),
-
 
   //*********************************** get the list of developer **************************** */
 
@@ -220,7 +220,7 @@ module.exports = {
 
     var query = {
       status: { $ne: enums.declaredEnum.status.DELETE },
-      role:enums.declaredEnum.role.DEVELOPER
+      role: enums.declaredEnum.role.DEVELOPER,
     };
     if (req.body.search) {
       query.name = new RegExp("^" + req.body.search, "i");
@@ -247,7 +247,4 @@ module.exports = {
       SuccessMessage.DATA_FOUND
     );
   }),
- 
-
-
 };

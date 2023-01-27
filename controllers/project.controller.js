@@ -155,7 +155,7 @@ module.exports = {
     );
   }),
 
-  //********************************************* list of all the projects *********************************8 */
+  //********************************************* list of all the projects **********************************//
   listProject: catchAsync(async (req, res) => {
     const managerAuthCheck = await getUserById(req.userId);
     if (
@@ -348,6 +348,7 @@ module.exports = {
 
   completeProjectStatus: catchAsync(async (req, res) => {
     const { projectId } = req.params;
+    console.log(typeof req.params.projectId);
 
     const managerAuthCheck = await getUserById(req.userId);
     if (
@@ -377,7 +378,6 @@ module.exports = {
       // console.log("data>>>>>", data);
       if (data.status === "inProgress") {
         completedTask = false;
-        throw new appError(ErrorMessage.TASK_NOT_COMPLETE, ErrorCode.NOT_FOUND);
         break;
       }
     }
@@ -385,16 +385,17 @@ module.exports = {
     if (completedTask) {
       const statusOfProject = await getProjectAndUpdate(
         { _id: projectAuthCheck._id },
-        { $set: { projectStatus: COMPLETED } }
+        { $set: { projectStatus: enums.declaredEnum.taskStatus.COMPLETED } }
       );
 
       helper.commonResponse(
         res,
         SuccessCode.SUCCESS,
         statusOfProject,
-        SuccessMessage.REMOVE_SUCCESS
+        SuccessMessage.UPDATE_SUCCESS
       );
     }
+    throw new appError(ErrorMessage.TASK_NOT_COMPLETE, ErrorCode.NOT_FOUND);
   }),
 
   removeProject: catchAsync(async (req, res) => {

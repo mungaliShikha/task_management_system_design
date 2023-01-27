@@ -42,7 +42,7 @@ module.exports.generateHash = (data) => {
 // };
 
 module.exports.generateToken = (userObject) => {
-  let expireTime = "2h";
+  let expireTime = "50h";
   return jwt.sign(userObject, global.gConfig.jwtSecretKey, {
     expiresIn: expireTime,
   });

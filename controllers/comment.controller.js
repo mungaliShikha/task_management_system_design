@@ -52,7 +52,7 @@ module.exports = {
       updateTask.comments_in_task.length
     );
   }),
- //**************************** GET COMMENT  OF PARTICULAR TASK *************************************** */
+  //**************************** GET COMMENT  OF PARTICULAR TASK ****************************************//
   getCommentOfParticularTask: catchAsync(async (req, res) => {
     const { taskId } = req.params;
     const roleAuth = await User.findOne({
@@ -110,7 +110,7 @@ module.exports = {
       { _id: taskId },
       { $pullAll: { comments_in_task: commentIds } }
     );
-    
+
     for (let i = 0; i < commentIds.length; i++) {
       await Comment.findOneAndUpdate(
         { _id: commentIds[i] },
@@ -118,9 +118,9 @@ module.exports = {
       );
     }
     helper.sendResponseWithoutData(
-        res,
-        SuccessCode.SUCCESS,
-        SuccessMessage.REMOVE_SUCCESS
-      );
+      res,
+      SuccessCode.SUCCESS,
+      SuccessMessage.REMOVE_SUCCESS
+    );
   }),
 };

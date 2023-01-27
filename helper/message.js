@@ -1,6 +1,6 @@
 module.exports.ErrorMessage = Object.freeze({
   TASK_NOT_FOUND: "Task not found",
-  TASK_NOT_COMPLETE: "tast is incomplete",
+  TASK_NOT_COMPLETE: "task is incomplete",
   DATA_AUTHORIZTAION: "Only develper can change the status of the task",
   DATA_SHOULD_BE_ARRAY: "Entered data should be an array",
   CANNOT_UPDATE: "Only admin can update his profile",
@@ -77,6 +77,7 @@ module.exports.SuccessMessage = Object.freeze({
   INVITATION_SUCCESS: "Invitaion sent",
   SESSION_DETAILS: "Session Join user list",
   REMOVE_SUCCESS: "Remove Successfully",
+  UPDATE_SUCCESS: "Project Updated successfully",
   CANCEL_SUCCESS: "Canceled successfully",
   LIST_EMPTY: "Empty List ",
   PLAYLIST_ADD: "Playlist has been added successfully.",
