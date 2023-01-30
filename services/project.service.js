@@ -23,11 +23,16 @@ const countProject = async() =>{
     return Project.countDocuments();
 }
 
+const getProjectByIdAndUpdate = async(id,update) =>{
+  return Project.findByIdAndUpdate(id,update,{new:true});
+}
+
 module.exports = {
   getOneProject,
   getAllProject,
   getProjectById,
   getProjectAndUpdate,
   createProject,
-  countProject
+  countProject,
+  getProjectByIdAndUpdate
 };
