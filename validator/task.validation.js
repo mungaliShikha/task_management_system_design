@@ -1,4 +1,5 @@
 const Joi = require("joi");
+const enums = require("../helper/enum/enums");
 
 module.exports = {
   createTaskValidation: (payload) => {
@@ -23,7 +24,7 @@ module.exports = {
         enums.declaredEnum.status.ACTIVE,
         enums.declaredEnum.status.BLOCKED,
         enums.declaredEnum.status.DELETE,
-        enums.declaredEnum.status.CANCELLED
+        enums.declaredEnum.status.CANCEL
       ),
       start_date: Joi.date().iso().required(),
       due_date: Joi.date().iso().required(),
@@ -51,7 +52,7 @@ module.exports = {
         enums.declaredEnum.status.ACTIVE,
         enums.declaredEnum.status.BLOCKED,
         enums.declaredEnum.status.DELETE,
-        enums.declaredEnum.status.CANCELLED
+        enums.declaredEnum.status.CANCEL
       ),
       start_date: Joi.date().iso(),
       due_date: Joi.date().iso(),
@@ -82,7 +83,7 @@ module.exports = {
         enums.declaredEnum.status.ACTIVE,
         enums.declaredEnum.status.BLOCKED,
         enums.declaredEnum.status.DELETE,
-        enums.declaredEnum.status.CANCELLED
+        enums.declaredEnum.status.CANCEL
       ),
     });
     return schema.validate(payload);
