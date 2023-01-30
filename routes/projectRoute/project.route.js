@@ -1,6 +1,14 @@
 const router = require("express").Router();
 const auth = require("../../middleware/auth");
 const projectController = require("../../controllers/project.controller");
+const { validationMiddleware } = require("../../middleware/joeValidator");
+const {
+  projectCreation,
+  addManager,
+  addTask,
+  removeProject,
+  updateSingleProject,
+} = require("../../validator/project.validatior");
 
 const { validationMiddleware } = require("../../middleware/joeValidator");
 
@@ -25,24 +33,34 @@ router.post(
   validationMiddleware(addManagerValidator),
   projectController.addManagerToProject
 );
+
+//************************ only manager can add task to the project ******************** */
 router.post(
   "/addTaskToProject/:projectId",
   auth.verifyToken,
   validationMiddleware(addTaskValidator),
   projectController.addTaskToProject
 );
+
+//************** view populated data of the project ************************** */
 router.get(
   "/viewProject/:projectId",
   auth.verifyToken,
   projectController.viewProject
 );
+
+//********************** list all the projects ************************ */
 router.get("/listProject", auth.verifyToken, projectController.listProject);
 
+//************************* only admin can remove the manager from the project ************ */
 router.delete(
   "/removeManagerFromProject/:projectId",
   auth.verifyToken,
+  validationMiddleware(removeProject),
   projectController.removeManagerFromProject
 );
+
+//************************ only manager and admin can update the project ***************** */
 router.put(
   "/updateProject/:projectId",
   auth.verifyToken,

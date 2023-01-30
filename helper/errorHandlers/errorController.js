@@ -9,12 +9,14 @@ module.exports = (err, req, res, next) => {
       success: false,
       message: err.message,
       statusCode:statusCode,
+      reference:`${req.path} ${req.method}`,
       stack: err.stack,
     });
   } else {
     res.status(statusCode).json({
       success: false,
       statusCode:statusCode,
+      reference:`${req.path} ${req.method}`,
       message: err.message,
     });
   }

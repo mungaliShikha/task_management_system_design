@@ -1,7 +1,7 @@
 const Joi = require("joi");
+const enums = require("../helper/enum/enums");
 
 module.exports = {
-
   forgetPasswordAdmin: (payload) => {
     const schema = Joi.object({
       email: Joi.string().email().lowercase().required(),
@@ -9,7 +9,7 @@ module.exports = {
     return schema.validate(payload);
   },
   resetPasswordAdmin: (payload) => {
-    const schema = Joi.object({ password: Joi.string().required().min(6) });
+    const schema = Joi.object({ password: Joi.string().required().min(7) });
     return schema.validate(payload);
   },
 
@@ -36,4 +36,31 @@ module.exports = {
     });
     return schema.validate(payload);
   },
+
+  statusChangeByAdmin: (payload) => {
+    const schema = Joi.object({
+      status: Joi.string()
+        .valid(
+          enums.declaredEnum.status.BLOCKED,
+          enums.declaredEnum.status.ACTIVE
+        )
+        .required(),
+      _id: Joi.string().regex(/^[0-9a-fA-F]{24}$/),
+    });
+    return schema.validate(payload);
+  },
+
+  userDeleteByAdmin: (payload) => {
+    const schema = Joi.object({
+      status: Joi.string()
+        .valid(
+          enums.declaredEnum.status.DELETE
+        )
+        .required(),
+      _id: Joi.string().regex(/^[0-9a-fA-F]{24}$/),
+    });
+    return schema.validate(payload);
+  },
+
+
 };

@@ -38,6 +38,7 @@ module.exports = {
           enums.declaredEnum.role.ADMIN,
         ],
       },
+      status:{$ne:enums.declaredEnum.status.DELETE}
     });
     if (!loggedInUser || !compareHash(password, loggedInUser.password)) {
       throw new appError(
@@ -75,6 +76,7 @@ module.exports = {
           enums.declaredEnum.role.ADMIN,
         ],
       },
+      status:{$ne:enums.declaredEnum.status.DELETE}
     });
     if (!tokenAuth) {
       throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
@@ -102,6 +104,7 @@ module.exports = {
           enums.declaredEnum.role.ADMIN,
         ],
       },
+      status:{$ne:enums.declaredEnum.status.DELETE}
     });
     console.log("tokenAuth>>>>>", tokenAuth);
 
@@ -134,9 +137,10 @@ module.exports = {
     const userAuth = await getOneUser({
       _id: req.userId,
       role: enums.declaredEnum.role.MANAGER,
+      status:enums.declaredEnum.status.ACTIVE
     });
     if (!userAuth) {
-      throw new appError(ErrorMessage.NOT_AUTHORISED, ErrorCode.NOT_FOUND);
+      throw new appError(ErrorMessage.CANNOT_CREATE, ErrorCode.NOT_FOUND);
     }
     const userFound = await getOneUser({ email, mobile_number });
     if (userFound) {
@@ -169,7 +173,7 @@ module.exports = {
       _id: req.userId,
       role: {
         $in: [enums.declaredEnum.role.MANAGER, enums.declaredEnum.role.ADMIN],
-      },
+      }
     });
     if (!allAuthRes) {
       throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
@@ -213,6 +217,7 @@ module.exports = {
       role: {
         $in: [enums.declaredEnum.role.DEVELOPER, enums.declaredEnum.role.ADMIN],
       },
+      status:enums.declaredEnum.status.ACTIVE
     });
     if (!allAuthRes) {
       throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
