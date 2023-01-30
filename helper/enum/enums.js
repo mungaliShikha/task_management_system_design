@@ -5,7 +5,12 @@ module.exports.declaredEnum = Object.freeze({
     COMPLETED: "completed",
     CANCEL: "canceled",
   },
-  status: { ACTIVE: "ACTIVE", BLOCKED: "BLOCKED", DELETE: "DELETE" },
+  status: {
+    ACTIVE: "ACTIVE",
+    BLOCKED: "BLOCKED",
+    DELETE: "DELETE",
+    CANCELLED: "CANCELLED",
+  },
   taskStatus: {
     INPROGRESS: "inProgress",
     INQA: "inQA",

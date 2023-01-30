@@ -1,16 +1,30 @@
 const Joi = require("joi");
-const { join } = require("lodash");
 
 module.exports = {
   createTaskValidation: (payload) => {
     const schema = Joi.object({
       projectId: Joi.string().required(),
       name: Joi.string().min(2).max(20).required(),
-      type: Joi.string().valid("bug", "enchancement", "new-feature").required(),
-      priority: Joi.string()
-        .valid("urgent", "high", "medium", "low")
+      type: Joi.string()
+        .valid(
+          enums.declaredEnum.type.BUG,
+          enums.declaredEnum.type.ENHANCEMENT,
+          enums.declaredEnum.type.NEWFEATURE
+        )
         .required(),
-      status: Joi.string().valid("started", "ongoing", "completed", "canceled"),
+      priority: Joi.string()
+        .valid(
+          enums.declaredEnum.priority.URGENT,
+          enums.declaredEnum.priority.HIGH,
+          enums.declaredEnum.priority.LOW
+        )
+        .required(),
+      status: Joi.string().valid(
+        enums.declaredEnum.status.ACTIVE,
+        enums.declaredEnum.status.BLOCKED,
+        enums.declaredEnum.status.DELETE,
+        enums.declaredEnum.status.CANCELLED
+      ),
       start_date: Joi.date().iso().required(),
       due_date: Joi.date().iso().required(),
       developer_assigned: Joi.array().required(),
@@ -23,9 +37,22 @@ module.exports = {
     const schema = Joi.object({
       taskId: Joi.string().required(),
       name: Joi.string().min(2).max(20),
-      type: Joi.string().valid("bug", "enchancement", "new-feature"),
-      priority: Joi.string().valid("urgent", "high", "medium", "low"),
-      status: Joi.string().valid("started", "ongoing", "completed", "canceled"),
+      type: Joi.string().valid(
+        enums.declaredEnum.type.BUG,
+        enums.declaredEnum.type.ENHANCEMENT,
+        enums.declaredEnum.type.NEWFEATURE
+      ),
+      priority: Joi.string().valid(
+        enums.declaredEnum.priority.URGENT,
+        enums.declaredEnum.priority.HIGH,
+        enums.declaredEnum.priority.LOW
+      ),
+      status: Joi.string().valid(
+        enums.declaredEnum.status.ACTIVE,
+        enums.declaredEnum.status.BLOCKED,
+        enums.declaredEnum.status.DELETE,
+        enums.declaredEnum.status.CANCELLED
+      ),
       start_date: Joi.date().iso(),
       due_date: Joi.date().iso(),
       developer_assigned: Joi.array().required(),
@@ -51,7 +78,12 @@ module.exports = {
   changeTaskStatusValidator: (payload) => {
     const schema = Joi.object({
       taskId: Joi.string().required(),
-      status: Joi.string().valid("started", "ongoing", "completed", "canceled"),
+      status: Joi.string().valid(
+        enums.declaredEnum.status.ACTIVE,
+        enums.declaredEnum.status.BLOCKED,
+        enums.declaredEnum.status.DELETE,
+        enums.declaredEnum.status.CANCELLED
+      ),
     });
     return schema.validate(payload);
   },
