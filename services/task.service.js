@@ -12,7 +12,7 @@ const getTaskById = async () => {
 };
 
 const getTaskByIdAndUpdate = async (id, update, data) => {
-  return Task.findByIdAndUpdate(id, update, data);
+  return Task.findByIdAndUpdate(id, update, { new: true });
 };
 const createTask = async (body) => {
   return Task.create(body);

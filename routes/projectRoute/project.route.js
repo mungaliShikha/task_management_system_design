@@ -1,14 +1,6 @@
 const router = require("express").Router();
 const auth = require("../../middleware/auth");
 const projectController = require("../../controllers/project.controller");
-const { validationMiddleware } = require("../../middleware/joeValidator");
-const {
-  projectCreation,
-  addManager,
-  addTask,
-  removeProject,
-  updateSingleProject,
-} = require("../../validator/project.validatior");
 
 const { validationMiddleware } = require("../../middleware/joeValidator");
 

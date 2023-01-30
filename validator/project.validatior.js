@@ -2,7 +2,7 @@ const Joi = require("joi");
 const enums = require("../helper/enum/enums");
 
 module.exports = {
-  projectCreation: (payload) => {
+  createProjectValidation: (payload) => {
     const schema = Joi.object({
       project_name: Joi.string().required(),
       description: Joi.string().required(),
@@ -17,7 +17,7 @@ module.exports = {
 
     return schema.validate(payload);
   },
-  addManager: (payload) => {
+  addManagerValidator: (payload) => {
     const schema = Joi.object({
       manager: Joi.array()
         .items(Joi.string().regex(/^[0-9a-fA-F]{24}$/))
@@ -25,7 +25,7 @@ module.exports = {
     });
     return schema.validate(payload);
   },
-  addTask: (payload) => {
+  addTaskValidator: (payload) => {
     const schema = Joi.object({
       project_task: Joi.array()
         .items(Joi.string().regex(/^[0-9a-fA-F]{24}$/))
@@ -33,22 +33,24 @@ module.exports = {
     });
     return schema.validate(payload);
   },
-  removeProject: (payload) => {
-    const schema = Joi.object({
-      manager: Joi.array()
-        .items(Joi.string().regex(/^[0-9a-fA-F]{24}$/))
-        .required(),
-    });
 
-    return schema.validate(payload);
-  },
-  updateSingleProject: (payload) => {
+  updateProjectValidator: (payload) => {
     const schema = Joi.object({
       projectStatus: Joi.string().valid(
         enums.declaredEnum.projectStatus.STARTED,
         enums.declaredEnum.projectStatus.COMPLETED,
         enums.declaredEnum.projectStatus.ONGOING
       ),
+    });
+
+    return schema.validate(payload);
+  },
+
+  removeProjectValidator: (payload) => {
+    const schema = Joi.object({
+      manager: Joi.array()
+        .items(Joi.string().regex(/^[0-9a-fA-F]{24}$/))
+        .required(),
     });
 
     return schema.validate(payload);
