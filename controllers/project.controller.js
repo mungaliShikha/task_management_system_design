@@ -28,8 +28,10 @@ const {
   getProjectAndUpdate,
   createProject,
   countProject,
-  getProjectByIdAndUpdate
+  getProjectByIdAndUpdate,
 } = require("../services/project.service");
+
+
 module.exports = {
   //************************************************create project ************************************** */
   createProject: catchAsync(async (req, res) => {
@@ -38,7 +40,7 @@ module.exports = {
       description,
       projectStatus,
       project_task,
-      developers
+      developers,
     } = req.body;
     const managerAuthCheck = await getOneUser({
       _id: req.userId,
@@ -60,7 +62,7 @@ module.exports = {
       projectStatus ||
       project_task ||
       developers ||
-      manager 
+      manager
     ) {
       managerId = managerAuthCheck._id.toString();
       req.body.manager = managerId.split(" ");
@@ -259,6 +261,7 @@ module.exports = {
       SuccessMessage.DATA_FOUND
     );
   }),
+
   //******************** only admin can remove the manager AND admin  from project ************************ */
   removeManagerFromProject: catchAsync(async (req, res) => {
     const { projectId } = req.params;
@@ -305,6 +308,7 @@ module.exports = {
       SuccessMessage.REMOVE_SUCCESS
     );
   }),
+
   //************************* only manager AND ADMIN  can update the project**************** */
   updateProject: catchAsync(async (req, res) => {
     const { projectId } = req.params;
@@ -339,6 +343,88 @@ module.exports = {
       SuccessCode.SUCCESS,
       statusOfProject,
       SuccessMessage.REMOVE_SUCCESS
+    );
+  }),
+
+  //************************* change project status to complete if all project tasks are completed *****************//
+  completeProjectStatus: catchAsync(async (req, res) => {
+    const { projectId } = req.params;
+    console.log(typeof req.params.projectId);
+
+    const managerAuthCheck = await getUserById(req.userId);
+    if (
+      managerAuthCheck &&
+      managerAuthCheck.role !== enums.declaredEnum.role.MANAGER
+    ) {
+      throw new appError(ErrorMessage.CANNOT_ACCESS_DATA, ErrorCode.FORBIDDEN);
+    }
+
+    const projectAuthCheck = await getProjectById({
+      _id: req.params.projectId,
+    });
+
+    if (!projectAuthCheck) {
+      throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
+    }
+
+    const task = await getAllTask({ projectId });
+
+    if (!task) {
+      throw new appError(ErrorMessage.TASK_NOT_EXIST, ErrorCode.NOT_FOUND);
+    }
+
+    let completedTask = true;
+    for (const data of task) {
+      if (data.status === "inProgress") {
+        completedTask = false;
+        break;
+      }
+    }
+
+    if (completedTask) {
+      const statusOfProject = await getProjectAndUpdate(
+        { _id: projectAuthCheck._id },
+        { $set: { projectStatus: enums.declaredEnum.taskStatus.COMPLETED } }
+      );
+
+      helper.commonResponse(
+        res,
+        SuccessCode.SUCCESS,
+        statusOfProject,
+        SuccessMessage.UPDATE_SUCCESS
+      );
+    }
+    throw new appError(ErrorMessage.TASK_NOT_COMPLETE, ErrorCode.NOT_FOUND);
+  }),
+
+  //********************** remove project by project id ************************** */
+  removeProject: catchAsync(async (req, res) => {
+    let { projectId } = req.params;
+    const projectStatus = req.body;
+
+    const managerAuthCheck = await getOneUser({
+      _id: req.userId,
+      role: enums.declaredEnum.role.MANAGER,
+    });
+    if (!managerAuthCheck) {
+      throw new appError(ErrorMessage.CANNOT_ACCESS_DATA, ErrorCode.FORBIDDEN);
+    }
+    const projectAuthCheck = await getProjectById(projectId);
+
+    if (!projectAuthCheck) {
+      throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
+    }
+
+    const statusOfProject = await getProjectAndUpdate(
+      { _id: projectAuthCheck._id },
+      { $set: projectStatus },
+      { new: true }
+    );
+    helper.commonResponse(
+      res,
+      SuccessCode.SUCCESS,
+      statusOfProject,
+      SuccessMessage.CANCEL_SUCCESS
     );
   }),
 };

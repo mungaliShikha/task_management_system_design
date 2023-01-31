@@ -2,13 +2,13 @@ const router = require("express").Router();
 const auth = require("../../middleware/auth");
 const projectController = require("../../controllers/project.controller");
 const {validationMiddleware}=require("../../middleware/joeValidator")
-const {projectCreation,addManager,addTask,removeProject,updateSingleProject} = require("../../validator/project.validatior")
+const {createProjectValidation,addManagerValidator,addTaskValidator,removeManagerProjectValidator,updateProjectValidator} = require("../../validator/project.validatior")
 
 //************************* manager can create the project ********************* */
 router.post(
   "/createProject",
   auth.verifyToken,
-  validationMiddleware(projectCreation),
+  validationMiddleware(createProjectValidation),
   projectController.createProject
 );
 
@@ -16,7 +16,7 @@ router.post(
 router.post(
   "/addManagerToProject/:projectId",
   auth.verifyToken,
-  validationMiddleware(addManager),
+  validationMiddleware(addManagerValidator),
   projectController.addManagerToProject
 );
 
@@ -24,7 +24,7 @@ router.post(
 router.post(
   "/addTaskToProject/:projectId",
   auth.verifyToken,
-  validationMiddleware(addTask),
+  validationMiddleware(addTaskValidator),
   projectController.addTaskToProject
 );
 
@@ -44,7 +44,7 @@ router.get("/listProject", auth.verifyToken, projectController.listProject);
 router.delete(
   "/removeManagerFromProject/:projectId",
   auth.verifyToken,
-  validationMiddleware(removeProject),
+  validationMiddleware(removeManagerProjectValidator),
   projectController.removeManagerFromProject
 );
 
@@ -52,11 +52,27 @@ router.delete(
 router.put(
   "/updateProject/:projectId",
   auth.verifyToken,
-  validationMiddleware(updateSingleProject),
+  validationMiddleware(updateProjectValidator),
   projectController.updateProject
 );
 
 
+//******************* change project status to completed **************** */
+
+router.put(
+  "/completeProjectStatus/:projectId",
+  auth.verifyToken,
+  projectController.completeProjectStatus
+);
+
+
+//********************** remove project by project id *********************** */
+
+router.put(
+  "/removeProject/:projectIdt",
+  auth.verifyToken,
+  projectController.removeProject
+);
 
 
 module.exports = router;
