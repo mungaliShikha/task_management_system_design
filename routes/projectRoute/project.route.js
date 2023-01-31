@@ -10,7 +10,7 @@ const {
   addTaskValidator,
   updateProjectValidator,
   removeProjectValidator,
-} = require("../../validator/project.validation");
+} = require("../../validator/project.validatior");
 
 router.post(
   "/createProject",
@@ -22,7 +22,7 @@ router.post(
 router.post(
   "/addManagerToProject/:projectId",
   auth.verifyToken,
-  validationMiddleware(addManagerValidator),
+
   projectController.addManagerToProject
 );
 
@@ -48,11 +48,11 @@ router.get("/listProject", auth.verifyToken, projectController.listProject);
 router.delete(
   "/removeManagerFromProject/:projectId",
   auth.verifyToken,
-  validationMiddleware(removeProject),
+  validationMiddleware(removeProjectValidator),
   projectController.removeManagerFromProject
 );
 
-//************************ only manager and admin can update the project ***************** */
+//************************ only manager and admin can update the project *****************/
 router.put(
   "/updateProject/:projectId",
   auth.verifyToken,
@@ -67,7 +67,7 @@ router.put(
 );
 
 router.put(
-  "/removeProject/:projectIdt",
+  "/removeProject/:projectId",
   auth.verifyToken,
   validationMiddleware(removeProjectValidator),
   projectController.removeProject

@@ -9,10 +9,10 @@ const getAllProject = async () => {
 };
 
 const getProjectById = async (id) => {
-  return Project.findOne(id);
+  return Project.findById(id);
 };
 
-const getProjectAndUpdate = async (id, update) => {
+const getProjectByIdAndUpdate = async (id, update) => {
   return Project.findOneAndUpdate(id, update, { new: true });
 };
 
@@ -27,7 +27,7 @@ module.exports = {
   getOneProject,
   getAllProject,
   getProjectById,
-  getProjectAndUpdate,
+  getProjectByIdAndUpdate,
   createProject,
   countProject,
 };

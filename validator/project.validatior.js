@@ -4,6 +4,7 @@ const enums = require("../helper/enum/enums");
 module.exports = {
   createProjectValidation: (payload) => {
     const schema = Joi.object({
+      // projectId: Joi.string().required(),
       project_name: Joi.string().required(),
       description: Joi.string().required(),
       projectStatus: Joi.string().valid(

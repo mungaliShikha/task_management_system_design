@@ -25,7 +25,7 @@ const {
   getOneProject,
   getAllProject,
   getProjectById,
-  getProjectAndUpdate,
+  getProjectByIdAndUpdate,
   createProject,
   countProject,
 } = require("../services/project.service");
@@ -38,7 +38,7 @@ module.exports = {
       description,
       projectStatus,
       project_task,
-      developers
+      developers,
     } = req.body;
     const managerAuthCheck = await getOneUser({
       _id: req.userId,
@@ -60,7 +60,7 @@ module.exports = {
       projectStatus ||
       project_task ||
       developers ||
-      manager 
+      manager
     ) {
       managerId = managerAuthCheck._id.toString();
       req.body.manager = managerId.split(" ");
@@ -113,7 +113,6 @@ module.exports = {
       SuccessMessage.PROJECT_ADDED
     );
   }),
-
   //***************************** add task to project ************************************************* */
   addTaskToProject: catchAsync(async (req, res) => {
     const { projectId } = req.params;
@@ -279,6 +278,7 @@ module.exports = {
       );
     }
     const projectExist = await getProjectById(projectId);
+    console.log(projectExist);
     if (
       projectExist &&
       projectExist.projectStatus == enums.declaredEnum.projectStatus.COMPLETED
@@ -328,7 +328,7 @@ module.exports = {
     if (!projectExist) {
       throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
     }
-    const statusOfProject = await getProjectAndUpdate(
+    const statusOfProject = await getProjectByIdAndUpdate(
       { _id: projectExist._id },
       { $set: projectStatus },
       { new: true }
@@ -338,7 +338,7 @@ module.exports = {
       res,
       SuccessCode.SUCCESS,
       statusOfProject,
-      SuccessMessage.REMOVE_SUCCESS
+      SuccessMessage.UPDATE_SUCCESS
     );
   }),
 

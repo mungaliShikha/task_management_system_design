@@ -138,7 +138,7 @@ module.exports = {
 
   //************************************************* create manager api ***************************************** */
 
-  addManager: catchAsync(async (req, res) => {
+  createManager: catchAsync(async (req, res) => {
     const payload = req.body;
     const { first_name, last_name, email, mobile_number } = payload;
     const userAuth = await getOneUser({
@@ -269,11 +269,11 @@ module.exports = {
       throw new appError(ErrorMessage.ADMIN_AUTHORIZE, ErrorCode.NOT_FOUND);
     }
     const { status, _id } = req.body;
-    const userCheck = await getUserById(_id)
-    if(userCheck&& userCheck.status == enums.declaredEnum.status.DELETE){
+    const userCheck = await getUserById(_id);
+    if (userCheck && userCheck.status == enums.declaredEnum.status.DELETE) {
       throw new appError(ErrorMessage.USER_DELETED, ErrorCode.NOT_FOUND);
     }
-    if(!userCheck){
+    if (!userCheck) {
       throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
     }
 
@@ -300,8 +300,8 @@ module.exports = {
       throw new appError(ErrorMessage.ADMIN_AUTHORIZE, ErrorCode.NOT_FOUND);
     }
     const { status, _id } = req.body;
-    const userCheck = await getUserById(_id)
-    if(!userCheck){
+    const userCheck = await getUserById(_id);
+    if (!userCheck) {
       throw new appError(ErrorMessage.USER_NOT_FOUND, ErrorCode.NOT_FOUND);
     }
 
@@ -317,6 +317,4 @@ module.exports = {
       SuccessMessage.PROFILE_DETAILS
     );
   }),
-
-
 };

@@ -4,7 +4,7 @@ const auth = require("../../middleware/auth");
 const { validationMiddleware } = require("../../middleware/joeValidator");
 const {
   updateAdminValidation,
-  createmanager,
+  createManagerValidation,
   resetPasswordAdmin,
   forgetPasswordAdmin,
   statusChangeByAdmin,
@@ -22,16 +22,16 @@ const {
   deleteUserByAdmin,
 } = require("../../controllers/admin.controller");
 
-const {
-  resetPassword,
-  forgetPassword,
-  addManager,
-  getAdminDetails,
-  updateAdmin,
-  listManager,
-  listAllUsers,
-  viewManager,
-} = require("../../controllers/admin.controller");
+// const {
+//   resetPassword,
+//   forgetPassword,
+//   addManager,
+//   getAdminDetails,
+//   updateAdmin,
+//   listManager,
+//   listAllUsers,
+//   viewManager,
+// } = require("../../controllers/admin.controller");
 
 router.post(
   "/forgetPassword",
@@ -59,8 +59,8 @@ router.get("/getAdminDetails", auth.verifyToken, getAdminDetails);
 router.post(
   "/createManager",
   auth.verifyToken,
-  validationMiddleware(createmanager),
-  addManager
+  validationMiddleware(createManagerValidation),
+  createManager
 );
 
 // router.get("/listManager", adminController.listManager);

@@ -45,7 +45,7 @@ module.exports = {
     let updateTask = await taskService.getTaskByIdAndUpdate(
       taskId,
       { $addToSet: { comments_in_task: createdComment._id } },
-      { new: true }
+     
     );
     helper.sendResponseWithCount(
       res,
@@ -87,7 +87,7 @@ module.exports = {
     );
   }),
 
-  //***************************** COMMENT REMOVED SUCCESSFULLY FROM TASK ********************************** */
+  //***************************** COMMENT REMOVED SUCCESSFULLY FROM TASK ***********************************//
   removeCommentFromTask: catchAsync(async (req, res) => {
     let { taskId } = req.params;
     let { commentIds } = req.body;
@@ -112,14 +112,13 @@ module.exports = {
     const commentCount = await taskService.getTaskByIdAndUpdate(
       { _id: taskId },
       { $pullAll: { comments_in_task: commentIds }},
-    {new:true} 
     );
 
     for (let i = 0; i < commentIds.length; i++) {
       await commentService.getOneCommentAndUpdate(
         { _id: commentIds[i] },
         { $set: { isDeleted: true } },
-        {new:true}
+  
       );
     }
     helper.sendResponseWithoutData(

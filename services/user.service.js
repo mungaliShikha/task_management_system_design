@@ -19,8 +19,8 @@ const getUserAndUpdate = async (id, update) => {
   return User.findByIdAndUpdate(id, update, { new: true });
 };
 
-const getOneUserAndUpdate = async (params, update, data) => {
-  return User.findOneAndUpdate(params, update, data);
+const getOneUserAndUpdate = async (params, update) => {
+  return User.findOneAndUpdate(params, update, { new: true });
 };
 
 const getOneToken = async (params) => {

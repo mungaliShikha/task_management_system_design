@@ -25,7 +25,7 @@ module.exports = {
     });
     return schema.validate(payload);
   },
-  createmanager: (payload) => {
+  createManagerValidation: (payload) => {
     const schema = Joi.object({
       first_name: Joi.string().min(2).max(10).required(),
       last_name: Joi.string().min(2).max(10).required(),
@@ -52,15 +52,9 @@ module.exports = {
 
   userDeleteByAdmin: (payload) => {
     const schema = Joi.object({
-      status: Joi.string()
-        .valid(
-          enums.declaredEnum.status.DELETE
-        )
-        .required(),
+      status: Joi.string().valid(enums.declaredEnum.status.DELETE).required(),
       _id: Joi.string().regex(/^[0-9a-fA-F]{24}$/),
     });
     return schema.validate(payload);
   },
-
-
 };

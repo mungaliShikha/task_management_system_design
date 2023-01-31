@@ -1,4 +1,6 @@
 module.exports = {
+
+  
   commonResponse: (res, statusCode, result, message) => {
     return res.json({
       result: result || null,
@@ -6,8 +8,19 @@ module.exports = {
       response_code: statusCode,
     });
   },
-  sendResponseWithCount: (responseObj,responseCode,responseMessage,data,no_of_comments) => {
-    return responseObj.send({responseCode: responseCode,responseMessage: responseMessage,result: data,commentCount: no_of_comments || null,});
+  sendResponseWithCount: (
+    responseObj,
+    responseCode,
+    responseMessage,
+    data,
+    no_of_comments
+  ) => {
+    return responseObj.send({
+      responseCode: responseCode,
+      responseMessage: responseMessage,
+      result: data,
+      commentCount: no_of_comments || null,
+    });
   },
   sendResponseWithData: (
     responseObj,
