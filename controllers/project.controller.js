@@ -237,14 +237,9 @@ module.exports = {
     ) {
       throw new appError(ErrorMessage.CANNOT_ACCESS_DATA, ErrorCode.FORBIDDEN);
     }
+    
     const projectAuthCheck = await getProjectById(projectId);
-    if (
-      projectAuthCheck &&
-      projectAuthCheck.projectStatus ==
-        enums.declaredEnum.projectStatus.COMPLETED
-    ) {
-      throw new appError(ErrorMessage.PROJECT_STATUS, ErrorCode.NOT_FOUND);
-    } else if (!projectAuthCheck) {
+    if (!projectAuthCheck) {
       throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
     }
 
