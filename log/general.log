@@ -1165,3 +1165,110 @@ Jan-30-2023 19:25:46 [info] http://localhost:5000/api/task/listTaskOnparticularP
 Jan-30-2023 19:25:47 [error] 404 - Data not found 
 Jan-30-2023 19:25:48 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
 Jan-30-2023 19:25:48 [error] 404 - Data not found 
+Jan-31-2023 10:47:11 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-31-2023 10:47:11 [error] 404 - Data not found 
+Jan-31-2023 10:47:24 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-31-2023 10:47:24 [error] 500 - Cannot call allow/valid/invalid with undefined 
+Jan-31-2023 11:08:42 [info] http://localhost:5000/api/project/updateProject/63d7a7f42ce4c3250c661640 - PUT METHOD  
+Jan-31-2023 11:18:10 [info] http://localhost:5000/api/project/updateProject/63d7a7f42ce4c3250c661640 - PUT METHOD  
+Jan-31-2023 11:18:29 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-31-2023 11:18:29 [error] 500 - Cannot call allow/valid/invalid with undefined 
+Jan-31-2023 11:42:03 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-31-2023 11:42:04 [error] 404 - Data not found 
+Jan-31-2023 11:44:19 [info] http://localhost:5000/api/task/listTaskOnparticularProject - GET METHOD  
+Jan-31-2023 11:44:19 [error] 404 - Data not found 
+Jan-31-2023 11:50:16 [info] http://localhost:5000/api/task/updateTask - GET METHOD  
+Jan-31-2023 11:50:16 [error] 404 - Requested URL http://localhost:5000/api/task/updateTask not found! 
+Jan-31-2023 11:50:22 [info] http://localhost:5000/api/task/updateTask - PUT METHOD  
+Jan-31-2023 11:50:22 [error] 401 - Please provide token. 
+Jan-31-2023 11:50:30 [info] http://localhost:5000/api/task/updateTask - PUT METHOD  
+Jan-31-2023 11:50:30 [error] 500 - Cannot call allow/valid/invalid with undefined 
+Jan-31-2023 11:52:22 [info] http://localhost:5000/api/task/updateTask - PUT METHOD  
+Jan-31-2023 11:52:22 [error] 500 - Cannot call allow/valid/invalid with undefined 
+Jan-31-2023 12:00:43 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-31-2023 12:00:43 [error] 500 - Cannot call allow/valid/invalid with undefined 
+Jan-31-2023 12:02:33 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-31-2023 12:02:33 [error] 412 - priority must be one of [urgent, high, low] 
+Jan-31-2023 12:03:04 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-31-2023 12:03:04 [error] 412 - start_date must be in ISO 8601 date format 
+Jan-31-2023 12:03:19 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-31-2023 12:03:19 [error] 412 - start_date must be in ISO 8601 date format 
+Jan-31-2023 12:05:27 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-31-2023 12:05:27 [error] 500 - task validation failed: developer_assigned.0: Cast to [ObjectId] failed for value "["ronin"]" (type string) at path "developer_assigned.0" 
+Jan-31-2023 12:06:07 [info] http://localhost:5000/api/task/addTaskToProject - POST METHOD  
+Jan-31-2023 12:07:01 [info] http://localhost:5000/api/task/updateTask - PUT METHOD  
+Jan-31-2023 12:07:01 [error] 500 - Cannot call allow/valid/invalid with undefined 
+Jan-31-2023 15:29:40 [info] http://localhost:5000/api/task/viewAllTask - GET METHOD  
+Jan-31-2023 15:39:20 [info] http://localhost:5000/api/task/changeTaskStatusByDev - GET METHOD  
+Jan-31-2023 15:39:20 [error] 404 - Requested URL http://localhost:5000/api/task/changeTaskStatusByDev not found! 
+Jan-31-2023 15:39:35 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-31-2023 15:39:35 [error] 412 - taskStatus is not allowed 
+Jan-31-2023 15:39:58 [info] http://localhost:5000/api/task/changeTaskStatusByDev - PUT METHOD  
+Jan-31-2023 15:39:58 [error] 404 - Only develper can change the status of the task 
+Jan-31-2023 15:44:32 [info] http://localhost:5000/api/comment/createComments/63c6648d5795762098e275ce - GET METHOD  
+Jan-31-2023 15:44:32 [error] 404 - Requested URL http://localhost:5000/api/comment/createComments/63c6648d5795762098e275ce not found! 
+Jan-31-2023 15:44:38 [info] http://localhost:5000/api/comment/createComments/63c6648d5795762098e275ce - POST METHOD  
+Jan-31-2023 15:44:38 [error] 404 - Requested URL http://localhost:5000/api/comment/createComments/63c6648d5795762098e275ce not found! 
+Jan-31-2023 15:45:22 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComments - POST METHOD  
+Jan-31-2023 15:45:22 [error] 404 - Requested URL http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComments not found! 
+Jan-31-2023 15:45:36 [info] http://localhost:5000/api/comments/63c6648d5795762098e275ce/createComments - POST METHOD  
+Jan-31-2023 15:45:36 [error] 404 - Requested URL http://localhost:5000/api/comments/63c6648d5795762098e275ce/createComments not found! 
+Jan-31-2023 15:45:38 [info] http://localhost:5000/api/comments/63c6648d5795762098e275ce/createComments - POST METHOD  
+Jan-31-2023 15:45:38 [error] 404 - Requested URL http://localhost:5000/api/comments/63c6648d5795762098e275ce/createComments not found! 
+Jan-31-2023 15:45:42 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComments - POST METHOD  
+Jan-31-2023 15:45:42 [error] 404 - Requested URL http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComments not found! 
+Jan-31-2023 15:52:54 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-31-2023 15:52:54 [error] 500 - Parameter "filter" to findOne() must be an object, got 63c6648d5795762098e275ce 
+Jan-31-2023 15:53:53 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-31-2023 15:53:53 [error] 500 - Parameter "filter" to findOne() must be an object, got 63c6648d5795762098e275ce 
+Jan-31-2023 15:53:56 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-31-2023 15:53:56 [error] 500 - Parameter "filter" to findOne() must be an object, got 63c6648d5795762098e275ce 
+Jan-31-2023 15:55:54 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/createComment - POST METHOD  
+Jan-31-2023 16:00:33 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/getCommentOfTask - GET METHOD  
+Jan-31-2023 16:00:33 [error] 401 - Please provide token. 
+Jan-31-2023 16:00:40 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/getCommentOfTask - GET METHOD  
+Jan-31-2023 16:00:40 [error] 404 - Task not found 
+Jan-31-2023 16:07:25 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/getCommentOfTask - GET METHOD  
+Jan-31-2023 16:07:25 [error] 404 - Task not found 
+Jan-31-2023 16:12:11 [info] http://localhost:5000/api/project/createProject - POST METHOD  
+Jan-31-2023 16:12:11 [error] 404 - Project is already created 
+Jan-31-2023 16:13:01 [info] http://localhost:5000/api/project/createProject - POST METHOD  
+Jan-31-2023 16:13:01 [error] 404 - Project is already created 
+Jan-31-2023 16:13:30 [info] http://localhost:5000/api/project/updateProject/63d7a7f42ce4c3250c661640 - PUT METHOD  
+Jan-31-2023 16:14:35 [info] http://localhost:5000/api/project/updateProject/63d7a7f42ce4c3250c661640 - PUT METHOD  
+Jan-31-2023 16:14:35 [error] 412 - projectStatus must be one of [started, completed, ongoing, canceled] 
+Jan-31-2023 16:14:46 [info] http://localhost:5000/api/project/updateProject/63d7a7f42ce4c3250c661640 - PUT METHOD  
+Jan-31-2023 16:19:42 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/getCommentOfTask - GET METHOD  
+Jan-31-2023 16:19:42 [error] 404 - Task not found 
+Jan-31-2023 16:21:04 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/getCommentOfTask - GET METHOD  
+Jan-31-2023 16:21:04 [error] 404 - Task not found 
+Jan-31-2023 16:25:36 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/getCommentOfTask - GET METHOD  
+Jan-31-2023 16:25:36 [error] 404 - Task not found 
+Jan-31-2023 16:26:11 [info] http://localhost:5000/api/comment/63c793356a7f4a24e74053c2/getCommentOfTask - GET METHOD  
+Jan-31-2023 16:26:12 [error] 404 - Task not found 
+Jan-31-2023 16:46:09 [info] http://localhost:5000/api/project/removeProject/63c64b1b0e84e1074c76cab5 - PUT METHOD  
+Jan-31-2023 16:46:09 [error] 500 - jwt expired 
+Jan-31-2023 16:46:24 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-31-2023 16:46:24 [error] 500 - Cast to ObjectId failed for value "{
+  email: 'nitin.ns008@gmail.com',
+  role: { '$in': [ 'Manager', 'Developer', 'Admin' ] },
+  status: { '$ne': 'DELETE' }
+}" (type Object) at path "_id" for model "users" 
+Jan-31-2023 16:46:57 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-31-2023 16:46:57 [error] 500 - Cast to ObjectId failed for value "{
+  email: 'nitin.ns008@gmail.com',
+  role: { '$in': [ 'Manager', 'Developer', 'Admin' ] },
+  status: { '$ne': 'DELETE' }
+}" (type Object) at path "_id" for model "users" 
+Jan-31-2023 16:47:51 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-31-2023 16:47:51 [error] 500 - Cast to ObjectId failed for value "{
+  email: 'nitin.ns008@gmail.com',
+  role: { '$in': [ 'Manager', 'Developer', 'Admin' ] },
+  status: { '$ne': 'DELETE' }
+}" (type Object) at path "_id" for model "users" 
+Jan-31-2023 16:48:28 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-31-2023 16:48:28 [error] 500 - Cast to ObjectId failed for value "{
+  email: 'nitin.ns008@gmail.com',
+  role: { '$in': [ 'Manager', 'Developer', 'Admin' ] },
+  status: { '$ne': 'DELETE' }
+}" (type Object) at path "_id" for model "users" 

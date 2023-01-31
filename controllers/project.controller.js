@@ -25,7 +25,7 @@ const {
   getOneProject,
   getAllProject,
   getProjectById,
-  getProjectByIdAndUpdate,
+  // getProjectByIdAndUpdate,
   createProject,
   countProject,
   getProjectByIdAndUpdate,
@@ -259,7 +259,7 @@ module.exports = {
     );
   }),
 
-  //******************** only admin can remove the manager AND admin  from project ************************ */
+  //******************** only admin can remove the manager AND admin  from project *************************//
   removeManagerFromProject: catchAsync(async (req, res) => {
     const { projectId } = req.params;
     const { manager } = req.body;

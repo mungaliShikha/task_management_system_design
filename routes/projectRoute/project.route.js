@@ -4,15 +4,15 @@ const projectController = require("../../controllers/project.controller");
 const {validationMiddleware}=require("../../middleware/joeValidator")
 const {createProjectValidation,addManagerValidator,addTaskValidator,removeManagerProjectValidator,updateProjectValidator} = require("../../validator/project.validatior")
 
-const { validationMiddleware } = require("../../middleware/joeValidator");
+// const { validationMiddleware } = require("../../middleware/joeValidator");
 
-const {
-  createProjectValidation,
-  addManagerValidator,
-  addTaskValidator,
-  updateProjectValidator,
-  removeProjectValidator,
-} = require("../../validator/project.validatior");
+// const {
+//   createProjectValidation,
+//   addManagerValidator,
+//   addTaskValidator,
+//   updateProjectValidator,
+//   removeProjectValidator,
+// } = require("../../validator/project.validatior");
 
 router.post(
   "/createProject",

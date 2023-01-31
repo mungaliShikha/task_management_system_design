@@ -9,17 +9,17 @@ const {
   addDeveloperValidator,
   removeDeveloperValidator,
   changeTaskStatusValidator,
-} = require("../../validator/task.validation");
-
-const { validationMiddleware } = require("../../middleware/joeValidator");
-
-const {
-  createTaskValidation,
-  updateTaskValidation,
-  addDeveloperValidator,
-  removeDeveloperValidator,
-  changeTaskStatusValidator,
 } = require("../../validator/task.validator");
+
+// const { validationMiddleware } = require("../../middleware/joeValidator");
+
+// const {
+//   createTaskValidation,
+//   updateTaskValidation,
+//   addDeveloperValidator,
+//   removeDeveloperValidator,
+//   changeTaskStatusValidator,
+// } = require("../../validator/task.validator");
 
 //***************************** create task by manager ************************* */
 router.post(

@@ -2,7 +2,7 @@ const User = require("../models/user.model");
 const Token = require("../models/token.model");
 
 const getOneUser = async (params) => {
-  return User.findOne(params);
+  return User.findById(params);
 };
 const getAllUser = async () => {
   return User.find();

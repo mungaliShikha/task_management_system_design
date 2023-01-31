@@ -48,7 +48,8 @@ module.exports = {
       projectStatus: Joi.string().valid(
         enums.declaredEnum.projectStatus.STARTED,
         enums.declaredEnum.projectStatus.COMPLETED,
-        enums.declaredEnum.projectStatus.ONGOING
+        enums.declaredEnum.projectStatus.ONGOING,
+        enums.declaredEnum.projectStatus.CANCEL
       ),
     });
 

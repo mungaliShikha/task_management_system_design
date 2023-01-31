@@ -1,7 +1,7 @@
 const Task = require("../models/task.model");
 
 const getOneTask = async (params) => {
-  return Task.findOne(params);
+  return Task.findById(params);
 };
 const getAllTask = async (id) => {
   return Task.find(id);

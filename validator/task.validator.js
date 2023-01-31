@@ -6,26 +6,9 @@ module.exports = {
     const schema = Joi.object({
       projectId: Joi.string().required(),
       name: Joi.string().min(2).max(20).required(),
-      type: Joi.string()
-        .valid(
-          enums.declaredEnum.type.BUG,
-          enums.declaredEnum.type.ENHANCEMENT,
-          enums.declaredEnum.type.NEWFEATURE
-        )
-        .required(),
-      priority: Joi.string()
-        .valid(
-          enums.declaredEnum.priority.URGENT,
-          enums.declaredEnum.priority.HIGH,
-          enums.declaredEnum.priority.LOW
-        )
-        .required(),
-      status: Joi.string().valid(
-        enums.declaredEnum.status.ACTIVE,
-        enums.declaredEnum.status.BLOCKED,
-        enums.declaredEnum.status.DELETE,
-        enums.declaredEnum.status.CANCEL
-      ),
+      type: Joi.string().valid("bug", "enhancement", "new-feature").required(),
+      priority: Joi.string().valid("urgent", "high", "low").required(),
+      status: Joi.string().valid("ACTIVE", "BLOCK", "DELETE", "CANCEL"),
       start_date: Joi.date().iso().required(),
       due_date: Joi.date().iso().required(),
       developer_assigned: Joi.array().required(),
@@ -80,10 +63,7 @@ module.exports = {
     const schema = Joi.object({
       taskId: Joi.string().required(),
       status: Joi.string().valid(
-        enums.declaredEnum.status.ACTIVE,
-        enums.declaredEnum.status.BLOCKED,
-        enums.declaredEnum.status.DELETE,
-        enums.declaredEnum.status.CANCEL
+        "ACTIVE","BLOCK","DELETE","CANCEL"
       ),
     });
     return schema.validate(payload);
