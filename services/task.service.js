@@ -8,6 +8,10 @@ const getAllTask = async () => {
   return Task.find()
 };
 
+const getTask = async (params) => {
+  return Task.find(params)
+};
+
 const getTaskById = async (id) => {
   return Task.findById(id);
 };
@@ -36,5 +40,6 @@ module.exports = {
   getTaskByIdAndUpdate,
   createTask,
   countTask,
-  getTaskByIdAndDelete
+  getTaskByIdAndDelete,
+  getTask
 };

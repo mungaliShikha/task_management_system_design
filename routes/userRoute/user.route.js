@@ -26,5 +26,9 @@ router.get("/listTheDeveloper",auth.verifyToken, userController.listTheDeveloper
 
 
 
+router.post("/getTaskOfDeveloper",auth.verifyToken,userController.getTaskOfPraticularDev)
+
+
+
 
 module.exports = router;
