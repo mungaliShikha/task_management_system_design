@@ -93,7 +93,7 @@ module.exports = {
     if (
       projectAuthCheck &&
       projectAuthCheck.projectStatus ==
-        enums.declaredEnum.projectStatus.COMPLETED
+      enums.declaredEnum.projectStatus.COMPLETED
     ) {
       throw new appError(ErrorMessage.PROJECT_STATUS, ErrorCode.NOT_FOUND);
     } else if (!projectAuthCheck) {
@@ -116,6 +116,34 @@ module.exports = {
     );
   }),
 
+  myProjectList: catchAsync(async (req, res) => {
+    let managerAuthCheck = await getOneUser({ _id: req.userId, role: enums.declaredEnum.role.MANAGER });
+    if (!managerAuthCheck) throw new appError(ErrorMessage.MANAGER_NOT_EXIST, {}, ErrorCode.NOT_FOUND);
+    var queryMade =  { manager: { $in: managerAuthCheck._id } };
+    if (req.body.search) {
+      queryMade.project_name = new RegExp("^" + req.body.search, "i");
+    }
+    let { page, limit } = req.query;
+    page = req.query.page || 1;
+    limit = req.query.limit || 10;
+    let allprojectList = await Project.find(queryMade)
+      .limit(limit * 1)
+      .skip((page - 1) * limit)
+      .exec();
+    const count = await countProject();
+    let final = {
+      projects: allprojectList,
+      totalPages: Math.ceil(count / limit),
+      currentPage: page,
+    };
+
+    if (allprojectList.length == 0) {
+      throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
+    }
+    helper.commonResponse(res, SuccessCode.SUCCESS, final, SuccessMessage.PROJECT_ADDED);
+
+  }),
+
   //***************************** add task to project ************************************************* */
   addTaskToProject: catchAsync(async (req, res) => {
     const { projectId } = req.params;
@@ -134,7 +162,7 @@ module.exports = {
     if (
       projectAuthCheck &&
       projectAuthCheck.projectStatus ==
-        enums.declaredEnum.projectStatus.COMPLETED
+      enums.declaredEnum.projectStatus.COMPLETED
     ) {
       throw new appError(ErrorMessage.PROJECT_STATUS, ErrorCode.NOT_FOUND);
     } else if (!projectAuthCheck) {
@@ -237,7 +265,7 @@ module.exports = {
     ) {
       throw new appError(ErrorMessage.CANNOT_ACCESS_DATA, ErrorCode.FORBIDDEN);
     }
-    
+
     const projectAuthCheck = await getProjectById(projectId);
     if (!projectAuthCheck) {
       throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);

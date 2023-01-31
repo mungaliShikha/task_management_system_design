@@ -4,8 +4,8 @@ const Project = require("../models/project.model");
 const getOneProject = async (params) => {
   return Project.findOne(params);
 };
-const getAllProject = async () => {
-  return Project.find();
+const getAllProject = async (query) => {
+  return Project.find(query);
 };
 
 const getProjectById = async (id) => {

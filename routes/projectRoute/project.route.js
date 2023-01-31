@@ -75,4 +75,10 @@ router.put(
 );
 
 
+router.post(
+  "/myProjectList",
+  auth.verifyToken,
+  projectController.myProjectList
+)
+
 module.exports = router;
