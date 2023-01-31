@@ -12,7 +12,6 @@ module.exports = {
     const schema = Joi.object({ password: Joi.string().required().min(7) });
     return schema.validate(payload);
   },
-
   updateAdminValidation: (payload) => {
     const schema = Joi.object({
       first_name: Joi.string().min(2).max(10),
@@ -36,7 +35,6 @@ module.exports = {
     });
     return schema.validate(payload);
   },
-
   statusChangeByAdmin: (payload) => {
     const schema = Joi.object({
       status: Joi.string()

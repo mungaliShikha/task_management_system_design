@@ -23,8 +23,7 @@ module.exports = {
       status: Joi.string().valid(
         enums.declaredEnum.status.ACTIVE,
         enums.declaredEnum.status.BLOCKED,
-        enums.declaredEnum.status.DELETE,
-        enums.declaredEnum.status.CANCEL
+        enums.declaredEnum.status.DELETE
       ),
       start_date: Joi.date().iso().required(),
       due_date: Joi.date().iso().required(),
@@ -37,7 +36,7 @@ module.exports = {
   updateTaskValidation: (payload) => {
     const schema = Joi.object({
       taskId: Joi.string().required(),
-      name: Joi.string().min(2).max(20),
+      name: Joi.string(),
       type: Joi.string().valid(
         enums.declaredEnum.type.BUG,
         enums.declaredEnum.type.ENHANCEMENT,
@@ -51,12 +50,11 @@ module.exports = {
       status: Joi.string().valid(
         enums.declaredEnum.status.ACTIVE,
         enums.declaredEnum.status.BLOCKED,
-        enums.declaredEnum.status.DELETE,
-        enums.declaredEnum.status.CANCEL
+        enums.declaredEnum.status.DELETE
       ),
       start_date: Joi.date().iso(),
       due_date: Joi.date().iso(),
-      developer_assigned: Joi.array().required(),
+      developer_assigned: Joi.array(),
     });
     return schema.validate(payload);
   },
@@ -82,8 +80,7 @@ module.exports = {
       status: Joi.string().valid(
         enums.declaredEnum.status.ACTIVE,
         enums.declaredEnum.status.BLOCKED,
-        enums.declaredEnum.status.DELETE,
-        enums.declaredEnum.status.CANCEL
+        enums.declaredEnum.status.DELETE
       ),
     });
     return schema.validate(payload);
