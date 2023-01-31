@@ -1,5 +1,5 @@
 module.exports.declaredEnum = Object.freeze({
-  projectStatus: { STARTED: "started", ONGOING: "ongoing", COMPLETED: "completed" },
+  projectStatus: { STARTED: "started", ONGOING: "ongoing", COMPLETED: "completed" ,CANCEL:"cancelled"},
   status: { ACTIVE: "ACTIVE", BLOCKED: "BLOCKED", DELETE: "DELETE" },
   taskStatus: { INPROGRESS: "inProgress", INQA: "inQA", COMPLETED: "completed" },
   type: { BUG: "bug", ENHANCEMENT: "enhancement", NEWFEATURE: "new-feature" },

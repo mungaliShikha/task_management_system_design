@@ -3,6 +3,7 @@ const appError = require("../helper/errorHandlers/errorHandler");
 const { ErrorMessage, SuccessMessage } = require("../helper/message");
 const User = require("../models/user.model");
 const Task = require("../models/task.model");
+const Project = require("../models/project.model")
 const { ErrorCode, SuccessCode } = require("../helper/statusCode");
 const {
   compareHash,
@@ -289,4 +290,36 @@ module.exports = {
       SuccessMessage.DATA_FOUND
     );
   }),
+
+
+  //********************************** get project details of a particular developer ************************ */
+
+  myProjectList: catchAsync(async (req, res) => {
+    let managerAuthCheck = await getOneUser({ _id: req.userId, role: enums.declaredEnum.role.MANAGER });
+    if (!managerAuthCheck) throw new appError(ErrorMessage.MANAGER_NOT_EXIST, {}, ErrorCode.NOT_FOUND);
+    var queryMade =  { manager: { $in: managerAuthCheck._id } };
+    if (req.body.search) {
+      queryMade.project_name = new RegExp("^" + req.body.search, "i");
+    }
+    let { page, limit } = req.query;
+    page = req.query.page || 1;
+    limit = req.query.limit || 10;
+    let allprojectList = await Project.find(queryMade)
+      .limit(limit * 1)
+      .skip((page - 1) * limit)
+      .exec();
+    const count = await Project.find(queryMade).countDocuments();
+    let final = {
+      projects: allprojectList,
+      totalPages: Math.ceil(count / limit),
+      currentPage: page,
+    };
+
+    if (allprojectList.length == 0) {
+      throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
+    }
+    helper.commonResponse(res, SuccessCode.SUCCESS, final, SuccessMessage.PROJECT_ADDED);
+
+  }),
+
 };

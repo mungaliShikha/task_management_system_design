@@ -1,4 +1,6 @@
 module.exports.ErrorMessage = Object.freeze({
+  PROJECT_COMPLETED:"Project Already completed",
+  TASK_NOT_COMPLETE:"Task is not completed",
   CANNOT_CREATE:"Only Manager can create developer",
   USER_DELETED:"User not found or deleted",
   USER_IS_ALREADY_BLOCKED:"User is already blocked",

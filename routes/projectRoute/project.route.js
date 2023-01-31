@@ -69,16 +69,12 @@ router.put(
 //********************** remove project by project id *********************** */
 
 router.put(
-  "/removeProject/:projectIdt",
+  "/removeProject/:projectId",
   auth.verifyToken,
   projectController.removeProject
 );
 
 
-router.post(
-  "/myProjectList",
-  auth.verifyToken,
-  projectController.myProjectList
-)
+
 
 module.exports = router;

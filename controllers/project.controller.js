@@ -31,7 +31,6 @@ const {
   getProjectByIdAndUpdate,
 } = require("../services/project.service");
 
-
 module.exports = {
   //************************************************create project ************************************** */
   createProject: catchAsync(async (req, res) => {
@@ -93,7 +92,7 @@ module.exports = {
     if (
       projectAuthCheck &&
       projectAuthCheck.projectStatus ==
-      enums.declaredEnum.projectStatus.COMPLETED
+        enums.declaredEnum.projectStatus.COMPLETED
     ) {
       throw new appError(ErrorMessage.PROJECT_STATUS, ErrorCode.NOT_FOUND);
     } else if (!projectAuthCheck) {
@@ -116,34 +115,6 @@ module.exports = {
     );
   }),
 
-  myProjectList: catchAsync(async (req, res) => {
-    let managerAuthCheck = await getOneUser({ _id: req.userId, role: enums.declaredEnum.role.MANAGER });
-    if (!managerAuthCheck) throw new appError(ErrorMessage.MANAGER_NOT_EXIST, {}, ErrorCode.NOT_FOUND);
-    var queryMade =  { manager: { $in: managerAuthCheck._id } };
-    if (req.body.search) {
-      queryMade.project_name = new RegExp("^" + req.body.search, "i");
-    }
-    let { page, limit } = req.query;
-    page = req.query.page || 1;
-    limit = req.query.limit || 10;
-    let allprojectList = await Project.find(queryMade)
-      .limit(limit * 1)
-      .skip((page - 1) * limit)
-      .exec();
-    const count = await countProject();
-    let final = {
-      projects: allprojectList,
-      totalPages: Math.ceil(count / limit),
-      currentPage: page,
-    };
-
-    if (allprojectList.length == 0) {
-      throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
-    }
-    helper.commonResponse(res, SuccessCode.SUCCESS, final, SuccessMessage.PROJECT_ADDED);
-
-  }),
-
   //***************************** add task to project ************************************************* */
   addTaskToProject: catchAsync(async (req, res) => {
     const { projectId } = req.params;
@@ -162,7 +133,7 @@ module.exports = {
     if (
       projectAuthCheck &&
       projectAuthCheck.projectStatus ==
-      enums.declaredEnum.projectStatus.COMPLETED
+        enums.declaredEnum.projectStatus.COMPLETED
     ) {
       throw new appError(ErrorMessage.PROJECT_STATUS, ErrorCode.NOT_FOUND);
     } else if (!projectAuthCheck) {
@@ -372,7 +343,6 @@ module.exports = {
   //************************* change project status to complete if all project tasks are completed *****************//
   completeProjectStatus: catchAsync(async (req, res) => {
     const { projectId } = req.params;
-    console.log(typeof req.params.projectId);
 
     const managerAuthCheck = await getUserById(req.userId);
     if (
@@ -390,6 +360,9 @@ module.exports = {
       throw new appError(ErrorMessage.PROJECT_NOT_EXIST, ErrorCode.NOT_FOUND);
     }
 
+    if (projectAuthCheck && projectAuthCheck.projectStatus == "completed") {
+      throw new appError(ErrorMessage.PROJECT_COMPLETED, ErrorCode.NOT_FOUND);
+    }
     const task = await getAllTask({ projectId });
 
     if (!task) {
@@ -407,7 +380,8 @@ module.exports = {
     if (completedTask) {
       const statusOfProject = await getProjectAndUpdate(
         { _id: projectAuthCheck._id },
-        { $set: { projectStatus: enums.declaredEnum.taskStatus.COMPLETED } }
+        { $set: { projectStatus: enums.declaredEnum.taskStatus.COMPLETED } },
+        {new:true}
       );
 
       helper.commonResponse(
@@ -416,14 +390,15 @@ module.exports = {
         statusOfProject,
         SuccessMessage.UPDATE_SUCCESS
       );
+    } else {
+      throw new appError(ErrorMessage.TASK_NOT_COMPLETE, ErrorCode.NOT_FOUND);
     }
-    throw new appError(ErrorMessage.TASK_NOT_COMPLETE, ErrorCode.NOT_FOUND);
   }),
 
   //********************** remove project by project id ************************** */
   removeProject: catchAsync(async (req, res) => {
     let { projectId } = req.params;
-    const projectStatus = req.body;
+    const {projectStatus} = req.body;
 
     const managerAuthCheck = await getOneUser({
       _id: req.userId,
@@ -440,7 +415,7 @@ module.exports = {
 
     const statusOfProject = await getProjectAndUpdate(
       { _id: projectAuthCheck._id },
-      { $set: projectStatus },
+      { $set: {projectStatus} },
       { new: true }
     );
     helper.commonResponse(

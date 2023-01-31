@@ -2,13 +2,21 @@ const router = require("express").Router();
 const { upload } = require("../../utils/aws/aws");
 const auth = require("../../middleware/auth");
 const userController = require("../../controllers/user.controller");
-const {validationMiddleware}=require("../../middleware/joeValidator")
-const {logIn,createDeveloper,updateData,} = require("../../validator/user.validator")
+const { validationMiddleware } = require("../../middleware/joeValidator");
+const {
+  logIn,
+  createDeveloper,
+  updateData,
+} = require("../../validator/user.validator");
 
-router.post("/addDeveloper", auth.verifyToken,validationMiddleware(createDeveloper), userController.addDeveloper);
+router.post(
+  "/addDeveloper",
+  auth.verifyToken,
+  validationMiddleware(createDeveloper),
+  userController.addDeveloper
+);
 
-router.post('/login',validationMiddleware(logIn), userController.login);
-
+router.post("/login", validationMiddleware(logIn), userController.login);
 
 router.get("/getProfile", auth.verifyToken, userController.getProfile); // get profile for manager and developer
 
@@ -22,13 +30,23 @@ router.put(
 
 router.get("/listTheManager", auth.verifyToken, userController.listTheManager);
 
-router.get("/listTheDeveloper",auth.verifyToken, userController.listTheDeveloper)
+router.get(
+  "/listTheDeveloper",
+  auth.verifyToken,
+  userController.listTheDeveloper
+);
+
+router.post(
+  "/getTaskOfDeveloper",
+  auth.verifyToken,
+  userController.getTaskOfPraticularDev
+);
 
 
-
-router.post("/getTaskOfDeveloper",auth.verifyToken,userController.getTaskOfPraticularDev)
-
-
-
+router.post(
+  "/myProjectList",
+  auth.verifyToken,
+  userController.myProjectList
+)
 
 module.exports = router;

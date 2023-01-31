@@ -12,7 +12,7 @@ var project_model = new schema(
     },
     projectStatus: {
       type: String,
-      enum: [enums.declaredEnum.projectStatus.STARTED,enums.declaredEnum.projectStatus.COMPLETED,enums.declaredEnum.projectStatus.ONGOING]
+      enum: [enums.declaredEnum.projectStatus.STARTED,enums.declaredEnum.projectStatus.COMPLETED,enums.declaredEnum.projectStatus.ONGOING,enums.declaredEnum.projectStatus.CANCEL]
     },
     project_task: [
       {
