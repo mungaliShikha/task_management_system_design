@@ -337,3 +337,7 @@ Jan-31-2023 16:48:28 [error] 500 - Cast to ObjectId failed for value "{
   role: { '$in': [ 'Manager', 'Developer', 'Admin' ] },
   status: { '$ne': 'DELETE' }
 }" (type Object) at path "_id" for model "users" 
+Jan-31-2023 16:53:59 [error] 404 - Project not found 
+Jan-31-2023 16:54:14 [error] 404 - Project not found 
+Jan-31-2023 16:54:15 [error] 404 - Project not found 
+Jan-31-2023 16:57:06 [error] 404 - Task not found 
