@@ -62,7 +62,7 @@ module.exports = {
   addDeveloperValidator: (payload) => {
     const schema = Joi.object({
       taskId: Joi.string().required(),
-      developer_assigned: Joi.array().required(),
+      developers: Joi.array().required(),
     });
     return schema.validate(payload);
   },
@@ -70,7 +70,7 @@ module.exports = {
   removeDeveloperValidator: (payload) => {
     const schema = Joi.object({
       taskId: Joi.string().required(),
-      developer_assigned: Joi.array().required(),
+      developers: Joi.array().required(),
     });
     return schema.validate(payload);
   },

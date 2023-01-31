@@ -47,7 +47,6 @@ module.exports = {
     });
     return schema.validate(payload);
   },
-
   userDeleteByAdmin: (payload) => {
     const schema = Joi.object({
       status: Joi.string()
