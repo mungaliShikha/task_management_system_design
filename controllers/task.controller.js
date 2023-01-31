@@ -142,7 +142,7 @@ module.exports = {
         if (!projectRes) {
             throw new appError(ErrorMessage.DATA_NOT_FOUND, ErrorCode.NOT_FOUND);
         }
-        let updatedTask = await getTaskByIdAndUpdate(taskId, req.body);
+        let updatedTask = await getTaskByIdAndUpdate(taskId, req.body,{new:true});
         helper.commonResponse(
             res,
             SuccessCode.SUCCESS,
