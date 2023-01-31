@@ -34,7 +34,15 @@ module.exports = {
     });
     return schema.validate(payload);
   },
+  removeManagerProjectValidator: (payload) => {
+    const schema = Joi.object({
+      manager: Joi.array()
+        .items(Joi.string().regex(/^[0-9a-fA-F]{24}$/))
+        .required(),
+    });
 
+    return schema.validate(payload);
+  },
   updateProjectValidator: (payload) => {
     const schema = Joi.object({
       projectStatus: Joi.string().valid(
