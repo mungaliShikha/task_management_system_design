@@ -65,3 +65,4 @@ app.use(errorController);
 app.listen(global.gConfig.node_port, function () {
   console.log("Server is listening on", global.gConfig.node_port);
 });
+

@@ -74,7 +74,7 @@ module.exports = {
     }
   }),
 
-  //*********************************** add manager to project************************* */
+  //*********************************** add manager to project*************************//
   addManagerToProject: catchAsync(async (req, res) => {
     let { projectId } = req.params;
     const managerAuthCheck = await getUserById(req.userId);
@@ -235,7 +235,8 @@ module.exports = {
     );
   }),
 
-  //************************************ view the populated project ****************************** */
+  
+  //************************************ view the populated project *******************************//
   viewProject: catchAsync(async (req, res) => {
     // const {projectId} = req.params
     // const projectView = await Project.aggregate([
@@ -343,7 +344,7 @@ module.exports = {
     );
   }),
 
-  //************************* only manager AND ADMIN  can update the project**************** */
+  //************************* only manager AND ADMIN  can update the project**************** /
   updateProject: catchAsync(async (req, res) => {
     const { projectId } = req.params;
     const projectStatus = req.body;

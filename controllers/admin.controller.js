@@ -122,7 +122,7 @@ module.exports = {
     );
   }),
 
-  ///******************************* get admin api ********************************************* */
+  ///******************************* get admin api **********************************************//
   getAdminDetails: catchAsync(async (req, res) => {
     const userData = await getOneUser({ _id: req.userId });
     if (!userData) {
@@ -136,7 +136,7 @@ module.exports = {
     );
   }),
 
-  //************************************************* create manager api ***************************************** */
+  //************************************************* create manager api ******************************************//
 
   createManager: catchAsync(async (req, res) => {
     const payload = req.body;

@@ -1280,3 +1280,51 @@ Jan-31-2023 16:54:15 [info] http://localhost:5000/api/project/removeProject/63c6
 Jan-31-2023 16:54:15 [error] 404 - Project not found 
 Jan-31-2023 16:57:06 [info] http://localhost:5000/api/comment/63c6648d5795762098e275ce/getCommentOfTask - GET METHOD  
 Jan-31-2023 16:57:06 [error] 404 - Task not found 
+Jan-31-2023 17:37:39 [info] http://localhost:5000/api/user/login - POST METHOD  
+Jan-31-2023 17:37:39 [error] 500 - Cast to ObjectId failed for value "{
+  email: 'nitin.ns008@gmail.com',
+  role: { '$in': [ 'Manager', 'Developer', 'Admin' ] },
+  status: { '$ne': 'DELETE' }
+}" (type Object) at path "_id" for model "users" 
+Feb-01-2023 09:43:26 [info] http://localhost:5000/api/user/login - POST METHOD  
+Feb-01-2023 09:43:26 [error] 500 - Cast to ObjectId failed for value "{
+  email: 'nitin.ns008@gmail.com',
+  role: { '$in': [ 'Manager', 'Developer', 'Admin' ] },
+  status: { '$ne': 'DELETE' }
+}" (type Object) at path "_id" for model "users" 
+Feb-01-2023 09:59:55 [info] http://localhost:5000/api/user/login - POST METHOD  
+Feb-01-2023 09:59:55 [error] 500 - Cast to ObjectId failed for value "{
+  email: 'nitin.ns008@gmail.com',
+  role: { '$in': [ 'Manager', 'Developer', 'Admin' ] },
+  status: { '$ne': 'DELETE' }
+}" (type Object) at path "_id" for model "users" 
+Feb-01-2023 10:10:42 [info] http://localhost:5000/api/user/login - POST METHOD  
+Feb-01-2023 10:10:42 [error] 500 - Cast to ObjectId failed for value "{
+  email: 'nitin.ns008@gmail.com',
+  role: { '$in': [ 'Manager', 'Developer', 'Admin' ] },
+  status: { '$ne': 'DELETE' }
+}" (type Object) at path "_id" for model "users" 
+Feb-01-2023 10:10:44 [info] http://localhost:5000/api/user/login - POST METHOD  
+Feb-01-2023 10:10:44 [error] 500 - Cast to ObjectId failed for value "{
+  email: 'nitin.ns008@gmail.com',
+  role: { '$in': [ 'Manager', 'Developer', 'Admin' ] },
+  status: { '$ne': 'DELETE' }
+}" (type Object) at path "_id" for model "users" 
+Feb-01-2023 10:10:45 [info] http://localhost:5000/api/user/login - POST METHOD  
+Feb-01-2023 10:10:45 [error] 500 - Cast to ObjectId failed for value "{
+  email: 'nitin.ns008@gmail.com',
+  role: { '$in': [ 'Manager', 'Developer', 'Admin' ] },
+  status: { '$ne': 'DELETE' }
+}" (type Object) at path "_id" for model "users" 
+Feb-01-2023 10:15:21 [info] http://localhost:5000/api/user/login - POST METHOD  
+Feb-01-2023 10:15:21 [error] 500 - Cast to ObjectId failed for value "{
+  email: 'nitin.ns008@gmail.com',
+  role: { '$in': [ 'Manager', 'Developer', 'Admin' ] },
+  status: { '$ne': 'DELETE' }
+}" (type Object) at path "_id" for model "users" 
+Feb-01-2023 10:18:41 [info] http://localhost:5000/api/user/login - POST METHOD  
+Feb-01-2023 10:18:41 [error] 500 - Cast to ObjectId failed for value "{
+  email: 'shikha1081998@gmail.com',
+  role: { '$in': [ 'Manager', 'Developer', 'Admin' ] },
+  status: { '$ne': 'DELETE' }
+}" (type Object) at path "_id" for model "users" 

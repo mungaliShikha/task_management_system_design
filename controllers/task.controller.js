@@ -72,7 +72,7 @@ module.exports = {
     );
   }),
 
-  //******************************** get the list of all tasks ************************************ */
+  //******************************** get the list of all tasks *************************************//
 
   listTaskOnparticularProject: catchAsync(async (req, res) => {
     const { _id } = req.body;
@@ -129,7 +129,7 @@ module.exports = {
     );
   }),
 
-  //********************************************* update the particular task ****************************** */
+  //********************************************* update the particular task *******************************/
   updateTask: catchAsync(async (req, res) => {
     const {
       taskId,

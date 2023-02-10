@@ -341,3 +341,43 @@ Jan-31-2023 16:53:59 [error] 404 - Project not found
 Jan-31-2023 16:54:14 [error] 404 - Project not found 
 Jan-31-2023 16:54:15 [error] 404 - Project not found 
 Jan-31-2023 16:57:06 [error] 404 - Task not found 
+Jan-31-2023 17:37:39 [error] 500 - Cast to ObjectId failed for value "{
+  email: 'nitin.ns008@gmail.com',
+  role: { '$in': [ 'Manager', 'Developer', 'Admin' ] },
+  status: { '$ne': 'DELETE' }
+}" (type Object) at path "_id" for model "users" 
+Feb-01-2023 09:43:26 [error] 500 - Cast to ObjectId failed for value "{
+  email: 'nitin.ns008@gmail.com',
+  role: { '$in': [ 'Manager', 'Developer', 'Admin' ] },
+  status: { '$ne': 'DELETE' }
+}" (type Object) at path "_id" for model "users" 
+Feb-01-2023 09:59:55 [error] 500 - Cast to ObjectId failed for value "{
+  email: 'nitin.ns008@gmail.com',
+  role: { '$in': [ 'Manager', 'Developer', 'Admin' ] },
+  status: { '$ne': 'DELETE' }
+}" (type Object) at path "_id" for model "users" 
+Feb-01-2023 10:10:42 [error] 500 - Cast to ObjectId failed for value "{
+  email: 'nitin.ns008@gmail.com',
+  role: { '$in': [ 'Manager', 'Developer', 'Admin' ] },
+  status: { '$ne': 'DELETE' }
+}" (type Object) at path "_id" for model "users" 
+Feb-01-2023 10:10:44 [error] 500 - Cast to ObjectId failed for value "{
+  email: 'nitin.ns008@gmail.com',
+  role: { '$in': [ 'Manager', 'Developer', 'Admin' ] },
+  status: { '$ne': 'DELETE' }
+}" (type Object) at path "_id" for model "users" 
+Feb-01-2023 10:10:45 [error] 500 - Cast to ObjectId failed for value "{
+  email: 'nitin.ns008@gmail.com',
+  role: { '$in': [ 'Manager', 'Developer', 'Admin' ] },
+  status: { '$ne': 'DELETE' }
+}" (type Object) at path "_id" for model "users" 
+Feb-01-2023 10:15:21 [error] 500 - Cast to ObjectId failed for value "{
+  email: 'nitin.ns008@gmail.com',
+  role: { '$in': [ 'Manager', 'Developer', 'Admin' ] },
+  status: { '$ne': 'DELETE' }
+}" (type Object) at path "_id" for model "users" 
+Feb-01-2023 10:18:41 [error] 500 - Cast to ObjectId failed for value "{
+  email: 'shikha1081998@gmail.com',
+  role: { '$in': [ 'Manager', 'Developer', 'Admin' ] },
+  status: { '$ne': 'DELETE' }
+}" (type Object) at path "_id" for model "users" 

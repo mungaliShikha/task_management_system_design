@@ -66,7 +66,6 @@ module.exports = {
       );
     }
   }),
-
   // *********************************************** common get profile for Manager,Developer and admin  *******************************
 
   getProfile: catchAsync(async (req, res) => {
@@ -132,7 +131,7 @@ module.exports = {
     );
   }),
 
-  // **************************************** Developer Create ************************
+  // **************************************** Developer Create ************************//
 
   addDeveloper: catchAsync(async (req, res) => {
     const payload = req.body;
@@ -160,6 +159,7 @@ module.exports = {
     const message = messages(payload.email, passGen);
 
     await sendMailNotify(userAuth.email, subject, message, req.body.email);
+    console.log(userAuth.email);
 
     helper.sendResponseWithData(
       res,
@@ -169,7 +169,7 @@ module.exports = {
     );
   }),
 
-  //*********************************** get the list of manager **************************** */
+  //*********************************** get the list of manager *****************************//
 
   listTheManager: catchAsync(async (req, res) => {
     const allAuthRes = await getOneUser({
@@ -212,7 +212,7 @@ module.exports = {
     );
   }),
 
-  //*********************************** get the list of developer **************************** */
+  //*********************************** get the list of developer ****************************//
 
   listTheDeveloper: catchAsync(async (req, res) => {
     const allAuthRes = await getOneUser({
