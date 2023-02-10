@@ -35,7 +35,7 @@ module.exports.ErrorMessage = Object.freeze({
   INVALID_MOBILE: "This mobile number is not valid.",
   EMAIL_EXIST: "This email is already exists.",
   NOT_FOUND: "Requested data not found.",
-  USER_NOT_FOUND: "This user does not exist.",
+  USER_NOT_FOUND: "The logged in user does not exist.",
   UPDATE_NOT: "Unexpected error during update, please try again.",
   MOBILE_EXIST: "This mobile number already exists.",
   USERNAME_EXIST: "This user name already exists.",

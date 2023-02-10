@@ -7,8 +7,12 @@ const getAllTask = async (id) => {
   return Task.find(id);
 };
 
-const getTaskById = async () => {
-  return Task.findById();
+const getTask = async (params) => {
+  return Task.find(params)
+};
+
+const getTaskById = async (id) => {
+  return Task.findById(id);
 };
 
 const getTaskByIdAndUpdate = async (id, update, data) => {
@@ -34,4 +38,5 @@ module.exports = {
   createTask,
   countTask,
   getTaskByIdAndDelete,
+  getTask
 };
